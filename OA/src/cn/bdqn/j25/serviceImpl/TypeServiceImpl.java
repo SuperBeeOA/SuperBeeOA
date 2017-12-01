@@ -24,4 +24,16 @@ public class TypeServiceImpl implements TypeService {
 		return typeDao.findAll();
 	}
 
+	@Override
+	public Types addOrUpdateType(Types types) {
+		// TODO Auto-generated method stub
+		return typeDao.addOrUpdateType(types);
+	}
+
+	@Override
+	public void delType(Types types) {
+		// TODO Auto-generated method stub
+		typeDao.delType(types);
+	}
+
 }
