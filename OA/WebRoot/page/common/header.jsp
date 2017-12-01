@@ -40,7 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav">
-	            <li class="active"><a href="${pageContext.request.contextPath }/index.jsp">首页</a></li>
+	            <li class="active"><a href="${pageContext.request.contextPath }/page/main.jsp">首页</a></li>
 	            <li><a href="${pageContext.request.contextPath }/page/business.jsp">业务</a></li>
 	            <li><a href="${pageContext.request.contextPath }/page/production.jsp">生产</a></li>
 	            <li><a href="${pageContext.request.contextPath }/page/financial.jsp">财务</a></li>

@@ -4,7 +4,7 @@
 	<script src="${pageContext.request.contextPath }/js/prefixfree.min.js"></script>
 	
     <!-- Bootstrap core CSS -->
-    <link href="${pageContext.request.contextPath }/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/css/bootstrap.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="${pageContext.request.contextPath }/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-    <script>window.jQuery || document.write('<script src="${pageContext.request.contextPath }/js/jquery-1.8.3.js"><\/script>')</script>
-    <script src="${pageContext.request.contextPath }/js/bootstrap.min.js"></script>
+    <script>window.jQuery || document.write('<script src="${pageContext.request.contextPath }/js/jquery.js"><\/script>');</script>
+    <script src="${pageContext.request.contextPath }/js/bootstrap.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="${pageContext.request.contextPath }/js/ie10-viewport-bug-workaround.js"></script>

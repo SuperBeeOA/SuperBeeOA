@@ -13,6 +13,8 @@
 				                <li><a href="javascript:void(0)">查看出勤</a></li>
 				                <li><a href="javascript:void(0)">发布公告</a></li>
 				                <li><a href="javascript:void(0)">内部联络</a></li>
+				                <li><a href="javascript:void(0)">新增员工</a></li>
+				                <li><a href="javascript:void(0)">管理员工</a></li>
 				            </ul>
 				        </div>
 				    </div>
@@ -20,7 +22,7 @@
 	        </div>
 	        
 	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height:0px; padding-bottom:50%">
-	            
+	            <%@include file="common/public.jsp" %>
 	        </div>
 	        
 	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:0px; padding-bottom:50%">

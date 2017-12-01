@@ -16,9 +16,9 @@
 	            </div>
 	            <div style="position: relative; top:200px;">
 		            <div id="datepicker" class="calendar"></div>
-					<script src='${pageContext.request.contextPath }/js/jquery.min.js'></script>
+					<script src='${pageContext.request.contextPath }/js/jquery.js'></script>
 					<script src='${pageContext.request.contextPath }/js/jquery-ui.js'></script>
-					<script src="${pageContext.request.contextPath }/js/index.js"></script>
+					<script src="${pageContext.request.contextPath }/jst/main.js"></script>
 	            </div>
 	        </div>
 	        
@@ -76,7 +76,7 @@
 	            		<input type="text" name="department"><br/>
 	            		<label>职位：</label><br/>
 	            		<input type="text" name="position"><br/>
-	            		<label>内部ID：</label><br/>
+	            		<label>职工号：</label><br/>
 	            		<input type="text" name="id"><br/><br/>
 	            		<input class="btn btn-primary" type="submit" value="查询">
 	            	</form>
