@@ -1,5 +1,5 @@
   <footer>
-  	<%@include file="js.jsp" %>
+  	
   	<div id="footer" class="container">
 		<nav class="navbar navbar-default navbar-fixed-bottom">
 		    <div class="navbar-inner navbar-content-center">
