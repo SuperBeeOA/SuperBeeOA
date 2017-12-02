@@ -107,8 +107,27 @@
 		<h2 class="text-center">发送消息<small><a id="if" href="javascript:void(0)">收到的消息</a></small></h2>
 		<hr>
 		<form action="">
-			联络人职工号：
-			<input type="text" name="id">
+			收件人：<br>
+			所属公司：
+			<select name="company">
+				<option value="1">本公司</option>
+				<option value="2">分公司1</option>
+				<option value="3">总部</option>
+			</select>
+			所属部门：
+			<select name="department">
+				<option value="1">业务部</option>
+				<option value="2">人事部</option>
+				<option value="3">财务部</option>
+				<option value="4">生产部</option>
+				<option value="5">仓库部</option>
+				<option value="6">质检部</option>
+			</select>
+			姓名：
+			<select name="company">
+				<option value="1">王大锤</option>
+				<option value="2">赵大刚</option>
+			</select>
 			<br>
 			信息内容：
 			<br>
