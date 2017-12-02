@@ -3,6 +3,7 @@
 <script src="${pageContext.request.contextPath }/jst/public.js"></script>
 <div id="info">
 	<h2 class="text-center">账号信息</h2>
+	<hr>
 	<div class=" col-md-offset-2"  style="width: 550px;">
 		<table class="table table-hover">
 			<tr>
@@ -50,10 +51,6 @@
 				<td> </td>
 			</tr>
 			<tr>
-				<td><label>基础薪资：</label></td>
-				<td> </td>
-			</tr>
-			<tr>
 				<td><label>剩余调休时数：</label></td>
 				<td> </td>
 			</tr>
@@ -68,7 +65,8 @@
 			<input type="text" name="newp"><br><br>
 			请确认新密码：<br><br>
 			<input type="text" name="newps"><br><br>
-			<input type="submit" value="确认" name="result">
+			<input type="submit" value="确认" class="btn btn-primary">
+			<a href="javascript:void(0)" id="out">关闭</a>
 		</form>
 	</div>
 </div>

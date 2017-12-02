@@ -1,6 +1,10 @@
 $(function() {
-  $("#cp" ).click(function(){
-	  $("#cpf").fadeToggle();
+  $("#cp" ).click(function() {
+	  $("#cpf").show();
+  });
+	
+  $("#out").click(function() {
+	  $("#cpf").hide();
   });
   
   $("#mi").click(function() {

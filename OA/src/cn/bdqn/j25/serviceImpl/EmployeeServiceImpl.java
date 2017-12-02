@@ -25,7 +25,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public List<Employee> findByid(int id) {
+	public Employee findByid(int id) {
 		// TODO Auto-generated method stub
 		return employeeDao.findByid(id);
 	}
@@ -51,19 +51,27 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public List<Employee> findByName(String name) {
 		// TODO Auto-generated method stub
+		
 		return employeeDao.findByName(name);
 	}
 
 	@Override
 	public Employee addOrUpdateType(Employee employee) {
 		// TODO Auto-generated method stub
+		
 		return employeeDao.addOrUpdateType(employee);
 	}
 
 	@Override
-	public void delType(Employee employee) {
+	public Boolean delType(Employee employee) {
 		// TODO Auto-generated method stub
-		employeeDao.delType(employee);
+		Boolean b=false;
+		if(this.findByid(employee.getEmployeeid().intValue())!=null){
+			employeeDao.delType(employee);
+			b=true;
+			return b;
+		}
+		return b;
 	}
 
 }

@@ -25,6 +25,12 @@
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Contact" />
         </set>
+        <set name="announcements" inverse="true">
+            <key>
+                <column name="STATEID" precision="22" scale="0" />
+            </key>
+            <one-to-many class="cn.bdqn.j25.pojo.Announcement" />
+        </set>
         <set name="orderses" inverse="true">
             <key>
                 <column name="STATE" precision="22" scale="0" />

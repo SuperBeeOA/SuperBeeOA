@@ -21,6 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
 	
   	<%@include file="js.jsp" %>
+  	<script src="${pageContext.request.contextPath }/jst/header.js"></script>
   </head>
   
   <body>
@@ -48,12 +49,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	            <li><a href="${pageContext.request.contextPath }/page/quality.jsp">质检</a></li>
 	            <li><a href="${pageContext.request.contextPath }/page/warehouse.jsp">仓库</a></li>
 	          </ul>
-	          <ul class="nav navbar-nav navbar-right">
-	            <li><a href="#">员工</a></li>
-	            <li><a href="#">签到</a></li>
-	            <li><a href="#">补签</a></li>
-	            <li class="active"><a href="#">退出<span class="sr-only">(current)</span></a></li>
+	          <ul id="ling" class="nav navbar-nav navbar-right">
+	          	<li class="active"><a id="login" href="javascript:void(0)">登录</a></li>
 	          </ul>
+	          <ul id="led" class="nav navbar-nav navbar-right" style="display: none;">
+	            <li><a href="javascript:void(0)">员工</a></li>
+	            <li><a href="javascript:void(0)">签到</a></li>
+	            <li><a href="javascript:void(0)">补签</a></li>
+	            <li class="active"><a href="javascript:void(0)">退出<span class="sr-only">(current)</span></a></li>
+	          </ul>
+	          <div id="log" class="vertical-center" style="display: none; height: 200px; width: 200px; background-color: white; padding: 20px;">
+	          	<form action="javascript:void(0)">
+	          		职工号：<input type="text" name="id"><br>
+	          		密码：<input type="text" name="password"><br><br>
+	          		<input type="submit" value="登录" class="btn btn-primary">
+	          		<a href="javascript:void(0)" id="out">关闭</a>
+	          	</form>
+	          </div>
 	        </div><!--/.nav-collapse -->
 	      </div>
 	    </nav>
