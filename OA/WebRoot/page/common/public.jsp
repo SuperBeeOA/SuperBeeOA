@@ -66,7 +66,7 @@
 			请确认新密码：<br><br>
 			<input type="text" name="newps"><br><br>
 			<input type="submit" value="确认" class="btn btn-primary">
-			<a href="javascript:void(0)" id="close">关闭</a>
+			<a href="javascript:void(0)" id="out">关闭</a>
 		</form>
 	</div>
 </div>

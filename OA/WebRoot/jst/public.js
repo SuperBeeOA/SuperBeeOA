@@ -3,7 +3,7 @@ $(function() {
 	  $("#cpf").show();
   });
 	
-  $("#close").click(function() {
+  $("#out").click(function() {
 	  $("#cpf").hide();
   });
   
