@@ -9,19 +9,19 @@ import cn.bdqn.j25.service.TypeService;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class TypeAction extends ActionSupport{
-		
+public class TypeAction extends ActionSupport {
+
 	private TypeService typeService;
 
-	public String find(){
-		
-		List<Types> list=typeService.findAll();
-		Map<String,Object> request=(Map)ActionContext.getContext().get("request");
+	public String find() {
+		List<Types> list = typeService.findAll();
+		Map<String, Object> request = (Map) ActionContext.getContext().get(
+				"request");
 		request.put("type", list);
 		return SUCCESS;
-		
+
 	}
-	
+
 	public TypeService getTypeService() {
 		return typeService;
 	}
