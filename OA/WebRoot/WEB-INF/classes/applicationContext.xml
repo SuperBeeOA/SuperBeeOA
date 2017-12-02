@@ -28,12 +28,17 @@
 	<bean id="typeDao" class="cn.bdqn.j25.daoImpl.TypeDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />		
 	</bean> 
+	<bean id="employeeDao" class="cn.bdqn.j25.daoImpl.EmployeeDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />		
+	</bean> 
 	
-	<!-- 配置业务层 -->
+	<!-- 配置service -->
 	<bean id="typeService" class="cn.bdqn.j25.serviceImpl.TypeServiceImpl">
 		<property name="typeDao" ref="typeDao"></property>
 	</bean>
-	
+	<bean id="employeeService" class="cn.bdqn.j25.serviceImpl.EmployeeServiceImpl">
+		<property name="employeeDao" ref="employeeDao"></property>
+	</bean>
 	
 	<!-- 定义事务管理器 -->
 	<!-- <bean id="txManager"

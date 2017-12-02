@@ -12,6 +12,7 @@ public class Announcement implements java.io.Serializable {
 	// Fields
 
 	private BigDecimal announcementid;
+	private State state;
 	private Employee employee;
 	private Department department;
 	private String title;
@@ -28,9 +29,10 @@ public class Announcement implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Announcement(Employee employee, Department department, String title,
-			Timestamp time, BigDecimal typeid, String image, String remarks,
-			String context) {
+	public Announcement(State state, Employee employee, Department department,
+			String title, Timestamp time, BigDecimal typeid, String image,
+			String remarks, String context) {
+		this.state = state;
 		this.employee = employee;
 		this.department = department;
 		this.title = title;
@@ -49,6 +51,14 @@ public class Announcement implements java.io.Serializable {
 
 	public void setAnnouncementid(BigDecimal announcementid) {
 		this.announcementid = announcementid;
+	}
+
+	public State getState() {
+		return this.state;
+	}
+
+	public void setState(State state) {
+		this.state = state;
 	}
 
 	public Employee getEmployee() {

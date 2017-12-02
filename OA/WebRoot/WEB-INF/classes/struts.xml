@@ -11,10 +11,16 @@
 	
     <package name="type" extends="struts-default">   
     	<default-action-ref name="defaultAction" />
+    	
 		<action name="ty" class="cn.bdqn.j25.action.TypeAction" method="find">
 			<result>/index.jsp</result>
 		</action>
-       
-       
+		
+       	<action name="em" class="cn.bdqn.j25.action.EmployeeAction" method="findAllEmployee">
+			<result>/index.jsp</result>
+		</action>
+       	<action name="em1" class="cn.bdqn.j25.action.EmployeeAction" method="findEmployeeByName">
+			<result>/index.jsp</result>
+		</action>
     </package>
 </struts>

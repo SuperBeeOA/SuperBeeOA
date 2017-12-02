@@ -16,10 +16,9 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements EmployeeDao 
 	}
 
 	@Override
-	public List<Employee> findByid(int id) {
+	public Employee findByid(int id) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().find(
-				"from Employee where employeeid=?", id);
+		return this.getHibernateTemplate().get(Employee.class, id);
 	}
 
 	@Override

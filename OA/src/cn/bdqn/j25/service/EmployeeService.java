@@ -8,7 +8,7 @@ public interface EmployeeService {
 
 	public List<Employee> findAll(); // 查询全部员工信息
 
-	public List<Employee> findByid(int id);// 根据id查询
+	public Employee findByid(int id);// 根据id查询
 
 	public List<Employee> findByWorkidPwd(Employee employee);// 根据名字密码查询(登录)
 
@@ -20,5 +20,5 @@ public interface EmployeeService {
 
 	public Employee addOrUpdateType(Employee employee); // 增加或更新类型
 
-	public void delType(Employee employee); // 增加类型
+	public Boolean delType(Employee employee); // 增加类型
 }
