@@ -15,4 +15,5 @@ public interface EquipmentDao {
 	public Equipment addOrUpdateEquipment(Equipment equipment);//增加或更新信息
 	
 	public void delEquipment(Equipment equipment); //删除
+	
 }
