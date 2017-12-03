@@ -22,15 +22,23 @@ public class AnnouncementDaoImpl extends HibernateDaoSupport implements Announce
 	}
 
 	@Override
-	public int addAnnouncement() {
+	public Announcement addAnnouncement(Announcement announcement) {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.getHibernateTemplate().merge(announcement);
 	}
 
 	@Override
-	public int delAnnouncement() {
+	public void delAnnouncement(String announcementid) {
 		// TODO Auto-generated method stub
-		return 0;
+		 this.getHibernateTemplate().delete(announcementid);
 	}
 
-}
+	@Override
+	public List<Announcement> findByDepartmentid(String announcementid) {
+		// TODO Auto-generated method stub
+		return getHibernateTemplate().find("from ANNOUNCEMENT where announcementid=?",announcementid);
+	}
+
+	
+	}
+
