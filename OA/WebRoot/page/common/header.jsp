@@ -37,7 +37,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#"><img src="${pageContext.request.contextPath }/images/logo.jps" alt="LOGO" style="width: 10%; height: 10%;"></a>
+	          <a class="navbar-brand" href="#">
+	          	<img src="${pageContext.request.contextPath }/images/logo.png" alt="LOGO" style="width: 120; height: 40; position: relative; right: 50px; bottom: 10px">
+	          </a>
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav">
