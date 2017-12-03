@@ -1,8 +1,4 @@
-	<!-- 日历 -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/reset.css">
-	<link rel="stylesheet" href="${pageContext.request.contextPath }/css/style.css">
-	<script src="${pageContext.request.contextPath }/js/prefixfree.min.js"></script>
-	
+
     <!-- Bootstrap core CSS -->
     <link href="${pageContext.request.contextPath }/css/bootstrap.css" rel="stylesheet">
 
