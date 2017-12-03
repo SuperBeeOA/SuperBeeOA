@@ -20,6 +20,7 @@ public class Material implements java.io.Serializable {
 	private String materialmodel;
 	private BigDecimal truckage;
 	private String materialremarks;
+	
 
 	// Constructors
 
@@ -73,14 +74,6 @@ public class Material implements java.io.Serializable {
 		this.provider = provider;
 	}
 
-	public String getMaterialname() {
-		return this.materialname;
-	}
-
-	public void setMaterialname(String materialname) {
-		this.materialname = materialname;
-	}
-
 	public String getMaterialno() {
 		return this.materialno;
 	}
@@ -127,6 +120,14 @@ public class Material implements java.io.Serializable {
 
 	public void setMaterialremarks(String materialremarks) {
 		this.materialremarks = materialremarks;
+	}
+
+	public String getMaterialname() {
+		return materialname;
+	}
+
+	public void setMaterialname(String materialname) {
+		this.materialname = materialname;
 	}
 
 }

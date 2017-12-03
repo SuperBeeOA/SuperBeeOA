@@ -29,6 +29,12 @@ public class TypeDaoImpl extends HibernateDaoSupport implements TypeDao {
 		this.getHibernateTemplate().delete(types);
 		
 	}
+
+	@Override
+	public Types findByid(int id) {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().get(Types.class, id);
+	}
 	
 	
 }
