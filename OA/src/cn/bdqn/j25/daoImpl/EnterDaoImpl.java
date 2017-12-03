@@ -33,4 +33,12 @@ public class EnterDaoImpl extends HibernateDaoSupport implements EnterDao {
 		return (Enter) this.getHibernateTemplate().find("from Enter where enterid=?",id);
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Enter> find() {
+		// TODO Auto-generated method stub
+		String hql = "from Enter";
+		return this.getHibernateTemplate().find(hql);
+	}
+
 }

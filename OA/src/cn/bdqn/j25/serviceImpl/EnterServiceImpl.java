@@ -32,13 +32,19 @@ public class EnterServiceImpl implements EnterService {
 		if(enterDao.findByid(enter.getEnterid().intValue())==null){
 			flag=true;
 		}
-           return flag;
+        return flag;
 	}
 
 	@Override
 	public List<Enter> findByOutOrIn(String out, Enter enter, int first, int max) {
 		// TODO Auto-generated method stub
 		return enterDao.findByOutOrIn(out, enter, first, max);
+	}
+
+	@Override
+	public List<Enter> find() {
+		// TODO Auto-generated method stub
+		return enterDao.find();
 	}
 
 }

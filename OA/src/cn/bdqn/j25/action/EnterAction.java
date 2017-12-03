@@ -12,10 +12,12 @@ public class EnterAction extends ActionSupport {
 	private EnterService enterService;
 	
 	public List<Enter> findAll(){
+		return null;
 		
 	}
 	
 	public  Enter addOrUpdateEnter(Enter enter){
+		return enter;
 		
 	}
 	

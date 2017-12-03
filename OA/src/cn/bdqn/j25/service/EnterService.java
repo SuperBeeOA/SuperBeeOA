@@ -4,7 +4,9 @@ import java.util.List;
 
 import cn.bdqn.j25.pojo.Enter;
 
-public interface EnterService {
+public interface EnterService {	
+	
+	public List<Enter> find();//查询全部Enter类信息
 
 	public List<Enter> findByOutOrIn(String out, Enter enter,int first, int max); //查询全部Enter类信息
 	

@@ -15,8 +15,7 @@ public class TypeAction extends ActionSupport {
 
 	public String find() {
 		List<Types> list = typeService.findAll();
-		Map<String, Object> request = (Map) ActionContext.getContext().get(
-				"request");
+		Map<String, Object> request = (Map) ActionContext.getContext().get("request");
 		request.put("type", list);
 		return SUCCESS;
 
