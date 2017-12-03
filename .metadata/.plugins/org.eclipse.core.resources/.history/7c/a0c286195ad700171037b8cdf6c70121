@@ -1,0 +1,58 @@
+package cn.bdqn.j25.serviceImpl;
+
+import java.util.List;
+
+import cn.bdqn.j25.pojo.Accounts;
+import cn.bdqn.j25.service.AccountsService;
+
+public class AccountsServiceImpl implements AccountsService {
+
+	@Override
+	public Accounts findByid(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Accounts> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Accounts> findByPeopleName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Accounts> findByOutOrIn(String out) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Accounts> findByTime(String[] time, int first, int end) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Accounts> findByPageTime(int first, int end) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Accounts addOrUpdateAccounts(Accounts accounts) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delAccounts(Accounts accounts) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

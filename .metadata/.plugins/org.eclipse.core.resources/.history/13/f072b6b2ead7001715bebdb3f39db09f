@@ -1,0 +1,42 @@
+package cn.bdqn.j25.daoImpl;
+
+import java.util.List;
+
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+import cn.bdqn.j25.dao.MaterialDao;
+import cn.bdqn.j25.pojo.Material;
+
+public class MaterialDaoImpl extends HibernateDaoSupport implements MaterialDao {
+
+	@Override
+	public Material findByid(int id) {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().get(Material.class, id);
+	}
+
+	@Override
+	public List<Material> findByName(String Name) {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().find("from Material where materialname =?", Name);
+	}
+
+	@Override
+	public List<Material> findByPage(Material material, int first, int max) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Material addOrUpdateMaterial(Material material) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delMaterial(Material material) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

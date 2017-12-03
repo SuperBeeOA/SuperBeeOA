@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.CustomerDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.DepartmentDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.EquipmentService"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.EquipmentDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.TeamDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.WorkshopDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.MaterialDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.MaterialService"/>
+</qualifiedTypeNameHistroy>

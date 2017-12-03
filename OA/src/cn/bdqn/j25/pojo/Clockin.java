@@ -1,0 +1,56 @@
+package cn.bdqn.j25.pojo;
+
+import java.math.BigDecimal;
+import java.sql.Timestamp;
+
+/**
+ * Clockin entity. @author MyEclipse Persistence Tools
+ */
+
+public class Clockin implements java.io.Serializable {
+
+	// Fields
+
+	private BigDecimal clockinid;
+	private Employee employee;
+	private Timestamp clocktime;
+
+	// Constructors
+
+	/** default constructor */
+	public Clockin() {
+	}
+
+	/** full constructor */
+	public Clockin(Employee employee, Timestamp clocktime) {
+		this.employee = employee;
+		this.clocktime = clocktime;
+	}
+
+	// Property accessors
+
+	public BigDecimal getClockinid() {
+		return this.clockinid;
+	}
+
+	public void setClockinid(BigDecimal clockinid) {
+		this.clockinid = clockinid;
+	}
+
+	public Employee getEmployee() {
+		return this.employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+
+	public Timestamp getClocktime() {
+		return this.clocktime;
+	}
+
+	public void setClocktime(Timestamp clocktime) {
+		this.clocktime = clocktime;
+	}
+
+}

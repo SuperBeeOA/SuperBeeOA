@@ -1,0 +1,34 @@
+package cn.bdqn.j25.serviceImpl;
+
+import java.util.List;
+
+import cn.bdqn.j25.pojo.Department;
+import cn.bdqn.j25.service.DepartmentService;
+
+public class DepartmentServiceImpl implements DepartmentService {
+
+	@Override
+	public Department findByid(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Department> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Department addOrUpdateDepartment(Department department) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean delDepartment(Department department) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

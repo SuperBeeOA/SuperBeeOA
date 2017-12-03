@@ -1,0 +1,42 @@
+package cn.bdqn.j25.serviceImpl;
+
+import java.util.List;
+
+import cn.bdqn.j25.pojo.Monitoring;
+import cn.bdqn.j25.service.MonitoringService;
+
+public class MonitoringServiceImpl implements MonitoringService {
+
+	private MonitoringDao monitoringDao;
+	
+	@Override
+	public Monitoring findByid(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Monitoring> findByOrders(String orderno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Monitoring> findByPage(Monitoring monitoring, int first, int max) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Monitoring addOrUpdateEquipment(Monitoring monitoring) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean delEquipment(Monitoring monitoring) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,10 @@
+package cn.bdqn.j25.dao;
+
+import cn.bdqn.j25.pojo.Customer;
+
+public interface CustomerDao {
+
+	public Customer findByid(int id);
+	
+	
+}

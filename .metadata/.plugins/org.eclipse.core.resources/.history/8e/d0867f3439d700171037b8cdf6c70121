@@ -1,0 +1,10 @@
+package cn.bdqn.j25.dao;
+
+import java.util.List;
+
+import cn.bdqn.j25.pojo.Department;
+
+public interface DepartmentDao {
+
+	public List<Department> findByid();
+}
