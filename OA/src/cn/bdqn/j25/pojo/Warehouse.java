@@ -13,8 +13,8 @@ public class Warehouse implements java.io.Serializable {
 	// Fields
 
 	private BigDecimal warehouseid;
+	private Types types;
 	private String warehousename;
-	private BigDecimal warehousetype;
 	private String capacity;
 	private String district;
 	private String shelf;
@@ -30,11 +30,11 @@ public class Warehouse implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Warehouse(String warehousename, BigDecimal warehousetype,
-			String capacity, String district, String shelf, String residual,
-			String remarks, Set outs, Set enters) {
+	public Warehouse(Types types, String warehousename, String capacity,
+			String district, String shelf, String residual, String remarks,
+			Set outs, Set enters) {
+		this.types = types;
 		this.warehousename = warehousename;
-		this.warehousetype = warehousetype;
 		this.capacity = capacity;
 		this.district = district;
 		this.shelf = shelf;
@@ -54,20 +54,20 @@ public class Warehouse implements java.io.Serializable {
 		this.warehouseid = warehouseid;
 	}
 
+	public Types getTypes() {
+		return this.types;
+	}
+
+	public void setTypes(Types types) {
+		this.types = types;
+	}
+
 	public String getWarehousename() {
 		return this.warehousename;
 	}
 
 	public void setWarehousename(String warehousename) {
 		this.warehousename = warehousename;
-	}
-
-	public BigDecimal getWarehousetype() {
-		return this.warehousetype;
-	}
-
-	public void setWarehousetype(BigDecimal warehousetype) {
-		this.warehousetype = warehousetype;
 	}
 
 	public String getCapacity() {

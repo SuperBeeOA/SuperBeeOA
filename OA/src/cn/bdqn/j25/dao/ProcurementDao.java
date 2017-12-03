@@ -7,7 +7,7 @@ import cn.bdqn.j25.pojo.Procurement;
 public interface ProcurementDao {
 	public Procurement findByid(int id);//根据ID查询	
 	
-	public List<Procurement> findByName(String name);//根据名称查询
+	public List<Procurement> findByNo(String no);//根据名称查询
 	
 	public List<Procurement> findByPage(Procurement procurement,int first,int max);//分页展示全部
 	 

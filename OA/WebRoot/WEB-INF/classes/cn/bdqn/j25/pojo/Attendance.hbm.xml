@@ -13,9 +13,6 @@
         <many-to-one name="employee" class="cn.bdqn.j25.pojo.Employee" fetch="select">
             <column name="EMPLOYEEID" precision="22" scale="0" />
         </many-to-one>
-        <property name="attendancetime" type="java.sql.Timestamp">
-            <column name="ATTENDANCETIME" length="7" />
-        </property>
         <property name="leave" type="java.math.BigDecimal">
             <column name="LEAVE" precision="22" scale="0" />
         </property>

@@ -37,17 +37,20 @@ public class Employee implements java.io.Serializable {
 	private Set contactsForSender = new HashSet(0);
 	private Set attendances = new HashSet(0);
 	private Set ordersesForOriginator = new HashSet(0);
+	private Set orderrootses = new HashSet(0);
 	private Set contactsForRecipient = new HashSet(0);
 	private Set restsForRester = new HashSet(0);
+	private Set ordersesForOperator = new HashSet(0);
 	private Set enters = new HashSet(0);
 	private Set holidaysesForApprover = new HashSet(0);
-	private Set ordersesForOperator = new HashSet(0);
 	private Set holidaysesForLeaver = new HashSet(0);
 	private Set monitoringsForProorderpeople = new HashSet(0);
 	private Set proorders = new HashSet(0);
+	private Set performanceses = new HashSet(0);
 	private Set procurementsForOperator = new HashSet(0);
 	private Set procurementsForOriginator = new HashSet(0);
 	private Set monitoringsForProducter = new HashSet(0);
+	private Set clockins = new HashSet(0);
 	private Set restsForApprover = new HashSet(0);
 	private Set announcements = new HashSet(0);
 
@@ -64,12 +67,13 @@ public class Employee implements java.io.Serializable {
 			String phone, String address, BigDecimal money, String password,
 			BigDecimal resttime, Set outs, Set wageses, Set accountses,
 			Set checkses, Set contactsForSender, Set attendances,
-			Set ordersesForOriginator, Set contactsForRecipient,
-			Set restsForRester, Set enters, Set holidaysesForApprover,
-			Set ordersesForOperator, Set holidaysesForLeaver,
-			Set monitoringsForProorderpeople, Set proorders,
-			Set procurementsForOperator, Set procurementsForOriginator,
-			Set monitoringsForProducter, Set restsForApprover, Set announcements) {
+			Set ordersesForOriginator, Set orderrootses,
+			Set contactsForRecipient, Set restsForRester,
+			Set ordersesForOperator, Set enters, Set holidaysesForApprover,
+			Set holidaysesForLeaver, Set monitoringsForProorderpeople,
+			Set proorders, Set performanceses, Set procurementsForOperator,
+			Set procurementsForOriginator, Set monitoringsForProducter,
+			Set clockins, Set restsForApprover, Set announcements) {
 		this.team = team;
 		this.department = department;
 		this.workshop = workshop;
@@ -93,17 +97,20 @@ public class Employee implements java.io.Serializable {
 		this.contactsForSender = contactsForSender;
 		this.attendances = attendances;
 		this.ordersesForOriginator = ordersesForOriginator;
+		this.orderrootses = orderrootses;
 		this.contactsForRecipient = contactsForRecipient;
 		this.restsForRester = restsForRester;
+		this.ordersesForOperator = ordersesForOperator;
 		this.enters = enters;
 		this.holidaysesForApprover = holidaysesForApprover;
-		this.ordersesForOperator = ordersesForOperator;
 		this.holidaysesForLeaver = holidaysesForLeaver;
 		this.monitoringsForProorderpeople = monitoringsForProorderpeople;
 		this.proorders = proorders;
+		this.performanceses = performanceses;
 		this.procurementsForOperator = procurementsForOperator;
 		this.procurementsForOriginator = procurementsForOriginator;
 		this.monitoringsForProducter = monitoringsForProducter;
+		this.clockins = clockins;
 		this.restsForApprover = restsForApprover;
 		this.announcements = announcements;
 	}
@@ -302,6 +309,14 @@ public class Employee implements java.io.Serializable {
 		this.ordersesForOriginator = ordersesForOriginator;
 	}
 
+	public Set getOrderrootses() {
+		return this.orderrootses;
+	}
+
+	public void setOrderrootses(Set orderrootses) {
+		this.orderrootses = orderrootses;
+	}
+
 	public Set getContactsForRecipient() {
 		return this.contactsForRecipient;
 	}
@@ -318,6 +333,14 @@ public class Employee implements java.io.Serializable {
 		this.restsForRester = restsForRester;
 	}
 
+	public Set getOrdersesForOperator() {
+		return this.ordersesForOperator;
+	}
+
+	public void setOrdersesForOperator(Set ordersesForOperator) {
+		this.ordersesForOperator = ordersesForOperator;
+	}
+
 	public Set getEnters() {
 		return this.enters;
 	}
@@ -332,14 +355,6 @@ public class Employee implements java.io.Serializable {
 
 	public void setHolidaysesForApprover(Set holidaysesForApprover) {
 		this.holidaysesForApprover = holidaysesForApprover;
-	}
-
-	public Set getOrdersesForOperator() {
-		return this.ordersesForOperator;
-	}
-
-	public void setOrdersesForOperator(Set ordersesForOperator) {
-		this.ordersesForOperator = ordersesForOperator;
 	}
 
 	public Set getHolidaysesForLeaver() {
@@ -366,6 +381,14 @@ public class Employee implements java.io.Serializable {
 		this.proorders = proorders;
 	}
 
+	public Set getPerformanceses() {
+		return this.performanceses;
+	}
+
+	public void setPerformanceses(Set performanceses) {
+		this.performanceses = performanceses;
+	}
+
 	public Set getProcurementsForOperator() {
 		return this.procurementsForOperator;
 	}
@@ -388,6 +411,14 @@ public class Employee implements java.io.Serializable {
 
 	public void setMonitoringsForProducter(Set monitoringsForProducter) {
 		this.monitoringsForProducter = monitoringsForProducter;
+	}
+
+	public Set getClockins() {
+		return this.clockins;
+	}
+
+	public void setClockins(Set clockins) {
+		this.clockins = clockins;
 	}
 
 	public Set getRestsForApprover() {

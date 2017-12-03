@@ -19,6 +19,7 @@ public class Types implements java.io.Serializable {
 	private Set providers = new HashSet(0);
 	private Set products = new HashSet(0);
 	private Set procurements = new HashSet(0);
+	private Set warehouses = new HashSet(0);
 
 	// Constructors
 
@@ -33,13 +34,14 @@ public class Types implements java.io.Serializable {
 
 	/** full constructor */
 	public Types(String typename, Set orderses, Set materials, Set providers,
-			Set products, Set procurements) {
+			Set products, Set procurements, Set warehouses) {
 		this.typename = typename;
 		this.orderses = orderses;
 		this.materials = materials;
 		this.providers = providers;
 		this.products = products;
 		this.procurements = procurements;
+		this.warehouses = warehouses;
 	}
 
 	// Property accessors
@@ -98,6 +100,14 @@ public class Types implements java.io.Serializable {
 
 	public void setProcurements(Set procurements) {
 		this.procurements = procurements;
+	}
+
+	public Set getWarehouses() {
+		return this.warehouses;
+	}
+
+	public void setWarehouses(Set warehouses) {
+		this.warehouses = warehouses;
 	}
 
 }

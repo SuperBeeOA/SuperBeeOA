@@ -31,6 +31,7 @@ public class Orders implements java.io.Serializable {
 	private Set enters = new HashSet(0);
 	private Set monitorings = new HashSet(0);
 	private Set proorders = new HashSet(0);
+	private Set orderrootses = new HashSet(0);
 
 	// Constructors
 
@@ -44,7 +45,7 @@ public class Orders implements java.io.Serializable {
 			Employee employeeByOriginator, Product product, String ordernumber,
 			Timestamp datetime, String orderno, BigDecimal quantity,
 			BigDecimal price, String orderremarks, Set outs, Set enters,
-			Set monitorings, Set proorders) {
+			Set monitorings, Set proorders, Set orderrootses) {
 		this.employeeByOperator = employeeByOperator;
 		this.department = department;
 		this.customer = customer;
@@ -62,6 +63,7 @@ public class Orders implements java.io.Serializable {
 		this.enters = enters;
 		this.monitorings = monitorings;
 		this.proorders = proorders;
+		this.orderrootses = orderrootses;
 	}
 
 	// Property accessors
@@ -208,6 +210,14 @@ public class Orders implements java.io.Serializable {
 
 	public void setProorders(Set proorders) {
 		this.proorders = proorders;
+	}
+
+	public Set getOrderrootses() {
+		return this.orderrootses;
+	}
+
+	public void setOrderrootses(Set orderrootses) {
+		this.orderrootses = orderrootses;
 	}
 
 }

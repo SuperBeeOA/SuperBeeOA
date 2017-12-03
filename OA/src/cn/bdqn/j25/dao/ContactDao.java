@@ -3,8 +3,7 @@ package cn.bdqn.j25.dao;
 import java.util.List;
 
 import cn.bdqn.j25.pojo.Contact;
-import cn.bdqn.j25.pojo.Employee;
-import cn.bdqn.j25.pojo.State;
+
 
 public interface ContactDao {
 	public List<Contact> finaAll();// 查询所有联络单

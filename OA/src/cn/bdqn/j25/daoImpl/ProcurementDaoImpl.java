@@ -17,9 +17,9 @@ public class ProcurementDaoImpl extends HibernateDaoSupport implements
 	}
 
 	@Override
-	public List<Procurement> findByName(String name) {
+	public List<Procurement> findByNo(String no) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().find("from Procurement where ", name);
+		return this.getHibernateTemplate().find("from Procurement where ", no);
 	}
 
 	@Override
