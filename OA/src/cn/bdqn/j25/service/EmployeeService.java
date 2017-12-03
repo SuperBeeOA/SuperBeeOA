@@ -18,7 +18,7 @@ public interface EmployeeService {
 
 	public List<Employee> findByName(String name);// 根据名字查询
 
-	public Employee addOrUpdateType(Employee employee); // 增加或更新类型
+	public Employee addOrUpdateEmployee(Employee employee); // 增加或更新类型
 
-	public Boolean delType(Employee employee); // 增加类型
+	public Boolean delEmployee(Employee employee); // 增加类型
 }
