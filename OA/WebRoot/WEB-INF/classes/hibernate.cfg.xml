@@ -27,6 +27,7 @@
 	<mapping resource="cn/bdqn/j25/pojo/Announcement.hbm.xml" />
 	<mapping resource="cn/bdqn/j25/pojo/Attendance.hbm.xml" />
 	<mapping resource="cn/bdqn/j25/pojo/Checks.hbm.xml" />
+	<mapping resource="cn/bdqn/j25/pojo/Clockin.hbm.xml" />
 	<mapping resource="cn/bdqn/j25/pojo/Contact.hbm.xml" />
 	<mapping resource="cn/bdqn/j25/pojo/Customer.hbm.xml" />
 	<mapping resource="cn/bdqn/j25/pojo/Department.hbm.xml" />
@@ -37,6 +38,7 @@
 	<mapping resource="cn/bdqn/j25/pojo/Material.hbm.xml" />
 	<mapping resource="cn/bdqn/j25/pojo/Monitoring.hbm.xml" />
 	<mapping resource="cn/bdqn/j25/pojo/Orders.hbm.xml" />
+	<mapping resource="cn/bdqn/j25/pojo/Orderroots.hbm.xml" />
 	<mapping resource="cn/bdqn/j25/pojo/Out.hbm.xml" />
 	<mapping resource="cn/bdqn/j25/pojo/Performances.hbm.xml" />
 	<mapping resource="cn/bdqn/j25/pojo/Post.hbm.xml" />

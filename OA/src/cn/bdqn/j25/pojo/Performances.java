@@ -12,7 +12,7 @@ public class Performances implements java.io.Serializable {
 	// Fields
 
 	private BigDecimal performanceid;
-	private Employee employee;
+	private String name;
 	private BigDecimal performancebonus;
 	private Timestamp time;
 	private String levels;
@@ -24,9 +24,9 @@ public class Performances implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Performances(Employee employee, BigDecimal performancebonus,
+	public Performances(String name, BigDecimal performancebonus,
 			Timestamp time, String levels) {
-		this.employee = employee;
+		this.name = name;
 		this.performancebonus = performancebonus;
 		this.time = time;
 		this.levels = levels;
@@ -42,12 +42,12 @@ public class Performances implements java.io.Serializable {
 		this.performanceid = performanceid;
 	}
 
-	public Employee getEmployee() {
-		return this.employee;
+	public String getName() {
+		return this.name;
 	}
 
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public BigDecimal getPerformancebonus() {

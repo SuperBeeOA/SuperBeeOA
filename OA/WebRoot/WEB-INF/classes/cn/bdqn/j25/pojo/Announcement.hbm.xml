@@ -8,11 +8,8 @@
     <class name="cn.bdqn.j25.pojo.Announcement" table="ANNOUNCEMENT" schema="SCOTT">
         <id name="announcementid" type="java.math.BigDecimal">
             <column name="ANNOUNCEMENTID" precision="22" scale="0" />
-            <generator class="increment" />
+            <generator class="increment"></generator>
         </id>
-        <many-to-one name="state" class="cn.bdqn.j25.pojo.State" fetch="select">
-            <column name="STATEID" precision="22" scale="0" />
-        </many-to-one>
         <many-to-one name="employee" class="cn.bdqn.j25.pojo.Employee" fetch="select">
             <column name="EMPLOYEEID" precision="22" scale="0" />
         </many-to-one>

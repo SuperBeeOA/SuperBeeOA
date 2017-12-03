@@ -17,7 +17,6 @@ public class State implements java.io.Serializable {
 	private Set procurements = new HashSet(0);
 	private Set orderrootses = new HashSet(0);
 	private Set contacts = new HashSet(0);
-	private Set announcements = new HashSet(0);
 	private Set orderses = new HashSet(0);
 
 	// Constructors
@@ -33,12 +32,11 @@ public class State implements java.io.Serializable {
 
 	/** full constructor */
 	public State(String statename, Set procurements, Set orderrootses,
-			Set contacts, Set announcements, Set orderses) {
+			Set contacts, Set orderses) {
 		this.statename = statename;
 		this.procurements = procurements;
 		this.orderrootses = orderrootses;
 		this.contacts = contacts;
-		this.announcements = announcements;
 		this.orderses = orderses;
 	}
 
@@ -82,14 +80,6 @@ public class State implements java.io.Serializable {
 
 	public void setContacts(Set contacts) {
 		this.contacts = contacts;
-	}
-
-	public Set getAnnouncements() {
-		return this.announcements;
-	}
-
-	public void setAnnouncements(Set announcements) {
-		this.announcements = announcements;
 	}
 
 	public Set getOrderses() {

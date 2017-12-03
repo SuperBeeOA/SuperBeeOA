@@ -1,6 +1,7 @@
 package cn.bdqn.j25.pojo;
 
 import java.math.BigDecimal;
+import java.sql.Timestamp;
 
 /**
  * Attendance entity. @author MyEclipse Persistence Tools
@@ -12,6 +13,7 @@ public class Attendance implements java.io.Serializable {
 
 	private BigDecimal attendanceid;
 	private Employee employee;
+	private Timestamp attendancetime;
 	private BigDecimal leave;
 	private BigDecimal absenteeism;
 	private String remarks;
@@ -23,9 +25,10 @@ public class Attendance implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Attendance(Employee employee, BigDecimal leave,
-			BigDecimal absenteeism, String remarks) {
+	public Attendance(Employee employee, Timestamp attendancetime,
+			BigDecimal leave, BigDecimal absenteeism, String remarks) {
 		this.employee = employee;
+		this.attendancetime = attendancetime;
 		this.leave = leave;
 		this.absenteeism = absenteeism;
 		this.remarks = remarks;
@@ -47,6 +50,14 @@ public class Attendance implements java.io.Serializable {
 
 	public void setEmployee(Employee employee) {
 		this.employee = employee;
+	}
+
+	public Timestamp getAttendancetime() {
+		return this.attendancetime;
+	}
+
+	public void setAttendancetime(Timestamp attendancetime) {
+		this.attendancetime = attendancetime;
 	}
 
 	public BigDecimal getLeave() {
