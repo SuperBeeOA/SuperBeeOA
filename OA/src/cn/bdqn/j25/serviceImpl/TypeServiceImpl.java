@@ -31,15 +31,9 @@ public class TypeServiceImpl implements TypeService {
 	}
 
 	@Override
-	public Boolean delType(Types types) {
-		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(types.getTypeid().intValue())!=null){
+	public void delType(Types types) {
+		// TODO Auto-generated method stub		
 			typeDao.delType(types);
-			b=true;
-			return b;
-		}
-		return b;
 		
 	}
 

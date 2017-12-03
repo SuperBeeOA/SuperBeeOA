@@ -42,15 +42,9 @@ public class OrdersServiceImpl implements OrdersService {
 	}
 
 	@Override
-	public Boolean delOrders(Orders orders) {
+	public void delOrders(Orders orders) {
 		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(orders.getOrderid().intValue())!=null){
-			ordersDao.delOrders(orders);
-			b=true;
-			return b;
-		}
-		return b;
+		ordersDao.delOrders(orders);
 	}
 
 }

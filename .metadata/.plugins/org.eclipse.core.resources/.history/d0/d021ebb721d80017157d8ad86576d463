@@ -1,0 +1,24 @@
+package cn.bdqn.j25.service;
+
+import java.util.List;
+
+import cn.bdqn.j25.pojo.Customer;
+
+public interface CustomerService {
+	
+	public Customer findByid(int id);//根据id查询
+	
+	public List<Customer> findAll();//查询全部
+	
+	public List<Customer> findByCustomername(String customername);//根据客户名字查询
+	
+	public List<Customer> findByContacts(String contacts);//根据联系人查询
+	
+	public List<Customer> findByPage(Customer customer,int first,int max);//分页展示全部
+	
+	public List<Customer> findByLevel(String level);//根据级别查询
+	
+	public Customer addOrUpdateCustomer(Customer customer);//增加或更新客户信息
+	
+	public Boolean delCustomer(Customer customer); //删除
+}

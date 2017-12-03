@@ -43,15 +43,9 @@ public class MonitoringServiceImpl implements MonitoringService {
 	}
 
 	@Override
-	public Boolean delMonitoring(Monitoring monitoring) {
+	public void delMonitoring(Monitoring monitoring) {
 		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(monitoring.getMonitoringid().intValue())!=null){
-			monitoringDao.delMonitoring(monitoring);
-			b=true;
-			return b;
-		}
-		return b;
+		monitoringDao.delMonitoring(monitoring);
 	}
 
 }

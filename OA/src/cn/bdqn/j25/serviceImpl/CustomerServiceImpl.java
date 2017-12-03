@@ -61,15 +61,9 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public Boolean delCustomer(Customer customer) {
+	public void delCustomer(Customer customer) {
 		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(customer.getCustomerid().intValue())!=null){
-			customerDao.delCustomer(customer);
-			b=true;
-			return b;
-		}
-		return b;
+		customerDao.delCustomer(customer);
 	}
 
 }

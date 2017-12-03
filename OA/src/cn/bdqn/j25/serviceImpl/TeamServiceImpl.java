@@ -37,15 +37,10 @@ public class TeamServiceImpl implements TeamService {
 	}
 
 	@Override
-	public Boolean delTeam(Team team) {
-		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(team.getTeamid().intValue())!=null){
+	public void delTeam(Team team) {
+		// TODO Auto-generated method stub	
 			teamDao.delTeam(team);
-			b=true;
-			return b;
-		}
-		return b;
+		
 	}
 
 }

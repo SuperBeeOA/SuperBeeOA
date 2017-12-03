@@ -61,15 +61,9 @@ public class AccountsServiceImpl implements AccountsService {
 	}
 
 	@Override
-	public Boolean delAccounts(Accounts accounts) {
+	public void delAccounts(Accounts accounts) {
 		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(accounts.getAccountsid().intValue())!=null){
-			accountsDao.delAccounts(accounts);
-			b=true;
-			return b;
-		}
-		return b;
+		accountsDao.delAccounts(accounts);
 	}
 
 }

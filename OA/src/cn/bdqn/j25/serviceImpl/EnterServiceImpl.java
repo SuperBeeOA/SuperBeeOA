@@ -37,15 +37,9 @@ public class EnterServiceImpl implements EnterService {
 	}
 
 	@Override
-	public boolean delEnter(Enter enter) {
+	public void delEnter(Enter enter) {
 		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(enter.getEnterid().intValue())!=null){
-			enterDao.delEnter(enter);
-			b=true;
-			return b;
-		}
-		return b;
+		enterDao.delEnter(enter);
 	}
 
 }

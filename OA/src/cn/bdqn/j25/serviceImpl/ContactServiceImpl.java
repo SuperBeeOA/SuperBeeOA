@@ -42,27 +42,15 @@ public class ContactServiceImpl implements ContactService {
 	}
 
 	@Override
-	public boolean updateContact(Contact contact) {
-		boolean flag=false;
-		Contact contactCode = contactDao.updateContact(contact);
-		
-		if(contactCode==null){
-			flag=true;
-		}
-		return flag;
+	public Contact updateContact(Contact contact) {
+		return contactDao.updateContact(contact);
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public boolean addContact(Contact contact) {
-		boolean flag=false;
-		Contact contactCode = contactDao.updateContact(contact);
-		
-		if(contactCode==null){
-			flag=true;
-		}
-		return flag;
+	public Contact addContact(Contact contact) {
+		return contactDao.updateContact(contact);
 		// TODO Auto-generated method stub
 
 	}

@@ -37,15 +37,10 @@ public class WarehouseServiceImpl implements WarehouseService {
 	}
 
 	@Override
-	public boolean delWarehouse(Warehouse warehouse) {
+	public void delWarehouse(Warehouse warehouse) {
 		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(warehouse.getWarehouseid().intValue())!=null){
 			warehouseDao.delWarehouse(warehouse);
-			b=true;
-			return b;
-		}
-		return b;
+	
 	}
 
 }

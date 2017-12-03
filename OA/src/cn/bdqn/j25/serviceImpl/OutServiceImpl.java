@@ -37,15 +37,9 @@ public class OutServiceImpl implements OutService {
 	}
 
 	@Override
-	public boolean delOut(Out out) {
+	public void delOut(Out out) {
 		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(out.getOutid().intValue())!=null){
-			outDao.delOut(out);
-			b=true;
-			return b;
-		}
-		return b;
+		outDao.delOut(out);
 	}
 
 }

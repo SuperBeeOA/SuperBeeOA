@@ -11,7 +11,7 @@ public interface AnnouncementService {
 
 	public Announcement addAnnouncement(Announcement announcement); // 添加公告
 
-	public boolean delAnnouncement(String announcementid);// 删除公告
+	public void delAnnouncement(String announcementid);// 删除公告
 
 	
 }

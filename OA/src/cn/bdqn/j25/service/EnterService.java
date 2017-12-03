@@ -12,6 +12,6 @@ public interface EnterService {
 	 
 	public Enter addOrUpdateOut(Enter enter);//增加或更新信息
 	
-	public boolean delEnter(Enter enter); //删除
+	public void delEnter(Enter enter); //删除
 	
 }

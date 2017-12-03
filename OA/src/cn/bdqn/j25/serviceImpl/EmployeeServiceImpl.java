@@ -63,15 +63,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public Boolean delEmployee(Employee employee) {
+	public void delEmployee(Employee employee) {
 		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(employee.getEmployeeid().intValue())!=null){
-			employeeDao.delType(employee);
-			b=true;
-			return b;
-		}
-		return b;
+		employeeDao.delType(employee);
 	}
 
 }

@@ -20,5 +20,5 @@ public interface EmployeeService {
 
 	public Employee addOrUpdateEmployee(Employee employee); // 增加或更新类型
 
-	public Boolean delEmployee(Employee employee); // 增加类型
+	public void delEmployee(Employee employee); // 增加类型
 }

@@ -13,5 +13,5 @@ public interface OrdersService {
 	 
 	public Orders addOrUpdateOrders(Orders orders);//增加或更新信息
 	
-	public Boolean delOrders(Orders orders); //删除
+	public void delOrders(Orders orders); //删除
 }

@@ -43,15 +43,9 @@ public class EquipmentServiceImpl implements EquipmentService{
 	}
 
 	@Override
-	public Boolean delEquipment(Equipment equipment) {
+	public void delEquipment(Equipment equipment) {
 		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(equipment.getEquipmentid().intValue())!=null){
-			equipmentDao.delEquipment(equipment);
-			b=true;
-			return b;
-		}
-		return b;
+		equipmentDao.delEquipment(equipment);
 	}
 
 }

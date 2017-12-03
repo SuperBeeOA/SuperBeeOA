@@ -37,15 +37,9 @@ public class DepartmentServiceImpl implements DepartmentService {
 	}
 
 	@Override
-	public Boolean delDepartment(Department department) {
+	public void delDepartment(Department department) {
 		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(department.getDepartmentid().intValue())!=null){
-			departmentDao.delDepartment(department);
-			b=true;
-			return b;
-		}
-		return b;
+		departmentDao.delDepartment(department);
 	}
 
 }

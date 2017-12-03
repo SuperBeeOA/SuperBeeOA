@@ -13,5 +13,5 @@ public interface MonitoringService {
 	 
 	public Monitoring addOrUpdateMonitoring(Monitoring monitoring);//增加或更新信息
 	
-	public Boolean delMonitoring(Monitoring monitoring); //删除
+	public void delMonitoring(Monitoring monitoring); //删除
 }

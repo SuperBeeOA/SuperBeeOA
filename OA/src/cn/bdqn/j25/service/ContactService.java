@@ -13,7 +13,7 @@ public interface ContactService {
 
 	public List<Contact> finaantactBySender(String name);// 根据发件人联络单;
 
-	public boolean updateContact(Contact contact);// 改联络单状态
+	public Contact updateContact(Contact contact);// 改联络单状态
 	
-	public boolean addContact(Contact contact);//添加联络单
+	public Contact addContact(Contact contact);//添加联络单
 }

@@ -20,5 +20,5 @@ public interface AccountsService {
 	 
 	public Accounts addOrUpdateAccounts(Accounts accounts);//增加或更新账目信息
 	
-	public Boolean delAccounts(Accounts accounts); //删除
+	public void delAccounts(Accounts accounts); //删除
 }

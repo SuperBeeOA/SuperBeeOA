@@ -12,5 +12,5 @@ public interface TypeService {
 	
 	public  Types addOrUpdateType(Types types); //增加或更新类型
 	
-	public Boolean delType(Types types); //增加类型
+	public void delType(Types types); //增加类型
 }

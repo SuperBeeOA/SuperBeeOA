@@ -37,15 +37,10 @@ public class WorkshopServiceImpl implements WorkshopService {
 	}
 
 	@Override
-	public Boolean delWorkshop(Workshop workshop) {
+	public void delWorkshop(Workshop workshop) {
 		// TODO Auto-generated method stub
-		Boolean b=false;
-		if(this.findByid(workshop.getWorkshopid().intValue())!=null){
 			workshopDao.delWorkshop(workshop);
-			b=true;
-			return b;
-		}
-		return b;
+
 	}
 
 }

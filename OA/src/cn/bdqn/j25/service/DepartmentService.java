@@ -12,5 +12,5 @@ public interface DepartmentService {
 	
 	public Department addOrUpdateDepartment(Department department); //增加或更新部门信息
 	
-	public Boolean delDepartment(Department department); //删除
+	public void delDepartment(Department department); //删除
 }

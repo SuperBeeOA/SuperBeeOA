@@ -12,6 +12,6 @@ public interface WarehouseService {
 	 
 	public Warehouse addOrUpdateWarehouse(Warehouse warehouse);//增加或更新信息
 	
-	public boolean delWarehouse(Warehouse warehouse); //删除
+	public void delWarehouse(Warehouse warehouse); //删除
 	
 }

@@ -8,4 +8,16 @@
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.WorkshopDao"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.MaterialDao"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.service.MaterialService"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.PerformancesDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.ProductDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.ProorderDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.ProcurementService"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.ProviderDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.StateDao"/>
+<fullyQualifiedTypeName name="org.springframework.orm.hibernate3.support.HibernateDaoSupport"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.WagesDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.HolidaysDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.RestDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.PostDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.OrderrootsDao"/>
 </qualifiedTypeNameHistroy>

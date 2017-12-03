@@ -12,5 +12,5 @@ public interface TeamService {
 	
 	public Team addOrUpdateTeam(Team team);//增加或更新信息
 	
-	public Boolean delTeam(Team team); //删除
+	public void delTeam(Team team); //删除
 }

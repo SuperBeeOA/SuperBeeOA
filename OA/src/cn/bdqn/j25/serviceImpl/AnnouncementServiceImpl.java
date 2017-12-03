@@ -37,15 +37,9 @@ public class AnnouncementServiceImpl implements AnnouncementService {
 	}
 
 	@Override
-	public boolean delAnnouncement(String announcementid) {
-		boolean flag=false;
+	public void delAnnouncement(String announcementid) {
 		annoucementDao.delAnnouncement(announcementid);
-		if(annoucementDao.findByDepartmentid(announcementid)==null){
-			flag=true;
-		}
-           return flag;
 	}
-
 
 
 }

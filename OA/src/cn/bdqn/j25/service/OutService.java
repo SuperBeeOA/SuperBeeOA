@@ -12,6 +12,6 @@ public interface OutService {
 	 
 	public Out addOrUpdateOut(Out out);//增加或更新信息
 	
-	public boolean delOut(Out out); //删除
+	public void delOut(Out out); //删除
 	
 }

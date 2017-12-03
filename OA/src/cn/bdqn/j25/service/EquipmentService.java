@@ -14,5 +14,5 @@ public Equipment findByid(int id);//根据ID查询
 	 
 	public Equipment addOrUpdateEquipment(Equipment equipment);//增加或更新信息
 	
-	public Boolean delEquipment(Equipment equipment); //删除
+	public void delEquipment(Equipment equipment); //删除
 }
