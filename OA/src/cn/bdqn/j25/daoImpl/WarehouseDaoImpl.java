@@ -24,7 +24,7 @@ public class WarehouseDaoImpl extends HibernateDaoSupport implements WarehouseDa
 	}
 
 	@Override
-	public Warehouse addOrUpdateOut(Warehouse warehouse) {
+	public Warehouse addOrUpdateWarehouse(Warehouse warehouse) {
 		// TODO Auto-generated method stub
 		return this.getHibernateTemplate().merge(warehouse);
 	}

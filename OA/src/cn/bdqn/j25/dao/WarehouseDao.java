@@ -10,7 +10,7 @@ public interface WarehouseDao {
 	
 	public List<Warehouse> findByPage(Warehouse warehouse,int first,int max);//分页展示全部
 	 
-	public Warehouse addOrUpdateOut(Warehouse warehouse);//增加或更新信息
+	public Warehouse addOrUpdateWarehouse(Warehouse warehouse);//增加或更新信息
 	
 	public void delWarehouse(Warehouse warehouse); //删除
 	

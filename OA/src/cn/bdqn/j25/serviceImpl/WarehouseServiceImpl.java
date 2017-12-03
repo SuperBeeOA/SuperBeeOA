@@ -31,9 +31,9 @@ public class WarehouseServiceImpl implements WarehouseService {
 	}
 
 	@Override
-	public Warehouse addOrUpdateOut(Warehouse warehouse) {
+	public Warehouse addOrUpdateWarehouse(Warehouse warehouse) {
 		// TODO Auto-generated method stub
-		return warehouseDao.addOrUpdateOut(warehouse);
+		return warehouseDao.addOrUpdateWarehouse(warehouse);
 	}
 
 	@Override
