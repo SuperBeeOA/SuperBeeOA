@@ -104,27 +104,28 @@
 	        
 	        <div class="col-md-7 panel" style="background-color: #f8f8f8; height:0px; padding-bottom:50%">
 	            <div>
-	            	<h2 style="padding-left: 50px;">公告</h2>
+	            	<h2 style="padding-left: 50px;">公司公告</h2>
 		            <hr>
-		            <ul class="list-unstyled" style="padding-left: 50px;">
+		            <ul id="announcement" class="list-unstyled" style="padding-left: 50px;">
 		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[财务]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
 		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[业务]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
 		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[人事]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
 		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[生产]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
 		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[仓库]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
 		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[质检]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
+		            	<li style="margin-bottom : 5px;"><a href="#"><strong>更多……</strong></a></li>
+		            </ul>
+		            
+	            	<h2 style="padding-left: 50px;">部门公告</h2>
+		            <hr>
+		            <ul id="dannouncement" class="list-unstyled" style="padding-left: 50px;">
 		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[财务]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
-		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[业务]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
-		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[人事]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
-		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[生产]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
-		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[仓库]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
-		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[质检]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
 		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[财务]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
-		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[业务]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
-		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[人事]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
-		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[生产]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
-		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[仓库]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
-		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[质检]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
+		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[财务]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
+		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[财务]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
+		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[财务]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
+		            	<li style="margin-bottom : 5px;"><a href="#"><strong>[财务]</strong></a>&nbsp;<a href="#">吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦……<label>2017/11/24 9:20</label></a></li>
+		            	<li style="margin-bottom : 5px;"><a href="#"><strong>更多……</strong></a></li>
 		            </ul>
 	            </div>
 		        <%-- <div style="text-align:right; position: absolute; right:35px; top: 120px;">
