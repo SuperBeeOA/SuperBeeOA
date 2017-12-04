@@ -20,7 +20,7 @@
 	        </div>
 	        
 	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height:0px; padding-bottom:50%">
-	            
+	            <%@include file="common/public.jsp" %>
 	        </div>
 	        
 	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:0px; padding-bottom:50%">
