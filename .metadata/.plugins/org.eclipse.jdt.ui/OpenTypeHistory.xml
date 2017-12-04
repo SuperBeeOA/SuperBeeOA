@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{CustomerService.java[CustomerService" modifiers="513" timestamp="1512225709737"/>
+<typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{CustomerService.java[CustomerService" modifiers="513" timestamp="1512302498929"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{CustomerDao.java[CustomerDao" modifiers="513" timestamp="1512215163457"/>
-<typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{DepartmentService.java[DepartmentService" modifiers="513" timestamp="1512225834737"/>
+<typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{DepartmentService.java[DepartmentService" modifiers="513" timestamp="1512302529699"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{TeamDao.java[TeamDao" modifiers="513" timestamp="1512204562478"/>
-<typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{TeamService.java[TeamService" modifiers="513" timestamp="1512226238496"/>
-<typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{WorkshopService.java[WorkshopService" modifiers="513" timestamp="1512226432818"/>
+<typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{TeamService.java[TeamService" modifiers="513" timestamp="1512302580638"/>
+<typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{WorkshopService.java[WorkshopService" modifiers="513" timestamp="1512302608592"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{MaterialDao.java[MaterialDao" modifiers="513" timestamp="1512280989669"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{MaterialService.java[MaterialService" modifiers="513" timestamp="1512281017537"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{ProcurementDao.java[ProcurementDao" modifiers="513" timestamp="1512281802289"/>

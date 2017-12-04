@@ -233,10 +233,9 @@
 			<tx:method name="*" propagation="REQUIRED" read-only="true" /> 
 		</tx:attributes> 
 		</tx:advice>
-		<aop:config> 定义切入点
-			<aop:pointcut id="serviceMethod" expression="execution(* cn.bdqn.j25.serviceImpl.*.*(..))"/>
-			 将事务通知与切入点组合 
-			 <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethod"/>
-		</aop:config> -->
+		 <aop:config> 定义切入点
+		<aop:pointcut id="serviceMethod" expression="execution(* cn.bdqn.j25.serviceImpl.*.*(..))"/>
+		 将事务通知与切入点组合 
+		 <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethod"/></aop:config> -->
 
 </beans>

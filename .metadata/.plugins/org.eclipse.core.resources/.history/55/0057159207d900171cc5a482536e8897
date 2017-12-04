@@ -217,26 +217,16 @@
 	
 	<!-- 定义事务管理器 -->
 	<!-- <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager"> 
-			<property name="sessionFactory" ref="sessionFactory" /> 
-		</bean> 
-		<tx:advice id="txAdvice" transaction-manager="txManager"> 
-		定义事务属性,声明事务规则 
-		<tx:attributes> 
-			<tx:method name="find*" read-only="true"/> 
-			<tx:method name="search*" read-only="true"/> 
-			<tx:method name="query*" read-only="true"/>
-			<tx:method name="add*" propagation="REQUIRED"/> 
-			<tx:method name="register" propagation="REQUIRED"/> 
-			<tx:method name="del*" propagation="REQUIRED"/> 
-			<tx:method name="update*" propagation="REQUIRED"/>
-			<tx:method name="do*" propagation="REQUIRED"/> 
-			<tx:method name="*" propagation="REQUIRED" read-only="true" /> 
-		</tx:attributes> 
-		</tx:advice>
-		<aop:config> 定义切入点
-			<aop:pointcut id="serviceMethod" expression="execution(* cn.bdqn.j25.serviceImpl.*.*(..))"/>
-			 将事务通知与切入点组合 
-			 <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethod"/>
-		</aop:config> -->
+		<property name="sessionFactory" ref="sessionFactory" /> </bean> <tx:advice 
+		id="txAdvice" transaction-manager="txManager"> 定义事务属性,声明事务规则 <tx:attributes> 
+		<tx:method name="find*" read-only="true" /> <tx:method name="search*" read-only="true" 
+		/> <tx:method name="query*" read-only="true" /> <tx:method name="add*" propagation="REQUIRED" 
+		/> <tx:method name="register" propagation="REQUIRED" /> <tx:method name="del*" 
+		propagation="REQUIRED" /> <tx:method name="update*" propagation="REQUIRED" 
+		/> <tx:method name="do*" propagation="REQUIRED" /> <tx:method name="*" propagation="REQUIRED" 
+		read-only="true" /> </tx:attributes> </tx:advice> <aop:config> 定义切入点 <aop:pointcut 
+		id="serviceMethod" expression="execution(* cn.bdqn.j25.serviceImpl.*.*(..))" 
+		/> 将事务通知与切入点组合 <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethod" 
+		/> </aop:config> -->
 
 </beans>
