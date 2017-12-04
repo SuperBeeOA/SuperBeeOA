@@ -1,22 +1,20 @@
 $(function() {
 	  $("#np").click(function() {
-		  $(this).parents().siblings(".active").removeClass("active");
-		  $(this).parent().addClass("active");
-		  $("#").show();
+		  $("#add").show();
 		  $("#contact").hide();
 		  $("#attendance").hide();
 		  $("#announcement").hide();
 		  $("#info").hide();
+		  $("#manage").hide();
 	  });
 	  
 	  $("#mp").click(function() {
-		  $(this).parents().siblings(".active").removeClass("active");
-		  $(this).parent().addClass("active");
-		  $("#").show();
+		  $("#manage").show();
 		  $("#contact").hide();
 		  $("#attendance").hide();
 		  $("#announcement").hide();
 		  $("#info").hide();
+		  $("#add").hide();
 	  });
 	  
 });

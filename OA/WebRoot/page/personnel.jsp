@@ -24,6 +24,17 @@
 	        
 	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height:0px; padding-bottom:50%">
 	            <%@include file="common/public.jsp" %>
+	            <div id="add" style="display: none;">
+	            	<h2 class="text-center">增加员工</h2>
+					<hr>
+					<form action="">
+						
+					</form>
+	            </div>
+	            <div id="manage" style="display: none;">
+	            	<h2 class="text-center">管理员工</h2>
+					<hr>
+	            </div>
 	        </div>
 	        
 	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:0px; padding-bottom:50%">
