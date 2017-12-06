@@ -127,7 +127,7 @@
 	<bean id="announcementService" class="cn.bdqn.j25.serviceImpl.AnnouncementServiceImpl">
 		<property name="annoucementDao" ref="announcementDao"></property>
 	</bean>
-	<bean id="attendanceDao" class="cn.bdqn.j25.serviceImpl.AttendanceServiceImpl">
+	<bean id="attendanceService" class="cn.bdqn.j25.serviceImpl.AttendanceServiceImpl">
 		<property name="attendanDao" ref="attendanceDao"></property>
 	</bean>
 	<bean id="checksService" class="cn.bdqn.j25.serviceImpl.ChecksServiceImpl">
