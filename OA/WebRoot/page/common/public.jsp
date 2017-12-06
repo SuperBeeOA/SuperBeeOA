@@ -96,7 +96,7 @@
 		<br>
 		<input type="file" name="image">
 		<br>
-		<input class="btn btn-primary col-md-offset-5" type="submit" value="发布公告">
+		<input class="btn btn-primary" type="submit" value="发布公告" style="position: relative; left: 45%;">
 	</form>
 </div>
 
@@ -131,7 +131,7 @@
 			<br>
 			<textarea rows="20" cols="100" name="com" id="com" class="col-md-offset-1"></textarea>
 			<br>
-			<input class="btn btn-primary col-md-offset-5" type="submit" value="发送消息">
+			<input class="btn btn-primary" type="submit" value="发送消息" style="position: relative; left: 45%;">
 		</form>
 	</div>
 	<div id="in" style="display: none;">
