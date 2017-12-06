@@ -1,7 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
-
 /**
  * Equipment entity. @author MyEclipse Persistence Tools
  */
@@ -10,15 +8,14 @@ public class Equipment implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal equipmentid;
+	private Integer equipmentid;
 	private Provider provider;
 	private Workshop workshop;
 	private String equipmentname;
 	private String equipmentno;
 	private String equipmentsituation;
-	private BigDecimal servicelife;
-	private BigDecimal usedlife;
-	private BigDecimal maintenance;
+	private Integer servicelife;
+	private Integer usedlife;
 	private String remarks;
 
 	// Constructors
@@ -30,8 +27,8 @@ public class Equipment implements java.io.Serializable {
 	/** full constructor */
 	public Equipment(Provider provider, Workshop workshop,
 			String equipmentname, String equipmentno,
-			String equipmentsituation, BigDecimal servicelife,
-			BigDecimal usedlife, BigDecimal maintenance, String remarks) {
+			String equipmentsituation, Integer servicelife, Integer usedlife,
+			String remarks) {
 		this.provider = provider;
 		this.workshop = workshop;
 		this.equipmentname = equipmentname;
@@ -39,17 +36,16 @@ public class Equipment implements java.io.Serializable {
 		this.equipmentsituation = equipmentsituation;
 		this.servicelife = servicelife;
 		this.usedlife = usedlife;
-		this.maintenance = maintenance;
 		this.remarks = remarks;
 	}
 
 	// Property accessors
 
-	public BigDecimal getEquipmentid() {
+	public Integer getEquipmentid() {
 		return this.equipmentid;
 	}
 
-	public void setEquipmentid(BigDecimal equipmentid) {
+	public void setEquipmentid(Integer equipmentid) {
 		this.equipmentid = equipmentid;
 	}
 
@@ -93,28 +89,20 @@ public class Equipment implements java.io.Serializable {
 		this.equipmentsituation = equipmentsituation;
 	}
 
-	public BigDecimal getServicelife() {
+	public Integer getServicelife() {
 		return this.servicelife;
 	}
 
-	public void setServicelife(BigDecimal servicelife) {
+	public void setServicelife(Integer servicelife) {
 		this.servicelife = servicelife;
 	}
 
-	public BigDecimal getUsedlife() {
+	public Integer getUsedlife() {
 		return this.usedlife;
 	}
 
-	public void setUsedlife(BigDecimal usedlife) {
+	public void setUsedlife(Integer usedlife) {
 		this.usedlife = usedlife;
-	}
-
-	public BigDecimal getMaintenance() {
-		return this.maintenance;
-	}
-
-	public void setMaintenance(BigDecimal maintenance) {
-		this.maintenance = maintenance;
 	}
 
 	public String getRemarks() {

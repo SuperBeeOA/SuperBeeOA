@@ -11,7 +11,7 @@ public class Accounts implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal accountsid;
+	private Integer accountsid;
 	private Employee employee;
 	private String output;
 	private Timestamp time;
@@ -38,11 +38,11 @@ public class Accounts implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getAccountsid() {
+	public Integer getAccountsid() {
 		return this.accountsid;
 	}
 
-	public void setAccountsid(BigDecimal accountsid) {
+	public void setAccountsid(Integer accountsid) {
 		this.accountsid = accountsid;
 	}
 

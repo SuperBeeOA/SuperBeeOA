@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +11,7 @@ public class Workshop implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal workshopid;
+	private Integer workshopid;
 	private String workshopname;
 	private Set equipments = new HashSet(0);
 	private Set employees = new HashSet(0);
@@ -32,11 +31,11 @@ public class Workshop implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getWorkshopid() {
+	public Integer getWorkshopid() {
 		return this.workshopid;
 	}
 
-	public void setWorkshopid(BigDecimal workshopid) {
+	public void setWorkshopid(Integer workshopid) {
 		this.workshopid = workshopid;
 	}
 

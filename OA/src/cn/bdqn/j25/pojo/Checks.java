@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 /**
@@ -11,11 +10,11 @@ public class Checks implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal checkid;
+	private Integer checkid;
 	private Employee employee;
 	private Proorder proorder;
 	private String name;
-	private BigDecimal quantity;
+	private Integer quantity;
 	private String qualifiedrate;
 	private Timestamp time;
 	private String reasons;
@@ -29,7 +28,7 @@ public class Checks implements java.io.Serializable {
 
 	/** full constructor */
 	public Checks(Employee employee, Proorder proorder, String name,
-			BigDecimal quantity, String qualifiedrate, Timestamp time,
+			Integer quantity, String qualifiedrate, Timestamp time,
 			String reasons, String remarks) {
 		this.employee = employee;
 		this.proorder = proorder;
@@ -43,11 +42,11 @@ public class Checks implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getCheckid() {
+	public Integer getCheckid() {
 		return this.checkid;
 	}
 
-	public void setCheckid(BigDecimal checkid) {
+	public void setCheckid(Integer checkid) {
 		this.checkid = checkid;
 	}
 
@@ -75,11 +74,11 @@ public class Checks implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public BigDecimal getQuantity() {
+	public Integer getQuantity() {
 		return this.quantity;
 	}
 
-	public void setQuantity(BigDecimal quantity) {
+	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
 

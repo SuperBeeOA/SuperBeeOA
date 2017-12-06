@@ -6,15 +6,15 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Equipment" table="EQUIPMENT" schema="SCOTT">
-        <id name="equipmentid" type="java.math.BigDecimal">
-            <column name="EQUIPMENTID" precision="22" scale="0" />
+        <id name="equipmentid" type="java.lang.Integer">
+            <column name="EQUIPMENTID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <many-to-one name="provider" class="cn.bdqn.j25.pojo.Provider" fetch="select">
-            <column name="PROVIDERID" precision="22" scale="0" />
+            <column name="PROVIDERID" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="workshop" class="cn.bdqn.j25.pojo.Workshop" fetch="select">
-            <column name="WORKSHOPID" precision="22" scale="0" />
+            <column name="WORKSHOPID" precision="9" scale="0" />
         </many-to-one>
         <property name="equipmentname" type="java.lang.String">
             <column name="EQUIPMENTNAME" length="20" />
@@ -25,14 +25,11 @@
         <property name="equipmentsituation" type="java.lang.String">
             <column name="EQUIPMENTSITUATION" length="10" />
         </property>
-        <property name="servicelife" type="java.math.BigDecimal">
-            <column name="SERVICELIFE" precision="22" scale="0" />
+        <property name="servicelife" type="java.lang.Integer">
+            <column name="SERVICELIFE" precision="9" scale="0" />
         </property>
-        <property name="usedlife" type="java.math.BigDecimal">
-            <column name="USEDLIFE" precision="22" scale="0" />
-        </property>
-        <property name="maintenance" type="java.math.BigDecimal">
-            <column name="MAINTENANCE" precision="22" scale="0" />
+        <property name="usedlife" type="java.lang.Integer">
+            <column name="USEDLIFE" precision="9" scale="0" />
         </property>
         <property name="remarks" type="java.lang.String">
             <column name="REMARKS" length="50" />

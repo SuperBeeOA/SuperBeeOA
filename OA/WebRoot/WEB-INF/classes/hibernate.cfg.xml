@@ -17,7 +17,7 @@
 	<property name="connection.driver_class">
 		oracle.jdbc.driver.OracleDriver
 	</property>
-	<property name="myeclipse.connection.profile"></property>
+	<property name="myeclipse.connection.profile">Orcale</property>
 	<property name="show_sql">true</property>
 	<property name="format_sql">true</property>
 	<property name="current_session_context_class">thread</property>

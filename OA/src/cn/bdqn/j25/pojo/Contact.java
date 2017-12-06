@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 /**
@@ -11,13 +10,13 @@ public class Contact implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal contactid;
+	private Integer contactid;
 	private Employee employeeByRecipient;
 	private State state;
 	private Employee employeeBySender;
 	private String content;
 	private Timestamp time;
-	private BigDecimal permissions;
+	private Integer permissions;
 
 	// Constructors
 
@@ -28,7 +27,7 @@ public class Contact implements java.io.Serializable {
 	/** full constructor */
 	public Contact(Employee employeeByRecipient, State state,
 			Employee employeeBySender, String content, Timestamp time,
-			BigDecimal permissions) {
+			Integer permissions) {
 		this.employeeByRecipient = employeeByRecipient;
 		this.state = state;
 		this.employeeBySender = employeeBySender;
@@ -39,11 +38,11 @@ public class Contact implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getContactid() {
+	public Integer getContactid() {
 		return this.contactid;
 	}
 
-	public void setContactid(BigDecimal contactid) {
+	public void setContactid(Integer contactid) {
 		this.contactid = contactid;
 	}
 
@@ -87,11 +86,11 @@ public class Contact implements java.io.Serializable {
 		this.time = time;
 	}
 
-	public BigDecimal getPermissions() {
+	public Integer getPermissions() {
 		return this.permissions;
 	}
 
-	public void setPermissions(BigDecimal permissions) {
+	public void setPermissions(Integer permissions) {
 		this.permissions = permissions;
 	}
 

@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 /**
@@ -11,12 +10,13 @@ public class Announcement implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal announcementid;
+	private Integer announcementid;
+	private State state;
 	private Employee employee;
 	private Department department;
 	private String title;
 	private Timestamp time;
-	private BigDecimal typeid;
+	private Integer typeid;
 	private String image;
 	private String remarks;
 	private String context;
@@ -28,9 +28,10 @@ public class Announcement implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Announcement(Employee employee, Department department, String title,
-			Timestamp time, BigDecimal typeid, String image, String remarks,
-			String context) {
+	public Announcement(State state, Employee employee, Department department,
+			String title, Timestamp time, Integer typeid, String image,
+			String remarks, String context) {
+		this.state = state;
 		this.employee = employee;
 		this.department = department;
 		this.title = title;
@@ -43,12 +44,20 @@ public class Announcement implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getAnnouncementid() {
+	public Integer getAnnouncementid() {
 		return this.announcementid;
 	}
 
-	public void setAnnouncementid(BigDecimal announcementid) {
+	public void setAnnouncementid(Integer announcementid) {
 		this.announcementid = announcementid;
+	}
+
+	public State getState() {
+		return this.state;
+	}
+
+	public void setState(State state) {
+		this.state = state;
 	}
 
 	public Employee getEmployee() {
@@ -83,11 +92,11 @@ public class Announcement implements java.io.Serializable {
 		this.time = time;
 	}
 
-	public BigDecimal getTypeid() {
+	public Integer getTypeid() {
 		return this.typeid;
 	}
 
-	public void setTypeid(BigDecimal typeid) {
+	public void setTypeid(Integer typeid) {
 		this.typeid = typeid;
 	}
 

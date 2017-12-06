@@ -6,12 +6,12 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Warehouse" table="WAREHOUSE" schema="SCOTT">
-        <id name="warehouseid" type="java.math.BigDecimal">
-            <column name="WAREHOUSEID" precision="22" scale="0" />
+        <id name="warehouseid" type="java.lang.Integer">
+            <column name="WAREHOUSEID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <many-to-one name="types" class="cn.bdqn.j25.pojo.Types" fetch="select">
-            <column name="WAREHOUSETYPE" precision="22" scale="0" />
+            <column name="WAREHOUSETYPE" precision="9" scale="0" />
         </many-to-one>
         <property name="warehousename" type="java.lang.String">
             <column name="WAREHOUSENAME" length="10" />
@@ -33,13 +33,13 @@
         </property>
         <set name="outs" inverse="true">
             <key>
-                <column name="WAREHOUSEID" precision="22" scale="0" />
+                <column name="WAREHOUSEID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Out" />
         </set>
         <set name="enters" inverse="true">
             <key>
-                <column name="WAREHOUSEID" precision="22" scale="0" />
+                <column name="WAREHOUSEID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Enter" />
         </set>

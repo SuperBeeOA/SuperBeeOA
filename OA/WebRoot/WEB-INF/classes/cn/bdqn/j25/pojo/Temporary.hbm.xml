@@ -6,8 +6,8 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Temporary" table="TEMPORARY" schema="SCOTT">
-        <id name="temporaryid" type="java.math.BigDecimal">
-            <column name="TEMPORARYID" precision="22" scale="0" />
+        <id name="temporaryid" type="java.lang.Integer">
+            <column name="TEMPORARYID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <property name="name" type="java.lang.String">

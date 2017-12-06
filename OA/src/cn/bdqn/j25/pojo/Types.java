@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +11,7 @@ public class Types implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal typeid;
+	private Integer typeid;
 	private String typename;
 	private Set orderses = new HashSet(0);
 	private Set materials = new HashSet(0);
@@ -46,11 +45,11 @@ public class Types implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getTypeid() {
+	public Integer getTypeid() {
 		return this.typeid;
 	}
 
-	public void setTypeid(BigDecimal typeid) {
+	public void setTypeid(Integer typeid) {
 		this.typeid = typeid;
 	}
 

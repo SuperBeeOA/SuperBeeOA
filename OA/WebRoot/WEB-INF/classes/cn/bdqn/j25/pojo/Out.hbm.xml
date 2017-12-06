@@ -6,18 +6,18 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Out" table="OUT" schema="SCOTT">
-        <id name="outid" type="java.math.BigDecimal">
-            <column name="OUTID" precision="22" scale="0" />
+        <id name="outid" type="java.lang.Integer">
+            <column name="OUTID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <many-to-one name="employee" class="cn.bdqn.j25.pojo.Employee" fetch="select">
-            <column name="EMPLOYEEID" precision="22" scale="0" />
+            <column name="EMPLOYEEID" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="warehouse" class="cn.bdqn.j25.pojo.Warehouse" fetch="select">
-            <column name="WAREHOUSEID" precision="22" scale="0" />
+            <column name="WAREHOUSEID" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="orders" class="cn.bdqn.j25.pojo.Orders" fetch="select">
-            <column name="ORDERID" precision="22" scale="0" />
+            <column name="ORDERID" precision="9" scale="0" />
         </many-to-one>
         <property name="name" type="java.lang.String">
             <column name="NAME" length="20" />

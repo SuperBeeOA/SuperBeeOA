@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +11,7 @@ public class Post implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal postid;
+	private Integer postid;
 	private String postname;
 	private Set employees = new HashSet(0);
 
@@ -30,11 +29,11 @@ public class Post implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getPostid() {
+	public Integer getPostid() {
 		return this.postid;
 	}
 
-	public void setPostid(BigDecimal postid) {
+	public void setPostid(Integer postid) {
 		this.postid = postid;
 	}
 

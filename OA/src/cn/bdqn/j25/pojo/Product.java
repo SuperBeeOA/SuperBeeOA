@@ -12,13 +12,13 @@ public class Product implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal productid;
+	private Integer productid;
 	private Types types;
 	private String productname;
 	private String productno;
 	private BigDecimal productprice;
 	private String component;
-	private BigDecimal shelflife;
+	private Integer shelflife;
 	private String productmodel;
 	private BigDecimal productioncost;
 	private BigDecimal truckage;
@@ -39,7 +39,7 @@ public class Product implements java.io.Serializable {
 
 	/** full constructor */
 	public Product(Types types, String productname, String productno,
-			BigDecimal productprice, String component, BigDecimal shelflife,
+			BigDecimal productprice, String component, Integer shelflife,
 			String productmodel, BigDecimal productioncost,
 			BigDecimal truckage, String productremarks, Set orderses,
 			Set procurements) {
@@ -59,11 +59,11 @@ public class Product implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getProductid() {
+	public Integer getProductid() {
 		return this.productid;
 	}
 
-	public void setProductid(BigDecimal productid) {
+	public void setProductid(Integer productid) {
 		this.productid = productid;
 	}
 
@@ -107,11 +107,11 @@ public class Product implements java.io.Serializable {
 		this.component = component;
 	}
 
-	public BigDecimal getShelflife() {
+	public Integer getShelflife() {
 		return this.shelflife;
 	}
 
-	public void setShelflife(BigDecimal shelflife) {
+	public void setShelflife(Integer shelflife) {
 		this.shelflife = shelflife;
 	}
 

@@ -13,11 +13,11 @@ public class Employee implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal employeeid;
-	private Post post;
+	private Integer employeeid;
 	private Team team;
 	private Department department;
 	private Workshop workshop;
+	private Post post;
 	private String workid;
 	private String name;
 	private String sex;
@@ -29,7 +29,7 @@ public class Employee implements java.io.Serializable {
 	private String address;
 	private BigDecimal money;
 	private String password;
-	private BigDecimal resttime;
+	private Integer resttime;
 	private Set outs = new HashSet(0);
 	private Set wageses = new HashSet(0);
 	private Set accountses = new HashSet(0);
@@ -46,6 +46,7 @@ public class Employee implements java.io.Serializable {
 	private Set holidaysesForLeaver = new HashSet(0);
 	private Set monitoringsForProorderpeople = new HashSet(0);
 	private Set proorders = new HashSet(0);
+	private Set performanceses = new HashSet(0);
 	private Set procurementsForOperator = new HashSet(0);
 	private Set procurementsForOriginator = new HashSet(0);
 	private Set monitoringsForProducter = new HashSet(0);
@@ -60,23 +61,23 @@ public class Employee implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Employee(Post post, Team team, Department department,
-			Workshop workshop, String workid, String name, String sex,
-			String nation, Timestamp birthday, Timestamp entrytime,
-			String education, String phone, String address, BigDecimal money,
-			String password, BigDecimal resttime, Set outs, Set wageses,
-			Set accountses, Set checkses, Set contactsForSender,
-			Set attendances, Set ordersesForOriginator, Set orderrootses,
+	public Employee(Team team, Department department, Workshop workshop,
+			Post post, String workid, String name, String sex, String nation,
+			Timestamp birthday, Timestamp entrytime, String education,
+			String phone, String address, BigDecimal money, String password,
+			Integer resttime, Set outs, Set wageses, Set accountses,
+			Set checkses, Set contactsForSender, Set attendances,
+			Set ordersesForOriginator, Set orderrootses,
 			Set contactsForRecipient, Set restsForRester,
 			Set ordersesForOperator, Set enters, Set holidaysesForApprover,
 			Set holidaysesForLeaver, Set monitoringsForProorderpeople,
-			Set proorders, Set procurementsForOperator,
+			Set proorders, Set performanceses, Set procurementsForOperator,
 			Set procurementsForOriginator, Set monitoringsForProducter,
 			Set clockins, Set restsForApprover, Set announcements) {
-		this.post = post;
 		this.team = team;
 		this.department = department;
 		this.workshop = workshop;
+		this.post = post;
 		this.workid = workid;
 		this.name = name;
 		this.sex = sex;
@@ -105,6 +106,7 @@ public class Employee implements java.io.Serializable {
 		this.holidaysesForLeaver = holidaysesForLeaver;
 		this.monitoringsForProorderpeople = monitoringsForProorderpeople;
 		this.proorders = proorders;
+		this.performanceses = performanceses;
 		this.procurementsForOperator = procurementsForOperator;
 		this.procurementsForOriginator = procurementsForOriginator;
 		this.monitoringsForProducter = monitoringsForProducter;
@@ -115,20 +117,12 @@ public class Employee implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getEmployeeid() {
+	public Integer getEmployeeid() {
 		return this.employeeid;
 	}
 
-	public void setEmployeeid(BigDecimal employeeid) {
+	public void setEmployeeid(Integer employeeid) {
 		this.employeeid = employeeid;
-	}
-
-	public Post getPost() {
-		return this.post;
-	}
-
-	public void setPost(Post post) {
-		this.post = post;
 	}
 
 	public Team getTeam() {
@@ -153,6 +147,14 @@ public class Employee implements java.io.Serializable {
 
 	public void setWorkshop(Workshop workshop) {
 		this.workshop = workshop;
+	}
+
+	public Post getPost() {
+		return this.post;
+	}
+
+	public void setPost(Post post) {
+		this.post = post;
 	}
 
 	public String getWorkid() {
@@ -243,11 +245,11 @@ public class Employee implements java.io.Serializable {
 		this.password = password;
 	}
 
-	public BigDecimal getResttime() {
+	public Integer getResttime() {
 		return this.resttime;
 	}
 
-	public void setResttime(BigDecimal resttime) {
+	public void setResttime(Integer resttime) {
 		this.resttime = resttime;
 	}
 
@@ -377,6 +379,14 @@ public class Employee implements java.io.Serializable {
 
 	public void setProorders(Set proorders) {
 		this.proorders = proorders;
+	}
+
+	public Set getPerformanceses() {
+		return this.performanceses;
+	}
+
+	public void setPerformanceses(Set performanceses) {
+		this.performanceses = performanceses;
 	}
 
 	public Set getProcurementsForOperator() {

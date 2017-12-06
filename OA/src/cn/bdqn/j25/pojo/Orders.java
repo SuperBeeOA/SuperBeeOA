@@ -13,7 +13,7 @@ public class Orders implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal orderid;
+	private Integer orderid;
 	private Employee employeeByOperator;
 	private Department department;
 	private Customer customer;
@@ -68,11 +68,11 @@ public class Orders implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getOrderid() {
+	public Integer getOrderid() {
 		return this.orderid;
 	}
 
-	public void setOrderid(BigDecimal orderid) {
+	public void setOrderid(Integer orderid) {
 		this.orderid = orderid;
 	}
 

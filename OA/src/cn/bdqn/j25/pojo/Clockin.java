@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 /**
@@ -11,7 +10,7 @@ public class Clockin implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal clockinid;
+	private Integer clockinid;
 	private Employee employee;
 	private Timestamp clocktime;
 
@@ -29,11 +28,11 @@ public class Clockin implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getClockinid() {
+	public Integer getClockinid() {
 		return this.clockinid;
 	}
 
-	public void setClockinid(BigDecimal clockinid) {
+	public void setClockinid(Integer clockinid) {
 		this.clockinid = clockinid;
 	}
 

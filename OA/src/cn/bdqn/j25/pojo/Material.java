@@ -10,13 +10,13 @@ public class Material implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal materialid;
+	private Integer materialid;
 	private Types types;
 	private Provider provider;
 	private String materialname;
 	private String materialno;
 	private BigDecimal materialprice;
-	private BigDecimal shelflife;
+	private Integer shelflife;
 	private String materialmodel;
 	private BigDecimal truckage;
 	private String materialremarks;
@@ -34,7 +34,7 @@ public class Material implements java.io.Serializable {
 
 	/** full constructor */
 	public Material(Types types, Provider provider, String materialname,
-			String materialno, BigDecimal materialprice, BigDecimal shelflife,
+			String materialno, BigDecimal materialprice, Integer shelflife,
 			String materialmodel, BigDecimal truckage, String materialremarks) {
 		this.types = types;
 		this.provider = provider;
@@ -49,11 +49,11 @@ public class Material implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getMaterialid() {
+	public Integer getMaterialid() {
 		return this.materialid;
 	}
 
-	public void setMaterialid(BigDecimal materialid) {
+	public void setMaterialid(Integer materialid) {
 		this.materialid = materialid;
 	}
 
@@ -97,11 +97,11 @@ public class Material implements java.io.Serializable {
 		this.materialprice = materialprice;
 	}
 
-	public BigDecimal getShelflife() {
+	public Integer getShelflife() {
 		return this.shelflife;
 	}
 
-	public void setShelflife(BigDecimal shelflife) {
+	public void setShelflife(Integer shelflife) {
 		this.shelflife = shelflife;
 	}
 

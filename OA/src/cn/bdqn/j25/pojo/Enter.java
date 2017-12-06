@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 /**
@@ -11,13 +10,13 @@ public class Enter implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal enterid;
+	private Integer enterid;
 	private Employee employee;
 	private Warehouse warehouse;
 	private Orders orders;
 	private String name;
 	private Timestamp time;
-	private BigDecimal quantity;
+	private Integer quantity;
 	private String remark;
 
 	// Constructors
@@ -28,7 +27,7 @@ public class Enter implements java.io.Serializable {
 
 	/** full constructor */
 	public Enter(Employee employee, Warehouse warehouse, Orders orders,
-			String name, Timestamp time, BigDecimal quantity, String remark) {
+			String name, Timestamp time, Integer quantity, String remark) {
 		this.employee = employee;
 		this.warehouse = warehouse;
 		this.orders = orders;
@@ -40,11 +39,11 @@ public class Enter implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getEnterid() {
+	public Integer getEnterid() {
 		return this.enterid;
 	}
 
-	public void setEnterid(BigDecimal enterid) {
+	public void setEnterid(Integer enterid) {
 		this.enterid = enterid;
 	}
 
@@ -88,11 +87,11 @@ public class Enter implements java.io.Serializable {
 		this.time = time;
 	}
 
-	public BigDecimal getQuantity() {
+	public Integer getQuantity() {
 		return this.quantity;
 	}
 
-	public void setQuantity(BigDecimal quantity) {
+	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
 

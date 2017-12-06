@@ -6,15 +6,15 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Rest" table="REST" schema="SCOTT">
-        <id name="restid" type="java.math.BigDecimal">
-            <column name="RESTID" precision="22" scale="0" />
+        <id name="restid" type="java.lang.Integer">
+            <column name="RESTID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <many-to-one name="employeeByRester" class="cn.bdqn.j25.pojo.Employee" fetch="select">
-            <column name="RESTER" precision="22" scale="0" />
+            <column name="RESTER" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="employeeByApprover" class="cn.bdqn.j25.pojo.Employee" fetch="select">
-            <column name="APPROVER" precision="22" scale="0" />
+            <column name="APPROVER" precision="9" scale="0" />
         </many-to-one>
         <property name="reasons" type="java.lang.String">
             <column name="REASONS" length="50" />

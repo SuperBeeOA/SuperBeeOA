@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 /**
@@ -11,7 +10,7 @@ public class Orderroots implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal orderrootsid;
+	private Integer orderrootsid;
 	private Employee employee;
 	private State state;
 	private Orders orders;
@@ -34,11 +33,11 @@ public class Orderroots implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getOrderrootsid() {
+	public Integer getOrderrootsid() {
 		return this.orderrootsid;
 	}
 
-	public void setOrderrootsid(BigDecimal orderrootsid) {
+	public void setOrderrootsid(Integer orderrootsid) {
 		this.orderrootsid = orderrootsid;
 	}
 

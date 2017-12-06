@@ -11,7 +11,7 @@ public class Rest implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal restid;
+	private Integer restid;
 	private Employee employeeByRester;
 	private Employee employeeByApprover;
 	private String reasons;
@@ -36,11 +36,11 @@ public class Rest implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getRestid() {
+	public Integer getRestid() {
 		return this.restid;
 	}
 
-	public void setRestid(BigDecimal restid) {
+	public void setRestid(Integer restid) {
 		this.restid = restid;
 	}
 

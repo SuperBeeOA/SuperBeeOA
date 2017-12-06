@@ -6,12 +6,12 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Clockin" table="CLOCKIN" schema="SCOTT">
-        <id name="clockinid" type="java.math.BigDecimal">
-            <column name="CLOCKINID" precision="22" scale="0" />
+        <id name="clockinid" type="java.lang.Integer">
+            <column name="CLOCKINID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <many-to-one name="employee" class="cn.bdqn.j25.pojo.Employee" fetch="select">
-            <column name="EMPLOYEEID" precision="22" scale="0" />
+            <column name="EMPLOYEEID" precision="9" scale="0" />
         </many-to-one>
         <property name="clocktime" type="java.sql.Timestamp">
             <column name="CLOCKTIME" length="7" />

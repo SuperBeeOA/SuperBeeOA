@@ -6,15 +6,15 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Holidays" table="HOLIDAYS" schema="SCOTT">
-        <id name="holidayid" type="java.math.BigDecimal">
-            <column name="HOLIDAYID" precision="22" scale="0" />
+        <id name="holidayid" type="java.lang.Integer">
+            <column name="HOLIDAYID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <many-to-one name="employeeByLeaver" class="cn.bdqn.j25.pojo.Employee" fetch="select">
-            <column name="LEAVER" precision="22" scale="0" />
+            <column name="LEAVER" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="employeeByApprover" class="cn.bdqn.j25.pojo.Employee" fetch="select">
-            <column name="APPROVER" precision="22" scale="0" />
+            <column name="APPROVER" precision="9" scale="0" />
         </many-to-one>
         <property name="reasons" type="java.lang.String">
             <column name="REASONS" length="50" />
@@ -22,8 +22,8 @@
         <property name="starttime" type="java.sql.Timestamp">
             <column name="STARTTIME" length="7" />
         </property>
-        <property name="days" type="java.math.BigDecimal">
-            <column name="DAYS" precision="22" scale="0" />
+        <property name="days" type="java.lang.Integer">
+            <column name="DAYS" precision="9" scale="0" />
         </property>
     </class>
 </hibernate-mapping>
