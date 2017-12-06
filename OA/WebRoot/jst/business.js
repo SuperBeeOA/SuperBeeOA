@@ -42,4 +42,34 @@ $(function() {
 		  $("#customer").hide();
 		  $("#forder").hide();
 	  });
+
+	  $("#find").click(function() {
+		  $("#order").show();
+		  $("#allorder").hide();
+	  });
+
+	  $("#bo").click(function() {
+		  $("#allorder").show();
+		  $("#order").hide();
+	  });
+
+	  $("#cc").click(function() {
+		  $("#mcustomer").show();
+		  $("#allcustomer").hide();
+	  });
+
+	  $("#bc").click(function() {
+		  $("#allcustomer").show();
+		  $("#mcustomer").hide();
+	  });
+
+	  $("#cs").click(function() {
+		  $("#msupplier").show();
+		  $("#allsupplier").hide();
+	  });
+
+	  $("#bs").click(function() {
+		  $("#allsupplier").show();
+		  $("#msupplier").hide();
+	  });
 });
