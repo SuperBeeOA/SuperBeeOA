@@ -6,15 +6,15 @@ import cn.bdqn.j25.pojo.Temporary;
 import cn.bdqn.j25.service.TemporaryService;
 
 public class TemporaryServiceImpl implements TemporaryService {
-	  
-	private TemporaryService temporaryDao;
+	  private TemporaryService temporaryDao;
 
-	public TemporaryService getTemporaryDao() {
+
+	public TemporaryService getTemp() {
 		return temporaryDao;
 	}
 
-	public void setTemporaryDao(TemporaryService temporaryDao) {
-		this.temporaryDao = temporaryDao;
+	public void setTemp(TemporaryService temp) {
+		this.temporaryDao = temp;
 	}
 
 	@Override

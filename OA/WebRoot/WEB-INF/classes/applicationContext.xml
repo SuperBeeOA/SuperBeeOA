@@ -200,7 +200,7 @@
 		<property name="teamDao" ref="teamDao"></property>
 	</bean>
 	<bean id="temporaryService" class="cn.bdqn.j25.serviceImpl.TemporaryServiceImpl">
-		<property name="temp" ref="temporaryService"></property>
+		<property name="temporaryDao" ref="temporaryService"></property>
 	</bean>
 	<bean id="typeService" class="cn.bdqn.j25.serviceImpl.TypeServiceImpl">
 		<property name="typeDao" ref="typeDao"></property>

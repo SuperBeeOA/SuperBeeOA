@@ -20,4 +20,5 @@
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.RestDao"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.PostDao"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.OrderrootsDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.AttendanceService"/>
 </qualifiedTypeNameHistroy>

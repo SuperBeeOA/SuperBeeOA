@@ -1,0 +1,14 @@
+$(function() {
+	$(".nav nav-pills nav-stacked li").click(function() {
+		$(this).siblings().removeClass("active");
+		$(this).addClass("active");
+	});
+	
+	$("#login").click(function() {
+		$("#log").show();
+	});
+	
+	$("#out").click(function() {
+		$("#log").hide();
+	});
+});

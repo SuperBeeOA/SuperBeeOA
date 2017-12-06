@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="65" version="2.0">
+<workbench progressCount="64" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="94" y="0">
 <fastViewData fastViewLocation="1024">
@@ -24,18 +24,19 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="183" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="80" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="103" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.struts2.editor" itemType="typePlaceholder" x="358" y="22"/>
 <coolItem id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" itemType="typePlaceholder" x="38" y="22"/>
 <coolItem id="com.spket.svg.editor.svgEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -45,23 +46,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="com.genuitec.eclipse.springframework.springconfigeditor" name="applicationContext.xml" partName="applicationContext.xml" path="F:/OA/OA/src/applicationContext.xml" title="applicationContext.xml" tooltip="OA/src/applicationContext.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/applicationContext.xml"/>
-</editor>
-<editor id="com.genuitec.eclipse.editor.webapp25" name="web.xml" partName="web.xml" path="F:/OA/OA/WebRoot/WEB-INF/web.xml" title="web.xml" tooltip="OA/WebRoot/WEB-INF/web.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/WebRoot/WEB-INF/web.xml"/>
-</editor>
-<editor activePart="true" focus="true" id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" name="hibernate.cfg.xml" partName="hibernate.cfg.xml" path="F:/OA/OA/src/hibernate.cfg.xml" title="hibernate.cfg.xml" tooltip="OA/src/hibernate.cfg.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/hibernate.cfg.xml"/>
-</editor>
 </editors>
 <views>
 <view id="com.genuitec.eclipse.ui.HTMLView" partName="Web Browser">
@@ -79,6 +67,10 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (100 of 623 items)"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="147" org.eclipse.ui.ide.pathField="175" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="693"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -139,7 +131,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -340,106 +332,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.springframework.springconfigeditor" path="/OA/src/applicationContext.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/OA/WebRoot/page/business.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/OA/WebRoot/page/production.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/pojo/Accounts.java"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Accounts.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Announcement.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Warehouse.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Wages.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Types.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Temporary.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Team.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/State.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Rest.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Provider.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Proorder.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Product.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Procurement.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Post.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Performances.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Out.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Orders.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Orderroots.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Monitoring.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Material.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Holidays.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Equipment.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Enter.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Employee.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Department.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Customer.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Contact.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Clockin.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Checks.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Attendance.hbm.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.editor.webapp25" path="/OA/WebRoot/WEB-INF/web.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" path="/OA/src/hibernate.cfg.xml"/>
-</editors>
-<item historyLabel="production.jsp" index="2"/>
-<item historyLabel="business.jsp" index="1"/>
-<item historyLabel="applicationContext.xml" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Accounts.java" index="3">
-<position/>
-</item>
-<item historyLabel="Accounts.hbm.xml" index="4"/>
-<item historyLabel="Accounts.java" index="3">
-<position/>
-</item>
-<item historyLabel="applicationContext.xml" index="0"/>
-<item historyLabel="Accounts.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Accounts.hbm.xml" index="4"/>
-<item historyLabel="Announcement.hbm.xml" index="5"/>
-<item historyLabel="Warehouse.hbm.xml" index="6"/>
-<item historyLabel="Wages.hbm.xml" index="7"/>
-<item historyLabel="Types.hbm.xml" index="8"/>
-<item historyLabel="Temporary.hbm.xml" index="9"/>
-<item historyLabel="Team.hbm.xml" index="10"/>
-<item historyLabel="State.hbm.xml" index="11"/>
-<item historyLabel="Rest.hbm.xml" index="12"/>
-<item historyLabel="Provider.hbm.xml" index="13"/>
-<item historyLabel="Proorder.hbm.xml" index="14"/>
-<item historyLabel="Product.hbm.xml" index="15"/>
-<item historyLabel="Procurement.hbm.xml" index="16"/>
-<item historyLabel="Post.hbm.xml" index="17"/>
-<item historyLabel="Performances.hbm.xml" index="18"/>
-<item historyLabel="Out.hbm.xml" index="19"/>
-<item historyLabel="Orders.hbm.xml" index="20"/>
-<item historyLabel="Orderroots.hbm.xml" index="21"/>
-<item historyLabel="Monitoring.hbm.xml" index="22"/>
-<item historyLabel="Material.hbm.xml" index="23"/>
-<item historyLabel="Holidays.hbm.xml" index="24"/>
-<item historyLabel="Equipment.hbm.xml" index="25"/>
-<item historyLabel="Enter.hbm.xml" index="26"/>
-<item historyLabel="Employee.hbm.xml" index="27"/>
-<item historyLabel="Department.hbm.xml" index="28"/>
-<item historyLabel="Customer.hbm.xml" index="29"/>
-<item historyLabel="Contact.hbm.xml" index="30"/>
-<item historyLabel="Clockin.hbm.xml" index="31"/>
-<item historyLabel="Checks.hbm.xml" index="32"/>
-<item historyLabel="Attendance.hbm.xml" index="33"/>
-<item historyLabel="Announcement.hbm.xml" index="5"/>
-<item historyLabel="Accounts.hbm.xml" index="4"/>
-<item historyLabel="applicationContext.xml" index="0"/>
-<item historyLabel="web.xml" index="34"/>
-<item historyLabel="hibernate.cfg.xml" index="35">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="applicationContext.xml" index="0"/>
-<item historyLabel="hibernate.cfg.xml" index="35"/>
-<item historyLabel="web.xml" index="34"/>
-<item historyLabel="applicationContext.xml" index="0"/>
-<item historyLabel="web.xml" index="34"/>
-<item historyLabel="applicationContext.xml" index="0"/>
-<item active="true" historyLabel="hibernate.cfg.xml" index="35"/>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -465,14 +358,35 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" name="hibernate.cfg.xml" tooltip="OA/src/hibernate.cfg.xml">
-<persistable path="/OA/src/hibernate.cfg.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Error.java" tooltip="OA/src/cn/bdqn/j25/aop/Error.java">
+<persistable path="/OA/src/cn/bdqn/j25/aop/Error.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.editor.webapp25" name="web.xml" tooltip="OA/WebRoot/WEB-INF/web.xml">
-<persistable path="/OA/WebRoot/WEB-INF/web.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="header.js" tooltip="OA/WebRoot/jst/header.js">
+<persistable path="/OA/WebRoot/jst/header.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Accounts.java" tooltip="OA/src/cn/bdqn/j25/pojo/Accounts.java">
+<persistable path="/OA/src/cn/bdqn/j25/pojo/Accounts.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TemporaryServiceImpl.java" tooltip="OA/src/cn/bdqn/j25/serviceImpl/TemporaryServiceImpl.java">
+<persistable path="/OA/src/cn/bdqn/j25/serviceImpl/TemporaryServiceImpl.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.springframework.springconfigeditor" name="applicationContext.xml" tooltip="OA/src/applicationContext.xml">
 <persistable path="/OA/src/applicationContext.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AttendanceServiceImpl.java" tooltip="OA/src/cn/bdqn/j25/serviceImpl/AttendanceServiceImpl.java">
+<persistable path="/OA/src/cn/bdqn/j25/serviceImpl/AttendanceServiceImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TemporaryDaoImpl.java" tooltip="OA/src/cn/bdqn/j25/daoImpl/TemporaryDaoImpl.java">
+<persistable path="/OA/src/cn/bdqn/j25/daoImpl/TemporaryDaoImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TemporaryDao.java" tooltip="OA/src/cn/bdqn/j25/dao/TemporaryDao.java">
+<persistable path="/OA/src/cn/bdqn/j25/dao/TemporaryDao.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AttendanceService.java" tooltip="OA/src/cn/bdqn/j25/service/AttendanceService.java">
+<persistable path="/OA/src/cn/bdqn/j25/service/AttendanceService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" name="hibernate.cfg.xml" tooltip="OA/src/hibernate.cfg.xml">
+<persistable path="/OA/src/hibernate.cfg.xml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Workshop.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Workshop.hbm.xml">
 <persistable path="/OA/src/cn/bdqn/j25/pojo/Workshop.hbm.xml"/>
@@ -488,27 +402,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Temporary.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Temporary.hbm.xml">
 <persistable path="/OA/src/cn/bdqn/j25/pojo/Temporary.hbm.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Team.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Team.hbm.xml">
-<persistable path="/OA/src/cn/bdqn/j25/pojo/Team.hbm.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="State.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/State.hbm.xml">
-<persistable path="/OA/src/cn/bdqn/j25/pojo/State.hbm.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Rest.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Rest.hbm.xml">
-<persistable path="/OA/src/cn/bdqn/j25/pojo/Rest.hbm.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Provider.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Provider.hbm.xml">
-<persistable path="/OA/src/cn/bdqn/j25/pojo/Provider.hbm.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Proorder.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Proorder.hbm.xml">
-<persistable path="/OA/src/cn/bdqn/j25/pojo/Proorder.hbm.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Product.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Product.hbm.xml">
-<persistable path="/OA/src/cn/bdqn/j25/pojo/Product.hbm.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Procurement.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Procurement.hbm.xml">
-<persistable path="/OA/src/cn/bdqn/j25/pojo/Procurement.hbm.xml"/>
 </file>
 </mruList>
 </workbench>
