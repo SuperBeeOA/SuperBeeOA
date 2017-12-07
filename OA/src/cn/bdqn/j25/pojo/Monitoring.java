@@ -11,7 +11,7 @@ public class Monitoring implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal monitoringid;
+	private Integer monitoringid;
 	private Employee employeeByProorderpeople;
 	private Employee employeeByProducter;
 	private Orders orders;
@@ -44,11 +44,11 @@ public class Monitoring implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getMonitoringid() {
+	public Integer getMonitoringid() {
 		return this.monitoringid;
 	}
 
-	public void setMonitoringid(BigDecimal monitoringid) {
+	public void setMonitoringid(Integer monitoringid) {
 		this.monitoringid = monitoringid;
 	}
 

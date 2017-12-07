@@ -11,7 +11,7 @@ public class Procurement implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal procurementid;
+	private Integer procurementid;
 	private Employee employeeByOperator;
 	private Department department;
 	private Customer customer;
@@ -55,11 +55,11 @@ public class Procurement implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getProcurementid() {
+	public Integer getProcurementid() {
 		return this.procurementid;
 	}
 
-	public void setProcurementid(BigDecimal procurementid) {
+	public void setProcurementid(Integer procurementid) {
 		this.procurementid = procurementid;
 	}
 

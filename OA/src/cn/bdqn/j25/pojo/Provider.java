@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +11,7 @@ public class Provider implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal providerid;
+	private Integer providerid;
 	private Types types;
 	private String providername;
 	private String address;
@@ -46,11 +45,11 @@ public class Provider implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getProviderid() {
+	public Integer getProviderid() {
 		return this.providerid;
 	}
 
-	public void setProviderid(BigDecimal providerid) {
+	public void setProviderid(Integer providerid) {
 		this.providerid = providerid;
 	}
 

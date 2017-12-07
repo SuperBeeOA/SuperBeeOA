@@ -8,39 +8,55 @@ $(function() {
   });
   
   $("#mi").click(function() {
-	  $(this).parents().siblings(".active").removeClass("active");
-	  $(this).parent().addClass("active");
 	  $("#info").show();
 	  $("#attendance").hide();
 	  $("#announcement").hide();
 	  $("#contact").hide();
+	  $("#add").hide();
+	  $("#manage").hide();
+	  $("#forder").hide();
+	  $("#aorder").hide();
+	  $("#customer").hide();
+	  $("#supplier").hide();
   });
 
   $("#fat").click(function() {
-	  $(this).parents().siblings(".active").removeClass("active");
-	  $(this).parent().addClass("active");
 	  $("#attendance").show();
 	  $("#info").hide();
 	  $("#announcement").hide();
 	  $("#contact").hide();
+	  $("#add").hide();
+	  $("#manage").hide();
+	  $("#forder").hide();
+	  $("#aorder").hide();
+	  $("#customer").hide();
+	  $("#supplier").hide();
   });
   
   $("#fan").click(function() {
-	  $(this).parents().siblings(".active").removeClass("active");
-	  $(this).parent().addClass("active");
 	  $("#announcement").show();
 	  $("#attendance").hide();
 	  $("#info").hide();
 	  $("#contact").hide();
+	  $("#add").hide();
+	  $("#manage").hide();
+	  $("#forder").hide();
+	  $("#aorder").hide();
+	  $("#customer").hide();
+	  $("#supplier").hide();
   });
   
   $("#fc").click(function() {
-	  $(this).parents().siblings(".active").removeClass("active");
-	  $(this).parent().addClass("active");
 	  $("#contact").show();
 	  $("#attendance").hide();
 	  $("#announcement").hide();
 	  $("#info").hide();
+	  $("#add").hide();
+	  $("#manage").hide();
+	  $("#forder").hide();
+	  $("#aorder").hide();
+	  $("#customer").hide();
+	  $("#supplier").hide();
   });
   
   $("#if").click(function() {

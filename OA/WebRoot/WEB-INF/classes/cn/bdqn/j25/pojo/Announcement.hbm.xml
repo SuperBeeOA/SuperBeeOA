@@ -6,15 +6,18 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Announcement" table="ANNOUNCEMENT" schema="SCOTT">
-        <id name="announcementid" type="java.math.BigDecimal">
-            <column name="ANNOUNCEMENTID" precision="22" scale="0" />
+        <id name="announcementid" type="java.lang.Integer">
+            <column name="ANNOUNCEMENTID" precision="9" scale="0" />
             <generator class="increment"></generator>
         </id>
+        <many-to-one name="state" class="cn.bdqn.j25.pojo.State" fetch="select">
+            <column name="STATEID" precision="9" scale="0" />
+        </many-to-one>
         <many-to-one name="employee" class="cn.bdqn.j25.pojo.Employee" fetch="select">
-            <column name="EMPLOYEEID" precision="22" scale="0" />
+            <column name="EMPLOYEEID" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="department" class="cn.bdqn.j25.pojo.Department" fetch="select">
-            <column name="DEPARTMENTID" precision="22" scale="0" />
+            <column name="DEPARTMENTID" precision="9" scale="0" />
         </many-to-one>
         <property name="title" type="java.lang.String">
             <column name="TITLE" length="20" />
@@ -22,8 +25,8 @@
         <property name="time" type="java.sql.Timestamp">
             <column name="TIME" length="7" />
         </property>
-        <property name="typeid" type="java.math.BigDecimal">
-            <column name="TYPEID" precision="22" scale="0" />
+        <property name="typeid" type="java.lang.Integer">
+            <column name="TYPEID" precision="9" scale="0" />
         </property>
         <property name="image" type="java.lang.String">
             <column name="IMAGE" length="100" />

@@ -4,21 +4,25 @@ import java.util.List;
 
 import cn.bdqn.j25.dao.AttendanceDao;
 import cn.bdqn.j25.pojo.Attendance;
+import cn.bdqn.j25.service.AttendanceService;
 
-public class AttendanceServiceImpl implements AttendanceDao {
+public class AttendanceServiceImpl implements AttendanceService{
+	
 	 private AttendanceDao attendanDao;
-	@Override
-	public Attendance findByID(int id) {
-		// TODO Auto-generated method stub
-		return attendanDao.findByID(id);
-	}
 
+	 
 	public AttendanceDao getAttendanDao() {
 		return attendanDao;
 	}
 
 	public void setAttendanDao(AttendanceDao attendanDao) {
 		this.attendanDao = attendanDao;
+	}
+
+	@Override
+	public Attendance findByID(int id) {
+		// TODO Auto-generated method stub
+		return attendanDao.findByID(id);
 	}
 
 	@Override
@@ -34,7 +38,7 @@ public class AttendanceServiceImpl implements AttendanceDao {
 	}
 
 	@Override
-	public Attendance addOrUpdateAttendance(Attendance attendance) {
+	public Attendance addOrUpdateClockin(Attendance attendance) {
 		// TODO Auto-generated method stub
 		return attendanDao.addOrUpdateAttendance(attendance);
 	}
@@ -43,7 +47,8 @@ public class AttendanceServiceImpl implements AttendanceDao {
 	public void delAttendance(Attendance attendance) {
 		// TODO Auto-generated method stub
 		attendanDao.delAttendance(attendance);
-
 	}
+	
+	
 
 }

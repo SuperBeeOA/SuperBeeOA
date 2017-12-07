@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="71" version="2.0">
+<workbench progressCount="64" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="94" y="0">
 <fastViewData fastViewLocation="1024">
@@ -24,16 +24,17 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="183" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="80" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="103" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="com.genuitec.eclipse.struts2.editor" itemType="typeToolBarContribution" x="358" y="22"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.struts2.editor" itemType="typePlaceholder" x="358" y="22"/>
 <coolItem id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" itemType="typePlaceholder" x="38" y="22"/>
 <coolItem id="com.spket.svg.editor.svgEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -45,15 +46,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.genuitec.eclipse.springframework.springconfigeditor" name="applicationContext.xml" partName="applicationContext.xml" path="F:/OA/OA/src/applicationContext.xml" title="applicationContext.xml" tooltip="OA/src/applicationContext.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/applicationContext.xml"/>
-</editor>
 </editors>
 <views>
 <view id="com.genuitec.eclipse.ui.HTMLView" partName="Web Browser">
@@ -73,6 +69,7 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (100 of 623 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="147" org.eclipse.ui.ide.pathField="175" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="693"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -134,7 +131,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.genuitec.eclipse.springframework.springconfigeditor" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -231,7 +228,7 @@
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <fastViews>
 <view id="com.genuitec.eclipse.ast.deploy.core.serverview" ratio="0.6797632"/>
-<view id="org.eclipse.ui.console.ConsoleView" ratio="0.6684607"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.9650161"/>
 </fastViews>
 <fastViewBars>
 <fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@470f93f9" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
@@ -335,166 +332,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/dao/RestDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/dao/WagesDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/serviceImpl/RestServiceImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/dao/PostDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/daoImpl/PostDaoImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/service/PostService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/serviceImpl/PostServiceImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/dao/OrderrootsDao.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/daoImpl/OrderrootsDaoImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/service/OrderrootsService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/serviceImpl/OrderrootsServiceImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.springframework.springconfigeditor" path="/OA/src/applicationContext.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/daoImpl/AccountsDaoImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/OA/src/applicationContext.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/serviceImpl/AccountsServiceImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/serviceImpl/AnnouncementServiceImpl.java"/>
-</editors>
-<item historyLabel="RestServiceImpl.java" index="2">
-<position info="not_deleted" x="632" y="0"/>
-</item>
-<item historyLabel="RestServiceImpl.java" index="2">
-<position info="not_deleted" x="1059" y="0"/>
-</item>
-<item historyLabel="RestDao.java" index="0">
-<position info="not_deleted" x="104" y="7"/>
-</item>
-<item historyLabel="WagesDao.java" index="1">
-<position info="not_deleted" x="121" y="271"/>
-</item>
-<item historyLabel="PostDao.java" index="3">
-<position info="not_deleted" x="373" y="0"/>
-</item>
-<item historyLabel="WagesDao.java" index="1">
-<position info="not_deleted" x="121" y="271"/>
-</item>
-<item historyLabel="PostDao.java" index="3">
-<position info="not_deleted" x="191" y="0"/>
-</item>
-<item historyLabel="PostDaoImpl.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PostDaoImpl.java" index="4">
-<position info="not_deleted" x="559" y="0"/>
-</item>
-<item historyLabel="PostDaoImpl.java" index="4">
-<position info="not_deleted" x="733" y="0"/>
-</item>
-<item historyLabel="PostDaoImpl.java" index="4">
-<position info="not_deleted" x="740" y="0"/>
-</item>
-<item historyLabel="PostDaoImpl.java" index="4">
-<position info="not_deleted" x="745" y="0"/>
-</item>
-<item historyLabel="PostDaoImpl.java" index="4">
-<position info="not_deleted" x="1023" y="0"/>
-</item>
-<item historyLabel="PostDao.java" index="3">
-<position info="not_deleted" x="104" y="7"/>
-</item>
-<item historyLabel="PostService.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PostDao.java" index="3">
-<position info="not_deleted" x="116" y="257"/>
-</item>
-<item historyLabel="PostService.java" index="5">
-<position info="not_deleted" x="108" y="11"/>
-</item>
-<item historyLabel="PostServiceImpl.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PostDao.java" index="3">
-<position info="not_deleted" x="104" y="7"/>
-</item>
-<item historyLabel="PostServiceImpl.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PostServiceImpl.java" index="6">
-<position info="not_deleted" x="1058" y="0"/>
-</item>
-<item historyLabel="WagesDao.java" index="1">
-<position info="not_deleted" x="121" y="271"/>
-</item>
-<item historyLabel="OrderrootsDao.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="WagesDao.java" index="1">
-<position info="not_deleted" x="121" y="271"/>
-</item>
-<item historyLabel="OrderrootsDao.java" index="7">
-<position info="not_deleted" x="454" y="0"/>
-</item>
-<item historyLabel="OrderrootsDaoImpl.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="OrderrootsDaoImpl.java" index="8">
-<position info="not_deleted" x="622" y="0"/>
-</item>
-<item historyLabel="OrderrootsDaoImpl.java" index="8">
-<position info="not_deleted" x="820" y="0"/>
-</item>
-<item historyLabel="OrderrootsDaoImpl.java" index="8">
-<position info="not_deleted" x="827" y="0"/>
-</item>
-<item historyLabel="OrderrootsDaoImpl.java" index="8">
-<position info="not_deleted" x="832" y="0"/>
-</item>
-<item historyLabel="OrderrootsDaoImpl.java" index="8">
-<position info="not_deleted" x="1164" y="0"/>
-</item>
-<item historyLabel="OrderrootsDao.java" index="7">
-<position info="not_deleted" x="454" y="0"/>
-</item>
-<item historyLabel="OrderrootsService.java" index="9">
-<position info="not_deleted" x="477" y="0"/>
-</item>
-<item historyLabel="OrderrootsDao.java" index="7">
-<position info="not_deleted" x="128" y="341"/>
-</item>
-<item historyLabel="OrderrootsService.java" index="9">
-<position info="not_deleted" x="114" y="17"/>
-</item>
-<item historyLabel="OrderrootsServiceImpl.java" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="OrderrootsServiceImpl.java" index="10">
-<position info="not_deleted" x="1298" y="0"/>
-</item>
-<item historyLabel="WagesDao.java" index="1">
-<position info="not_deleted" x="121" y="271"/>
-</item>
-<item historyLabel="applicationContext.xml" index="11"/>
-<item historyLabel="AccountsDaoImpl.java" index="12">
-<position/>
-</item>
-<item historyLabel="applicationContext.xml" index="11">
-<position info="not_deleted" x="5121" y="0"/>
-</item>
-<item historyLabel="applicationContext.xml" index="13">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="AccountsServiceImpl.java" index="14">
-<position info="not_deleted" x="267" y="11"/>
-</item>
-<item historyLabel="applicationContext.xml" index="11"/>
-<item historyLabel="AccountsServiceImpl.java" index="14">
-<position info="not_deleted" x="267" y="11"/>
-</item>
-<item historyLabel="applicationContext.xml" index="11"/>
-<item historyLabel="AccountsServiceImpl.java" index="14">
-<position info="not_deleted" x="267" y="11"/>
-</item>
-<item historyLabel="applicationContext.xml" index="11"/>
-<item historyLabel="AnnouncementServiceImpl.java" index="15">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item active="true" historyLabel="applicationContext.xml" index="11"/>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -520,50 +358,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AnnouncementServiceImpl.java" tooltip="OA/src/cn/bdqn/j25/serviceImpl/AnnouncementServiceImpl.java">
-<persistable path="/OA/src/cn/bdqn/j25/serviceImpl/AnnouncementServiceImpl.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Error.java" tooltip="OA/src/cn/bdqn/j25/aop/Error.java">
+<persistable path="/OA/src/cn/bdqn/j25/aop/Error.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AccountsServiceImpl.java" tooltip="OA/src/cn/bdqn/j25/serviceImpl/AccountsServiceImpl.java">
-<persistable path="/OA/src/cn/bdqn/j25/serviceImpl/AccountsServiceImpl.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="header.js" tooltip="OA/WebRoot/jst/header.js">
+<persistable path="/OA/WebRoot/jst/header.js"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AccountsDaoImpl.java" tooltip="OA/src/cn/bdqn/j25/daoImpl/AccountsDaoImpl.java">
-<persistable path="/OA/src/cn/bdqn/j25/daoImpl/AccountsDaoImpl.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Accounts.java" tooltip="OA/src/cn/bdqn/j25/pojo/Accounts.java">
+<persistable path="/OA/src/cn/bdqn/j25/pojo/Accounts.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TemporaryServiceImpl.java" tooltip="OA/src/cn/bdqn/j25/serviceImpl/TemporaryServiceImpl.java">
+<persistable path="/OA/src/cn/bdqn/j25/serviceImpl/TemporaryServiceImpl.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.springframework.springconfigeditor" name="applicationContext.xml" tooltip="OA/src/applicationContext.xml">
 <persistable path="/OA/src/applicationContext.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrderrootsServiceImpl.java" tooltip="OA/src/cn/bdqn/j25/serviceImpl/OrderrootsServiceImpl.java">
-<persistable path="/OA/src/cn/bdqn/j25/serviceImpl/OrderrootsServiceImpl.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AttendanceServiceImpl.java" tooltip="OA/src/cn/bdqn/j25/serviceImpl/AttendanceServiceImpl.java">
+<persistable path="/OA/src/cn/bdqn/j25/serviceImpl/AttendanceServiceImpl.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrderrootsService.java" tooltip="OA/src/cn/bdqn/j25/service/OrderrootsService.java">
-<persistable path="/OA/src/cn/bdqn/j25/service/OrderrootsService.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TemporaryDaoImpl.java" tooltip="OA/src/cn/bdqn/j25/daoImpl/TemporaryDaoImpl.java">
+<persistable path="/OA/src/cn/bdqn/j25/daoImpl/TemporaryDaoImpl.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrderrootsDaoImpl.java" tooltip="OA/src/cn/bdqn/j25/daoImpl/OrderrootsDaoImpl.java">
-<persistable path="/OA/src/cn/bdqn/j25/daoImpl/OrderrootsDaoImpl.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TemporaryDao.java" tooltip="OA/src/cn/bdqn/j25/dao/TemporaryDao.java">
+<persistable path="/OA/src/cn/bdqn/j25/dao/TemporaryDao.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrderrootsDao.java" tooltip="OA/src/cn/bdqn/j25/dao/OrderrootsDao.java">
-<persistable path="/OA/src/cn/bdqn/j25/dao/OrderrootsDao.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AttendanceService.java" tooltip="OA/src/cn/bdqn/j25/service/AttendanceService.java">
+<persistable path="/OA/src/cn/bdqn/j25/service/AttendanceService.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PostServiceImpl.java" tooltip="OA/src/cn/bdqn/j25/serviceImpl/PostServiceImpl.java">
-<persistable path="/OA/src/cn/bdqn/j25/serviceImpl/PostServiceImpl.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" name="hibernate.cfg.xml" tooltip="OA/src/hibernate.cfg.xml">
+<persistable path="/OA/src/hibernate.cfg.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PostService.java" tooltip="OA/src/cn/bdqn/j25/service/PostService.java">
-<persistable path="/OA/src/cn/bdqn/j25/service/PostService.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Workshop.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Workshop.hbm.xml">
+<persistable path="/OA/src/cn/bdqn/j25/pojo/Workshop.hbm.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PostDaoImpl.java" tooltip="OA/src/cn/bdqn/j25/daoImpl/PostDaoImpl.java">
-<persistable path="/OA/src/cn/bdqn/j25/daoImpl/PostDaoImpl.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Warehouse.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Warehouse.hbm.xml">
+<persistable path="/OA/src/cn/bdqn/j25/pojo/Warehouse.hbm.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PostDao.java" tooltip="OA/src/cn/bdqn/j25/dao/PostDao.java">
-<persistable path="/OA/src/cn/bdqn/j25/dao/PostDao.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Wages.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Wages.hbm.xml">
+<persistable path="/OA/src/cn/bdqn/j25/pojo/Wages.hbm.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RestServiceImpl.java" tooltip="OA/src/cn/bdqn/j25/serviceImpl/RestServiceImpl.java">
-<persistable path="/OA/src/cn/bdqn/j25/serviceImpl/RestServiceImpl.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Types.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Types.hbm.xml">
+<persistable path="/OA/src/cn/bdqn/j25/pojo/Types.hbm.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RestService.java" tooltip="OA/src/cn/bdqn/j25/service/RestService.java">
-<persistable path="/OA/src/cn/bdqn/j25/service/RestService.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RestDaoImpl.java" tooltip="OA/src/cn/bdqn/j25/daoImpl/RestDaoImpl.java">
-<persistable path="/OA/src/cn/bdqn/j25/daoImpl/RestDaoImpl.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Temporary.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Temporary.hbm.xml">
+<persistable path="/OA/src/cn/bdqn/j25/pojo/Temporary.hbm.xml"/>
 </file>
 </mruList>
 </workbench>

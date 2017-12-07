@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +12,7 @@ public class Proorder implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal proorderid;
+	private Integer proorderid;
 	private Employee employee;
 	private Orders orders;
 	private String productno;
@@ -42,11 +41,11 @@ public class Proorder implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getProorderid() {
+	public Integer getProorderid() {
 		return this.proorderid;
 	}
 
-	public void setProorderid(BigDecimal proorderid) {
+	public void setProorderid(Integer proorderid) {
 		this.proorderid = proorderid;
 	}
 

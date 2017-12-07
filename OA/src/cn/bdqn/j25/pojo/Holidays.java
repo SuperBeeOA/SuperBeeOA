@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 /**
@@ -11,12 +10,12 @@ public class Holidays implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal holidayid;
+	private Integer holidayid;
 	private Employee employeeByLeaver;
 	private Employee employeeByApprover;
 	private String reasons;
 	private Timestamp starttime;
-	private BigDecimal days;
+	private Integer days;
 
 	// Constructors
 
@@ -26,7 +25,7 @@ public class Holidays implements java.io.Serializable {
 
 	/** full constructor */
 	public Holidays(Employee employeeByLeaver, Employee employeeByApprover,
-			String reasons, Timestamp starttime, BigDecimal days) {
+			String reasons, Timestamp starttime, Integer days) {
 		this.employeeByLeaver = employeeByLeaver;
 		this.employeeByApprover = employeeByApprover;
 		this.reasons = reasons;
@@ -36,11 +35,11 @@ public class Holidays implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getHolidayid() {
+	public Integer getHolidayid() {
 		return this.holidayid;
 	}
 
-	public void setHolidayid(BigDecimal holidayid) {
+	public void setHolidayid(Integer holidayid) {
 		this.holidayid = holidayid;
 	}
 
@@ -76,11 +75,11 @@ public class Holidays implements java.io.Serializable {
 		this.starttime = starttime;
 	}
 
-	public BigDecimal getDays() {
+	public Integer getDays() {
 		return this.days;
 	}
 
-	public void setDays(BigDecimal days) {
+	public void setDays(Integer days) {
 		this.days = days;
 	}
 

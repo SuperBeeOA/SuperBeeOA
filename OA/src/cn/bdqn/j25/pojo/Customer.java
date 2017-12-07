@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +11,7 @@ public class Customer implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal customerid;
+	private Integer customerid;
 	private String customername;
 	private String address;
 	private String levels;
@@ -44,11 +43,11 @@ public class Customer implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getCustomerid() {
+	public Integer getCustomerid() {
 		return this.customerid;
 	}
 
-	public void setCustomerid(BigDecimal customerid) {
+	public void setCustomerid(Integer customerid) {
 		this.customerid = customerid;
 	}
 

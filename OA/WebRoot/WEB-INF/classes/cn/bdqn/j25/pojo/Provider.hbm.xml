@@ -6,12 +6,12 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Provider" table="PROVIDER" schema="SCOTT">
-        <id name="providerid" type="java.math.BigDecimal">
-            <column name="PROVIDERID" precision="22" scale="0" />
+        <id name="providerid" type="java.lang.Integer">
+            <column name="PROVIDERID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <many-to-one name="types" class="cn.bdqn.j25.pojo.Types" fetch="select">
-            <column name="TYPEID" precision="22" scale="0" />
+            <column name="TYPEID" precision="9" scale="0" />
         </many-to-one>
         <property name="providername" type="java.lang.String">
             <column name="PROVIDERNAME" length="20" />
@@ -33,13 +33,13 @@
         </property>
         <set name="equipments" inverse="true">
             <key>
-                <column name="PROVIDERID" precision="22" scale="0" />
+                <column name="PROVIDERID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Equipment" />
         </set>
         <set name="materials" inverse="true">
             <key>
-                <column name="PROVIDERID" precision="22" scale="0" />
+                <column name="PROVIDERID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Material" />
         </set>

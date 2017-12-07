@@ -11,7 +11,7 @@ public class Wages implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal wagesid;
+	private Integer wagesid;
 	private Employee employee;
 	private BigDecimal wages;
 	private Timestamp time;
@@ -31,11 +31,11 @@ public class Wages implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getWagesid() {
+	public Integer getWagesid() {
 		return this.wagesid;
 	}
 
-	public void setWagesid(BigDecimal wagesid) {
+	public void setWagesid(Integer wagesid) {
 		this.wagesid = wagesid;
 	}
 

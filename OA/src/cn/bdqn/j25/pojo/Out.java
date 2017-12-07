@@ -11,7 +11,7 @@ public class Out implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal outid;
+	private Integer outid;
 	private Employee employee;
 	private Warehouse warehouse;
 	private Orders orders;
@@ -40,11 +40,11 @@ public class Out implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getOutid() {
+	public Integer getOutid() {
 		return this.outid;
 	}
 
-	public void setOutid(BigDecimal outid) {
+	public void setOutid(Integer outid) {
 		this.outid = outid;
 	}
 

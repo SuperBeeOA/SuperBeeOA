@@ -6,15 +6,15 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Proorder" table="PROORDER" schema="SCOTT">
-        <id name="proorderid" type="java.math.BigDecimal">
-            <column name="PROORDERID" precision="22" scale="0" />
+        <id name="proorderid" type="java.lang.Integer">
+            <column name="PROORDERID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <many-to-one name="employee" class="cn.bdqn.j25.pojo.Employee" fetch="select">
-            <column name="EMPLOYEEID" precision="22" scale="0" />
+            <column name="EMPLOYEEID" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="orders" class="cn.bdqn.j25.pojo.Orders" fetch="select">
-            <column name="ORDERID" precision="22" scale="0" />
+            <column name="ORDERID" precision="9" scale="0" />
         </many-to-one>
         <property name="productno" type="java.lang.String">
             <column name="PRODUCTNO" length="20" />
@@ -30,7 +30,7 @@
         </property>
         <set name="checkses" inverse="true">
             <key>
-                <column name="PROORDERID" precision="22" scale="0" />
+                <column name="PROORDERID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Checks" />
         </set>

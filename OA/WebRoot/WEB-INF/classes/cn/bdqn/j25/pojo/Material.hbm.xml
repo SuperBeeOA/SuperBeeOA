@@ -6,15 +6,15 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Material" table="MATERIAL" schema="SCOTT">
-        <id name="materialid" type="java.math.BigDecimal">
-            <column name="MATERIALID" precision="22" scale="0" />
+        <id name="materialid" type="java.lang.Integer">
+            <column name="MATERIALID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <many-to-one name="types" class="cn.bdqn.j25.pojo.Types" fetch="select">
-            <column name="TYPEID" precision="22" scale="0" />
+            <column name="TYPEID" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="provider" class="cn.bdqn.j25.pojo.Provider" fetch="select">
-            <column name="PROVIDERID" precision="22" scale="0" />
+            <column name="PROVIDERID" precision="9" scale="0" />
         </many-to-one>
         <property name="materialname" type="java.lang.String">
             <column name="MATERIALNAME" length="10" not-null="true" />
@@ -25,8 +25,8 @@
         <property name="materialprice" type="java.math.BigDecimal">
             <column name="MATERIALPRICE" precision="22" scale="0" />
         </property>
-        <property name="shelflife" type="java.math.BigDecimal">
-            <column name="SHELFLIFE" precision="22" scale="0" />
+        <property name="shelflife" type="java.lang.Integer">
+            <column name="SHELFLIFE" precision="9" scale="0" />
         </property>
         <property name="materialmodel" type="java.lang.String">
             <column name="MATERIALMODEL" length="20" />

@@ -6,21 +6,18 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Attendance" table="ATTENDANCE" schema="SCOTT">
-        <id name="attendanceid" type="java.math.BigDecimal">
-            <column name="ATTENDANCEID" precision="22" scale="0" />
+        <id name="attendanceid" type="java.lang.Integer">
+            <column name="ATTENDANCEID" precision="9" scale="0" />
             <generator class="increment"></generator>
         </id>
         <many-to-one name="employee" class="cn.bdqn.j25.pojo.Employee" fetch="select">
-            <column name="EMPLOYEEID" precision="22" scale="0" />
+            <column name="EMPLOYEEID" precision="9" scale="0" />
         </many-to-one>
-        <property name="attendancetime" type="java.sql.Timestamp">
-            <column name="ATTENDANCETIME" length="7" />
+        <property name="leave" type="java.lang.Integer">
+            <column name="LEAVE" precision="9" scale="0" />
         </property>
-        <property name="leave" type="java.math.BigDecimal">
-            <column name="LEAVE" precision="22" scale="0" />
-        </property>
-        <property name="absenteeism" type="java.math.BigDecimal">
-            <column name="ABSENTEEISM" precision="22" scale="0" />
+        <property name="absenteeism" type="java.lang.Integer">
+            <column name="ABSENTEEISM" precision="9" scale="0" />
         </property>
         <property name="remarks" type="java.lang.String">
             <column name="REMARKS" length="50" />

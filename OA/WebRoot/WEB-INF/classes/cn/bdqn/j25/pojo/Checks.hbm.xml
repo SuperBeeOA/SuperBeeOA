@@ -6,21 +6,21 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Checks" table="CHECKS" schema="SCOTT">
-        <id name="checkid" type="java.math.BigDecimal">
-            <column name="CHECKID" precision="22" scale="0" />
+        <id name="checkid" type="java.lang.Integer">
+            <column name="CHECKID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <many-to-one name="employee" class="cn.bdqn.j25.pojo.Employee" fetch="select">
-            <column name="PEOPLE" precision="22" scale="0" />
+            <column name="PEOPLE" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="proorder" class="cn.bdqn.j25.pojo.Proorder" fetch="select">
-            <column name="PROORDERID" precision="22" scale="0" />
+            <column name="PROORDERID" precision="9" scale="0" />
         </many-to-one>
         <property name="name" type="java.lang.String">
             <column name="NAME" length="20" />
         </property>
-        <property name="quantity" type="java.math.BigDecimal">
-            <column name="QUANTITY" precision="22" scale="0" />
+        <property name="quantity" type="java.lang.Integer">
+            <column name="QUANTITY" precision="9" scale="0" />
         </property>
         <property name="qualifiedrate" type="java.lang.String">
             <column name="QUALIFIEDRATE" length="10" />

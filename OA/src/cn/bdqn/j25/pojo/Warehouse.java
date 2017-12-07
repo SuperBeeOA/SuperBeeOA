@@ -1,6 +1,5 @@
 package cn.bdqn.j25.pojo;
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,7 +11,7 @@ public class Warehouse implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal warehouseid;
+	private Integer warehouseid;
 	private Types types;
 	private String warehousename;
 	private String capacity;
@@ -46,11 +45,11 @@ public class Warehouse implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getWarehouseid() {
+	public Integer getWarehouseid() {
 		return this.warehouseid;
 	}
 
-	public void setWarehouseid(BigDecimal warehouseid) {
+	public void setWarehouseid(Integer warehouseid) {
 		this.warehouseid = warehouseid;
 	}
 

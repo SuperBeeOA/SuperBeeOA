@@ -6,8 +6,8 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Team" table="TEAM" schema="SCOTT">
-        <id name="teamid" type="java.math.BigDecimal">
-            <column name="TEAMID" precision="22" scale="0" />
+        <id name="teamid" type="java.lang.Integer">
+            <column name="TEAMID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <property name="teamname" type="java.lang.String">
@@ -15,7 +15,7 @@
         </property>
         <set name="employees" inverse="true">
             <key>
-                <column name="TEAMID" precision="22" scale="0" />
+                <column name="TEAMID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Employee" />
         </set>

@@ -6,12 +6,12 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Product" table="PRODUCT" schema="SCOTT">
-        <id name="productid" type="java.math.BigDecimal">
-            <column name="PRODUCTID" precision="22" scale="0" />
+        <id name="productid" type="java.lang.Integer">
+            <column name="PRODUCTID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <many-to-one name="types" class="cn.bdqn.j25.pojo.Types" fetch="select">
-            <column name="TYPEID" precision="22" scale="0" />
+            <column name="TYPEID" precision="9" scale="0" />
         </many-to-one>
         <property name="productname" type="java.lang.String">
             <column name="PRODUCTNAME" length="10" not-null="true" />
@@ -25,8 +25,8 @@
         <property name="component" type="java.lang.String">
             <column name="COMPONENT" length="20" />
         </property>
-        <property name="shelflife" type="java.math.BigDecimal">
-            <column name="SHELFLIFE" precision="22" scale="0" />
+        <property name="shelflife" type="java.lang.Integer">
+            <column name="SHELFLIFE" precision="9" scale="0" />
         </property>
         <property name="productmodel" type="java.lang.String">
             <column name="PRODUCTMODEL" length="20" />
@@ -42,13 +42,13 @@
         </property>
         <set name="orderses" inverse="true">
             <key>
-                <column name="PRODUCTNAME" precision="22" scale="0" />
+                <column name="PRODUCTNAME" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Orders" />
         </set>
         <set name="procurements" inverse="true">
             <key>
-                <column name="PRODUCTNAME" precision="22" scale="0" />
+                <column name="PRODUCTNAME" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Procurement" />
         </set>

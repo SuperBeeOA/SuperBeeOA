@@ -6,30 +6,30 @@
 -->
 <hibernate-mapping>
     <class name="cn.bdqn.j25.pojo.Orders" table="ORDERS" schema="SCOTT">
-        <id name="orderid" type="java.math.BigDecimal">
-            <column name="ORDERID" precision="22" scale="0" />
+        <id name="orderid" type="java.lang.Integer">
+            <column name="ORDERID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
         <many-to-one name="employeeByOperator" class="cn.bdqn.j25.pojo.Employee" fetch="select">
-            <column name="OPERATOR" precision="22" scale="0" />
+            <column name="OPERATOR" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="department" class="cn.bdqn.j25.pojo.Department" fetch="select">
-            <column name="DEPARTMENT" precision="22" scale="0" />
+            <column name="DEPARTMENT" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="customer" class="cn.bdqn.j25.pojo.Customer" fetch="select">
-            <column name="CUSTOMERID" precision="22" scale="0" />
+            <column name="CUSTOMERID" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="state" class="cn.bdqn.j25.pojo.State" fetch="select">
-            <column name="STATE" precision="22" scale="0" />
+            <column name="STATE" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="types" class="cn.bdqn.j25.pojo.Types" fetch="select">
-            <column name="TYPEID" precision="22" scale="0" />
+            <column name="TYPEID" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="employeeByOriginator" class="cn.bdqn.j25.pojo.Employee" fetch="select">
-            <column name="ORIGINATOR" precision="22" scale="0" />
+            <column name="ORIGINATOR" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="product" class="cn.bdqn.j25.pojo.Product" fetch="select">
-            <column name="PRODUCTNAME" precision="22" scale="0" />
+            <column name="PRODUCTNAME" precision="9" scale="0" />
         </many-to-one>
         <property name="ordernumber" type="java.lang.String">
             <column name="ORDERNUMBER" length="10" />
@@ -51,31 +51,31 @@
         </property>
         <set name="outs" inverse="true">
             <key>
-                <column name="ORDERID" precision="22" scale="0" />
+                <column name="ORDERID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Out" />
         </set>
         <set name="enters" inverse="true">
             <key>
-                <column name="ORDERID" precision="22" scale="0" />
+                <column name="ORDERID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Enter" />
         </set>
         <set name="monitorings" inverse="true">
             <key>
-                <column name="ORDERID" precision="22" scale="0" />
+                <column name="ORDERID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Monitoring" />
         </set>
         <set name="proorders" inverse="true">
             <key>
-                <column name="ORDERID" precision="22" scale="0" />
+                <column name="ORDERID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Proorder" />
         </set>
         <set name="orderrootses" inverse="true">
             <key>
-                <column name="ORDERID" precision="22" scale="0" />
+                <column name="ORDERID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Orderroots" />
         </set>

@@ -11,7 +11,7 @@ public class Temporary implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal temporaryid;
+	private Integer temporaryid;
 	private String name;
 	private String phone;
 	private Timestamp time;
@@ -33,11 +33,11 @@ public class Temporary implements java.io.Serializable {
 
 	// Property accessors
 
-	public BigDecimal getTemporaryid() {
+	public Integer getTemporaryid() {
 		return this.temporaryid;
 	}
 
-	public void setTemporaryid(BigDecimal temporaryid) {
+	public void setTemporaryid(Integer temporaryid) {
 		this.temporaryid = temporaryid;
 	}
 
