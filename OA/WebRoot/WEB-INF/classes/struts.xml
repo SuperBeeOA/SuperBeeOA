@@ -22,5 +22,7 @@
        	<action name="em1" class="cn.bdqn.j25.action.EmployeeAction" method="findEmployeeByName">
 			<result>/index.jsp</result>
 		</action>
+		<action name="loinAndOut" class="cn.bdqn.j25.action.LoinAndOutAction.java">
+		</action>
     </package>
 </struts>
