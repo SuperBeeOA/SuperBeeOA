@@ -1,10 +1,10 @@
-package cn.bdqn.j25.service;
+package cn.bdqn.j25.dao;
 
 import java.util.List;
 
 import cn.bdqn.j25.pojo.Product;
 
-public interface ProductService {
+public interface ProductDao {
 	public Product findByid(int id);//根据ID查询	
 	
 	public List<Product> findByProductname(String productname);//根据名字查询
@@ -15,7 +15,5 @@ public interface ProductService {
 	
 	public void delProduct(Product product); //删除
 	
-	public List<Product> findAll();
-	
-	public List<Product> findById(int id);
+	public List<Product> findAll();//查找所有的产品id和名字
 }

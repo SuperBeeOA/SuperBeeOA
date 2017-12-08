@@ -16,6 +16,4 @@ public interface ProductService {
 	public void delProduct(Product product); //删除
 	
 	public List<Product> findAll();
-	
-	public List<Product> findById(int id);
 }

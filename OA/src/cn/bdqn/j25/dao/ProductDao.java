@@ -16,4 +16,6 @@ public interface ProductDao {
 	public void delProduct(Product product); //删除
 	
 	public List<Product> findAll();//查找所有的产品id和名字
+	
+	public List<Product> findById(int id);
 }
