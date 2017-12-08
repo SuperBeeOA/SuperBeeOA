@@ -5,7 +5,7 @@
 <script src="${pageContext.request.contextPath }/jst/business.js"></script>
 	<section>
 		<div id="content" class="row-fluid">
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:0px; padding-bottom:50%">
+	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:100%; padding-bottom:50%">
 	            <div class="container">
 				    <div class="row">
 				        <div class="span2">
@@ -13,7 +13,7 @@
 				                <li id="mi" class="active"><a href="javascript:void(0)">账号信息</a></li>
 				                <li id="fat"><a href="javascript:void(0)">查看出勤</a></li>
 				                <li id="fan"><a href="javascript:void(0)">发布公告</a></li>
-				                <li id="fc"><a id="fc" href="javascript:void(0)">内部联络</a></li>
+				                <li id="fc"><a href="javascript:void(0)">内部联络</a></li>
 				                <li id="fo"><a href="javascript:void(0)">查看订单</a></li>
 				                <li id="ao"><a href="javascript:void(0)">生成订单</a></li>
 				                <li id="mc"><a href="javascript:void(0)">管理客户</a></li>
@@ -24,7 +24,7 @@
 				</div>
 	        </div>
 	        
-	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height:0px; padding-bottom:50%">
+	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height:100%; padding-bottom:50%">
 	            <%@include file="common/public.jsp" %>
 	            <div id="forder" style="display: none;">
 	            	<h2 class="text-center">查看订单</h2>
@@ -83,7 +83,7 @@
 	            				<td>操作时间</td>
 	            			</tr>
 	            		</table>
-	            		<input id="bo" class="btn btn-primary" type="button" value="返回">
+	            		<input id="bo" class="btn btn-primary pull-right" type="button" value="返回">
 	            	</div>
 	            </div>
 	            <div id="aorder" style="display: none;">
@@ -196,7 +196,7 @@
 	            				<input type="hidden" value="remarks">
 	            			</li>
 	            		</ul>
-	            		<input id="bc" class="btn btn-primary" type="button" value="返回">
+	            		<input id="bc" class="btn btn-primary pull-right" type="button" value="返回">
 	            	</div>
 	            </div>
 	            <div id="supplier" style="display: none;">
@@ -281,12 +281,12 @@
 	            				<input type="hidden" value="remarks">
 	            			</li>
 	            		</ul>
-	            		<input id="bs" class="btn btn-primary" type="button" value="返回">
+	            		<input id="bs" class="btn btn-primary pull-right" type="button" value="返回">
 	            	</div>
 	            </div>
 	        </div>
 	        
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:0px; padding-bottom:50%">
+	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:100%; padding-bottom:50%">
 	            <div>
 	            	<h3 class="text-center">个人信息</h3>
 	            	<ul class="list-unstyled">

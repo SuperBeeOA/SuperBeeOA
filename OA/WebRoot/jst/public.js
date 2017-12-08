@@ -18,6 +18,10 @@ $(function() {
 	  $("#aorder").hide();
 	  $("#customer").hide();
 	  $("#supplier").hide();
+	  $("#smoney").hide();
+	  $("#teo").hide();
+	  $("#ars").hide();
+	  $("#irs").hide();
   });
 
   $("#fat").click(function() {
@@ -31,6 +35,10 @@ $(function() {
 	  $("#aorder").hide();
 	  $("#customer").hide();
 	  $("#supplier").hide();
+	  $("#smoney").hide();
+	  $("#teo").hide();
+	  $("#ars").hide();
+	  $("#irs").hide();
   });
   
   $("#fan").click(function() {
@@ -44,6 +52,10 @@ $(function() {
 	  $("#aorder").hide();
 	  $("#customer").hide();
 	  $("#supplier").hide();
+	  $("#smoney").hide();
+	  $("#teo").hide();
+	  $("#ars").hide();
+	  $("#irs").hide();
   });
   
   $("#fc").click(function() {
@@ -57,6 +69,10 @@ $(function() {
 	  $("#aorder").hide();
 	  $("#customer").hide();
 	  $("#supplier").hide();
+	  $("#smoney").hide();
+	  $("#teo").hide();
+	  $("#ars").hide();
+	  $("#irs").hide();
   });
   
   $("#if").click(function() {

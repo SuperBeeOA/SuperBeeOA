@@ -4,7 +4,7 @@
     <section>
     
     	<div id="content" class="row-fluid">
-	        <div class="col-md-3 panel" style="background-color: #e7e7e7; height:0px; padding-bottom:50%">
+	        <div class="col-md-3 panel" style="background-color: #e7e7e7; height:100%; padding-bottom:50%">
 	            <div>
 	            	<h3>公司信息</h3>
 	            	<ul class="list-unstyled">
@@ -102,7 +102,7 @@
 	            </div> --%>
 	        </div>
 	        
-	        <div class="col-md-7 panel" style="background-color: #f8f8f8; height:0px; padding-bottom:50%">
+	        <div class="col-md-7 panel" style="background-color: #f8f8f8; height:100%; padding-bottom:50%">
 	            <div>
 	            	<h2 style="padding-left: 50px;">公司公告</h2>
 		            <hr>
@@ -135,7 +135,7 @@
 		        </div> --%>
 	        </div>
 	        
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:0px; padding-bottom:50%">
+	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:100%; padding-bottom:50%">
 	            <div>
 	            	<h3>个人信息</h3>
 	            	<ul class="list-unstyled">
