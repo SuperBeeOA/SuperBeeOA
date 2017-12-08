@@ -8,7 +8,7 @@
 	<constant name="struts.custom.i18n.resources" value="message" />
 	<constant name="struts.i18n.encoding" value="UTF-8" />
 	<constant name="struts.ui.theme" value="simple" />
-<!-- 
+
 	<package name="type" extends="struts-default">
 		<default-action-ref name="defaultAction" />
 
@@ -24,16 +24,6 @@
 			method="findEmployeeByName">
 			<result>/index.jsp</result>
 		</action>
-		<action name="loinAndOut" class="cn.bdqn.j25.action.LoinAndOutAction.java"
-			method="loinAndOut">
-			<result>/page/main.jsp</result>
-		</action>
-	</package>  -->
-	 <package name="type" extends="struts-default">
-		<default-action-ref name="defaultAction" />
-		<action name="login" class="cn.bdqn.j25.action.LoginAndOutAction"
-			method="login">
-			<result>/page/main.jsp</result>
-		</action>
-	</package> 
+	</package>
+<include file="struts/struts-login.xml"></include>
 </struts>

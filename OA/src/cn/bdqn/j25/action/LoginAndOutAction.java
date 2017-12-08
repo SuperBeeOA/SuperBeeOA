@@ -40,8 +40,9 @@ public class LoginAndOutAction extends ActionSupport{
 	
 	@SuppressWarnings({ "unused", "unchecked" })
 	public String login(Employee employee){
-		employee = (Employee) employeeService.findByWorkidPwd(employee);
-		ActionContext ac=ActionContext.getContext();
+		Employee employee1=(Employee) employeeService.findByWorkidPwd(employee);
+		Map<String, Object> request = (Map) ActionContext.getContext().get(
+				"request");
 		System.out.println(employee.getName());
 		if(employee.getName()==null||employee.getName()==""){
 			this.setMessage("登入失败，请检查用户名或密码");
@@ -55,8 +56,7 @@ public class LoginAndOutAction extends ActionSupport{
 			this.setMessage("登入失败，请检查用户名或密码");
 			return SUCCESS;
 		}else{
-			Map session=ac.getSession();
-			session.put("login", employee);
+			request.put("employee", employee1);
 			return SUCCESS;
 		}
 		
