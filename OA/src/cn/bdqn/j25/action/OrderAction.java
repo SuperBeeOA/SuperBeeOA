@@ -19,7 +19,6 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class OrderAction extends ActionSupport{
 
-	private Logger logger=Logger.getLogger(OrderAction.class);
 	private OrdersService ordersService;
 	private Orders orders;
 	private Customer customer;
@@ -32,18 +31,29 @@ public class OrderAction extends ActionSupport{
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
 	
-	private String result;
+	private String productid;
 	
 	//自动生成客户编号
 	public String findCustomer() throws UnsupportedEncodingException{
 		listCustomer=customerService.findAll();	
 		return SUCCESS;		
 	}
-
+	//自动生成产品编号
 	public String findProduct() throws UnsupportedEncodingException{
 		listProduct=productService.findAll();		 
 		return SUCCESS;		
 	}
+	
+	//查询单价和单位
+	
+	public String findprice(){
+		product=productService.findByid(Integer.parseInt(productid));	
+		
+		request.put("po",product);
+		return SUCCESS;
+	}
+	
+	
 	
 	public OrdersService getOrdersService() {
 		return ordersService;
@@ -124,13 +134,13 @@ public class OrderAction extends ActionSupport{
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-
-	public String getResult() {
-		return result;
+	
+	public String getProductid() {
+		return productid;
 	}
-
-	public void setResult(String result) {
-		this.result = result;
+	
+	public void setProductid(String productid) {
+		this.productid = productid;
 	}
 	
 	

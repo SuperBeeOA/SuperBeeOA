@@ -23,10 +23,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  	<c:forEach var="w" items="${requestScope.type}" >
-  			${w.typename}
-  			
-  	</c:forEach>
+  	<%-- <c:forEach var="w" items="${requestScope.po}" > --%>
+  			${requestScope.po.productname}
+  			${requestScope.po.productprice}
+  			${requestScope.po.unit}
+  <%-- 	</c:forEach> --%>
       <br>
       
       123

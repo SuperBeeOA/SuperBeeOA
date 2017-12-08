@@ -36,20 +36,27 @@ public class Product implements java.io.Serializable {
 	
 	
 
-	public Product(Integer productid, String productname,
-			BigDecimal productprice, String unit) {
+	public Product(Integer productid, String productname) {
 		super();
 		this.productid = productid;
 		this.productname = productname;
-		this.productprice = productprice;
-		this.unit = unit;
+		
 	}
 
 	/** full constructor */
-	public Product(Types types, String productname, String productno,
-			BigDecimal productprice, String component, Integer shelflife,
-			String productmodel, BigDecimal productioncost,
+	
+	// Property accessors
+
+	public Integer getProductid() {
+		return this.productid;
+	}
+
+	public Product(Integer productid, Types types, String productname,
+			String productno, BigDecimal productprice, String component,
+			Integer shelflife, String productmodel, BigDecimal productioncost,
 			BigDecimal truckage, String productremarks, String unit) {
+		super();
+		this.productid = productid;
 		this.types = types;
 		this.productname = productname;
 		this.productno = productno;
@@ -61,12 +68,6 @@ public class Product implements java.io.Serializable {
 		this.truckage = truckage;
 		this.productremarks = productremarks;
 		this.unit = unit;
-	}
-
-	// Property accessors
-
-	public Integer getProductid() {
-		return this.productid;
 	}
 
 	public void setProductid(Integer productid) {

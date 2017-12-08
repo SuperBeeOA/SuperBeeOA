@@ -74,12 +74,17 @@ $(function() {
 					$(".productid").append(
 			            "<option value="+this.productid+">"+this.productname+"</option>"   			
 					);
-					$(".unit").html(this.unit);
-					$(".productprice").html(this.productprice);
 				});	
-			  });
-		  
-		  
+			  });		    
+	  	});
+	  //根据产品id查询单位和单价
+	  
+	  $(".productid").blur(function() {
+		  var id= $(".productid").val();
+		  $.getJSON("order2!findprice","productid="+id,function(data){
+			  $(".unit").html(data.unit);
+			  $(".productprice").html(data.productprice);
+		  });
 	  });
 	  
 });
