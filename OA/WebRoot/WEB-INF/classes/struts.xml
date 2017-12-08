@@ -21,7 +21,7 @@
 			<result>/index.jsp</result>
 		</action>
 		
-		<action name="order2" class="cn.bdqn.j25.action.OrderAction" method="findprice" >
+	 <action name="order2" class="cn.bdqn.j25.action.OrderAction" method="findprice" >
 			<result>/index.jsp</result>
 		</action> 
        	
@@ -44,10 +44,10 @@
 		
 		<!-- <action name="order2" class="cn.bdqn.j25.action.OrderAction" method="findprice" >
 			<result type="json">
-				<param name="root">product</param>	
+				<param name="root">listProduct</param>	
 				<param name="includeProperties">product.unit,product.productprice</param>			
 			</result>
-		</action>  -->
+		</action> -->
 	</package>
 
 </struts>

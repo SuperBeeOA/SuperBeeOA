@@ -47,9 +47,9 @@ public class OrderAction extends ActionSupport{
 	//查询单价和单位
 	
 	public String findprice(){
-		product=productService.findByid(Integer.parseInt(productid));	
-		
-		request.put("po",product);
+		product=productService.findByid(Integer.parseInt(productid));
+		request.put("po", product);
+		System.out.println(listProduct);
 		return SUCCESS;
 	}
 	
