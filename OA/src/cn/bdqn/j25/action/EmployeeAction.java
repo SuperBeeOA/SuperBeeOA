@@ -14,7 +14,7 @@ public class EmployeeAction extends ActionSupport {
 	private EmployeeService employeeService;
 	private String name;
 	private Employee employee;
-   
+
 	@SuppressWarnings("unchecked")
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
@@ -22,15 +22,12 @@ public class EmployeeAction extends ActionSupport {
 	public String findAllEmployee() {
 		List<Employee> list = employeeService.findAll();
 		request.put("employee", list);
-		System.out.println("++++++++++++++++++++++++");
 		return SUCCESS;
 	}
 
 	public String findEmployeeByName() {
 		List<Employee> list = employeeService.findByWorkidPwd(employee);
 		request.put("employee", list);
-		System.out.println("++++++++++++++++++++++++");
-
 		return SUCCESS;
 	}
 

@@ -3,8 +3,8 @@
 <%@include file="common/header.jsp" %>
 <%@include file="common/js.jsp" %>
 	<section>
-		<div id="content" class="row-fluid">
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:0px; padding-bottom:50%">
+		<div id="content" class="row-fluid" style="overflow:hidden;">
+	        <div class="col-md-3 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div class="container">
 				    <div class="row">
 				        <div class="span2">
@@ -19,17 +19,17 @@
 				</div>
 	        </div>
 	        
-	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height:0px; padding-bottom:50%">
+	        <div class="col-md-7 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <%@include file="common/public.jsp" %>
 	        </div>
 	        
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:0px; padding-bottom:50%">
+	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div>
 	            	<h3>个人信息</h3>
 	            	<ul class="list-unstyled">
 	            		<li><label>姓名：</label>员工001</li>
 	            		<li><label>所属公司：</label>台江分部</li>
-	            		<li><label>部门：</label>仓库部</li>
+	            		<li><label>部门：</label>质检部</li>
 	            		<li><label>职位：</label>经理</li>
 	            		<li><label>工龄：</label>2 年</li>
 	            	</ul>

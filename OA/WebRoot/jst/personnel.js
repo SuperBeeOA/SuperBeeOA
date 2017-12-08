@@ -17,4 +17,15 @@ $(function() {
 		  $("#add").hide();
 	  });
 	  
+	  $("#cs").click(function() {
+		  $("#cstaff").show();
+		  $("#allstaff").hide();
+	  });
+	  
+	  $("#bcs").click(function() {
+		  $("#allstaff").show();
+		  $("#cstaff").hide();
+	  });
+	  
+	  
 });

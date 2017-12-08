@@ -21,4 +21,6 @@ public interface CustomerDao {
 	public Customer addOrUpdateCustomer(Customer customer);//增加或更新客户信息
 	
 	public void delCustomer(Customer customer); //删除
+	
+	
 }
