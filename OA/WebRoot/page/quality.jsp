@@ -5,7 +5,7 @@
 <script src="${pageContext.request.contextPath }/jst/quality.js"></script>
 	<section>
 		<div id="content" class="row-fluid" style="overflow:hidden;">
-	        <div class="col-md-3 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
+	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div class="container">
 				    <div class="row">
 				        <div class="span2">
@@ -20,7 +20,7 @@
 				</div>
 	        </div>
 	        
-	        <div class="col-md-7 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
+	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <%@include file="common/public.jsp" %>
 	        </div>
 	        
