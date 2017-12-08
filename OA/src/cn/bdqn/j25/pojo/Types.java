@@ -19,9 +19,6 @@ public class Types implements java.io.Serializable {
 	private Set products = new HashSet(0);
 	private Set procurements = new HashSet(0);
 	private Set warehouses = new HashSet(0);
-	// Fields
-	
-	
 
 	// Constructors
 
@@ -47,17 +44,17 @@ public class Types implements java.io.Serializable {
 	}
 
 	// Property accessors
-	
-	public String getTypename() {
-		return this.typename;
-	}
 
 	public Integer getTypeid() {
-		return typeid;
+		return this.typeid;
 	}
 
 	public void setTypeid(Integer typeid) {
 		this.typeid = typeid;
+	}
+
+	public String getTypename() {
+		return this.typename;
 	}
 
 	public void setTypename(String typename) {

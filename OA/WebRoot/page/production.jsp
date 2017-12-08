@@ -83,23 +83,44 @@
 	            	<h2 class="text-center">原材料申请</h2>
 	            	<hr>
 	            	<form action="">
-	            		<table>
+	            		<table class="table">
 		            		<tr>
 		            			<td>材料编号</td>
 		            			<td>材料名称</td>
-		            			<td>单位</td>
+		            			<td>材料型号</td>
 		            			<td>申请数量</td>
 		            		</tr>
 		            		<tr>
-		            			
+		            			<td><input type="text" name="materialid"></td>
+		            			<td><input type="text" name="materialname"></td>
+		            			<td><input type="text" name="materialmodel"></td>
+		            			<td><input type="text" name="number"></td>
 		            		</tr>
 		            	</table>
+		            	<input class="btn btn-primary" type="submit" value="提交申请" style="position: relative; left: 45%;">
 	            	</form>
 	            	
 	            </div>
 	            <div id="irs" style="display: none;">
 	            	<h2 class="text-center">入库申请</h2>
 	            	<hr>
+	            	<form action="">
+	            		<table class="table">
+		            		<tr>
+		            			<td>产品编号</td>
+		            			<td>产品名称</td>
+		            			<td>产品型号</td>
+		            			<td>入库数量</td>
+		            		</tr>
+		            		<tr>
+		            			<td><input type="text" name="productid"></td>
+		            			<td><input type="text" name="productname"></td>
+		            			<td><input type="text" name="productmodel"></td>
+		            			<td><input type="text" name="number"></td>
+		            		</tr>
+		            	</table>
+		            	<input class="btn btn-primary" type="submit" value="提交申请" style="position: relative; left: 45%;">
+	            	</form>
 	            </div>
 	        </div>
 	        
