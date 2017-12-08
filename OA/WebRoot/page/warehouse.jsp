@@ -10,10 +10,10 @@
 				    <div class="row">
 				        <div class="span2">
 				            <ul class="nav nav-pills nav-stacked">
-				                <li class="active"><a href="javascript:void(0)">账号信息</a></li>
-				                <li><a href="javascript:void(0)">查看出勤</a></li>
-				                <li><a href="javascript:void(0)">发布公告</a></li>
-				                <li><a href="javascript:void(0)">内部联络</a></li>
+				                <li id="mi" class="active"><a href="javascript:void(0)">账号信息</a></li>
+				                <li id="fat"><a href="javascript:void(0)">查看出勤</a></li>
+				                <li id="fan"><a href="javascript:void(0)">发布公告</a></li>
+				                <li id="fc"><a href="javascript:void(0)">内部联络</a></li>
 				            </ul>
 				        </div>
 				    </div>
