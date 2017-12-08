@@ -34,15 +34,10 @@ public class Product implements java.io.Serializable {
 		this.productname = productname;
 	}
 	
-	
-
-	public Product(Integer productid, String productname,
-			BigDecimal productprice, String unit) {
+	public Product(Integer productid, String productname) {
 		super();
 		this.productid = productid;
 		this.productname = productname;
-		this.productprice = productprice;
-		this.unit = unit;
 	}
 
 	/** full constructor */

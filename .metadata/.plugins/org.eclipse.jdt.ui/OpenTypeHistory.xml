@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{CustomerService.java[CustomerService" modifiers="513" timestamp="1512489320690"/>
-<typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{CustomerDao.java[CustomerDao" modifiers="513" timestamp="1512489320649"/>
+<typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{CustomerDao.java[CustomerDao" modifiers="513" timestamp="1512657740536"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{DepartmentService.java[DepartmentService" modifiers="513" timestamp="1512489320690"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{TeamDao.java[TeamDao" modifiers="513" timestamp="1512489320653"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{TeamService.java[TeamService" modifiers="513" timestamp="1512489320696"/>
@@ -11,10 +11,10 @@
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{ProcurementDao.java[ProcurementDao" modifiers="513" timestamp="1512489320652"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{PerformancesDao.java[PerformancesDao" modifiers="513" timestamp="1512489320652"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{PerformancesService.java[PerformancesService" modifiers="513" timestamp="1512489320694"/>
-<typeInfo handle="=OA/F:\/OA\/OA\/WebRoot\/WEB-INF\/lib\/aspectjweaver-1.6.9.jar&lt;org.aspectj.lang.reflect(PerClause.class[PerClause" modifiers="1537" timestamp="1512489320449"/>
-<typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{ProductDao.java[ProductDao" modifiers="513" timestamp="1512489320652"/>
+<typeInfo handle="=OA/F:\/OA\/OA\/WebRoot\/WEB-INF\/lib\/aspectjweaver-1.6.9.jar&lt;org.aspectj.lang.reflect(PerClause.class[PerClause" modifiers="1537" timestamp="1512717715636"/>
+<typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{ProductDao.java[ProductDao" modifiers="513" timestamp="1512702046087"/>
 <typeInfo handle="=OA/F:\/Users\/ASUS\/MyEclipse\/Common\/plugins\/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805\/data\/libraryset\/EE_6\/weld-osgi-bundle.jar&lt;javax.enterprise.inject.spi(Producer.class[Producer" modifiers="1537" timestamp="1342520516000"/>
-<typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{ProductService.java[ProductService" modifiers="513" timestamp="1512489320695"/>
+<typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{ProductService.java[ProductService" modifiers="513" timestamp="1512702066312"/>
 <typeInfo handle="=OA/F:\/Program Files\/Java\/jdk1.7.0_79\/jre\/lib\/jfr.jar&lt;oracle.jrockit.jfr(ProducerDescriptor.class[ProducerDescriptor" modifiers="1050113" timestamp="1504340777641"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{ProorderDao.java[ProorderDao" modifiers="513" timestamp="1512489320653"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{ProorderService.java[ProorderService" modifiers="513" timestamp="1512489320695"/>
@@ -29,9 +29,9 @@
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{RestDao.java[RestDao" modifiers="513" timestamp="1512489320653"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{RestService.java[RestService" modifiers="513" timestamp="1512489320695"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{PostDao.java[PostDao" modifiers="513" timestamp="1512489320652"/>
-<typeInfo handle="=OA/F:\/OA\/OA\/WebRoot\/WEB-INF\/lib\/hibernate3.jar&lt;org.hibernate.event(PostCollectionRemoveEventListener.class[PostCollectionRemoveEventListener" modifiers="1537" timestamp="1512489320516"/>
+<typeInfo handle="=OA/F:\/OA\/OA\/WebRoot\/WEB-INF\/lib\/hibernate3.jar&lt;org.hibernate.event(PostCollectionRemoveEventListener.class[PostCollectionRemoveEventListener" modifiers="1537" timestamp="1512717715697"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{PostService.java[PostService" modifiers="513" timestamp="1512489320694"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.dao{OrderrootsDao.java[OrderrootsDao" modifiers="513" timestamp="1512489320651"/>
 <typeInfo handle="=OA/src&lt;cn.bdqn.j25.service{OrderrootsService.java[OrderrootsService" modifiers="513" timestamp="1512489320692"/>
-<typeInfo handle="=OA/F:\/OA\/OA\/WebRoot\/WEB-INF\/lib\/spring-orm-3.2.13.RELEASE.jar&lt;org.springframework.orm.hibernate3.support(HibernateDaoSupport.class[HibernateDaoSupport" modifiers="1025" timestamp="1512489320583"/>
+<typeInfo handle="=OA/F:\/OA\/OA\/WebRoot\/WEB-INF\/lib\/spring-orm-3.2.13.RELEASE.jar&lt;org.springframework.orm.hibernate3.support(HibernateDaoSupport.class[HibernateDaoSupport" modifiers="1025" timestamp="1512717715760"/>
 </typeInfoHistroy>

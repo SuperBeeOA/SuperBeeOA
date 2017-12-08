@@ -73,7 +73,7 @@
 	            				</td>			
 	            				<td class="unit"></td>
 	            				<td><input type="text" name="orders.quantity"></td>
-	            				<td class="productprice"></td>
+	            				<td class="price"></td>
 	            				<td><input type="text" name="orders.price"></td>
 	            			</tr>
 	            		

@@ -23,8 +23,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  	<c:forEach var="s" items="${requestScope.type}">
-  			${s.typename}
+  	<c:forEach var="w" items="${requestScope.type}" >
+  			${w.typename}
   			
   	</c:forEach>
       <br>

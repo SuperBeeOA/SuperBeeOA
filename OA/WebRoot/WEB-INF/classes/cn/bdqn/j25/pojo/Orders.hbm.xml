@@ -16,7 +16,7 @@
         <many-to-one name="department" class="cn.bdqn.j25.pojo.Department" fetch="select">
             <column name="DEPARTMENT" precision="9" scale="0" />
         </many-to-one>
-        <many-to-one name="customer" class="cn.bdqn.j25.pojo.Customer" fetch="select" >
+        <many-to-one name="customer" class="cn.bdqn.j25.pojo.Customer" fetch="select">
             <column name="CUSTOMERID" precision="9" scale="0" />
         </many-to-one>
         <many-to-one name="state" class="cn.bdqn.j25.pojo.State" fetch="select">
