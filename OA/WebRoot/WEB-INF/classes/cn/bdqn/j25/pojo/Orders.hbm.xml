@@ -28,9 +28,6 @@
         <many-to-one name="employeeByOriginator" class="cn.bdqn.j25.pojo.Employee" fetch="select">
             <column name="ORIGINATOR" precision="9" scale="0" />
         </many-to-one>
-        <many-to-one name="product" class="cn.bdqn.j25.pojo.Product" fetch="select">
-            <column name="PRODUCTNAME" precision="9" scale="0" />
-        </many-to-one>
         <property name="ordernumber" type="java.lang.String">
             <column name="ORDERNUMBER" length="10" />
         </property>
@@ -48,6 +45,9 @@
         </property>
         <property name="orderremarks" type="java.lang.String">
             <column name="ORDERREMARKS" length="50" />
+        </property>
+        <property name="productname" type="java.lang.Integer">
+            <column name="PRODUCTNAME" precision="9" scale="0" />
         </property>
         <set name="outs" inverse="true">
             <key>

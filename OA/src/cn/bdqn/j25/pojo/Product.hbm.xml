@@ -14,7 +14,7 @@
             <column name="TYPEID" precision="9" scale="0" />
         </many-to-one>
         <property name="productname" type="java.lang.String">
-            <column name="PRODUCTNAME" length="10" not-null="true" />
+            <column name="PRODUCTNAME" length="10" />
         </property>
         <property name="productno" type="java.lang.String">
             <column name="PRODUCTNO" length="10" />
@@ -40,17 +40,8 @@
         <property name="productremarks" type="java.lang.String">
             <column name="PRODUCTREMARKS" length="50" />
         </property>
-        <set name="orderses" inverse="true">
-            <key>
-                <column name="PRODUCTNAME" precision="9" scale="0" />
-            </key>
-            <one-to-many class="cn.bdqn.j25.pojo.Orders" />
-        </set>
-        <set name="procurements" inverse="true">
-            <key>
-                <column name="PRODUCTNAME" precision="9" scale="0" />
-            </key>
-            <one-to-many class="cn.bdqn.j25.pojo.Procurement" />
-        </set>
+        <property name="unit" type="java.lang.String">
+            <column name="UNIT" length="10" />
+        </property>
     </class>
 </hibernate-mapping>

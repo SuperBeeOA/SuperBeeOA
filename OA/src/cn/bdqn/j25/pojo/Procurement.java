@@ -18,13 +18,13 @@ public class Procurement implements java.io.Serializable {
 	private State state;
 	private Types types;
 	private Employee employeeByOriginator;
-	private Product product;
 	private String ordernumber;
 	private Timestamp datetime;
 	private String orderno;
 	private BigDecimal quantity;
 	private BigDecimal price;
 	private String orderremarks;
+	private Integer productname;
 
 	// Constructors
 
@@ -35,22 +35,22 @@ public class Procurement implements java.io.Serializable {
 	/** full constructor */
 	public Procurement(Employee employeeByOperator, Department department,
 			Customer customer, State state, Types types,
-			Employee employeeByOriginator, Product product, String ordernumber,
+			Employee employeeByOriginator, String ordernumber,
 			Timestamp datetime, String orderno, BigDecimal quantity,
-			BigDecimal price, String orderremarks) {
+			BigDecimal price, String orderremarks, Integer productname) {
 		this.employeeByOperator = employeeByOperator;
 		this.department = department;
 		this.customer = customer;
 		this.state = state;
 		this.types = types;
 		this.employeeByOriginator = employeeByOriginator;
-		this.product = product;
 		this.ordernumber = ordernumber;
 		this.datetime = datetime;
 		this.orderno = orderno;
 		this.quantity = quantity;
 		this.price = price;
 		this.orderremarks = orderremarks;
+		this.productname = productname;
 	}
 
 	// Property accessors
@@ -111,14 +111,6 @@ public class Procurement implements java.io.Serializable {
 		this.employeeByOriginator = employeeByOriginator;
 	}
 
-	public Product getProduct() {
-		return this.product;
-	}
-
-	public void setProduct(Product product) {
-		this.product = product;
-	}
-
 	public String getOrdernumber() {
 		return this.ordernumber;
 	}
@@ -165,6 +157,14 @@ public class Procurement implements java.io.Serializable {
 
 	public void setOrderremarks(String orderremarks) {
 		this.orderremarks = orderremarks;
+	}
+
+	public Integer getProductname() {
+		return this.productname;
+	}
+
+	public void setProductname(Integer productname) {
+		this.productname = productname;
 	}
 
 }

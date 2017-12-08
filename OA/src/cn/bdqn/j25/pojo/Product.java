@@ -1,8 +1,6 @@
 package cn.bdqn.j25.pojo;
 
 import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Set;
 
 /**
  * Product entity. @author MyEclipse Persistence Tools
@@ -23,8 +21,7 @@ public class Product implements java.io.Serializable {
 	private BigDecimal productioncost;
 	private BigDecimal truckage;
 	private String productremarks;
-	private Set orderses = new HashSet(0);
-	private Set procurements = new HashSet(0);
+	private String unit;
 
 	// Constructors
 
@@ -32,17 +29,11 @@ public class Product implements java.io.Serializable {
 	public Product() {
 	}
 
-	/** minimal constructor */
-	public Product(String productname) {
-		this.productname = productname;
-	}
-
 	/** full constructor */
 	public Product(Types types, String productname, String productno,
 			BigDecimal productprice, String component, Integer shelflife,
 			String productmodel, BigDecimal productioncost,
-			BigDecimal truckage, String productremarks, Set orderses,
-			Set procurements) {
+			BigDecimal truckage, String productremarks, String unit) {
 		this.types = types;
 		this.productname = productname;
 		this.productno = productno;
@@ -53,8 +44,7 @@ public class Product implements java.io.Serializable {
 		this.productioncost = productioncost;
 		this.truckage = truckage;
 		this.productremarks = productremarks;
-		this.orderses = orderses;
-		this.procurements = procurements;
+		this.unit = unit;
 	}
 
 	// Property accessors
@@ -147,20 +137,12 @@ public class Product implements java.io.Serializable {
 		this.productremarks = productremarks;
 	}
 
-	public Set getOrderses() {
-		return this.orderses;
+	public String getUnit() {
+		return this.unit;
 	}
 
-	public void setOrderses(Set orderses) {
-		this.orderses = orderses;
-	}
-
-	public Set getProcurements() {
-		return this.procurements;
-	}
-
-	public void setProcurements(Set procurements) {
-		this.procurements = procurements;
+	public void setUnit(String unit) {
+		this.unit = unit;
 	}
 
 }
