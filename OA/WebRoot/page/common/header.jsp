@@ -61,9 +61,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	            <li class="active"><a href="javascript:void(0)">退出<span class="sr-only">(current)</span></a></li>
 	          </ul>
 	          <div id="log" class="vertical-center" style="display: none; height: 200px; width: 200px; background-color: white; padding: 20px;">
-	          	<form action="/LoginAndOutAction.action" type="POST">
-	          		职工号：<input type="text" name="Employee.Workid"><br>
-	          		密码：<input type="text" name="Employee.password"><br><br>
+	          	<form action="login.action" method="post">
+	          		职工号：<input type="text" name="employee.workid"><br>
+	          		密码：<input type="text" name="employee.password"><br><br>
 	          		<input type="submit" value="登录" class="btn btn-primary">
 	          		<a href="javascript:void(0)" id="out">关闭</a>
 	          	</form>

@@ -11,7 +11,10 @@
 
 	<package name="type" extends="struts-default">
 		<default-action-ref name="defaultAction" />
-
+	<action name="login" class="cn.bdqn.j25.action.LoginAndOutAction"
+			method="login">
+			<result>/page/main.jsp</result>
+		</action>
 		<action name="ty" class="cn.bdqn.j25.action.TypeAction" method="find">
 			<result>/index.jsp</result>
 		</action>
@@ -25,5 +28,5 @@
 			<result>/index.jsp</result>
 		</action>
 	</package>
-<include file="struts/struts-login.xml"></include>
+<!-- <include file="struts/struts-login.xml"></include> -->
 </struts>
