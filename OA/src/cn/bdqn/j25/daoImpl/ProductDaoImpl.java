@@ -1,5 +1,6 @@
 package cn.bdqn.j25.daoImpl;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
@@ -40,10 +41,11 @@ public class ProductDaoImpl extends HibernateDaoSupport implements ProductDao {
 	}
 
 	@Override
-	public List<Product> findAll() {
+	public void addProductsPriceById(Integer productid, BigDecimal productprice) {
 		// TODO Auto-generated method stub
-		return getHibernateTemplate().find("select new Product(productid,productname,productprice,units) from Product");
+		Product product = this.findByid(productid);
+		product.setProductprice(productprice);
+		getHibernateTemplate().update(product);
 	}
 
-	
 }

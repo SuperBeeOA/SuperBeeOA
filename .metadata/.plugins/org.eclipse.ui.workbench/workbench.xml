@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="39" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="94" y="0">
 <fastViewData fastViewLocation="1024">
@@ -26,18 +26,18 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="103" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.struts2.editor" itemType="typeToolBarContribution" x="358" y="22"/>
 <coolItem id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" itemType="typePlaceholder" x="38" y="22"/>
 <coolItem id="com.spket.svg.editor.svgEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -46,49 +46,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="business.js" partName="business.js" path="F:/OA/OA/WebRoot/jst/business.js" title="business.js" tooltip="OA/WebRoot/jst/business.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/WebRoot/jst/business.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2144" selectionTopPixel="1073"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrderAction.java" partName="OrderAction.java" path="F:/OA/OA/src/cn/bdqn/j25/action/OrderAction.java" title="OrderAction.java" tooltip="OA/src/cn/bdqn/j25/action/OrderAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/cn/bdqn/j25/action/OrderAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1285" selectionTopPixel="30"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="business.jsp" partName="business.jsp" path="F:/OA/OA/WebRoot/page/business.jsp" title="business.jsp" tooltip="OA/WebRoot/page/business.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/WebRoot/page/business.jsp"/>
-</editor>
-<editor id="com.genuitec.eclipse.struts2.editor" name="struts.xml" partName="struts.xml" path="F:/OA/OA/src/struts.xml" title="struts.xml" tooltip="OA/src/struts.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/struts.xml"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProductDaoImpl.java" partName="ProductDaoImpl.java" path="F:/OA/OA/src/cn/bdqn/j25/daoImpl/ProductDaoImpl.java" title="ProductDaoImpl.java" tooltip="OA/src/cn/bdqn/j25/daoImpl/ProductDaoImpl.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/cn/bdqn/j25/daoImpl/ProductDaoImpl.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1327" selectionTopPixel="176"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Orders.java" partName="Orders.java" path="F:/OA/OA/src/cn/bdqn/j25/pojo/Orders.java" title="Orders.java" tooltip="OA/src/cn/bdqn/j25/pojo/Orders.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/cn/bdqn/j25/pojo/Orders.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="5" selectionOffset="629" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmployeeDaoImpl.java" partName="EmployeeDaoImpl.java" path="F:/OA/OA/src/cn/bdqn/j25/daoImpl/EmployeeDaoImpl.java" title="EmployeeDaoImpl.java" tooltip="OA/src/cn/bdqn/j25/daoImpl/EmployeeDaoImpl.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/cn/bdqn/j25/daoImpl/EmployeeDaoImpl.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="709" selectionTopPixel="186"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Product.java" partName="Product.java" path="F:/OA/OA/src/cn/bdqn/j25/pojo/Product.java" title="Product.java" tooltip="OA/src/cn/bdqn/j25/pojo/Product.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/cn/bdqn/j25/pojo/Product.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="747" selectionTopPixel="390"/>
-</editor>
 </editors>
 <views>
 <view id="com.genuitec.eclipse.ui.HTMLView" partName="Web Browser">
@@ -107,7 +68,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (100 of 623 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="147" org.eclipse.ui.ide.pathField="175" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="693"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -169,7 +130,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -370,151 +331,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/OA/WebRoot/jst/business.js"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/OA/WebRoot/page/business.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/action/OrderAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" path="/OA/src/struts.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/service/ProductService.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/daoImpl/ProductDaoImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/pojo/Product.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/daoImpl/CustomerDaoImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/pojo/Orders.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/daoImpl/EmployeeDaoImpl.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.core.runtime.xml.source" path="/OA/src/struts.xml"/>
-</editors>
-<item historyLabel="business.js" index="0">
-<position info="not_deleted" x="1856" y="335"/>
-</item>
-<item historyLabel="struts.xml" index="3"/>
-<item historyLabel="OrderAction.java" index="2">
-<position info="not_deleted" x="1183" y="0"/>
-</item>
-<item historyLabel="struts.xml" index="3"/>
-<item historyLabel="business.js" index="0">
-<position info="not_deleted" x="1907" y="0"/>
-</item>
-<item historyLabel="OrderAction.java" index="2">
-<position info="not_deleted" x="1183" y="0"/>
-</item>
-<item historyLabel="OrderAction.java" index="2">
-<position info="not_deleted" x="1287" y="0"/>
-</item>
-<item historyLabel="OrderAction.java" index="2">
-<position info="not_deleted" x="1285" y="0"/>
-</item>
-<item historyLabel="ProductService.java" index="4">
-<position info="not_deleted" x="474" y="0"/>
-</item>
-<item historyLabel="OrderAction.java" index="2">
-<position info="not_deleted" x="1285" y="0"/>
-</item>
-<item historyLabel="ProductDaoImpl.java" index="5">
-<position info="not_deleted" x="1328" y="0"/>
-</item>
-<item historyLabel="Product.java" index="6">
-<position info="not_deleted" x="819" y="0"/>
-</item>
-<item historyLabel="struts.xml" index="3"/>
-<item historyLabel="ProductDaoImpl.java" index="5">
-<position info="not_deleted" x="1328" y="0"/>
-</item>
-<item historyLabel="CustomerDaoImpl.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Product.java" index="6">
-<position info="not_deleted" x="819" y="0"/>
-</item>
-<item historyLabel="CustomerDaoImpl.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ProductDaoImpl.java" index="5">
-<position info="not_deleted" x="1328" y="0"/>
-</item>
-<item historyLabel="business.js" index="0">
-<position info="not_deleted" x="1928" y="0"/>
-</item>
-<item historyLabel="business.jsp" index="1"/>
-<item historyLabel="Orders.java" index="8">
-<position info="not_deleted" x="629" y="5"/>
-</item>
-<item historyLabel="business.jsp" index="1"/>
-<item historyLabel="business.js" index="0">
-<position/>
-</item>
-<item historyLabel="business.jsp" index="1"/>
-<item historyLabel="EmployeeDaoImpl.java" index="9">
-<position/>
-</item>
-<item historyLabel="business.js" index="0">
-<position/>
-</item>
-<item historyLabel="business.jsp" index="1"/>
-<item historyLabel="business.js" index="0">
-<position/>
-</item>
-<item historyLabel="business.jsp" index="1"/>
-<item historyLabel="business.js" index="0">
-<position info="not_deleted" x="2171" y="0"/>
-</item>
-<item historyLabel="business.jsp" index="1"/>
-<item historyLabel="business.js" index="0">
-<position info="not_deleted" x="2171" y="0"/>
-</item>
-<item historyLabel="business.js" index="0">
-<position/>
-</item>
-<item historyLabel="business.js" index="0">
-<position info="not_deleted" x="2169" y="0"/>
-</item>
-<item historyLabel="Product.java" index="6">
-<position/>
-</item>
-<item historyLabel="business.js" index="0">
-<position info="not_deleted" x="2169" y="0"/>
-</item>
-<item historyLabel="business.jsp" index="1"/>
-<item historyLabel="business.js" index="0">
-<position info="not_deleted" x="2144" y="0"/>
-</item>
-<item historyLabel="ProductDaoImpl.java" index="5">
-<position info="not_deleted" x="1327" y="0"/>
-</item>
-<item historyLabel="Product.java" index="6">
-<position info="not_deleted" x="331" y="12"/>
-</item>
-<item historyLabel="struts.xml" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Orders.java" index="8">
-<position info="not_deleted" x="629" y="5"/>
-</item>
-<item historyLabel="EmployeeDaoImpl.java" index="9">
-<position info="not_deleted" x="709" y="0"/>
-</item>
-<item historyLabel="business.js" index="0">
-<position info="not_deleted" x="2144" y="0"/>
-</item>
-<item historyLabel="Product.java" index="6">
-<position info="not_deleted" x="747" y="0"/>
-</item>
-<item historyLabel="ProductDaoImpl.java" index="5">
-<position info="not_deleted" x="1327" y="0"/>
-</item>
-<item historyLabel="Product.java" index="6">
-<position info="not_deleted" x="747" y="0"/>
-</item>
-<item historyLabel="ProductDaoImpl.java" index="5">
-<position info="not_deleted" x="1327" y="0"/>
-</item>
-<item historyLabel="Product.java" index="6">
-<position info="not_deleted" x="747" y="0"/>
-</item>
-<item active="true" historyLabel="ProductDaoImpl.java" index="5">
-<position info="not_deleted" x="1327" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -522,7 +339,6 @@
 <trimLayout>
 <trimArea IMemento.internal.id="16384">
 <trimItem IMemento.internal.id="bottomleft"/>
-<trimItem IMemento.internal.id="topleft"/>
 </trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@470f93f9"/>
@@ -541,6 +357,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmployeeAction.java" tooltip="OA/src/cn/bdqn/j25/action/EmployeeAction.java">
+<persistable path="/OA/src/cn/bdqn/j25/action/EmployeeAction.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Product.java" tooltip="OA/src/cn/bdqn/j25/pojo/Product.java">
 <persistable path="/OA/src/cn/bdqn/j25/pojo/Product.java"/>
 </file>
@@ -582,9 +401,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TemporaryServiceImpl.java" tooltip="OA/src/cn/bdqn/j25/serviceImpl/TemporaryServiceImpl.java">
 <persistable path="/OA/src/cn/bdqn/j25/serviceImpl/TemporaryServiceImpl.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.springframework.springconfigeditor" name="applicationContext.xml" tooltip="OA/src/applicationContext.xml">
-<persistable path="/OA/src/applicationContext.xml"/>
 </file>
 </mruList>
 </workbench>
