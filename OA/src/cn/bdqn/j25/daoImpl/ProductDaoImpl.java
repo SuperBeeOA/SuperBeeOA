@@ -42,7 +42,7 @@ public class ProductDaoImpl extends HibernateDaoSupport implements ProductDao {
 	@Override
 	public List<Product> findAll() {
 		// TODO Auto-generated method stub
-		return getHibernateTemplate().find("select productid,productname from Product");
+		return getHibernateTemplate().find("select new Product(productid,productname,unit,productprice) from Product");
 	}
 
 	

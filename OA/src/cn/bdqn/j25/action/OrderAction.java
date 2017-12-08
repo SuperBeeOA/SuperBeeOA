@@ -37,10 +37,6 @@ public class OrderAction extends ActionSupport{
 	//自动生成客户编号
 	public String findCustomer() throws UnsupportedEncodingException{
 		listCustomer=customerService.findAll();	
-		for(Customer o:listCustomer){
-			System.out.println(o.getCustomername()+"\t"+o.getCustomerid());
-		}
-
 		return SUCCESS;		
 	}
 

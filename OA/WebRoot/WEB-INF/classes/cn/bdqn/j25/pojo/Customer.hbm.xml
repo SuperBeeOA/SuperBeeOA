@@ -28,7 +28,7 @@
         <property name="remarks" type="java.lang.String">
             <column name="REMARKS" length="50" />
         </property>
-        <set name="orderses" inverse="true">
+        <set name="orderses" inverse="true" >
             <key>
                 <column name="CUSTOMERID" precision="9" scale="0" />
             </key>

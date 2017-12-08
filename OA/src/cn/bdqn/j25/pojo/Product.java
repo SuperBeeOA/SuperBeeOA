@@ -36,6 +36,12 @@ public class Product implements java.io.Serializable {
 	public Product(String productname) {
 		this.productname = productname;
 	}
+	
+	public Product(Integer productid, String productname) {
+		super();
+		this.productid = productid;
+		this.productname = productname;
+	}
 
 	/** full constructor */
 	public Product(Types types, String productname, String productno,

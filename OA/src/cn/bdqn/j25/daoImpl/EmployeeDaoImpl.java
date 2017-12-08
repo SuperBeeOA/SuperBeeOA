@@ -25,7 +25,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements EmployeeDao 
 	public List<Employee> findByWorkidPwd(Employee employee) {
 		// TODO Auto-generated method stub
 		return this.getHibernateTemplate().findByValueBean(
-				"from Employee where  workid=? and password=?",
+				"from Employee where workid=? and password=?",
 				employee);
 	}
 
