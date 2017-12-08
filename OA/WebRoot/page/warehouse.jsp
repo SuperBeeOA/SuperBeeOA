@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@include file="common/header.jsp" %>
 <%@include file="common/js.jsp" %>
+<script src="${pageContext.request.contextPath }/jst/warehouse.js"></script>
 	<section>
 		<div id="content" class="row-fluid" style="overflow:hidden;">
 	        <div class="col-md-3 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
