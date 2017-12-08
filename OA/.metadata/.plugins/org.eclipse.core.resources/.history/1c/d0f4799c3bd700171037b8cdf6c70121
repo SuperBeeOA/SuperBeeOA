@@ -1,8 +1,0 @@
-package cn.bdqn.j25.dao;
-
-public interface WorkshopDao {
-	
-	public Workshop findByid(int id);
-	
-	
-}

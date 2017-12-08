@@ -22,10 +22,6 @@ $(function() {
 	  $("#teo").hide();
 	  $("#ars").hide();
 	  $("#irs").hide();
-	  $("#fstock").hide();
-	  $("#mstock").hide();
-	  $("#tin").hide();
-	  $("#tout").hide();
   });
 
   $("#fat").click(function() {
@@ -43,10 +39,6 @@ $(function() {
 	  $("#teo").hide();
 	  $("#ars").hide();
 	  $("#irs").hide();
-	  $("#fstock").hide();
-	  $("#mstock").hide();
-	  $("#tin").hide();
-	  $("#tout").hide();
   });
   
   $("#fan").click(function() {
@@ -64,10 +56,6 @@ $(function() {
 	  $("#teo").hide();
 	  $("#ars").hide();
 	  $("#irs").hide();
-	  $("#fstock").hide();
-	  $("#mstock").hide();
-	  $("#tin").hide();
-	  $("#tout").hide();
   });
   
   $("#fc").click(function() {
@@ -85,10 +73,6 @@ $(function() {
 	  $("#teo").hide();
 	  $("#ars").hide();
 	  $("#irs").hide();
-	  $("#fstock").hide();
-	  $("#mstock").hide();
-	  $("#tin").hide();
-	  $("#tout").hide();
   });
   
   $("#if").click(function() {

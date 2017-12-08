@@ -43,26 +43,6 @@ $(function() {
 		  $("#forder").hide();
 	  });
 	  
-	  $("#cc").click(function() {
-		  $("#mcustomer").show();
-		  $("#allcustomer").hide();
-	  });
-	  
-	  $("#bc").click(function() {
-		  $("#allcustomer").show();
-		  $("#mcustomer").hide();
-	  });
-	  
-	  $("#cs").click(function() {
-		  $("#msupplier").show();
-		  $("#allsupplier").hide();
-	  });
-	  
-	  $("#bs").click(function() {
-		  $("#allsupplier").show();
-		  $("#msupplier").hide();
-	  });
-	  
 	//生产订单编号  
 	  $("#ao").click(function() {
 		  var time = new Date();

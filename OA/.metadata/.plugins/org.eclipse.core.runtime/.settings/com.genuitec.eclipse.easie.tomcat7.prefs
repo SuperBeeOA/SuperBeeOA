@@ -1,8 +1,0 @@
-ENDORSED_DIRS="F\:\\TomCat\u670D\u52A1\u5668\uFF08\u5185\u9644\u8BF4\u660E\uFF09\\apache-tomcat-7.0.59/common/endorsed"
-JDK_HOME=F\:\\Program Files\\Java\\jdk1.7.0_79
-LIBRARY_PATH="F\:\\Program Files\\Java\\jdk1.7.0_79\\bin;F\:\\TomCat\u670D\u52A1\u5668\uFF08\u5185\u9644\u8BF4\u660E\uFF09\\apache-tomcat-7.0.59\\bin"
-SERVER_ENABLEMENT=true
-TOMCAT_BASE=F\:\\TomCat\u670D\u52A1\u5668\uFF08\u5185\u9644\u8BF4\u660E\uFF09\\apache-tomcat-7.0.59
-TOMCAT_HOME=F\:\\TomCat\u670D\u52A1\u5668\uFF08\u5185\u9644\u8BF4\u660E\uFF09\\apache-tomcat-7.0.59
-TOMCAT_TEMP=F\:\\TomCat\u670D\u52A1\u5668\uFF08\u5185\u9644\u8BF4\u660E\uFF09\\apache-tomcat-7.0.59\\temp
-eclipse.preferences.version=1

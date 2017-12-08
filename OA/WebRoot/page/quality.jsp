@@ -2,25 +2,24 @@
     pageEncoding="UTF-8"%>
 <%@include file="common/header.jsp" %>
 <%@include file="common/js.jsp" %>
-<script src="${pageContext.request.contextPath }/jst/quality.js"></script>
 	<section>
 		<div id="content" class="row-fluid" style="overflow:hidden;">
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
+	        <div class="col-md-3 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div class="container">
 				    <div class="row">
 				        <div class="span2">
 				            <ul class="nav nav-pills nav-stacked">
-				                <li id="mi" class="active"><a href="javascript:void(0)">账号信息</a></li>
-				                <li id="fat"><a href="javascript:void(0)">查看出勤</a></li>
-				                <li id="fan"><a href="javascript:void(0)">发布公告</a></li>
-				                <li id="fc"><a href="javascript:void(0)">内部联络</a></li>
+				                <li class="active"><a href="javascript:void(0)">账号信息</a></li>
+				                <li><a href="javascript:void(0)">查看出勤</a></li>
+				                <li><a href="javascript:void(0)">发布公告</a></li>
+				                <li><a href="javascript:void(0)">内部联络</a></li>
 				            </ul>
 				        </div>
 				    </div>
 				</div>
 	        </div>
 	        
-	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
+	        <div class="col-md-7 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <%@include file="common/public.jsp" %>
 	        </div>
 	        

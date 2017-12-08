@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <struts>
 	<package name="loginandout" extends="struts-default">
-		<default-action-ref name="defaultAction" />
-		<action name="login" class="cn.bdqn.j25.action.LoginAndOutAction"
-				method="login">
-			<result>/page/main.jsp</result>
-		</action>
+		
 	
 	</package>
 
