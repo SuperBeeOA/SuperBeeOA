@@ -20,13 +20,12 @@ $(function() {
 	  $("#cs").click(function() {
 		  $("#cstaff").show();
 		  $("#allstaff").hide();
-		  $("#fstaff").hide();
 	  });
 	  
-	  $("#fs").click(function() {
-		  $("#fstaff").show();
-		  $("#allstaff").hide();
+	  $("#bcs").click(function() {
+		  $("#allstaff").show();
 		  $("#cstaff").hide();
 	  });
+	  
 	  
 });

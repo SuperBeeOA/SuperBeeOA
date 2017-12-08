@@ -4,8 +4,8 @@
 <%@include file="common/js.jsp" %>
 <script src="${pageContext.request.contextPath }/jst/production.js"></script>
 	<section>
-		<div id="content" class="row-fluid">
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:100%; padding-bottom:50%">
+		<div id="content" class="row-fluid" style="overflow:hidden;">
+	        <div class="col-md-3 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div class="container">
 				    <div class="row">
 				        <div class="span2">
@@ -23,7 +23,7 @@
 				</div>
 	        </div>
 	        
-	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height:100%; padding-bottom:50%">
+	        <div class="col-md-7 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <%@include file="common/public.jsp" %>
 	            <div id="teo" style="display: none;">
 	            	<h2 class="text-center">审核订单</h2>
@@ -103,7 +103,7 @@
 	            </div>
 	        </div>
 	        
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:100%; padding-bottom:50%">
+	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div>
 	            	<h3>个人信息</h3>
 	            	<ul class="list-unstyled">

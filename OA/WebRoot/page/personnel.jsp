@@ -4,8 +4,8 @@
 <%@include file="common/js.jsp" %>
 <script src="${pageContext.request.contextPath }/jst/personnel.js"></script>
 	<section>
-		<div id="content" class="row-fluid">
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:100%; padding-bottom:50%">
+		<div id="content" class="row-fluid" style="overflow:hidden;">
+	        <div class="col-md-3 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div class="container">
 				    <div class="row">
 				        <div class="span2">
@@ -22,13 +22,13 @@
 				</div>
 	        </div>
 	        
-	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height:100%; padding-bottom:50%">
+	        <div class="col-md-7 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <%@include file="common/public.jsp" %>
 	            <div id="add" style="display: none;" class="text-center">
 	            	<h2 class="text-center">增加员工</h2>
 					<hr>
 					<form action="">
-						<table class="table-condensed">
+						<table class="table table-condensed">
 							<tr>
 								<td>职工号：</td>
 								<td></td>
@@ -50,7 +50,7 @@
 							</tr>
 							<tr>
 								<td>生日：</td>
-								<td><input type="datetime-local" name="birthday"></td>
+								<td><input type="date" name="birthday"></td>
 							</tr>
 							<tr>
 								<td>部门：</td>
@@ -145,7 +145,6 @@
 		            			<td>
 		            				<input id="cs" type="button" value="修改">
 		            				<input id="ds" type="button" value="删除">
-		            				<input id="fs" type="button" value="查看出勤">
 		            			</td>
 		            		</tr>
 		            	</table>
@@ -215,14 +214,10 @@
 						</table>
 						<input id="bcs" class="btn btn-primary pull-right" type="button" value="返回">
 	            	</div>
-	            	<div id="fstaff" style="display: none;">
-	            		
-						<input id="bfs" class="btn btn-primary pull-right" type="button" value="返回">
-	            	</div>
 	            </div>
 	        </div>
 	        
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:100%; padding-bottom:50%">
+	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div>
 	            	<h3>个人信息</h3>
 	            	<ul class="list-unstyled">
