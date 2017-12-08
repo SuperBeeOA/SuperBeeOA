@@ -2,6 +2,8 @@ package cn.bdqn.j25.daoImpl;
 
 import java.util.List;
 
+import org.hibernate.Hibernate;
+import org.hibernate.type.Type;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import cn.bdqn.j25.dao.EmployeeDao;
@@ -24,13 +26,11 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements EmployeeDao 
 	@Override
 	public List<Employee> findByWorkidPwd(Employee employee) {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
-		return this.getHibernateTemplate().find("from Employee where workid=? and password=?",employee);
-=======
-		return this.getHibernateTemplate().findByValueBean(
-				"from Employee where  workid=? and password=?",
-				employee);
->>>>>>> 781261a6b8db0ece9fcd00a71da49f0e78ba055e
+	/*	Object[] obj = new Object[2];
+		Type[] types = new Type[] {Hibernate.STRING, Hibernate.STRING};
+		obj[0]=employee.getWorkid();
+		obj[1]=employee.getPassword();*/
+		return this.getHibernateTemplate().findByValueBean("from Employee where workid=:workid and password=:password",employee);
 	}
 
 	@Override

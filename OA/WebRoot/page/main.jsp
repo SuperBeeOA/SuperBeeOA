@@ -148,7 +148,7 @@
 	            </div>
 	            <div>
 	            	<h3>查询员工</h3>
-	            	<form class="form-horizontal" action="#">
+	            	<form class="form-horizontal" action="empCheck">
 	            		<label>姓名：</label><br/>
 	            		<input type="text" name="name"><br/>
 	            		<label>所属公司：</label><br/>
