@@ -43,6 +43,8 @@ $(function() {
 		  $("#forder").hide();
 	  });
 	  
+	  $("#")
+	  
 	//生产订单编号  
 	  $("#ao").click(function() {
 		  var time = new Date();

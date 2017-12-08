@@ -4,12 +4,16 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+<<<<<<< HEAD
 
+=======
+>>>>>>> b6c35e6d326cf090d3e801dc181d39defeabe17f
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
 	<constant name="struts.custom.i18n.resources" value="message" />
 	<constant name="struts.i18n.encoding" value="UTF-8" />
 	<constant name="struts.ui.theme" value="simple" />
 
+<<<<<<< HEAD
 	<package name="html" extends="struts-default">
 		<default-action-ref name="defaultAction" />
 		<action name="login" class="cn.bdqn.j25.action.LoginAndOutAction"
@@ -17,10 +21,16 @@
 			<result>/page/main.jsp</result>
 		</action>
 
+=======
+    <package name="type" extends="struts-default">   
+    	<default-action-ref name="defaultAction" />
+    	
+>>>>>>> b6c35e6d326cf090d3e801dc181d39defeabe17f
 		<action name="ty" class="cn.bdqn.j25.action.TypeAction" method="find">
 			<result>/index.jsp</result>
 		</action>
 		
+<<<<<<< HEAD
 		<action name="order2" class="cn.bdqn.j25.action.OrderAction" method="findprice" >
 			<result>/index.jsp</result>
 		</action> 
@@ -28,6 +38,27 @@
 	</package>
 
 
+=======
+       	<action name="em" class="cn.bdqn.j25.action.EmployeeAction" method="findAllEmployee">
+			<result>/index.jsp</result>
+		</action>
+		<action name="em1" class="cn.bdqn.j25.action.EmployeeAction"
+			method="findEmployeeByName">
+			<result>/index.jsp</result>
+		</action>
+	</package>
+	<!-- <include file="struts-login.xml"/> -->
+	<package name="login" extends="struts-default">
+	
+		<default-action-ref name="defaultAction" />
+		<action name="login" class="cn.bdqn.j25.action.LoginAndOutAction"
+				method="login">
+			<result>/page/main.jsp</result>
+		</action>
+		
+    </package>
+    
+>>>>>>> b6c35e6d326cf090d3e801dc181d39defeabe17f
     <package name="josn" extends="json-default">
     
 		<action name="order" class="cn.bdqn.j25.action.OrderAction" method="findCustomer" >
@@ -49,5 +80,34 @@
 			</result>
 		</action>  -->
 	</package>
+<<<<<<< HEAD
 
+=======
+	
+	<package name="checks" extends="struts-default">
+		<action name="findAll" class="cn.bdqn.j25.action.ChecksAction" method="findAll">
+			<result>/page/gerenzhongxin.jsp</result>
+		</action>
+		<action name="findChecksById" class="cn.bdqn.j25.action.ChecksAction" method="findChecksById">
+			<result>/page/gerenzhongxin.jsp</result>
+		</action>
+		<action name="findChecksByEmployeeId" class="cn.bdqn.j25.action.ChecksAction" method="findChecksByEmployeeId">
+			<result>/page/gerenzhongxin.jsp</result>
+		</action>
+		<action name="findChecksByProorderId" class="cn.bdqn.j25.action.ChecksAction" method="findChecksByProorderId">
+			<result>/page/gerenzhongxin.jsp</result>
+		</action>
+		<action name="addChecks" class="cn.bdqn.j25.action.ChecksAction" method="addChecks">
+			<result name="showCheck">/page/showCheck.jsp</result>
+		</action>
+	</package>
+	<package name="products" extends="struts-default">
+		<action name="addProducts" class="cn.bdqn.j25.action.productsAction" method="addProducts">
+			<result>/page/gerenzhongxin.jsp</result>
+		</action>
+		<action name="addProductsPrice" class="cn.bdqn.j25.action.productsAction" method="addProductsPrice">
+			<result>/page/gerenzhongxin.jsp</result>
+		</action>
+	</package>
+>>>>>>> b6c35e6d326cf090d3e801dc181d39defeabe17f
 </struts>

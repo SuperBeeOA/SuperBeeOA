@@ -26,18 +26,18 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="103" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.struts2.editor" itemType="typeToolBarContribution" x="358" y="22"/>
 <coolItem id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" itemType="typePlaceholder" x="38" y="22"/>
 <coolItem id="com.spket.svg.editor.svgEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -46,6 +46,7 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
+<<<<<<< HEAD
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
@@ -98,6 +99,12 @@
 <editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="index.jsp" partName="index.jsp" path="F:/OA/OA/WebRoot/index.jsp" title="index.jsp" tooltip="OA/WebRoot/index.jsp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/WebRoot/index.jsp"/>
 </editor>
+=======
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</editorArea>
+>>>>>>> b6c35e6d326cf090d3e801dc181d39defeabe17f
 </editors>
 <views>
 <view id="com.genuitec.eclipse.ui.HTMLView" partName="Web Browser">
@@ -116,7 +123,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (100 of 623 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="147" org.eclipse.ui.ide.pathField="175" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="693"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -178,7 +185,11 @@
 <viewState/>
 </view>
 </views>
+<<<<<<< HEAD
 <perspectives activePart="com.genuitec.eclipse.webdesigner3.editors.jsp" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+=======
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+>>>>>>> b6c35e6d326cf090d3e801dc181d39defeabe17f
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -379,6 +390,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
+<<<<<<< HEAD
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" path="/OA/src/struts.xml"/>
@@ -517,6 +529,9 @@
 <item historyLabel="struts.xml" index="0"/>
 <item active="true" historyLabel="index.jsp" index="10"/>
 </navigationHistory>
+=======
+<navigationHistory/>
+>>>>>>> b6c35e6d326cf090d3e801dc181d39defeabe17f
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -542,6 +557,7 @@
 </trimLayout>
 </window>
 <mruList>
+<<<<<<< HEAD
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="index.jsp" tooltip="OA/WebRoot/index.jsp">
 <persistable path="/OA/WebRoot/index.jsp"/>
 </file>
@@ -559,6 +575,10 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProductService.java" tooltip="OA/src/cn/bdqn/j25/service/ProductService.java">
 <persistable path="/OA/src/cn/bdqn/j25/service/ProductService.java"/>
+=======
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmployeeAction.java" tooltip="OA/src/cn/bdqn/j25/action/EmployeeAction.java">
+<persistable path="/OA/src/cn/bdqn/j25/action/EmployeeAction.java"/>
+>>>>>>> b6c35e6d326cf090d3e801dc181d39defeabe17f
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Product.java" tooltip="OA/src/cn/bdqn/j25/pojo/Product.java">
 <persistable path="/OA/src/cn/bdqn/j25/pojo/Product.java"/>
@@ -587,5 +607,23 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OrderAction.java" tooltip="OA/src/cn/bdqn/j25/action/OrderAction.java">
 <persistable path="/OA/src/cn/bdqn/j25/action/OrderAction.java"/>
 </file>
+<<<<<<< HEAD
+=======
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="business.js" tooltip="OA/WebRoot/jst/business.js">
+<persistable path="/OA/WebRoot/jst/business.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Error.java" tooltip="OA/src/cn/bdqn/j25/aop/Error.java">
+<persistable path="/OA/src/cn/bdqn/j25/aop/Error.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="header.js" tooltip="OA/WebRoot/jst/header.js">
+<persistable path="/OA/WebRoot/jst/header.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Accounts.java" tooltip="OA/src/cn/bdqn/j25/pojo/Accounts.java">
+<persistable path="/OA/src/cn/bdqn/j25/pojo/Accounts.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TemporaryServiceImpl.java" tooltip="OA/src/cn/bdqn/j25/serviceImpl/TemporaryServiceImpl.java">
+<persistable path="/OA/src/cn/bdqn/j25/serviceImpl/TemporaryServiceImpl.java"/>
+</file>
+>>>>>>> b6c35e6d326cf090d3e801dc181d39defeabe17f
 </mruList>
 </workbench>
