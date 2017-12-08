@@ -10,8 +10,9 @@
 	<constant name="struts.i18n.encoding" value="UTF-8" />
 	<constant name="struts.ui.theme" value="simple" />
 
-	<package name="type" extends="struts-default">
+	<package name="html" extends="struts-default">
 		<default-action-ref name="defaultAction" />
+<<<<<<< HEAD
 		
 			<action name="ty" class="cn.bdqn.j25.action.TypeAction"
 				method="find">
@@ -42,9 +43,49 @@
 		</action>
 		<action name="order1" class="cn.bdqn.j25.action.OrderAction"
 			method="findProduct">
+=======
+		<action name="login" class="cn.bdqn.j25.action.LoginAndOutAction"
+			method="login">
+			<result>/page/main.jsp</result>
+		</action>
+
+		<action name="ty" class="cn.bdqn.j25.action.TypeAction" method="find">
+			<result>/index.jsp</result>
+		</action>
+		
+		<action name="order2" class="cn.bdqn.j25.action.OrderAction" method="findprice" >
+			<result>/index.jsp</result>
+		</action> 
+       	
+	</package>
+
+
+    <package name="josn" extends="json-default">
+    
+		<action name="order" class="cn.bdqn.j25.action.OrderAction" method="findCustomer" >
+			<result type="json">
+				 <param name="root">listCustomer</param>			 			
+			</result>
+		</action>
+		
+		<action name="order1" class="cn.bdqn.j25.action.OrderAction" method="findProduct" >
+>>>>>>> 8ebe5f9c4117b5bb540fd16389b878a14a067d35
 			<result type="json">
 				<param name="root">listProduct</param>
 			</result>
+<<<<<<< HEAD
 		</action>
 	</package>
+=======
+		</action> 
+		
+		<!-- <action name="order2" class="cn.bdqn.j25.action.OrderAction" method="findprice" >
+			<result type="json">
+				<param name="root">product</param>	
+				<param name="includeProperties">product.unit,product.productprice</param>			
+			</result>
+		</action>  -->
+	</package>
+
+>>>>>>> 8ebe5f9c4117b5bb540fd16389b878a14a067d35
 </struts>
