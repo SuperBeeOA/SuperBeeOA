@@ -12,6 +12,38 @@
 
 	<package name="html" extends="struts-default">
 		<default-action-ref name="defaultAction" />
+<<<<<<< HEAD
+		
+			<action name="ty" class="cn.bdqn.j25.action.TypeAction"
+				method="find">
+				<result>/index.jsp</result>
+			</action>
+
+			<action name="em" class="cn.bdqn.j25.action.EmployeeAction"
+				method="findAllEmployee">
+				<result>/index.jsp</result>
+			</action>
+
+			<action name="em1" class="cn.bdqn.j25.action.EmployeeAction"
+				method="findEmployeeByName">
+				<result>/index.jsp</result>
+			</action>
+		</package>
+     <include file="struts/struts-login.xml"></include> 
+
+
+	<package name="josn" extends="json-default">
+
+		<action name="order" class="cn.bdqn.j25.action.OrderAction"
+			method="findCustomer">
+			<result type="json">
+				<param name="root">listCustomer</param>
+
+			</result>
+		</action>
+		<action name="order1" class="cn.bdqn.j25.action.OrderAction"
+			method="findProduct">
+=======
 		<action name="login" class="cn.bdqn.j25.action.LoginAndOutAction"
 			method="login">
 			<result>/page/main.jsp</result>
@@ -37,9 +69,14 @@
 		</action>
 		
 		<action name="order1" class="cn.bdqn.j25.action.OrderAction" method="findProduct" >
+>>>>>>> 8ebe5f9c4117b5bb540fd16389b878a14a067d35
 			<result type="json">
-				<param name="root">listProduct</param>				
+				<param name="root">listProduct</param>
 			</result>
+<<<<<<< HEAD
+		</action>
+	</package>
+=======
 		</action> 
 		
 		<!-- <action name="order2" class="cn.bdqn.j25.action.OrderAction" method="findprice" >
@@ -50,4 +87,5 @@
 		</action> -->
 	</package>
 
+>>>>>>> 8ebe5f9c4117b5bb540fd16389b878a14a067d35
 </struts>

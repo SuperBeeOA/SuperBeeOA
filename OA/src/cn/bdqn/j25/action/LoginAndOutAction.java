@@ -40,9 +40,9 @@ public class LoginAndOutAction extends ActionSupport{
 	
 	
 	public String login(){
-		Employee employee1=(Employee) employeeService.findByWorkidPwd(employee);
-		Map<String, Object> request = (Map) ActionContext.getContext().get("request");
-		System.out.println(employee.getName());
+		Employee employee1=employeeService.findByWorkidPwd(employee).get(0);
+		Map<String, Object> session = (Map) ActionContext.getContext().get("session");
+		System.out.println(employee1.getName());
 		if(employee.getName()==null||employee.getName()==""){
 			this.setMessage("登入失败，请检查用户名或密码");
 			return SUCCESS;
@@ -55,7 +55,7 @@ public class LoginAndOutAction extends ActionSupport{
 			this.setMessage("登入失败，请检查用户名或密码");
 			return SUCCESS;
 		}else{
-			request.put("employee", employee1);
+			session.put("employee", employee1);
 			return SUCCESS;
 		}
 		
