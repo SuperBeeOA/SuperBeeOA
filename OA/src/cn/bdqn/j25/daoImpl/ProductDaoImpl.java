@@ -39,4 +39,11 @@ public class ProductDaoImpl extends HibernateDaoSupport implements ProductDao {
 		getHibernateTemplate().delete(product);
 	}
 
+	@Override
+	public List<Product> findAll() {
+		// TODO Auto-generated method stub
+		return getHibernateTemplate().find("select productid,productname from Product");
+	}
+
+	
 }

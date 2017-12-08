@@ -18,7 +18,7 @@ public class CustomerDaoImpl extends HibernateDaoSupport implements CustomerDao 
 	@Override
 	public List<Customer> findAll() {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().find("from Customer");
+		return this.getHibernateTemplate().find("select new Customer(customerid,customername) from Customer");
 	}
 
 	@Override

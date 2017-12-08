@@ -1,5 +1,6 @@
 package cn.bdqn.j25.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import cn.bdqn.j25.pojo.Orders;
@@ -14,4 +15,6 @@ public interface OrdersDao {
 	public Orders addOrUpdateOrders(Orders orders);//增加或更新信息
 	
 	public void delOrders(Orders orders); //删除
+	
+	public int countByTime(String date);//根据传入的时间统计订单量
 }

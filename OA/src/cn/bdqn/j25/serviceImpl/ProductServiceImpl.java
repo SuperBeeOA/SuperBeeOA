@@ -48,4 +48,10 @@ public class ProductServiceImpl implements ProductService {
 		productDao.delProduct(product);
 	}
 
+	@Override
+	public List<Product> findAll() {
+		// TODO Auto-generated method stub
+		return productDao.findAll();
+	}
+
 }

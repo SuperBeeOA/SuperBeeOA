@@ -1,5 +1,6 @@
 package cn.bdqn.j25.serviceImpl;
 
+import java.util.Date;
 import java.util.List;
 
 import cn.bdqn.j25.dao.OrdersDao;
@@ -45,6 +46,13 @@ public class OrdersServiceImpl implements OrdersService {
 	public void delOrders(Orders orders) {
 		// TODO Auto-generated method stub
 		ordersDao.delOrders(orders);
+	}
+
+	@Override
+	public int countByTime(String date) {
+		// TODO Auto-generated method stub	
+		
+		return ordersDao.countByTime(date);
 	}
 
 }

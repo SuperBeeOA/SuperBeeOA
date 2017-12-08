@@ -14,4 +14,6 @@ public interface ProductService {
 	public Product addOrUpdateProduct(Product product);//增加或更新信息
 	
 	public void delProduct(Product product); //删除
+	
+	public List<Product> findAll();
 }
