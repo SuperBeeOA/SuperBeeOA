@@ -1,0 +1,42 @@
+package cn.bdqn.j25.daoImpl;
+
+import java.util.List;
+
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+import cn.bdqn.j25.dao.OrdersDao;
+import cn.bdqn.j25.pojo.Orders;
+
+public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
+
+	@Override
+	public Orders findByid(int id) {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().get(Orders.class, id);
+	}
+
+	@Override
+	public List<Orders> findByOrderno(String orderno) {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().find("from Orders where ", value)
+	}
+
+	@Override
+	public List<Orders> findByPage(Orders orders, int first, int max) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Orders addOrUpdateOrders(Orders orders) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delOrders(Orders orders) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

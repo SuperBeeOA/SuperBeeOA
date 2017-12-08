@@ -1,0 +1,42 @@
+package cn.bdqn.j25.daoImpl;
+
+import java.util.List;
+
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+import cn.bdqn.j25.dao.ProviderDao;
+import cn.bdqn.j25.pojo.Provider;
+
+public class ProviderDaoImpl extends HibernateDaoSupport implements ProviderDao {
+
+	@Override
+	public Provider findByid(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Provider> findByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Provider> findByPage(Provider provider, int first, int max) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Provider addOrUpdateProvider(Provider provider) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delProvider(Provider provider) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

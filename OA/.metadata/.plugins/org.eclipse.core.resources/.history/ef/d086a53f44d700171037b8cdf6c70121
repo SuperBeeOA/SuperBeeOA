@@ -1,0 +1,18 @@
+package cn.bdqn.j25.dao;
+
+import java.util.List;
+
+import cn.bdqn.j25.pojo.Customer;
+
+public interface CustomerDao {
+
+	public Customer findByid(int id);
+	
+	public List<Customer> findAll();
+	
+	public List<Customer> findByCustomername(String name);
+	
+	public List<Customer> findByContacts(String Contacts);
+	
+	public List<Customer> findByPage(Customer customer,int first,int max);
+}

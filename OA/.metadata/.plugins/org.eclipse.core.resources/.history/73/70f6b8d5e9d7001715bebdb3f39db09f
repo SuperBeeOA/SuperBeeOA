@@ -1,0 +1,8 @@
+package cn.bdqn.j25.pojo;
+
+public class Snippet {
+	public static void main(String[] args) {
+		materialname : String
+	}
+}
+

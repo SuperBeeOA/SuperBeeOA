@@ -1,7 +1,3 @@
 INDEX VERSION 1.126
-D:\OA\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2009708395.index
-\OA\src
-D:\OA\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2663960170.index
-\OA\src
-D:\OA\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2917782701.index
+F:\OA\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2663960170.index
 \OA\src

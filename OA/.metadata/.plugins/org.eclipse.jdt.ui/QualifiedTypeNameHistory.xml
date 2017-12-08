@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.CustomerDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.DepartmentDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.EquipmentService"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.EquipmentDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.TeamDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.WorkshopDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.MaterialDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.MaterialService"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.PerformancesDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.ProductDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.ProorderDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.ProcurementService"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.ProviderDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.StateDao"/>
+<fullyQualifiedTypeName name="org.springframework.orm.hibernate3.support.HibernateDaoSupport"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.WagesDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.HolidaysDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.RestDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.PostDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.dao.OrderrootsDao"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.AttendanceService"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+</qualifiedTypeNameHistroy>

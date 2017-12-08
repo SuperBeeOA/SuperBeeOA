@@ -1,0 +1,6 @@
+package cn.bdqn.j25.dao;
+
+public interface DepartmentDao {
+
+	public List<Department> findByid();
+}

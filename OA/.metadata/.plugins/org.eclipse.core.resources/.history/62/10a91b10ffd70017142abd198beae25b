@@ -1,0 +1,7 @@
+package cn.bdqn.j25.daoImpl;
+
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+public class WagesDaoImpl extends HibernateDaoSupport implements WagesDao{
+
+}

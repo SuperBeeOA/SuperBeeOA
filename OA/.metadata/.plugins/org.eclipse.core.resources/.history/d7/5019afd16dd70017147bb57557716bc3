@@ -1,0 +1,58 @@
+package cn.bdqn.j25.serviceImpl;
+
+import java.util.List;
+
+import cn.bdqn.j25.pojo.Customer;
+import cn.bdqn.j25.service.CustomerService;
+
+public class CustomerServiceImpl implements CustomerService {
+
+	@Override
+	public Customer findByid(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Customer> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Customer> findByCustomername(String customername) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Customer> findByContacts(String contacts) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Customer> findByPage(Customer customer, int first, int max) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Customer> findByLevel(String level) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Customer addOrUpdateCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

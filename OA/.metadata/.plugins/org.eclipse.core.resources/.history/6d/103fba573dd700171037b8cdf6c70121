@@ -1,0 +1,16 @@
+package cn.bdqn.j25.dao;
+
+import java.util.List;
+
+import cn.bdqn.j25.pojo.Team;
+
+public interface TeamDao {
+	
+	public Team findByid(int id);
+	
+	public List<Team> findAll();
+	
+	public Team addOrUpdateWorkshop(Team team);
+	
+	public void delWorkshop(Team team); 
+}
