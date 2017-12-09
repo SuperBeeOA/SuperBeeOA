@@ -1,5 +1,6 @@
 package cn.bdqn.j25.action;
 
+import java.util.List;
 import java.util.Map;
 
 import cn.bdqn.j25.pojo.Employee;
@@ -40,32 +41,52 @@ public class LoginAndOutAction extends ActionSupport{
 	
 	
 	public String login(){
-		Employee employee1=employeeService.findByWorkidPwd(employee).get(0);
-		Map<String, Object> session =  ActionContext.getContext().getSession();
-		System.out.println(employee1.getName());
-		if(employee.getName()==null||employee.getName().equals("")){
+		/*Employee employee1=employeeService.findByWorkidPwd(employee).get(0);*/
+		Map<String, Object> session = (Map) ActionContext.getContext().getSession();
+		if(employee.getWorkid()==null||employee.getWorkid().equals("")){
+			System.out.println("AAAAAAAAAAAAAAAA");
 			this.setMessage("登入失败，请检查用户名或密码");
-			System.out.println("1111111111111111");
 			return SUCCESS;
 		}
 		if(employee.getPassword()==null||employee.getPassword().equals("")){
 			this.setMessage("登入失败，请检查用户名或密码");
-			System.out.println("222222222222222222");
+			System.out.println("BBBBBBBBBBBBBBBBBBBBBBB");
 			return SUCCESS;
 		}
-		if(employee1==null){
-			this.setMessage("登入失败，请检查用户名或密码");
-			System.out.println("333333333333333333");
-			return SUCCESS;
-		}else{
-			session.put("employee", employee1);
-			System.out.println("----------");
+		else{
+			List<Employee> employee1=(List<Employee>) employeeService.findByWorkidPwd(employee);
+			if(employee1.size()!=0){
+				Employee employee2 = employee1.get(0);
+				session.put("employee", employee2);
+				System.out.println("DDDDDDDDDDDDDDDDDDDDDDDDDDD");
+			}
+		    this.setMessage("账号密码错误请重新输入");
+			/*Employee employee1=employeeService.findByWorkidPwd(employee).get(0);*/
+			System.out.println("fffffffffffffffffffff");
 			return SUCCESS;
 		}
 		
 		
 	}
 	
-	
+	public String findEmployee(){
+		Employee findemp=new Employee();
+		Map<String, Object> session = (Map) ActionContext.getContext().get("session");
+		System.out.println(employee.getName());
+		if(employee.getName()!=null&&!employee.getName().equals("")){
+			findemp.setName(employee.getName());
+		}
+		if(employee.getWorkid()!=null&&!employee.getWorkid().equals("")){
+			findemp.setWorkid(employee.getWorkid());
+		}
+		List<Employee> emplist=employeeService.findAll(findemp);
+		System.out.println("id<<<<<<<<<<<<<<<<<<<<"+employee.getWorkid());
+		System.out.println("name<<<<<<<<<<<<<<<<<<<<"+employee.getName());
+		session.put("emplist",emplist);
+		for(Employee e:emplist){
+			System.out.println(e.getName());
+		}
+		return SUCCESS;
+	}
 
 }

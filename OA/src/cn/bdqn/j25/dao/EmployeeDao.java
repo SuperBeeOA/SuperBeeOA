@@ -18,6 +18,8 @@ public interface EmployeeDao {
 
 	public List<Employee> findByName(String name);// 根据名字查询
 
+	public List<Employee> findAll(Employee employee);
+
 	public Employee addOrUpdateType(Employee employee); // 增加或更新类型
 
 	public void delType(Employee employee); // 增加类型
