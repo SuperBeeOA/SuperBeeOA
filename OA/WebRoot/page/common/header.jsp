@@ -55,7 +55,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	          	<li class="active"><a id="login" href="javascript:void(0)">登录</a></li>
 	          </ul>
 	          <ul id="led" class="nav navbar-nav navbar-right" style="display: none;">
-	            <li><a href="javascript:void(0)">${sessionScope.employee.name}<s:></a></li>
+	            <li><a href="javascript:void(0)">${sessionScope.employee.name}</a></li>
 	            <li><a href="javascript:void(0)">签到</a></li>
 	            <li><a href="javascript:void(0)">补签</a></li>
 	            <li id="outlogin" class="active"><a href="javascript:void(0)">退出<span class="sr-only">(current)</span></a></li>
