@@ -41,21 +41,25 @@ public class LoginAndOutAction extends ActionSupport{
 	
 	public String login(){
 		Employee employee1=employeeService.findByWorkidPwd(employee).get(0);
-		Map<String, Object> session = (Map) ActionContext.getContext().get("session");
+		Map<String, Object> session =  ActionContext.getContext().getSession();
 		System.out.println(employee1.getName());
-		if(employee.getName()==null||employee.getName()==""){
+		if(employee.getName()==null||employee.getName().equals("")){
 			this.setMessage("登入失败，请检查用户名或密码");
+			System.out.println("1111111111111111");
 			return SUCCESS;
 		}
-		if(employee.getPassword()==null||employee.getPassword()==""){
+		if(employee.getPassword()==null||employee.getPassword().equals("")){
 			this.setMessage("登入失败，请检查用户名或密码");
+			System.out.println("222222222222222222");
 			return SUCCESS;
 		}
-		if(employee==null){
+		if(employee1==null){
 			this.setMessage("登入失败，请检查用户名或密码");
+			System.out.println("333333333333333333");
 			return SUCCESS;
 		}else{
 			session.put("employee", employee1);
+			System.out.println("----------");
 			return SUCCESS;
 		}
 		

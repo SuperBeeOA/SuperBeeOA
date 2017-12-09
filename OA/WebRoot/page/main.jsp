@@ -139,7 +139,7 @@
 	            <div>
 	            	<h3>个人信息</h3>
 	            	<ul class="list-unstyled">
-	            		<li><label>姓名：</label>员工001</li>
+	            		<li><label>姓名：</label>${ sessionScope.employee.name }</li>
 	            		<li><label>所属公司：</label>台江分部</li>
 	            		<li><label>部门：</label>财务部</li>
 	            		<li><label>职位：</label>经理</li>

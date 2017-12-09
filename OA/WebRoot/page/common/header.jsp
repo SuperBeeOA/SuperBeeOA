@@ -55,10 +55,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	          	<li class="active"><a id="login" href="javascript:void(0)">登录</a></li>
 	          </ul>
 	          <ul id="led" class="nav navbar-nav navbar-right" style="display: none;">
-	            <li><a href="javascript:void(0)">员工</a></li>
+	            <li><a href="javascript:void(0)">${sessionScope.employee.name}<s:></a></li>
 	            <li><a href="javascript:void(0)">签到</a></li>
 	            <li><a href="javascript:void(0)">补签</a></li>
-	            <li class="active"><a href="javascript:void(0)">退出<span class="sr-only">(current)</span></a></li>
+	            <li id="outlogin" class="active"><a href="javascript:void(0)">退出<span class="sr-only">(current)</span></a></li>
 	          </ul>
 	          <div id="log" class="vertical-center" style="display: none; height: 200px; width: 200px; background-color: white; padding: 20px;">
 	          	<form action="login.action" method="post">
@@ -68,6 +68,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	          		<a href="javascript:void(0)" id="out">关闭</a>
 	          	</form>
 	          </div>
+	          <script type="text/javascript">
+	          	function login(name,password) {
+					if(name!=null && password!=""){
+						$("#ling").hide();
+						$("#led").show();
+					}else{
+						$("#led").hide();
+						$("#ling").show();
+					}
+				}
+				
+				login("${sessionScope.employee.name}","${sessionScope.employee.password}");
+	          </script>
 	        </div><!--/.nav-collapse -->
 	      </div>
 	    </nav>

@@ -18,4 +18,8 @@ $(function() {
 	$("#out").click(function() {
 		$("#log").hide();
 	});
+	
+	$("#outlogin").click(function() {
+		$.session.remove("employee");
+	});
 });
