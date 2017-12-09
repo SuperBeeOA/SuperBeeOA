@@ -26,7 +26,6 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements EmployeeDao 
 	@Override
 	public List<Employee> findByWorkidPwd(Employee employee) {
 		// TODO Auto-generated method stub
-
 	/*	Object[] obj = new Object[2];
 		Type[] types = new Type[] {Hibernate.STRING, Hibernate.STRING};
 		obj[0]=employee.getWorkid();
@@ -65,6 +64,12 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements EmployeeDao 
 	public void delType(Employee employee) {
 		// TODO Auto-generated method stub
 		this.getHibernateTemplate().delete(employee);
+	}
+
+	@Override
+	public List<Employee> findAll(Employee employee) {
+		// TODO Auto-generated method stub
+		return getHibernateTemplate().findByExample(employee);
 	}
 
 }

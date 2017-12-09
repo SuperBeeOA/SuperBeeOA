@@ -21,4 +21,6 @@ public interface EmployeeService {
 	public Employee addOrUpdateEmployee(Employee employee); // 增加或更新类型
 
 	public void delEmployee(Employee employee); // 增加类型
+
+	public List<Employee> findAll(Employee employee);
 }

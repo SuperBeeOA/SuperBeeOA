@@ -139,7 +139,7 @@
 	            <div>
 	            	<h3>个人信息</h3>
 	            	<ul class="list-unstyled">
-	            		<li><label>姓名：</label>员工001</li>
+	            		<li><label>姓名：</label>${ sessionScope.employee.name }</li>
 	            		<li><label>所属公司：</label>台江分部</li>
 	            		<li><label>部门：</label>财务部</li>
 	            		<li><label>职位：</label>经理</li>
@@ -151,12 +151,16 @@
 	            	<form class="form-horizontal" action="empCheck">
 	            		<label>姓名：</label><br/>
 	            		<input type="text" name="name"><br/>
-	            		<label>所属公司：</label><br/>
-	            		<input type="text" name="company"><br/>
-	            		<label>部门：</label><br/>
-	            		<input type="text" name="department"><br/>
-	            		<label>职位：</label><br/>
-	            		<input type="text" name="position"><br/>
+	            		<label>职工号：</label><br/>
+	            		<input type="text" name="id"><br/><br/>
+	            		<input class="btn btn-primary" type="submit" value="查询">
+	            	</form>
+	            </div>
+	            <div>
+	            	<h3>查询结果</h3>
+	            	<form class="form-horizontal" action="empCheck">
+	            		<label>姓名：</label><br/>
+	            		<input type="text" name="name"><br/>
 	            		<label>职工号：</label><br/>
 	            		<input type="text" name="id"><br/><br/>
 	            		<input class="btn btn-primary" type="submit" value="查询">

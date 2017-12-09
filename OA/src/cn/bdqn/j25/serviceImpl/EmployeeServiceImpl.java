@@ -68,4 +68,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 		employeeDao.delType(employee);
 	}
 
+	@Override
+	public List<Employee> findAll(Employee employee) {
+		// TODO Auto-generated method stub
+		return employeeDao.findAll(employee);
+	}
+
 }
