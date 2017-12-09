@@ -26,15 +26,12 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements EmployeeDao 
 	@Override
 	public List<Employee> findByWorkidPwd(Employee employee) {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
+
 	/*	Object[] obj = new Object[2];
 		Type[] types = new Type[] {Hibernate.STRING, Hibernate.STRING};
 		obj[0]=employee.getWorkid();
 		obj[1]=employee.getPassword();*/
 		return this.getHibernateTemplate().findByValueBean("from Employee where workid=:workid and password=:password",employee);
-=======
-		return this.getHibernateTemplate().find("from Employee where workid=? and password=?",employee);
->>>>>>> 8ebe5f9c4117b5bb540fd16389b878a14a067d35
 	}
 	@Override
 	public List<Employee> findByDepartment(String Department) {

@@ -14,6 +14,7 @@ import cn.bdqn.j25.service.CustomerService;
 import cn.bdqn.j25.service.OrdersService;
 import cn.bdqn.j25.service.ProductService;
 
+import com.alibaba.fastjson.JSONObject;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -32,10 +33,16 @@ public class OrderAction extends ActionSupport{
 			"request");
 	
 	private String productid;
+	private String result;
 	
 	//自动生成客户编号
 	public String findCustomer() throws UnsupportedEncodingException{
-		listCustomer=customerService.findAll();	
+		listCustomer=customerService.findAll();
+		System.out.println(listCustomer);
+		for (Customer c : listCustomer) {
+			c.getCustomerid();
+			c.getCustomername();
+		}
 		return SUCCESS;		
 	}
 	//自动生成产品编号
@@ -48,8 +55,10 @@ public class OrderAction extends ActionSupport{
 	
 	public String findprice(){
 		product=productService.findByid(Integer.parseInt(productid));
-		request.put("po", product);
-		System.out.println(listProduct);
+		result=JSONObject.toJSONString(product);
+		
+//		request.put("po", product);
+//		System.out.println(listProduct);
 		return SUCCESS;
 	}
 	
@@ -141,6 +150,12 @@ public class OrderAction extends ActionSupport{
 	
 	public void setProductid(String productid) {
 		this.productid = productid;
+	}
+	public String getResult() {
+		return result;
+	}
+	public void setResult(String result) {
+		this.result = result;
 	}
 	
 	
