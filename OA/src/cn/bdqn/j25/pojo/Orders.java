@@ -26,7 +26,7 @@ public class Orders implements java.io.Serializable {
 	private BigDecimal quantity;
 	private BigDecimal price;
 	private String orderremarks;
-	private Integer productname;
+	private Product productname;
 	private Set outs = new HashSet(0);
 	private Set enters = new HashSet(0);
 	private Set monitorings = new HashSet(0);
@@ -44,7 +44,7 @@ public class Orders implements java.io.Serializable {
 			Customer customer, State state, Types types,
 			Employee employeeByOriginator, String ordernumber,
 			Timestamp datetime, String orderno, BigDecimal quantity,
-			BigDecimal price, String orderremarks, Integer productname,
+			BigDecimal price, String orderremarks, Product productname,
 			Set outs, Set enters, Set monitorings, Set proorders,
 			Set orderrootses) {
 		this.employeeByOperator = employeeByOperator;
@@ -173,11 +173,11 @@ public class Orders implements java.io.Serializable {
 		this.orderremarks = orderremarks;
 	}
 
-	public Integer getProductname() {
+	public Product getProductname() {
 		return this.productname;
 	}
 
-	public void setProductname(Integer productname) {
+	public void setProductname(Product productname) {
 		this.productname = productname;
 	}
 

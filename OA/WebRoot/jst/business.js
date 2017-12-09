@@ -59,6 +59,7 @@ $(function() {
 	  });
 	  //客户、产品编号
 	  $("#ao").click(function() {
+		  $(".cutomerNo").empty();
 		  $.getJSON("order!findCustomer"," ",function(data){
 			  var jsonObj=data;		
 				$(jsonObj).each(function(){
@@ -69,7 +70,8 @@ $(function() {
 			  });
 		  
 		  $.getJSON("order1!findProduct"," ",function(data1){
-			  var json=data1;		
+			  $(".productid").empty();
+			  	var json=data1;		
 				$(json).each(function(){
 					$(".productid").append(
 			            "<option value="+this.productid+">"+this.productname+"</option>"   			
@@ -82,11 +84,35 @@ $(function() {
 	  $(".productid").change(function() {
 		  var id= $(".productid").val();
 		  $.getJSON("order2!findprice","productid="+id,function(data){
-			  alert(data.types);			  
+			  			  
 			  $(".unit").html(data.unit);
 			  $(".productprice").html(data.productprice);
 		  });
 	  });
 	  
-	  //添加
+	  //合计金额改变
+	  $(".quantity").change(function() {
+		  var num=$(".quantity").val();
+		  var price=$(".productprice").html();
+		  $(".totalprice").val(num*price);
+	  });
+	  
+	  
+	  //添加订单
+	  $(".btn-primary").click(function(){
+			var orderAdd=$("#orderAdd").serialize();
+			$.post("order3!addOrder",orderAdd,callback,"text");
+		});
+	  function callback(data){
+			if(data=="添加成功"){
+				alert("添加成功");			
+			}else{				
+				 $(':input','#myform')
+			       .not(':button,:submit,:reset,:hidden')//将myform表单中input元素type为button、submit、reset、hidden排除
+			       .val('')  //将input元素的value设为空值
+			       .removeAttr('checked')
+			       .removeAttr('checked') // 如果任何radio/checkbox/select inputs有checked or selected 属性，将其移除
+			}
+			
+		}
 });

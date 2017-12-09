@@ -79,8 +79,17 @@ public class OrderAction extends ActionSupport{
 	}
 	
 	public String addOrder(){
-		
-		
+		String result=null;
+
+		if(ordersService.addOrUpdateOrders(orders)!=null){
+			result="添加成功";
+			try {				
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		
 		return SUCCESS;
 	}

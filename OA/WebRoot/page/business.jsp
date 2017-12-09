@@ -6,8 +6,8 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <script src="${pageContext.request.contextPath }/jst/business.js"></script>
 	<section>
-		<div id="content" class="row-fluid">
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:0px; padding-bottom:50%">
+		<div id="content" class="row-fluid" style="overflow:hidden;">
+	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div class="container">
 				    <div class="row">
 				        <div class="span2">
@@ -26,7 +26,7 @@
 				</div>
 	        </div>
 	        
-	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height:0px; padding-bottom:50%">
+	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <%@include file="common/public.jsp" %>
 	            <div id="forder" style="display: none;">
 	            	<h2 class="text-center">查看订单</h2>
@@ -44,14 +44,14 @@
 	            <div id="aorder" style="display: none;">
 	            	<h2 class="text-center">生成订单</h2>
 	            	<hr>
-	            	<form action="" class="orderAdd">
+	            	<form action="javascript:void(0);" method="post" id="orderAdd">
 	            		<table class="table">
 	            			<tr>
 	            				<td>订单号：</td>
-	            				<td> <input type="text" name="orders.orderid" class="orderno"> </td>
+	            				<td> <input type="text" name="orders.orderno" class="orderno"> </td>
 	            				<td>客户编号：</td>
 	            				<td>
-								<select style="width:150px" class="cutomerNo" name="orders.customer">	
+								<select style="width:150px" class="cutomerNo" name="customer.customerid">	
 	            				</select></td>
 	            				<td>发起时间：</td>
 	            				<td><input name="orders.datetime" type="date">    </td>
@@ -72,9 +72,9 @@
 	            				</select>
 	            				</td>			
 	            				<td class="unit"></td>
-	            				<td><input type="text" name="orders.quantity"></td>
+	            				<td><input type="text" name="orders.quantity" class="quantity"></td>
 	            				<td class="productprice"></td>
-	            				<td><input type="text" name="orders.price"></td>
+	            				<td><input type="text" name="orders.price" class="totalprice"></td>
 	            			</tr>
 	            		
 	            		</table>
@@ -93,7 +93,7 @@
 	            </div>
 	        </div>
 	        
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height:0px; padding-bottom:50%">
+	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div>
 	            	<h3 class="text-center">个人信息</h3>
 	            	<ul class="list-unstyled">
