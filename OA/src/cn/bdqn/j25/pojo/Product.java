@@ -2,6 +2,8 @@ package cn.bdqn.j25.pojo;
 
 import java.math.BigDecimal;
 
+import org.apache.struts2.json.annotations.JSON;
+
 /**
  * Product entity. @author MyEclipse Persistence Tools
  */
@@ -51,12 +53,11 @@ public class Product implements java.io.Serializable {
 		return this.productid;
 	}
 
-	public Product(Integer productid, Types types, String productname,
+	public Product(Types types, String productname,
 			String productno, BigDecimal productprice, String component,
 			Integer shelflife, String productmodel, BigDecimal productioncost,
 			BigDecimal truckage, String productremarks, String unit) {
 		super();
-		this.productid = productid;
 		this.types = types;
 		this.productname = productname;
 		this.productno = productno;
@@ -73,7 +74,8 @@ public class Product implements java.io.Serializable {
 	public void setProductid(Integer productid) {
 		this.productid = productid;
 	}
-
+	
+//	@JSON (serialize=false)
 	public Types getTypes() {
 		return this.types;
 	}

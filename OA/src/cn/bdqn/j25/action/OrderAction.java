@@ -1,9 +1,15 @@
 package cn.bdqn.j25.action;
 
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
+
+import net.sf.json.JSONObject;
+import net.sf.json.JsonConfig;
+import net.sf.json.util.CycleDetectionStrategy;
 
 import org.apache.log4j.Logger;
 
@@ -14,7 +20,6 @@ import cn.bdqn.j25.service.CustomerService;
 import cn.bdqn.j25.service.OrdersService;
 import cn.bdqn.j25.service.ProductService;
 
-import com.alibaba.fastjson.JSONObject;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -28,21 +33,24 @@ public class OrderAction extends ActionSupport{
 	private List<Product> listProduct;
 	private ProductService productService;
 	private Product product;
+	private InputStream inputStream;
+	
+
 	@SuppressWarnings("unchecked")
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
 	
 	private String productid;
-	private String result;
+	
 	
 	//自动生成客户编号
 	public String findCustomer() throws UnsupportedEncodingException{
 		listCustomer=customerService.findAll();
-		System.out.println(listCustomer);
-		for (Customer c : listCustomer) {
-			c.getCustomerid();
-			c.getCustomername();
-		}
+//		System.out.println(listCustomer);
+//		for (Customer c : listCustomer) {
+//			c.getCustomerid();
+//			c.getCustomername();
+//		}
 		return SUCCESS;		
 	}
 	//自动生成产品编号
@@ -54,15 +62,28 @@ public class OrderAction extends ActionSupport{
 	//查询单价和单位
 	
 	public String findprice(){
+		JsonConfig jsonConfig = new JsonConfig();
+		jsonConfig.setIgnoreDefaultExcludes(false); //设置默认忽略 
+		jsonConfig.setCycleDetectionStrategy(CycleDetectionStrategy.LENIENT);//设置循环策略为忽略    解决json最头疼的问题 死循环
+		jsonConfig.setExcludes(new String[] {"types"});//此处是亮点，只要将所需忽略字段加到数组中即可
 		product=productService.findByid(Integer.parseInt(productid));
-		result=JSONObject.toJSONString(product);
-		
-//		request.put("po", product);
-//		System.out.println(listProduct);
+		String jsonStr = JSONObject.fromObject(product, jsonConfig).toString();
+		try {
+			inputStream = new ByteArrayInputStream(jsonStr.getBytes("utf-8")) ;
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+	
 		return SUCCESS;
 	}
 	
-	
+	public String addOrder(){
+		
+		
+		
+		return SUCCESS;
+	}
 	
 	public OrdersService getOrdersService() {
 		return ordersService;
@@ -151,12 +172,12 @@ public class OrderAction extends ActionSupport{
 	public void setProductid(String productid) {
 		this.productid = productid;
 	}
-	public String getResult() {
-		return result;
-	}
-	public void setResult(String result) {
-		this.result = result;
-	}
 	
+	public InputStream getInputStream() {
+		return inputStream;
+	}
+	public void setInputStream(InputStream inputStream) {
+		this.inputStream = inputStream;
+	}
 	
 }

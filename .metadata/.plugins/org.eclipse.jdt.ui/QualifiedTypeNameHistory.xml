@@ -22,4 +22,11 @@
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.OrderrootsDao"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.service.AttendanceService"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="net.sf.json.JsonConfig"/>
+<fullyQualifiedTypeName name="net.sf.json.util.CycleDetectionStrategy"/>
+<fullyQualifiedTypeName name="org.apache.struts2.json.annotations.JSON"/>
+<fullyQualifiedTypeName name="com.alibaba.fastjson.JSONObject"/>
+<fullyQualifiedTypeName name="net.sf.json.JSONObject"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
 </qualifiedTypeNameHistroy>

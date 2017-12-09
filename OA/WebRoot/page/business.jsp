@@ -44,7 +44,7 @@
 	            <div id="aorder" style="display: none;">
 	            	<h2 class="text-center">生成订单</h2>
 	            	<hr>
-	            	<form action="">
+	            	<form action="" class="orderAdd">
 	            		<table class="table">
 	            			<tr>
 	            				<td>订单号：</td>
