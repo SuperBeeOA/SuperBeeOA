@@ -71,7 +71,7 @@ public class OrderAction extends ActionSupport{
 		JsonConfig jsonConfig = new JsonConfig();
 		jsonConfig.setIgnoreDefaultExcludes(false); //设置默认忽略 
 		jsonConfig.setCycleDetectionStrategy(CycleDetectionStrategy.LENIENT);//设置循环策略为忽略    解决json最头疼的问题 死循环
-		jsonConfig.setExcludes(new String[] {"types"});//此处是亮点，只要将所需忽略字段加到数组中即可
+		jsonConfig.setExcludes(new String[] {"types","orderses","procurements"});//此处是亮点，只要将所需忽略字段加到数组中即可
 		product=productService.findByid(Integer.parseInt(productid));
 		String jsonStr = JSONObject.fromObject(product, jsonConfig).toString();
 		try {

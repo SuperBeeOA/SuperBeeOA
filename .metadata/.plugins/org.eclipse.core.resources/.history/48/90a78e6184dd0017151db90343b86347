@@ -24,7 +24,6 @@ public class Product implements java.io.Serializable {
 	private BigDecimal truckage;
 	private String productremarks;
 	private String unit;
-	
 	private Set orderses = new HashSet(0);
 	private Set procurements = new HashSet(0);
 

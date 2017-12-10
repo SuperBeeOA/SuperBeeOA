@@ -26,7 +26,11 @@ public class Orders implements java.io.Serializable {
 	private BigDecimal quantity;
 	private BigDecimal price;
 	private String orderremarks;
+<<<<<<< HEAD
+	private Product product;
 
+=======
+>>>>>>> 315701b391ff380228418853f7990e817c2d7636
 	private Set outs = new HashSet(0);
 	private Set enters = new HashSet(0);
 	private Set monitorings = new HashSet(0);
