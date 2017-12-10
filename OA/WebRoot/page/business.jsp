@@ -4,6 +4,7 @@
 <%@include file="common/js.jsp" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <script src="${pageContext.request.contextPath }/jst/business.js"></script>
 	<section>
 		<div id="content" class="row-fluid" style="overflow:hidden;">
@@ -97,11 +98,10 @@
 	            <div>
 	            	<h3 class="text-center">个人信息</h3>
 	            	<ul class="list-unstyled">
-	            		<li><label>姓名：</label>员工001</li>
-	            		<li><label>所属公司：</label>台江分部</li>
-	            		<li><label>部门：</label>业务部</li>
-	            		<li><label>职位：</label>经理</li>
-	            		<li><label>工龄：</label>2 年</li>
+	            		<li><label>姓名：</label>${ sessionScope.employee.name }</li>
+	            		<li><label>部门：</label>${ sessionScope.employee.department.departmentname }</li>
+	            		<li><label>职位：</label>${ sessionScope.employee.post.postname }</li>
+	            		<li><label>入职时间：</label><fmt:formatDate value="${ sessionScope.employee.entrytime }" pattern="yyyy-MM-dd"/></li>
 	            	</ul>
 	            </div>
 	        </div>

@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="common/header.jsp" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
     <section>
     
     	<div id="content" class="row-fluid" style="overflow:hidden;">
@@ -15,7 +18,7 @@
 	            </div>
 	            <script src="${pageContext.request.contextPath }/js/coda.js" type="text/javascript"> </script>
 	            <link rel="stylesheet" href="${pageContext.request.contextPath }/css/master.css" type="text/css" media="screen"/>
-	            <table cellspacing="0">
+	            <table class="master-table" cellspacing="0">
 					<thead>
 						<tr>
 							<th>Mon</th><th>Tue</th><th>Wed</th>
@@ -102,7 +105,7 @@
 	            </div> --%>
 	        </div>
 	        
-	        <div class="col-md-7 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
+	        <div class="col-md-6 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div>
 	            	<h2 style="padding-left: 50px;">公司公告</h2>
 		            <hr>
@@ -135,36 +138,42 @@
 		        </div> --%>
 	        </div>
 	        
-	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
+	        <div class="col-md-3 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div>
 	            	<h3>个人信息</h3>
 	            	<ul class="list-unstyled">
 	            		<li><label>姓名：</label>${ sessionScope.employee.name }</li>
-	            		<li><label>所属公司：</label>台江分部</li>
-	            		<li><label>部门：</label>财务部</li>
-	            		<li><label>职位：</label>经理</li>
-	            		<li><label>工龄：</label>2 年</li>
+	            		<li><label>部门：</label>${ sessionScope.employee.department.departmentname }</li>
+	            		<li><label>职位：</label>${ sessionScope.employee.post.postname }</li>
+	            		<li><label>入职时间：</label><fmt:formatDate value="${ sessionScope.employee.entrytime }" pattern="yyyy-MM-dd"/></li>
 	            	</ul>
 	            </div>
 	            <div>
 	            	<h3>查询员工</h3>
-	            	<form class="form-horizontal" action="empCheck">
+	            	<form class="form-horizontal" action="findEmployee.action">
 	            		<label>姓名：</label><br/>
-	            		<input type="text" name="name"><br/>
+	            		<input type="text" name="employee.name"><br/>
 	            		<label>职工号：</label><br/>
-	            		<input type="text" name="id"><br/><br/>
+	            		<input type="text" name="employee.workid"><br/><br/>
 	            		<input class="btn btn-primary" type="submit" value="查询">
 	            	</form>
 	            </div>
 	            <div>
 	            	<h3>查询结果</h3>
-	            	<form class="form-horizontal" action="empCheck">
-	            		<label>姓名：</label><br/>
-	            		<input type="text" name="name"><br/>
-	            		<label>职工号：</label><br/>
-	            		<input type="text" name="id"><br/><br/>
-	            		<input class="btn btn-primary" type="submit" value="查询">
-	            	</form>
+	            	<table class="table table-bordered table-hover">
+	            		<tr>
+	            			<td>姓名</td>
+	            			<td>部门</td>
+	            			<td>电话</td>
+	            		</tr>
+		            	<c:forEach var="emp" items="${ sessionScope.emplist }">
+		            		<tr>
+		            			<td>${ emp.name }</td>
+		            			<td></td>
+		            			<td>${ emp.phone }</td>
+		            		</tr>
+		            	</c:forEach>
+	            	</table>
 	            </div>
 	        </div>
     	</div>

@@ -30,7 +30,7 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements EmployeeDao 
 		Type[] types = new Type[] {Hibernate.STRING, Hibernate.STRING};
 		obj[0]=employee.getWorkid();
 		obj[1]=employee.getPassword();*/
-		return this.getHibernateTemplate().findByValueBean("from Employee where workid=:workid and password=:password",employee);
+		return this.getHibernateTemplate().findByValueBean("from Employee e where e.workid=:workid and e.password=:password",employee);
 	}
 	@Override
 	public List<Employee> findByDepartment(String Department) {
