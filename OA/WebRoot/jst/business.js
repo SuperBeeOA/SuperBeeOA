@@ -91,7 +91,12 @@ $(function() {
 	  });
 	  
 	  //合计金额改变
-	  $(".quantity").change(function() {
+	  
+	  var num=$(".quantity").val();
+	  var price=$(".productprice").html();
+	  $(".totalprice").val(num*price);
+	  
+	  $(".quantity").blur(function() {
 		  var num=$(".quantity").val();
 		  var price=$(".productprice").html();
 		  $(".totalprice").val(num*price);
@@ -101,7 +106,7 @@ $(function() {
 	  //添加订单
 	  $(".btn-primary").click(function(){
 			var orderAdd=$("#orderAdd").serialize();
-			$.post("order3!addOrder",orderAdd,callback,"text");
+			$.get("order3!addOrder?employee.employeeid=1&department.departmentid=2&type.typeid=1&state.stateid=1&orders.orderremarks=aaa",orderAdd,callback,"text");
 		});
 	  function callback(data){
 			if(data=="添加成功"){

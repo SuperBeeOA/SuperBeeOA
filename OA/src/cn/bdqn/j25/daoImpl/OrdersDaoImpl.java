@@ -59,4 +59,10 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 		});
 	}
 
+	@Override
+	public void addOrders(Orders orders) {
+		// TODO Auto-generated method stub
+		getHibernateTemplate().save(orders);
+	}
+
 }

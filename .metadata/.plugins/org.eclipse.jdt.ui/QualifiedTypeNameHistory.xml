@@ -29,4 +29,5 @@
 <fullyQualifiedTypeName name="net.sf.json.JSONObject"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.pojo.Product"/>
 </qualifiedTypeNameHistroy>

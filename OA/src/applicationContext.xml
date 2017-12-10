@@ -217,7 +217,10 @@
 	</bean>
 	
 	<!-- 定义事务管理器 -->
-	<!-- <tx:advice id="txAdvice" transaction-manager="txManager">
+	<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	 <tx:advice id="txAdvice" transaction-manager="txManager">
 		<tx:attributes>
 			<tx:method name="get*" propagation="REQUIRED"
 				read-only="true" />
@@ -238,12 +241,11 @@
 			<tx:method name="check*" propagation="REQUIRED" />
 			<tx:method name="do*" propagation="REQUIRED" />
 			<tx:method name="*" propagation="REQUIRED" read-only="true" />
-
 		</tx:attributes>
 	</tx:advice>
 	<aop:config>
 		<aop:pointcut id="serviceMethod"
-			expression="execution(* cn.jboa.service.*.*(..))" />
+			expression="execution(* cn.bdqn.j25.service.*.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethod" />
-	</aop:config> -->
+	</aop:config>
 </beans>

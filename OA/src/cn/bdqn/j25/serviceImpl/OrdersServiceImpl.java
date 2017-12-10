@@ -55,4 +55,17 @@ public class OrdersServiceImpl implements OrdersService {
 		return ordersDao.countByTime(date);
 	}
 
+	@Override
+	public boolean addOrders(Orders orders) {
+		// TODO Auto-generated method stub
+		try {
+			ordersDao.addOrders(orders);
+			return true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+
 }

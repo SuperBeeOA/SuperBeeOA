@@ -17,4 +17,6 @@ public interface OrdersDao {
 	public void delOrders(Orders orders); //删除
 	
 	public int countByTime(String date);//根据传入的时间统计订单量
+	
+	public void addOrders(Orders orders);//添加
 }

@@ -14,8 +14,12 @@ import net.sf.json.util.CycleDetectionStrategy;
 import org.apache.log4j.Logger;
 
 import cn.bdqn.j25.pojo.Customer;
+import cn.bdqn.j25.pojo.Department;
+import cn.bdqn.j25.pojo.Employee;
 import cn.bdqn.j25.pojo.Orders;
 import cn.bdqn.j25.pojo.Product;
+import cn.bdqn.j25.pojo.State;
+import cn.bdqn.j25.pojo.Types;
 import cn.bdqn.j25.service.CustomerService;
 import cn.bdqn.j25.service.OrdersService;
 import cn.bdqn.j25.service.ProductService;
@@ -34,8 +38,10 @@ public class OrderAction extends ActionSupport{
 	private ProductService productService;
 	private Product product;
 	private InputStream inputStream;
-	
-
+	private Employee employee;
+	private Department department;
+	private Types type;
+	private State state;
 	@SuppressWarnings("unchecked")
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
@@ -79,9 +85,35 @@ public class OrderAction extends ActionSupport{
 	}
 	
 	public String addOrder(){
-		String result=null;
-
-		if(ordersService.addOrUpdateOrders(orders)!=null){
+		orders.setCustomer(customer);
+		orders.setProduct(product);
+		orders.setEmployeeByOperator(employee);	
+		orders.setEmployeeByOriginator(employee);
+		orders.setDepartment(department);
+		orders.setTypes(type);
+		orders.setState(state);
+//		orders.getTypes().getProducts().add(product);
+//		orders.setEmployeeByOriginator(null);
+//		orders.setTypes(null);
+//		orders.setState(null);
+//		orders.setOrderremarks(null);
+//		orders.setDepartment(department);	
+//		System.out.println(employee.getEmployeeid());
+		System.out.println(orders.getOrderid());
+		System.out.println(orders.getCustomer().getCustomerid());
+		System.out.println(orders.getOrdernumber());
+		System.out.println(orders.getQuantity());
+		System.out.println(orders.getPrice());
+		System.out.println(orders.getTypes().getTypeid());
+		System.out.println(orders.getState().getStateid());
+		System.out.println(orders.getDepartment().getDepartmentid());
+		System.out.println(orders.getEmployeeByOperator().getEmployeeid());
+		System.out.println(orders.getEmployeeByOriginator().getEmployeeid());
+		System.out.println(orders.getDatetime());
+		System.out.println(orders.getProduct().getProductid());
+		System.out.println(orders.getOrderremarks());
+		String result=null;		
+		if(ordersService.addOrders(orders)!=false){
 			result="添加成功";
 			try {				
 				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
@@ -187,6 +219,30 @@ public class OrderAction extends ActionSupport{
 	}
 	public void setInputStream(InputStream inputStream) {
 		this.inputStream = inputStream;
+	}
+	public Employee getEmployee() {
+		return employee;
+	}
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+	public Department getDepartment() {
+		return department;
+	}
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+	public Types getType() {
+		return type;
+	}
+	public void setType(Types type) {
+		this.type = type;
+	}
+	public State getState() {
+		return state;
+	}
+	public void setState(State state) {
+		this.state = state;
 	}
 	
 }

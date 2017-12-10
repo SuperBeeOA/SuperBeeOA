@@ -22,11 +22,10 @@ public class Orders implements java.io.Serializable {
 	private Employee employeeByOriginator;
 	private String ordernumber;
 	private Timestamp datetime;
-	private String orderno;
 	private BigDecimal quantity;
 	private BigDecimal price;
 	private String orderremarks;
-	private Product productname;
+	private Product product;
 	private Set outs = new HashSet(0);
 	private Set enters = new HashSet(0);
 	private Set monitorings = new HashSet(0);
@@ -43,7 +42,7 @@ public class Orders implements java.io.Serializable {
 	public Orders(Employee employeeByOperator, Department department,
 			Customer customer, State state, Types types,
 			Employee employeeByOriginator, String ordernumber,
-			Timestamp datetime, String orderno, BigDecimal quantity,
+			Timestamp datetime, BigDecimal quantity,
 			BigDecimal price, String orderremarks, Product productname,
 			Set outs, Set enters, Set monitorings, Set proorders,
 			Set orderrootses) {
@@ -55,11 +54,11 @@ public class Orders implements java.io.Serializable {
 		this.employeeByOriginator = employeeByOriginator;
 		this.ordernumber = ordernumber;
 		this.datetime = datetime;
-		this.orderno = orderno;
+		
 		this.quantity = quantity;
 		this.price = price;
 		this.orderremarks = orderremarks;
-		this.productname = productname;
+		this.product = product;
 		this.outs = outs;
 		this.enters = enters;
 		this.monitorings = monitorings;
@@ -141,13 +140,6 @@ public class Orders implements java.io.Serializable {
 		this.datetime = datetime;
 	}
 
-	public String getOrderno() {
-		return this.orderno;
-	}
-
-	public void setOrderno(String orderno) {
-		this.orderno = orderno;
-	}
 
 	public BigDecimal getQuantity() {
 		return this.quantity;
@@ -173,12 +165,12 @@ public class Orders implements java.io.Serializable {
 		this.orderremarks = orderremarks;
 	}
 
-	public Product getProductname() {
-		return this.productname;
+	public Product getProduct() {
+		return this.product;
 	}
 
-	public void setProductname(Product productname) {
-		this.productname = productname;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 
 	public Set getOuts() {

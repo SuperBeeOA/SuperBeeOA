@@ -44,11 +44,11 @@
 	            <div id="aorder" style="display: none;">
 	            	<h2 class="text-center">生成订单</h2>
 	            	<hr>
-	            	<form action="javascript:void(0);" method="post" id="orderAdd">
+	            	<form action="javascript:void(0);"  id="orderAdd">
 	            		<table class="table">
 	            			<tr>
 	            				<td>订单号：</td>
-	            				<td> <input type="text" name="orders.orderno" class="orderno"> </td>
+	            				<td> <input type="text" name="orders.ordernumber" class="orderno"> </td>
 	            				<td>客户编号：</td>
 	            				<td>
 								<select style="width:150px" class="cutomerNo" name="customer.customerid">	
@@ -78,7 +78,7 @@
 	            			</tr>
 	            		
 	            		</table>
-	            		<input class="btn btn-primary" type="submit" value="提交订单" style="position: relative; left: 45%;">
+	            		<input class="btn btn-primary" type="button" value="提交订单" style="position: relative; left: 45%;">
 	            	</form>
 	            </div>
 	            <div id="customer" style="display: none;">

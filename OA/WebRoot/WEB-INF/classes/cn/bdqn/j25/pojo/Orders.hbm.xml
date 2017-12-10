@@ -28,15 +28,17 @@
         <many-to-one name="employeeByOriginator" class="cn.bdqn.j25.pojo.Employee" fetch="select">
             <column name="ORIGINATOR" precision="9" scale="0" />
         </many-to-one>
+        <many-to-one name="product" class="cn.bdqn.j25.pojo.Product" fetch="select">
+            <column name="PRODUCID" precision="9" scale="0" />
+        </many-to-one>
+               
         <property name="ordernumber" type="java.lang.String">
             <column name="ORDERNUMBER" length="10" />
         </property>
         <property name="datetime" type="java.sql.Timestamp">
             <column name="DATETIME" length="7" />
         </property>
-        <property name="orderno" type="java.lang.String">
-            <column name="ORDERNO" length="10" />
-        </property>
+       
         <property name="quantity" type="java.math.BigDecimal">
             <column name="QUANTITY" precision="22" scale="0" />
         </property>
@@ -46,9 +48,7 @@
         <property name="orderremarks" type="java.lang.String">
             <column name="ORDERREMARKS" length="50" />
         </property>
-        <property name="productname" type="cn.bdqn.j25.pojo.Product">
-            <column name="PRODUCTNAME" precision="9" scale="0" />
-        </property>
+       
         <set name="outs" inverse="true">
             <key>
                 <column name="ORDERID" precision="9" scale="0" />
