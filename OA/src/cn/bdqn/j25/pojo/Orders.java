@@ -26,10 +26,6 @@ public class Orders implements java.io.Serializable {
 	private BigDecimal quantity;
 	private BigDecimal price;
 	private String orderremarks;
-<<<<<<< HEAD
-	private Product product;
-=======
->>>>>>> no message
 	private Set outs = new HashSet(0);
 	private Set enters = new HashSet(0);
 	private Set monitorings = new HashSet(0);
@@ -46,18 +42,11 @@ public class Orders implements java.io.Serializable {
 	public Orders(Product product, State state, Employee employeeByOperator,
 			Department department, Customer customer, Types types,
 			Employee employeeByOriginator, String ordernumber,
-<<<<<<< HEAD
-			Timestamp datetime, BigDecimal quantity,
-			BigDecimal price, String orderremarks, Product productname,
-			Set outs, Set enters, Set monitorings, Set proorders,
-			Set orderrootses) {
-=======
 			Timestamp datetime, BigDecimal quantity, BigDecimal price,
 			String orderremarks, Set outs, Set enters, Set monitorings,
 			Set proorders, Set orderrootses) {
 		this.product = product;
 		this.state = state;
->>>>>>> no message
 		this.employeeByOperator = employeeByOperator;
 		this.department = department;
 		this.customer = customer;
@@ -65,17 +54,9 @@ public class Orders implements java.io.Serializable {
 		this.employeeByOriginator = employeeByOriginator;
 		this.ordernumber = ordernumber;
 		this.datetime = datetime;
-<<<<<<< HEAD
-		
 		this.quantity = quantity;
 		this.price = price;
 		this.orderremarks = orderremarks;
-		this.product = product;
-=======
-		this.quantity = quantity;
-		this.price = price;
-		this.orderremarks = orderremarks;
->>>>>>> no message
 		this.outs = outs;
 		this.enters = enters;
 		this.monitorings = monitorings;
@@ -165,10 +146,6 @@ public class Orders implements java.io.Serializable {
 		this.datetime = datetime;
 	}
 
-<<<<<<< HEAD
-
-=======
->>>>>>> no message
 	public BigDecimal getQuantity() {
 		return this.quantity;
 	}
@@ -193,17 +170,6 @@ public class Orders implements java.io.Serializable {
 		this.orderremarks = orderremarks;
 	}
 
-<<<<<<< HEAD
-	public Product getProduct() {
-		return this.product;
-	}
-
-	public void setProduct(Product product) {
-		this.product = product;
-	}
-
-=======
->>>>>>> no message
 	public Set getOuts() {
 		return this.outs;
 	}
