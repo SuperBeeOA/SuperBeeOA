@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <%@include file="common/header.jsp" %>
 <%@include file="common/js.jsp" %>
 <script src="${pageContext.request.contextPath }/jst/financial.js"></script>
 	<section>
 		<div id="content" class="row-fluid" style="overflow:hidden;">
-	        <div class="col-md-3 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
+	        <div class="col-md-2 panel" style="background-color: #e7e7e7; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <div class="container">
 				    <div class="row">
 				        <div class="span2">
@@ -22,7 +23,7 @@
 				</div>
 	        </div>
 	        
-	        <div class="col-md-7 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
+	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <%@include file="common/public.jsp" %>
 	            <div id="teo" style="display: none;">
 	            	<h2 class="text-center">审核订单</h2>
@@ -89,11 +90,10 @@
 	            <div>
 	            	<h3>个人信息</h3>
 	            	<ul class="list-unstyled">
-	            		<li><label>姓名：</label>员工001</li>
-	            		<li><label>所属公司：</label>台江分部</li>
-	            		<li><label>部门：</label>财务部</li>
-	            		<li><label>职位：</label>经理</li>
-	            		<li><label>工龄：</label>2 年</li>
+	            		<li><label>姓名：</label>${ sessionScope.employee.name }</li>
+	            		<li><label>部门：</label>${ sessionScope.employee.department.departmentname }</li>
+	            		<li><label>职位：</label>${ sessionScope.employee.post.postname }</li>
+	            		<li><label>入职时间：</label><fmt:formatDate value="${ sessionScope.employee.entrytime }" pattern="yyyy-MM-dd"/></li>
 	            	</ul>
 	            </div>
 	        </div>

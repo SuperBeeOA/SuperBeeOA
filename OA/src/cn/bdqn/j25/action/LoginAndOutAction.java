@@ -71,20 +71,23 @@ public class LoginAndOutAction extends ActionSupport{
 	
 	public String findEmployee(){
 		Employee findemp=new Employee();
-		Map<String, Object> session = (Map) ActionContext.getContext().get("session");
-		System.out.println(employee.getName());
-		if(employee.getName()!=null&&!employee.getName().equals("")){
-			findemp.setName(employee.getName());
-		}
-		if(employee.getWorkid()!=null&&!employee.getWorkid().equals("")){
-			findemp.setWorkid(employee.getWorkid());
+		Map<String, Object> session = (Map) ActionContext.getContext().getSession();
+		if(employee != null){
+			if(employee.getName()!=null&&!employee.getName().equals("")){
+				findemp.setName(employee.getName());
+			}
+			if(employee.getWorkid()!=null&&!employee.getWorkid().equals("")){
+				findemp.setWorkid(employee.getWorkid());
+			}
 		}
 		List<Employee> emplist=employeeService.findAll(findemp);
 		System.out.println("id<<<<<<<<<<<<<<<<<<<<"+employee.getWorkid());
 		System.out.println("name<<<<<<<<<<<<<<<<<<<<"+employee.getName());
+		
 		session.put("emplist",emplist);
 		for(Employee e:emplist){
 			System.out.println(e.getName());
+			System.out.println("post>>>>>>>>>>>>>>>>>>"+e.getPost().getPostname());
 		}
 		return SUCCESS;
 	}
