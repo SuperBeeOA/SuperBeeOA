@@ -14,8 +14,8 @@
 				                <li id="mi" class="active"><a href="javascript:void(0)">账号信息</a></li>
 				                <li id="fat"><a href="javascript:void(0)">查看出勤</a></li>
 				                <li id="fan"><a href="javascript:void(0)">发布公告</a></li>
-				                <li id="fc"><a id="fc" href="javascript:void(0)">内部联络</a></li>
-				                <li id="np"><a id="np" href="javascript:void(0)">新增员工</a></li>
+				                <li id="fc"><a href="javascript:void(0)">内部联络</a></li>
+				                <li id="np"><a href="javascript:void(0)">新增员工</a></li>
 				                <li id="mp"><a href="javascript:void(0)">管理员工</a></li>
 				            </ul>
 				        </div>

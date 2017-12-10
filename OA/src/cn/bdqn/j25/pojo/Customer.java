@@ -26,12 +26,6 @@ public class Customer implements java.io.Serializable {
 	/** default constructor */
 	public Customer() {
 	}
-	
-	public Customer(Integer customerid, String customername) {
-		super();
-		this.customerid = customerid;
-		this.customername = customername;
-	}
 
 	/** full constructor */
 	public Customer(String customername, String address, String levels,

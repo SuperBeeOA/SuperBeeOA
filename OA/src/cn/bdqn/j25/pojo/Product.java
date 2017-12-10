@@ -1,8 +1,8 @@
 package cn.bdqn.j25.pojo;
 
 import java.math.BigDecimal;
-
-import org.apache.struts2.json.annotations.JSON;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Product entity. @author MyEclipse Persistence Tools
@@ -24,9 +24,8 @@ public class Product implements java.io.Serializable {
 	private BigDecimal truckage;
 	private String productremarks;
 	private String unit;
-	// Fields
-	
-	
+	private Set orderses = new HashSet(0);
+	private Set procurements = new HashSet(0);
 
 	// Constructors
 
@@ -34,33 +33,12 @@ public class Product implements java.io.Serializable {
 	public Product() {
 	}
 
-	/** minimal constructor */
-	public Product(String productname) {
-		this.productname = productname;
-	}
-	
-	
-
-	public Product(Integer productid, String productname) {
-		super();
-		this.productid = productid;
-		this.productname = productname;
-		
-	}
-
 	/** full constructor */
-	
-	// Property accessors
-
-	public Integer getProductid() {
-		return this.productid;
-	}
-
-	public Product(Types types, String productname,
-			String productno, BigDecimal productprice, String component,
-			Integer shelflife, String productmodel, BigDecimal productioncost,
-			BigDecimal truckage, String productremarks, String unit) {
-		super();
+	public Product(Types types, String productname, String productno,
+			BigDecimal productprice, String component, Integer shelflife,
+			String productmodel, BigDecimal productioncost,
+			BigDecimal truckage, String productremarks, String unit,
+			Set orderses, Set procurements) {
 		this.types = types;
 		this.productname = productname;
 		this.productno = productno;
@@ -72,13 +50,20 @@ public class Product implements java.io.Serializable {
 		this.truckage = truckage;
 		this.productremarks = productremarks;
 		this.unit = unit;
+		this.orderses = orderses;
+		this.procurements = procurements;
+	}
+
+	// Property accessors
+
+	public Integer getProductid() {
+		return this.productid;
 	}
 
 	public void setProductid(Integer productid) {
 		this.productid = productid;
 	}
-	
-//	@JSON (serialize=false)
+
 	public Types getTypes() {
 		return this.types;
 	}
@@ -165,6 +150,22 @@ public class Product implements java.io.Serializable {
 
 	public void setUnit(String unit) {
 		this.unit = unit;
+	}
+
+	public Set getOrderses() {
+		return this.orderses;
+	}
+
+	public void setOrderses(Set orderses) {
+		this.orderses = orderses;
+	}
+
+	public Set getProcurements() {
+		return this.procurements;
+	}
+
+	public void setProcurements(Set procurements) {
+		this.procurements = procurements;
 	}
 
 }

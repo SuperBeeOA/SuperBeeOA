@@ -16,7 +16,7 @@
 				                <li id="mi" class="active"><a href="javascript:void(0)">账号信息</a></li>
 				                <li id="fat"><a href="javascript:void(0)">查看出勤</a></li>
 				                <li id="fan"><a href="javascript:void(0)">发布公告</a></li>
-				                <li id="fc"><a id="fc" href="javascript:void(0)">内部联络</a></li>
+				                <li id="fc"><a href="javascript:void(0)">内部联络</a></li>
 				                <li id="fo"><a href="javascript:void(0)">查看订单</a></li>
 				                <li id="ao"><a href="javascript:void(0)">生成订单</a></li>
 				                <li id="mc"><a href="javascript:void(0)">管理客户</a></li>
