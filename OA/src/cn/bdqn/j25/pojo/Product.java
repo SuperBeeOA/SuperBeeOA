@@ -23,8 +23,6 @@ public class Product implements java.io.Serializable {
 	private BigDecimal productioncost;
 	private BigDecimal truckage;
 	private String productremarks;
-	private String unit;
-	
 	private Set orderses = new HashSet(0);
 	private Set procurements = new HashSet(0);
 
@@ -33,19 +31,33 @@ public class Product implements java.io.Serializable {
 	/** default constructor */
 	public Product() {
 	}
-	
-	public Product(Integer productid, String productname) {
-		super();
-		this.productid = productid;
+
+	/** minimal constructor */
+	public Product(String productname) {
 		this.productname = productname;
+	}
+
+	public Product(Types types, String productname,
+			String productno, String component,
+			Integer shelflife, String productmodel, BigDecimal productioncost,
+			BigDecimal truckage, String productremarks) {
+		this.types = types;
+		this.productname = productname;
+		this.productno = productno;
+		this.component = component;
+		this.shelflife = shelflife;
+		this.productmodel = productmodel;
+		this.productioncost = productioncost;
+		this.truckage = truckage;
+		this.productremarks = productremarks;
 	}
 
 	/** full constructor */
 	public Product(Types types, String productname, String productno,
 			BigDecimal productprice, String component, Integer shelflife,
 			String productmodel, BigDecimal productioncost,
-			BigDecimal truckage, String productremarks, String unit,
-			Set orderses, Set procurements) {
+			BigDecimal truckage, String productremarks, Set orderses,
+			Set procurements) {
 		this.types = types;
 		this.productname = productname;
 		this.productno = productno;
@@ -56,7 +68,6 @@ public class Product implements java.io.Serializable {
 		this.productioncost = productioncost;
 		this.truckage = truckage;
 		this.productremarks = productremarks;
-		this.unit = unit;
 		this.orderses = orderses;
 		this.procurements = procurements;
 	}
@@ -149,14 +160,6 @@ public class Product implements java.io.Serializable {
 
 	public void setProductremarks(String productremarks) {
 		this.productremarks = productremarks;
-	}
-
-	public String getUnit() {
-		return this.unit;
-	}
-
-	public void setUnit(String unit) {
-		this.unit = unit;
 	}
 
 	public Set getOrderses() {
