@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <%@include file="common/header.jsp" %>
 <%@include file="common/js.jsp" %>
@@ -16,8 +18,8 @@
 				                <li id="fan"><a href="javascript:void(0)">发布公告</a></li>
 				                <li id="fc"><a href="javascript:void(0)">内部联络</a></li>
 				                <li id="tei"><a href="javascript:void(0)">审核产品入库申请</a></li>
-				                <li id="tem"><a href="javascript:void(0)">审核原材料申请</a></li>
-				                <li id="fo"><a href="javascript:void(0)">查看出库单</a></li>
+				                <li id="tem"><a href="javascript:void(0)">审核原材料入库申请</a></li>
+				                <li id="fo"><a href="javascript:void(0)">查看产品出库单</a></li>
 				                <li id="mwh"><a href="javascript:void(0)">库存管理</a></li>
 				            </ul>
 				        </div>
@@ -30,7 +32,7 @@
 	            <div id="tein" style="display: none;">
 	            	<h2 class="text-center">审核产品入库申请</h2>
 	            	<hr>
-	            	<div id="allin">
+	            	<div id="alltein">
 	            		<table class="table table-hover table-bordered">
 	            			<tr>
 	            				<td>申请人</td>
@@ -40,11 +42,11 @@
 	            			<tr>
 	            				<td></td>
 	            				<td></td>
-	            				<td><input type="button" value="查看" id="fin"></td>
+	            				<td><input type="button" value="查看" id="ftein"></td>
 	            			</tr>
 	            		</table>
 	            	</div>
-	            	<div id="in" style="display: none;">
+	            	<div id="ain" style="display: none;">
 	            		<table class="table table-hover table-bordered">
 	            			<tr>
 	            				<td>产品编号</td>
@@ -56,15 +58,52 @@
 	            		</table>
 	            		<input id="yes" class="btn btn-primary" type="button" value="通过">
 	            		<input id="no" class="btn btn-primary" type="button" value="驳回">
-	            		<input id="bi" class="btn btn-primary pull-right" type="button" value="返回">
+	            		<input id="btei" class="btn btn-primary pull-right" type="button" value="返回">
 	            	</div>
 	            </div>
 	            <div id="fout" style="display: none;">
-	            	<h2 class="text-center">查看出库单</h2>
+	            	<h2 class="text-center">查看产品出库单</h2>
 	            	<hr>
+	            	<div id="allout">
+		            	<table class="table table-hover table-bordered">
+		            			<tr>
+		            				<td>订单编号</td>
+		            				<td>发起人</td>
+		            				<td>时间</td>
+		            				<td>操作</td>
+		            			</tr>
+		            			<c:forEach var="allout" items="${ requestScope.allOut }">
+			            			<tr>
+			            				<td>${ allout.ordernumber }</td>
+			            				<td>${ allout.employeeByOriginator.name }</td>
+			            				<td>${ allout.datetime }</td>
+			            				<td><input type="button" value="查看" id="gout"></td>
+			            			</tr>
+		            			</c:forEach>
+		            	</table>
+	            	</div>
+	            	<div id="faout" style="display: none;">
+	            		<table class="table table-hover table-bordered">
+	            			<tr>
+		            			<td>订单编号</td>
+	            				<td>发起人</td>
+	            				<td>客户</td>
+	            				<td>日期</td>
+	            			</tr>
+	            		</table>
+	            		<table class="table table-hover table-bordered">
+	            			<tr>
+		            			<td>产品编号</td>
+		            			<td>产品名称</td>
+		            			<td>产品类型</td>
+	            				<td>数量</td>
+	            			</tr>
+	            		</table>
+	            		<input id="bout" class="btn btn-primary pull-right" type="button" value="返回">
+	            	</div>
 	            </div>
 	            <div id="tematerial" style="display: none;">
-	            	<h2 class="text-center">审核原材料申请</h2>
+	            	<h2 class="text-center">审核原材料入库申请</h2>
 	            	<hr>
 	            </div>
 	            <div id="mwarehouse" style="display: none;">

@@ -29,7 +29,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			${requestScope.po.unit}
   <%-- 	</c:forEach> --%>
       <br>
-      
+      <div class="divnode">
+	    <div>child</div>
+	  </div>
+	  <script type="text/javascript">
+	  var s = '<div style="width:12px; height:12px">text</div>';
+	  $(function () {
+	  	$(".divnode").innerHTML(s);
+		});
+	  </script>
       123
   </body>
 </html>
