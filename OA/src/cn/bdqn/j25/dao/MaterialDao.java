@@ -14,4 +14,6 @@ public interface MaterialDao {
 	public Material addOrUpdateMaterial(Material material);//增加或更新信息
 	
 	public void delMaterial(Material material); //删除
+	
+	public List<Material> findAll();//查找全部原料
 }

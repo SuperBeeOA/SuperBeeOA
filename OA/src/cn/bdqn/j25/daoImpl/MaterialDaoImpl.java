@@ -39,4 +39,10 @@ public class MaterialDaoImpl extends HibernateDaoSupport implements MaterialDao 
 		this.getHibernateTemplate().delete(material);
 	}
 
+	@Override
+	public List<Material> findAll() {
+		// TODO Auto-generated method stub
+		return getHibernateTemplate().find("select new Material(materialid,materialname) from Material");
+	}
+
 }

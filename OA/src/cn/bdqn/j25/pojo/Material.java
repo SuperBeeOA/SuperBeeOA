@@ -1,6 +1,8 @@
 package cn.bdqn.j25.pojo;
 
 import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Material entity. @author MyEclipse Persistence Tools
@@ -20,6 +22,8 @@ public class Material implements java.io.Serializable {
 	private String materialmodel;
 	private BigDecimal truckage;
 	private String materialremarks;
+	private String unit;
+	private Set procurements = new HashSet(0);
 
 	// Constructors
 
@@ -27,15 +31,11 @@ public class Material implements java.io.Serializable {
 	public Material() {
 	}
 
-	/** minimal constructor */
-	public Material(String materialname) {
-		this.materialname = materialname;
-	}
-
 	/** full constructor */
 	public Material(Types types, Provider provider, String materialname,
 			String materialno, BigDecimal materialprice, Integer shelflife,
-			String materialmodel, BigDecimal truckage, String materialremarks) {
+			String materialmodel, BigDecimal truckage, String materialremarks,
+			String unit, Set procurements) {
 		this.types = types;
 		this.provider = provider;
 		this.materialname = materialname;
@@ -45,6 +45,14 @@ public class Material implements java.io.Serializable {
 		this.materialmodel = materialmodel;
 		this.truckage = truckage;
 		this.materialremarks = materialremarks;
+		this.unit = unit;
+		this.procurements = procurements;
+	}
+	
+	public Material(Integer materialid, String materialname) {
+		super();
+		this.materialid = materialid;
+		this.materialname = materialname;
 	}
 
 	// Property accessors
@@ -127,6 +135,22 @@ public class Material implements java.io.Serializable {
 
 	public void setMaterialremarks(String materialremarks) {
 		this.materialremarks = materialremarks;
+	}
+
+	public String getUnit() {
+		return this.unit;
+	}
+
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
+
+	public Set getProcurements() {
+		return this.procurements;
+	}
+
+	public void setProcurements(Set procurements) {
+		this.procurements = procurements;
 	}
 
 }

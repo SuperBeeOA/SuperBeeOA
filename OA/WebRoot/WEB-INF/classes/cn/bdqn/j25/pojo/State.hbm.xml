@@ -15,7 +15,7 @@
         </property>
         <set name="procurements" inverse="true">
             <key>
-                <column name="STATE" precision="9" scale="0" />
+                <column name="STATEID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Procurement" />
         </set>

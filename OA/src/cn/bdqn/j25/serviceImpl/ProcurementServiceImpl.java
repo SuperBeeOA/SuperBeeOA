@@ -49,4 +49,17 @@ public class ProcurementServiceImpl implements ProcurementService {
 		procurementDao.delProcurement(procurement);
 	}
 
+	@Override
+	public boolean addProcurement(Procurement procurement) {
+		// TODO Auto-generated method stub
+		try {
+			procurementDao.addProcurement(procurement);
+			return true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+
 }

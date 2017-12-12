@@ -7,11 +7,9 @@
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.TeamDao"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.WorkshopDao"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.MaterialDao"/>
-<fullyQualifiedTypeName name="cn.bdqn.j25.service.MaterialService"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.PerformancesDao"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.ProductDao"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.ProorderDao"/>
-<fullyQualifiedTypeName name="cn.bdqn.j25.service.ProcurementService"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.ProviderDao"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.StateDao"/>
 <fullyQualifiedTypeName name="org.springframework.orm.hibernate3.support.HibernateDaoSupport"/>
@@ -30,4 +28,11 @@
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.pojo.Product"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.pojo.Procurement"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.action.procurementAction"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.ProcurementService"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.MaterialService"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.pojo.Material"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.pojo.Provider"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.ProviderService"/>
 </qualifiedTypeNameHistroy>

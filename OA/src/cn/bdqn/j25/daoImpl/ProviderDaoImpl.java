@@ -39,4 +39,10 @@ public class ProviderDaoImpl extends HibernateDaoSupport implements ProviderDao 
 		getHibernateTemplate().delete(provider);
 	}
 
+	@Override
+	public List<Provider> findAll() {
+		// TODO Auto-generated method stub
+		return getHibernateTemplate().find("select new Provider(providerid,providername) from Provider");
+	}
+
 }

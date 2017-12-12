@@ -48,4 +48,10 @@ public class MaterialServiceImpl implements MaterialService {
 		materialDao.delMaterial(material);
 	}
 
+	@Override
+	public List<Material> findAll() {
+		// TODO Auto-generated method stub
+		return materialDao.findAll();
+	}
+
 }

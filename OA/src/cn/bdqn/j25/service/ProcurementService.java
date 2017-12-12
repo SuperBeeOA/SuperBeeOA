@@ -14,4 +14,6 @@ public interface ProcurementService {
 	public Procurement addOrUpdateProcurement(Procurement procurement);//增加或更新信息
 	
 	public void delProcurement(Procurement procurement); //删除
+	
+	public boolean addProcurement(Procurement procurement);//添加
 }

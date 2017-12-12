@@ -41,4 +41,10 @@ public class ProcurementDaoImpl extends HibernateDaoSupport implements
 		this.getHibernateTemplate().delete(procurement);
 	}
 
+	@Override
+	public void addProcurement(Procurement procurement) {
+		// TODO Auto-generated method stub
+		getHibernateTemplate().save(procurement);
+	}
+
 }

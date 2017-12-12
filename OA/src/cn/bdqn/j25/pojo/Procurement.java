@@ -12,16 +12,15 @@ public class Procurement implements java.io.Serializable {
 	// Fields
 
 	private Integer procurementid;
+	private State state;
 	private Employee employeeByOperator;
 	private Department department;
-	private Customer customer;
-	private State state;
 	private Types types;
 	private Employee employeeByOriginator;
-	private Product product;
+	private Material material;
+	private Provider provider;
 	private String ordernumber;
 	private Timestamp datetime;
-	private String orderno;
 	private BigDecimal quantity;
 	private BigDecimal price;
 	private String orderremarks;
@@ -33,21 +32,20 @@ public class Procurement implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Procurement(Employee employeeByOperator, Department department,
-			Customer customer, State state, Types types,
-			Employee employeeByOriginator, Product product, String ordernumber,
-			Timestamp datetime, String orderno, BigDecimal quantity,
-			BigDecimal price, String orderremarks) {
+	public Procurement(State state, Employee employeeByOperator,
+			Department department, Types types, Employee employeeByOriginator,
+			Material material, Provider provider, String ordernumber,
+			Timestamp datetime, BigDecimal quantity, BigDecimal price,
+			String orderremarks) {
+		this.state = state;
 		this.employeeByOperator = employeeByOperator;
 		this.department = department;
-		this.customer = customer;
-		this.state = state;
 		this.types = types;
 		this.employeeByOriginator = employeeByOriginator;
-		this.product = product;
+		this.material = material;
+		this.provider = provider;
 		this.ordernumber = ordernumber;
 		this.datetime = datetime;
-		this.orderno = orderno;
 		this.quantity = quantity;
 		this.price = price;
 		this.orderremarks = orderremarks;
@@ -61,6 +59,14 @@ public class Procurement implements java.io.Serializable {
 
 	public void setProcurementid(Integer procurementid) {
 		this.procurementid = procurementid;
+	}
+
+	public State getState() {
+		return this.state;
+	}
+
+	public void setState(State state) {
+		this.state = state;
 	}
 
 	public Employee getEmployeeByOperator() {
@@ -79,22 +85,6 @@ public class Procurement implements java.io.Serializable {
 		this.department = department;
 	}
 
-	public Customer getCustomer() {
-		return this.customer;
-	}
-
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
-
-	public State getState() {
-		return this.state;
-	}
-
-	public void setState(State state) {
-		this.state = state;
-	}
-
 	public Types getTypes() {
 		return this.types;
 	}
@@ -111,12 +101,20 @@ public class Procurement implements java.io.Serializable {
 		this.employeeByOriginator = employeeByOriginator;
 	}
 
-	public Product getProduct() {
-		return this.product;
+	public Material getMaterial() {
+		return this.material;
 	}
 
-	public void setProduct(Product product) {
-		this.product = product;
+	public void setMaterial(Material material) {
+		this.material = material;
+	}
+
+	public Provider getProvider() {
+		return this.provider;
+	}
+
+	public void setProvider(Provider provider) {
+		this.provider = provider;
 	}
 
 	public String getOrdernumber() {
@@ -133,14 +131,6 @@ public class Procurement implements java.io.Serializable {
 
 	public void setDatetime(Timestamp datetime) {
 		this.datetime = datetime;
-	}
-
-	public String getOrderno() {
-		return this.orderno;
-	}
-
-	public void setOrderno(String orderno) {
-		this.orderno = orderno;
 	}
 
 	public BigDecimal getQuantity() {

@@ -19,25 +19,16 @@ public class Customer implements java.io.Serializable {
 	private String contacts;
 	private String remarks;
 	private Set orderses = new HashSet(0);
-	private Set procurements = new HashSet(0);
 
 	// Constructors
 
 	/** default constructor */
 	public Customer() {
 	}
-	
-	public Customer(Integer customerid, String customername) {
-		super();
-		this.customerid = customerid;
-		this.customername = customername;
-	}
-
 
 	/** full constructor */
 	public Customer(String customername, String address, String levels,
-			String phone, String contacts, String remarks, Set orderses,
-			Set procurements) {
+			String phone, String contacts, String remarks, Set orderses) {
 		this.customername = customername;
 		this.address = address;
 		this.levels = levels;
@@ -45,10 +36,15 @@ public class Customer implements java.io.Serializable {
 		this.contacts = contacts;
 		this.remarks = remarks;
 		this.orderses = orderses;
-		this.procurements = procurements;
 	}
 
 	// Property accessors
+
+	public Customer(Integer customerid, String customername) {
+		super();
+		this.customerid = customerid;
+		this.customername = customername;
+	}
 
 	public Integer getCustomerid() {
 		return this.customerid;
@@ -112,14 +108,6 @@ public class Customer implements java.io.Serializable {
 
 	public void setOrderses(Set orderses) {
 		this.orderses = orderses;
-	}
-
-	public Set getProcurements() {
-		return this.procurements;
-	}
-
-	public void setProcurements(Set procurements) {
-		this.procurements = procurements;
 	}
 
 }

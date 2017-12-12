@@ -15,4 +15,6 @@ public interface ProviderDao {
 	public Provider addOrUpdateProvider(Provider provider);//增加或更新信息
 	
 	public void delProvider(Provider provider); //删除
+	
+	public List<Provider> findAll();//查找全部供应商
 }

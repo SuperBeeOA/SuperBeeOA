@@ -21,6 +21,7 @@ public class Provider implements java.io.Serializable {
 	private String comments;
 	private Set equipments = new HashSet(0);
 	private Set materials = new HashSet(0);
+	private Set procurements = new HashSet(0);
 
 	// Constructors
 
@@ -31,7 +32,7 @@ public class Provider implements java.io.Serializable {
 	/** full constructor */
 	public Provider(Types types, String providername, String address,
 			String phone, String contacts, String remarks, String comments,
-			Set equipments, Set materials) {
+			Set equipments, Set materials, Set procurements) {
 		this.types = types;
 		this.providername = providername;
 		this.address = address;
@@ -41,9 +42,16 @@ public class Provider implements java.io.Serializable {
 		this.comments = comments;
 		this.equipments = equipments;
 		this.materials = materials;
+		this.procurements = procurements;
 	}
 
 	// Property accessors
+
+	public Provider(Integer providerid, String providername) {
+		super();
+		this.providerid = providerid;
+		this.providername = providername;
+	}
 
 	public Integer getProviderid() {
 		return this.providerid;
@@ -123,6 +131,14 @@ public class Provider implements java.io.Serializable {
 
 	public void setMaterials(Set materials) {
 		this.materials = materials;
+	}
+
+	public Set getProcurements() {
+		return this.procurements;
+	}
+
+	public void setProcurements(Set procurements) {
+		this.procurements = procurements;
 	}
 
 }

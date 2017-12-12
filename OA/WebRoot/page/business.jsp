@@ -18,9 +18,10 @@
 				                <li id="fan"><a href="javascript:void(0)">发布公告</a></li>
 				                <li id="fc"><a href="javascript:void(0)">内部联络</a></li>
 				                <li id="fo"><a href="javascript:void(0)">查看订单</a></li>
-				                <li id="ao"><a href="javascript:void(0)">生成订单</a></li>
+				                <li id="ao"><a href="javascript:void(0)">生成销售订单</a></li>
+				                <li id="cg"><a href="javascript:void(0)">生成采购订单</a></li>
 				                <li id="mc"><a href="javascript:void(0)">管理客户</a></li>
-	            				<li id="ms"><a href="javascript:void(0)">管理供应商</a></li>
+	            				<li id="ms"><a href="javascript:void(0)">管理供应商</a></li>	            				
 				            </ul>
 				        </div>
 				    </div>
@@ -65,6 +66,7 @@
 	            				<td>数量</td>
 	            				<td>单价</td>
 	            				<td>合计</td>
+	            				<td>备注</td>
 	            			</tr>
 	            			<tr>
 	            				<td>1</td>
@@ -76,12 +78,54 @@
 	            				<td><input type="text" name="orders.quantity" class="quantity"></td>
 	            				<td class="productprice"></td>
 	            				<td><input type="text" name="orders.price" class="totalprice"></td>
+	            				<td><input type="text" name="orders.orderremarks"></td>
 	            			</tr>
 	            		
 	            		</table>
 	            		<input class="btn btn-primary" type="button" value="提交订单" style="position: relative; left: 45%;">
 	            	</form>
 	            </div>
+	           <div id="cgrder" style="display: none;">
+	            	<h2 class="text-center">生成销售订单</h2>
+	            	<hr>
+	            	<form action="javascript:void(0);"  id="Procurement">
+	            		<table class="table">
+	            			<tr>
+	            				<td>订单号：</td>
+	            				<td> <input type="text" name="procurement.ordernumber" class="Procurementnum"> </td>
+	            				<td>供应商名称：</td>
+	            				<td>
+								<select style="width:150px" class="providerNo" name="provider.providerid">	
+	            				</select></td>
+	            				<td>发起时间：</td>
+	            				<td><input name="procurement.datetime" type="date">    </td>
+	            			</tr>
+	            			<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	            			<tr>	            				
+	            				<td>物品名称</td>
+	            				<td>单位</td>
+	            				<td>数量</td>
+	            				<td>单价</td>
+	            				<td>合计</td>
+	            				<td>备注</td>
+	            			</tr>
+	            			<tr>	            				
+	            				<td>
+	            				<select style="width:150px" class="materialid" name="material.materialid">	
+	            				</select>
+	            				</td>			
+	            				<td class="Procurementunit"></td>
+	            				<td><input type="text" name="procurement.quantity" class="Procurementquantity"></td>
+	            				<td class="Procurementprice"></td>
+	            				<td><input type="text" name="procurement.price" class="Procurementtotalprice"></td>
+	            				<td><input type="text" name="procurement.orderremarks"></td>
+	            			</tr>
+	            		
+	            		</table>
+	            		<input class="btn btn-primary1" type="button" value="提交订单" style="position: relative; left: 45%;">
+	            	</form>
+	            </div>
+	            
 	            <div id="customer" style="display: none;">
 	            	<h2 class="text-center">管理客户</h2>
 	            	<hr>

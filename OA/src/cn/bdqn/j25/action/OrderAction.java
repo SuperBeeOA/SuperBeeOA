@@ -87,31 +87,7 @@ public class OrderAction extends ActionSupport{
 	public String addOrder(){
 		orders.setCustomer(customer);
 		orders.setProduct(product);
-		orders.setEmployeeByOperator(employee);	
 		orders.setEmployeeByOriginator(employee);
-		orders.setDepartment(department);
-		orders.setTypes(type);
-		orders.setState(state);
-//		orders.getTypes().getProducts().add(product);
-//		orders.setEmployeeByOriginator(null);
-//		orders.setTypes(null);
-//		orders.setState(null);
-//		orders.setOrderremarks(null);
-//		orders.setDepartment(department);	
-//		System.out.println(employee.getEmployeeid());
-		System.out.println(orders.getOrderid());
-		System.out.println(orders.getCustomer().getCustomerid());
-		System.out.println(orders.getOrdernumber());
-		System.out.println(orders.getQuantity());
-		System.out.println(orders.getPrice());
-		System.out.println(orders.getTypes().getTypeid());
-		System.out.println(orders.getState().getStateid());
-		System.out.println(orders.getDepartment().getDepartmentid());
-		System.out.println(orders.getEmployeeByOperator().getEmployeeid());
-		System.out.println(orders.getEmployeeByOriginator().getEmployeeid());
-		System.out.println(orders.getDatetime());
-		System.out.println(orders.getProduct().getProductid());
-		System.out.println(orders.getOrderremarks());
 		String result=null;		
 		if(ordersService.addOrders(orders)!=false){
 			result="添加成功";

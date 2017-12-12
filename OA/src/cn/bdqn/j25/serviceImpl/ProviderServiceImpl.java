@@ -48,4 +48,10 @@ public class ProviderServiceImpl implements ProviderService {
 		providerDao.delProvider(provider);
 	}
 
+	@Override
+	public List<Provider> findAll() {
+		// TODO Auto-generated method stub
+		return providerDao.findAll();
+	}
+
 }
