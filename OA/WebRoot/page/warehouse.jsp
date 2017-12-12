@@ -65,22 +65,6 @@
 	            	<h2 class="text-center">查看产品出库单</h2>
 	            	<hr>
 	            	<div id="allout">
-		            	<table class="table table-hover table-bordered">
-		            			<tr>
-		            				<td>订单编号</td>
-		            				<td>发起人</td>
-		            				<td>时间</td>
-		            				<td>操作</td>
-		            			</tr>
-		            			<c:forEach var="allout" items="${ requestScope.allOut }">
-			            			<tr>
-			            				<td>${ allout.ordernumber }</td>
-			            				<td>${ allout.employeeByOriginator.name }</td>
-			            				<td>${ allout.datetime }</td>
-			            				<td><input type="button" value="查看" id="gout"></td>
-			            			</tr>
-		            			</c:forEach>
-		            	</table>
 	            	</div>
 	            	<div id="faout" style="display: none;">
 	            		<table class="table table-hover table-bordered">

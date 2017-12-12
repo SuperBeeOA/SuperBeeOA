@@ -11,7 +11,7 @@ $(function() {
 	});
 
 	$("#fo").click(function() {
-		$.post("findallorder.action");
+		$("#allout").load("findallorder.action");
 		$("#fout").show();
 		$("#contact").hide();
 		$("#attendance").hide();
