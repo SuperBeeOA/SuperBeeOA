@@ -5,5 +5,11 @@
 <struts>
 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
 	
+	<package name="warehouse" namespace="/"  extends="struts-default">
+		<action name="findallorder" class="cn.bdqn.j25.action.WarehouseAction"
+			method="findAllOrder">
+			<result name="success">/page/warehouse/allout.jsp</result>
+		</action>
+	</package>
 	
 </struts>

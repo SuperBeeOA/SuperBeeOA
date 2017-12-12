@@ -1,5 +1,6 @@
 package cn.bdqn.j25.serviceImpl;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import cn.bdqn.j25.dao.ProductDao;
@@ -49,15 +50,9 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public List<Product> findAll() {
+	public void addProductsPriceById(Integer productid, BigDecimal productprice) {
 		// TODO Auto-generated method stub
-		return productDao.findAll();
-	}
-
-	@Override
-	public List<Product> findById(int id) {
-		// TODO Auto-generated method stub
-		return productDao.findById(id);
+		productDao.addProductsPriceById(productid, productprice);
 	}
 
 }

@@ -1,5 +1,6 @@
 package cn.bdqn.j25.dao;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import cn.bdqn.j25.pojo.Product;
@@ -15,7 +16,5 @@ public interface ProductDao {
 	
 	public void delProduct(Product product); //删除
 	
-	public List<Product> findAll();//查找所有的产品id和名字
-	
-	public List<Product> findById(int id);
+	public void addProductsPriceById(Integer productid,BigDecimal productprice);
 }

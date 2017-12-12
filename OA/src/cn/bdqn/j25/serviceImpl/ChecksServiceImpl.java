@@ -25,9 +25,9 @@ public class ChecksServiceImpl implements ChecksService {
 	}
 
 	@Override
-	public Checks mergeChecks(Checks checks) {
+	public void mergeChecks(Checks checks) {
 		// TODO Auto-generated method stub
-		return checksDao.mergeChecks(checks);
+		checksDao.mergeChecks(checks);
 	}
 
 	@Override
@@ -37,13 +37,13 @@ public class ChecksServiceImpl implements ChecksService {
 	}
 
 	@Override
-	public List<Checks> findChecksByEmployeeId(int employeeId) {
+	public List<Object[]> findChecksByEmployeeId(int employeeId) {
 		// TODO Auto-generated method stub
 		return checksDao.findChecksByEmployeeId(employeeId);
 	}
 
 	@Override
-	public List<Checks> findChecksByProorderId(int proorderId) {
+	public List<Object[]> findChecksByProorderId(int proorderId) {
 		// TODO Auto-generated method stub
 		return checksDao.findChecksByProorderId(proorderId);
 	}
