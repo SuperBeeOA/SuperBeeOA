@@ -4,7 +4,6 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
-
 	<package name="loginandout" extends="struts-default">
 		<action name="login" class="cn.bdqn.j25.action.LoginAndOutAction"
 			method="login">
@@ -14,7 +13,5 @@
 			method="findEmployee">
 			<result>/page/main.jsp</result>
 		</action>
-	</package>
-	
-
+	</package>	
 </struts>
