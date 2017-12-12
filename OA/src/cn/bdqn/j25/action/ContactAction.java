@@ -1,6 +1,7 @@
 package cn.bdqn.j25.action;
 
 import java.util.List;
+import java.util.Map;
 
 import cn.bdqn.j25.pojo.Contact;
 import cn.bdqn.j25.pojo.Department;
@@ -17,7 +18,7 @@ public class ContactAction extends ActionSupport{
 	private Employee employeeByRecipient;//收
 	private Contact contact;
 	private Department  department;
-	private ContactService contaceService;
+	private ContactService contactService;
 	
 
 
@@ -85,16 +86,21 @@ public class ContactAction extends ActionSupport{
 	public String getEmps(){
 		List<Employee> listemp=employeeService.findByDepartmentName(department.getDepartmentname());
 		employeeBySender=(Employee) ActionContext.getContext().getSession().get("employee");
-		return null;
+		Map<String, Object> request = (Map) ActionContext.getContext().get("request");
+		request.put("listemps",listemp);
+		return SUCCESS;
 	}
    public String addContact(){
 	   System.out.println("....aaaaa...................");
 		employeeBySender=(Employee) ActionContext.getContext().getSession().get("employee");
-       /* contact.setEmployeeByRecipient(employeeByRecipient);
-        contact.setEmployeeBySender(employeeBySender);*/
-        contaceService.addContact(contact);
+		System.out.println(employeeBySender.getName());
+		System.out.println(employeeByRecipient.getName());
+       contact.setEmployeeByRecipient(employeeByRecipient);
+        contact.setEmployeeBySender(employeeBySender);
+		System.out.println(contact.getEmployeeByRecipient().getName());
+		contactService.addContact(contact);
         System.out.println("...............................");
-	return null;
+	return SUCCESS;
 	}
    
 }

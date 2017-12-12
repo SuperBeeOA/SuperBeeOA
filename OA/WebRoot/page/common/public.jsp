@@ -129,7 +129,7 @@
 			<br>
 			信息内容：
 			<br>
-			<textarea rows="20" cols="100" name="com" id="com" class="col-md-offset-1" name="contact.content"></textarea>
+			<textarea name="contact.content" rows="20" cols="100" name="com" id="com" class="col-md-offset-1" ></textarea>
 			<br>
 			<input class="btn btn-primary" type="submit" value="发送消息" style="position: relative; left: 45%;">
 		</form>
