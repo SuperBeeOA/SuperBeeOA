@@ -1,5 +1,6 @@
 package cn.bdqn.j25.service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import cn.bdqn.j25.pojo.Product;
@@ -15,7 +16,5 @@ public interface ProductService {
 	
 	public void delProduct(Product product); //删除
 	
-	public List<Product> findAll();
-	
-	public List<Product> findById(int id);
+	public void addProductsPriceById(Integer productid,BigDecimal productprice);
 }

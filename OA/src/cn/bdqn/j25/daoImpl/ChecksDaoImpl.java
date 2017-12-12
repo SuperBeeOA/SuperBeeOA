@@ -19,9 +19,9 @@ public class ChecksDaoImpl extends HibernateDaoSupport implements ChecksDao {
 	}
 
 	@Override
-	public Checks mergeChecks(Checks checks) {
+	public void mergeChecks(Checks checks) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().merge(checks);
+		this.getHibernateTemplate().saveOrUpdate(checks);
 	}
 
 	@Override
@@ -31,14 +31,14 @@ public class ChecksDaoImpl extends HibernateDaoSupport implements ChecksDao {
 	}
 
 	@Override
-	public List<Checks> findChecksByEmployeeId(int employeeId) {
+	public List<Object[]> findChecksByEmployeeId(int employeeId) {
 		// TODO Auto-generated method stub
 		return this.getHibernateTemplate().find("from Checks c,Employee e where c.employee = e and employeeId = ?",employeeId);
 	}
 
 	@Override
-	public List<Checks> findChecksByProorderId(int proorderId) {
+	public List<Object[]> findChecksByProorderId(int proorderId) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().find("from Checks c,Proorder p where c.proorder = p and proorderId = ?",proorderId);
+		return this.getHibernateTemplate().find("from Checks c,Proorder p where c.proorder = p and p.proorderid = ?",proorderId);
 	}
 }

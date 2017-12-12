@@ -28,7 +28,7 @@
         <many-to-one name="types" class="cn.bdqn.j25.pojo.Types" fetch="select">
             <column name="TYPEID" precision="9" scale="0" />
         </many-to-one>
-        <many-to-one name="employeeByOriginator" class="cn.bdqn.j25.pojo.Employee" fetch="select">
+        <many-to-one name="employeeByOriginator" class="cn.bdqn.j25.pojo.Employee" fetch="select" lazy="false">
             <column name="ORIGINATOR" precision="9" scale="0" />
         </many-to-one>
         <property name="ordernumber" type="java.lang.String">
