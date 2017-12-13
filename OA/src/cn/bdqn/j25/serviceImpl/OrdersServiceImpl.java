@@ -74,4 +74,10 @@ public class OrdersServiceImpl implements OrdersService {
 		return ordersDao.findAllByPage(pageNo, max);
 	}
 
+	@Override
+	public int countAll() {
+		// TODO Auto-generated method stub
+		return ordersDao.countAll();
+	}
+
 }

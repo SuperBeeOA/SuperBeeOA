@@ -77,4 +77,16 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 		});
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public int countAll() {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().execute(new HibernateCallback(){
+			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
+			Query query = session.createQuery("select count(*) from Orders");
+			return Integer.parseInt(query.uniqueResult().toString());
+			}
+		});
+	}
+
 }

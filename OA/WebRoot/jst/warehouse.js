@@ -60,4 +60,9 @@ $(function() {
 		$("#faout").show();
 		$("#allout").hide();
 	});
+	
+	$("#bout").click(function() {
+		$("#allout").show();
+		$("#faout").hide();
+	});
 });

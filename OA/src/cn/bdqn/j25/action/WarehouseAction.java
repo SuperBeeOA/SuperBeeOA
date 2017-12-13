@@ -37,10 +37,17 @@ public class WarehouseAction extends ActionSupport {
 
 	public String findAllOrder() {
 		System.out.println("Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-		List<Orders> allOut = ordersService.findAllByPage(1, 10);
+		List<Orders> allOut = ordersService.findAllByPage(1, 5);
+		int countNo = 0;
+		if(ordersService.countAll()%5 != 0){
+			countNo = ordersService.countAll()/5+1;
+		}else if(ordersService.countAll()%5 == 0){
+			countNo = ordersService.countAll()/5;
+		}
 		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+allOut.get(0).getOrdernumber());
 		Map<String, Object> request = (Map) ActionContext.getContext().get("request");
 		request.put("allOut", allOut);
+		request.put("countNo", countNo);
 		/*Map<String, Object> session = (Map) ActionContext.getContext().getSession();
 		session.put("allOut", allOut);*/
 		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stop");
