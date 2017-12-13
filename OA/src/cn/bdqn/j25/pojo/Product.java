@@ -31,6 +31,29 @@ public class Product implements java.io.Serializable {
 	/** default constructor */
 	public Product() {
 	}
+<<<<<<< HEAD
+=======
+
+	/** minimal constructor */
+	public Product(String productname) {
+		this.productname = productname;
+	}
+
+	public Product(Types types, String productname,
+			String productno, String component,
+			Integer shelflife, String productmodel, BigDecimal productioncost,
+			BigDecimal truckage, String productremarks) {
+		this.types = types;
+		this.productname = productname;
+		this.productno = productno;
+		this.component = component;
+		this.shelflife = shelflife;
+		this.productmodel = productmodel;
+		this.productioncost = productioncost;
+		this.truckage = truckage;
+		this.productremarks = productremarks;
+	}
+>>>>>>> 4d7110e9fd709c1a97ed8f916488f9c4e02a1971
 
 	/** full constructor */
 	public Product(Types types, String productname, String productno,
