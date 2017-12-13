@@ -102,5 +102,17 @@ public class ContactAction extends ActionSupport{
         System.out.println("...............................");
 	return SUCCESS;
 	}
+
+
+
+public ContactService getContactService() {
+	return contactService;
+}
+
+
+
+public void setContactService(ContactService contactService) {
+	this.contactService = contactService;
+}
    
 }

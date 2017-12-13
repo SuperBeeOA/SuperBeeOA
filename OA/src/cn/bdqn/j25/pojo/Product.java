@@ -175,4 +175,12 @@ public class Product implements java.io.Serializable {
 		this.orderses = orderses;
 	}
 
+	public String getUnit() {
+		return unit;
+	}
+
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
+
 }
