@@ -115,8 +115,8 @@ public class productsAction extends ActionSupport {
 		productService.addOrUpdateProduct(product);
 		return SUCCESS;
 	}
-	public String addProductsPrice(){
+	/*public String addProductsPrice(){
 		productService.addProductsPriceById(productid, productprice);
 		return SUCCESS;
-	}
+	}*/
 }

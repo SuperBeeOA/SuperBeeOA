@@ -32,6 +32,10 @@ public class Product implements java.io.Serializable {
 	/** default constructor */
 	public Product() {
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 86a4d067baa50770d063ede07e05642fe7568b04
 
 	/** minimal constructor */
 	public Product(String productname) {
@@ -52,7 +56,10 @@ public class Product implements java.io.Serializable {
 		this.truckage = truckage;
 		this.productremarks = productremarks;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 86a4d067baa50770d063ede07e05642fe7568b04
 
 	/** full constructor */
 	public Product(Types types, String productname, String productno,
@@ -170,20 +177,5 @@ public class Product implements java.io.Serializable {
 		this.productremarks = productremarks;
 	}
 
-	public String getUnit() {
-		return this.unit;
-	}
-
-	public void setUnit(String unit) {
-		this.unit = unit;
-	}
-
-	public Set getOrderses() {
-		return this.orderses;
-	}
-
-	public void setOrderses(Set orderses) {
-		this.orderses = orderses;
-	}
 
 }
