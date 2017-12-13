@@ -8,6 +8,11 @@
 	<include file="struts/struts-login.xml"></include> 
 	<include file="struts/struts-order.xml"></include>
 	<include file="struts/struts-procurement.xml"></include>
+<<<<<<< HEAD
+=======
+	<include file="struts/struts-contact.xml"></include>
+	<include file="struts/struts-warehouse.xml"></include>
+>>>>>>> no message
 	
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
 	<constant name="struts.custom.i18n.resources" value="message" />
