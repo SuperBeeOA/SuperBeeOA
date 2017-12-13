@@ -23,6 +23,4 @@ public interface EmployeeDao {
 	public Employee addOrUpdateType(Employee employee); // 增加或更新类型
 
 	public void delType(Employee employee); // 增加类型
-	
-	public List<Employee> findByDepartmentName(String name);
 }

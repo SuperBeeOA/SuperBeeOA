@@ -65,16 +65,4 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 		getHibernateTemplate().save(orders);
 	}
 
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<Orders> findAllByPage(final int pageNo,final int max) {
-		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().execute(new HibernateCallback(){
-			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
-				Query query = session.createQuery("from Orders");
-				return query.setFirstResult((pageNo-1)*max).setMaxResults(max).list();
-			}
-		});
-	}
-
 }
