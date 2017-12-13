@@ -1,12 +1,7 @@
 package cn.bdqn.j25.action;
 
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.struts2.ServletActionContext;
 
 import cn.bdqn.j25.pojo.Contact;
 import cn.bdqn.j25.pojo.Department;
@@ -89,21 +84,10 @@ public class ContactAction extends ActionSupport{
 	
 	
 	public String getEmps(){
-		HttpServletRequest request = ServletActionContext.getRequest();
-		
-		String name = null;
-		try {
-			name = new String(request.getParameter("departmentname").getBytes(),"utf-8");
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
-		System.out.println(request.getCharacterEncoding()+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+name);
-		List<Employee> listemp=employeeService.findByDepartmentName(name);
-		System.out.println("+++++++++++++++++++++++++++++++"+listemp.get(0).getName());
+		List<Employee> listemp=employeeService.findByDepartmentName(department.getDepartmentname());
 		employeeBySender=(Employee) ActionContext.getContext().getSession().get("employee");
-		Map<String, Object> request1 = (Map) ActionContext.getContext().get("request");
-		request1.put("listemps",listemp);
+		Map<String, Object> request = (Map) ActionContext.getContext().get("request");
+		request.put("listemps",listemp);
 		return SUCCESS;
 	}
    public String addContact(){

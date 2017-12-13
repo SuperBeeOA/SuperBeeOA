@@ -11,8 +11,6 @@ import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
 import net.sf.json.util.CycleDetectionStrategy;
 
-import org.apache.log4j.Logger;
-
 import cn.bdqn.j25.pojo.Customer;
 import cn.bdqn.j25.pojo.Department;
 import cn.bdqn.j25.pojo.Employee;
@@ -33,6 +31,7 @@ public class OrderAction extends ActionSupport{
 	private Orders orders;
 	private Customer customer;
 	private CustomerService customerService;
+	private List<Orders> listOrders;
 	private List<Customer> listCustomer;
 	private List<Product> listProduct;
 	private ProductService productService;
@@ -42,21 +41,47 @@ public class OrderAction extends ActionSupport{
 	private Department department;
 	private Types type;
 	private State state;
+	private String productid;
+	private String first;
+	private String max="5";
 	@SuppressWarnings("unchecked")
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
+	private String orderid;
+	private String stateid;
 	
-	private String productid;
 	
-	
+	//审核
+	public String pass(){
+		System.out.println(stateid);
+		System.out.println(orderid);
+		state.setStateid(Integer.parseInt(stateid));
+		orders.setState(state);
+		orders.setOrderid(Integer.parseInt(orderid));
+		String result=null;
+		if(ordersService.UpdateOrders(orders)==true){
+			result="审核成功";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else{
+			result="审核失败";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}			
+		return SUCCESS;
+	}
+		
 	//自动生成客户编号
 	public String findCustomer() throws UnsupportedEncodingException{
 		listCustomer=customerService.findAll();
-//		System.out.println(listCustomer);
-//		for (Customer c : listCustomer) {
-//			c.getCustomerid();
-//			c.getCustomername();
-//		}
 		return SUCCESS;		
 	}
 	//自动生成产品编号
@@ -101,7 +126,14 @@ public class OrderAction extends ActionSupport{
 		
 		return SUCCESS;
 	}
+	//查看所有订单	
+		public String findOrder() throws UnsupportedEncodingException{		
+			listOrders=ordersService.findByPage(Integer.parseInt(first),Integer.parseInt(max));	
+			request.put("listOrders", listOrders);
+			return SUCCESS;		
+		}
 	
+					
 	public OrdersService getOrdersService() {
 		return ordersService;
 	}
@@ -147,15 +179,6 @@ public class OrderAction extends ActionSupport{
 
 	public void setListCustomer(List<Customer> listCustomer) {
 		this.listCustomer = listCustomer;
-	}
-
-	public Map<String, Object> getRequest() {
-		return request;
-	}
-
-
-	public void setRequest(Map<String, Object> request) {
-		this.request = request;
 	}
 
 	public List<Product> getListProduct() {
@@ -220,5 +243,40 @@ public class OrderAction extends ActionSupport{
 	public void setState(State state) {
 		this.state = state;
 	}
-	
+	public String getFirst() {
+		return first;
+	}
+	public void setFirst(String first) {
+		this.first = first;
+	}
+	public String getMax() {
+		return max;
+	}
+	public void setMax(String max) {
+		this.max = max;
+	}
+	public List<Orders> getListOrders() {
+		return listOrders;
+	}
+	public void setListOrders(List<Orders> listOrders) {
+		this.listOrders = listOrders;
+	}
+	public Map<String, Object> getRequest() {
+		return request;
+	}
+	public void setRequest(Map<String, Object> request) {
+		this.request = request;
+	}
+	public String getOrderid() {
+		return orderid;
+	}
+	public void setOrderid(String orderid) {
+		this.orderid = orderid;
+	}
+	public String getStateid() {
+		return stateid;
+	}
+	public void setStateid(String stateid) {
+		this.stateid = stateid;
+	}	
 }

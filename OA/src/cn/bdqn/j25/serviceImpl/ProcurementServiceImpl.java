@@ -28,14 +28,7 @@ public class ProcurementServiceImpl implements ProcurementService {
 	public List<Procurement> findByNo(String no) {
 		// TODO Auto-generated method stub
 		return procurementDao.findByNo(no);
-	}
-
-	@Override
-	public List<Procurement> findByPage(Procurement procurement, int first,
-			int max) {
-		// TODO Auto-generated method stub
-		return procurementDao.findByPage(procurement, first, max);
-	}
+	}	
 
 	@Override
 	public Procurement addOrUpdateProcurement(Procurement procurement) {
@@ -60,6 +53,12 @@ public class ProcurementServiceImpl implements ProcurementService {
 			e.printStackTrace();
 			return false;
 		}
+	}
+
+	@Override
+	public List<Procurement> findByPage(int firstResult, int maxResults) {
+		// TODO Auto-generated method stub
+		return procurementDao.findByPage(firstResult, maxResults);
 	}
 
 }

@@ -24,19 +24,7 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 	@Override
 	public List<Orders> findByOrderno(String orderno) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().find("from Orders where ordernumber =?", orderno);
-	}
-
-	@Override
-	public List<Orders> findByPage(Orders orders, int first, int max) {
-		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().findByExample(orders, first, max);
-	}
-
-	@Override
-	public Orders addOrUpdateOrders(Orders orders) {
-		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().merge(orders);
+		return this.getHibernateTemplate().find("from Orders where orderno =?", orderno);
 	}
 
 	@Override
@@ -65,28 +53,23 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 		getHibernateTemplate().save(orders);
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
-	public List<Orders> findAllByPage(final int pageNo,final int max) {
-		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().execute(new HibernateCallback(){
-			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
-			Query query = session.createQuery("from Orders");
-			return query.setFirstResult(pageNo).setMaxResults(max).list();
-			}
-		});
+	public List<Orders> findByPage(final int firstResult,final int maxResults){
+		 return getHibernateTemplate().executeFind(new HibernateCallback(){   
+			 public Object doInHibernate(Session  s)throws HibernateException,SQLException{  
+				 Query query = s.createQuery("from Orders order by datetime desc");  
+				 query.setFirstResult(firstResult);   
+				 query.setMaxResults(maxResults);   
+				 List list  = query.list();  
+				 return list;     
+				 }    
+			 });     
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
-	public int countAll() {
+	public void UpdateOrders(Orders orders) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().execute(new HibernateCallback(){
-			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
-			Query query = session.createQuery("select count(*) from Orders");
-			return Integer.parseInt(query.uniqueResult().toString());
-			}
-		});
+		 getHibernateTemplate().update(orders);
 	}
 
 }

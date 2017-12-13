@@ -1,7 +1,8 @@
 $(function() {
 	  $("#fo").click(function() {
-		  $("#forder").show();
+		  $("#forder").show();	  
 		  $("#contact").hide();
+		  $("#cgrder").hide();
 		  $("#attendance").hide();
 		  $("#announcement").hide();
 		  $("#info").hide();
@@ -43,6 +44,7 @@ $(function() {
 		  $("#aorder").hide();
 		  $("#forder").hide();
 		  $("#supplier").hide();
+		  $("#cgrder").hide();
 	  });
 
 	  $("#ms").click(function() {
@@ -54,6 +56,37 @@ $(function() {
 		  $("#aorder").hide();
 		  $("#customer").hide();
 		  $("#forder").hide();
+		  $("#cgrder").hide();
+	  });
+	  
+	  $("#find").click(function() {
+		  $("#order").show();
+		  $("#allorder").hide();
+	  });
+
+	  $("#bo").click(function() {
+		  $("#allorder").show();
+		  $("#order").hide();
+	  });
+
+	  $("#cc").click(function() {
+		  $("#mcustomer").show();
+		  $("#allcustomer").hide();
+	  });
+
+	  $("#bc").click(function() {
+		  $("#allcustomer").show();
+		  $("#mcustomer").hide();
+	  });
+
+	  $("#cs").click(function() {
+		  $("#msupplier").show();
+		  $("#allsupplier").hide();
+	  });
+
+	  $("#bs").click(function() {
+		  $("#allsupplier").show();
+		  $("#msupplier").hide();
 	  });
 	  
 	//生成订单编号  
@@ -212,5 +245,26 @@ $(function() {
 				
 			};
 			
+	//查看所有订单
+			
+		$(".sale").click(function(){
+			$("#chakan").load("order4!findOrder","first=1");
+		});
 		
+		$(".buy").click(function(){
+			$("#chakan").load("procurement4!findProcurement","first=1");
+		});
+	//审核
+		$(".pass").click(function(){
+			var id=$(this).parents().siblings(".orderid").text();
+			$.get("order5!pass",{"orderid":id,"stateid":2},function(date){
+				if(date=="审核成功"){
+					$(".table-bordered").load("order4!findOrder","first=1");
+				}
+				if(date=="审核失败"){
+					alert("审核失败");
+				}
+			});
+						
+		});
 });

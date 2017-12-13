@@ -13,31 +13,33 @@
         <property name="statename" type="java.lang.String">
             <column name="STATENAME" length="20" not-null="true" />
         </property>
-        <set name="procurements" inverse="true">
+        
+        <set name="procurements" inverse="true" cascade="none">
             <key>
                 <column name="STATEID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Procurement" />
         </set>
-        <set name="orderrootses" inverse="true">
+        
+        <set name="orderrootses" inverse="true" cascade="none">
             <key>
                 <column name="STATE" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Orderroots" />
         </set>
-        <set name="contacts" inverse="true">
+        <set name="contacts" inverse="true" cascade="none">
             <key>
                 <column name="STATE" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Contact" />
         </set>
-        <set name="announcements" inverse="true">
+        <set name="announcements" inverse="true" cascade="none">
             <key>
                 <column name="STATEID" precision="9" scale="0" />
             </key>
             <one-to-many class="cn.bdqn.j25.pojo.Announcement" />
         </set>
-        <set name="orderses" inverse="true">
+        <set name="orderses" inverse="true" cascade="none">
             <key>
                 <column name="STATEID" precision="9" scale="0" />
             </key>

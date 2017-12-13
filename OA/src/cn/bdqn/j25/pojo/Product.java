@@ -27,21 +27,7 @@ public class Product implements java.io.Serializable {
 	private Set orderses = new HashSet(0);
 
 	// Constructors
-	public String getUnit() {
-		return unit;
-	}
 
-	public Set getOrderses() {
-		return orderses;
-	}
-
-	public void setOrderses(Set orderses) {
-		this.orderses = orderses;
-	}
-
-	public void setUnit(String unit) {
-		this.unit = unit;
-	}
 
 	/** default constructor */
 	public Product() {
@@ -181,6 +167,22 @@ public class Product implements java.io.Serializable {
 
 	public void setProductremarks(String productremarks) {
 		this.productremarks = productremarks;
+	}
+
+	public String getUnit() {
+		return unit;
+	}
+
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
+
+	public Set getOrderses() {
+		return orderses;
+	}
+
+	public void setOrderses(Set orderses) {
+		this.orderses = orderses;
 	}
 
 

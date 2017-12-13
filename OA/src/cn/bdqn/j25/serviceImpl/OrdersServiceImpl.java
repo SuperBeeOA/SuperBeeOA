@@ -31,18 +31,6 @@ public class OrdersServiceImpl implements OrdersService {
 	}
 
 	@Override
-	public List<Orders> findByPage(Orders orders, int first, int max) {
-		// TODO Auto-generated method stub
-		return ordersDao.findByPage(orders, first, max);
-	}
-
-	@Override
-	public Orders addOrUpdateOrders(Orders orders) {
-		// TODO Auto-generated method stub
-		return ordersDao.addOrUpdateOrders(orders);
-	}
-
-	@Override
 	public void delOrders(Orders orders) {
 		// TODO Auto-generated method stub
 		ordersDao.delOrders(orders);
@@ -69,15 +57,24 @@ public class OrdersServiceImpl implements OrdersService {
 	}
 
 	@Override
-	public List<Orders> findAllByPage(int pageNo, int max) {
+	public List<Orders> findByPage(int firstResult, int maxResults) {
 		// TODO Auto-generated method stub
-		return ordersDao.findAllByPage(pageNo, max);
+		return ordersDao.findByPage(firstResult, maxResults);
 	}
 
 	@Override
-	public int countAll() {
+	public boolean UpdateOrders(Orders orders){
 		// TODO Auto-generated method stub
-		return ordersDao.countAll();
+		try {
+			ordersDao.UpdateOrders(orders);
+			return true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
 	}
+
+	
 
 }

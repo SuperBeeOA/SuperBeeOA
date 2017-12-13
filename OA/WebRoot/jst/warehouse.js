@@ -1,5 +1,4 @@
 $(function() {
-	
 	$("#tei").click(function() {
 		$("#tein").show();
 		$("#contact").hide();
@@ -12,7 +11,6 @@ $(function() {
 	});
 
 	$("#fo").click(function() {
-		$("#allout").load("findallorder.action");
 		$("#fout").show();
 		$("#contact").hide();
 		$("#attendance").hide();
@@ -45,45 +43,13 @@ $(function() {
 		$("#tein").hide();
 	});
 	
-	$("#ftein").click(function() {
-		$("#teins").show();
-		$("#alltein").hide();
+	$("#fin").click(function() {
+		$("#in").show();
+		$("#allin").hide();
 	});
 	
-	$("#btei").click(function() {
-		$("#alltein").show();
-		$("#teins").hide();
-	});
-	
-	$(".gout").click(function() {
-		var ordernumber = $(this).prev().val();
-		$("#faout").load("findorderbyordernumber.action","ordernumber="+ordernumber);
-		$("#faout").show();
-		$("#allout").hide();
-	});
-	
-	$("#bout").click(function() {
-		$("#allout").show();
-		$("#faout").hide();
-	});
-	
-	$("#allout-first").click(function() {
-		var nowpageno = $("#allout-nowpageno").text();
-		$("#allout").load("changepageno.action",{"changeno":"first","nowpageno":nowpageno});
-	});
-	
-	$("#allout-up").click(function() {
-		var nowpageno = $("#allout-nowpageno").text();
-		$("#allout").load("changepageno.action",{"changeno":"up","nowpageno":nowpageno});
-	});
-	
-	$("#allout-down").click(function() {
-		var nowpageno = $("#allout-nowpageno").text();
-		$("#allout").load("changepageno.action",{"changeno":"down","nowpageno":nowpageno});
-	});
-	
-	$("#allout-last").click(function() {
-		var nowpageno = $("#allout-nowpageno").text();
-		$("#allout").load("changepageno.action",{"changeno":"last","nowpageno":nowpageno});
+	$("#bi").click(function() {
+		$("#allin").show();
+		$("#in").hide();
 	});
 });
