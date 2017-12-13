@@ -12,13 +12,13 @@ public interface ChecksDao {
 
 	public List<Checks> findAll();
 	
-	public void mergeChecks(Checks checks);
+	public Checks mergeChecks(Checks checks);
 	
 	public List<Checks> findChecksById(int checkId);
 	
-	public List<Object[]> findChecksByEmployeeId(int employeeId);
+	public List<Checks> findChecksByEmployeeId(int employeeId);
 	
-	public List<Object[]> findChecksByProorderId(int proorderId);
+	public List<Checks> findChecksByProorderId(int proorderId);
 
 	
 }

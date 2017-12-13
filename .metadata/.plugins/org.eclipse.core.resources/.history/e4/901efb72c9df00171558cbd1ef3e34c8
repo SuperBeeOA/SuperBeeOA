@@ -12,7 +12,6 @@ $(function() {
 
 	  $("#ao").click(function() {
 		  $("#aorder").show();
-		  $("#cgrder").hide();
 		  $("#contact").hide();
 		  $("#attendance").hide();
 		  $("#announcement").hide();

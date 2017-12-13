@@ -29,15 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			${requestScope.po.unit}
   <%-- 	</c:forEach> --%>
       <br>
-      <div class="divnode">
-	    <div>11111111111</div>
-	  </div>
-	  <script src="${pageContext.request.contextPath }/js/jquery.js"></script>
-	  <script type="text/javascript">
-		$(function () {
-			$(".divnode").append("<p style='width:12px; height:12px; color:red;'>text</p>");
-		});
-	  </script>
+      
       123
   </body>
 </html>
