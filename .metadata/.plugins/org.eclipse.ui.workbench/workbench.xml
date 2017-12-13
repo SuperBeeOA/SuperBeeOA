@@ -26,7 +26,7 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="103" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -35,7 +35,7 @@
 <coolItem id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" itemType="typePlaceholder" x="38" y="22"/>
 <coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.struts2.editor" itemType="typeToolBarContribution" x="358" y="22"/>
@@ -50,35 +50,17 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="business.js" partName="business.js" path="F:/OA/OA/WebRoot/jst/business.js" title="business.js" tooltip="OA/WebRoot/jst/business.js" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/WebRoot/jst/business.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1345" selectionTopPixel="980"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="productsAction.java" partName="productsAction.java" path="F:/OA/OA/src/cn/bdqn/j25/action/productsAction.java" title="productsAction.java" tooltip="OA/src/cn/bdqn/j25/action/productsAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/cn/bdqn/j25/action/productsAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3484" selectionTopPixel="1771"/>
 </editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="business.jsp" partName="business.jsp" path="F:/OA/OA/WebRoot/page/business.jsp" title="business.jsp" tooltip="OA/WebRoot/page/business.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/WebRoot/page/business.jsp"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="procurementAction.java" partName="procurementAction.java" path="F:/OA/OA/src/cn/bdqn/j25/action/procurementAction.java" title="procurementAction.java" tooltip="OA/src/cn/bdqn/j25/action/procurementAction.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/cn/bdqn/j25/action/procurementAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1073" selectionTopPixel="465"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Procurement.java" partName="Procurement.java" path="F:/OA/OA/src/cn/bdqn/j25/pojo/Procurement.java" title="Procurement.java" tooltip="OA/src/cn/bdqn/j25/pojo/Procurement.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/cn/bdqn/j25/pojo/Procurement.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="336" selectionTopPixel="0"/>
-</editor>
-<editor id="com.genuitec.eclipse.struts2.editor" name="struts-procurement.xml" partName="struts-procurement.xml" path="F:/OA/OA/src/struts/struts-procurement.xml" title="struts-procurement.xml" tooltip="OA/src/struts/struts-procurement.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/struts/struts-procurement.xml"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProviderDao.java" partName="ProviderDao.java" path="F:/OA/OA/src/cn/bdqn/j25/dao/ProviderDao.java" title="ProviderDao.java" tooltip="OA/src/cn/bdqn/j25/dao/ProviderDao.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/cn/bdqn/j25/dao/ProviderDao.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="449" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContactAction.java" partName="ContactAction.java" path="F:/OA/OA/src/cn/bdqn/j25/action/ContactAction.java" title="ContactAction.java" tooltip="OA/src/cn/bdqn/j25/action/ContactAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OA/src/cn/bdqn/j25/action/ContactAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2447" selectionTopPixel="1282"/>
 </editor>
 </editors>
 <views>
@@ -346,13 +328,6 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/OA/WebRoot/jst/business.js"/>
 <editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Accounts.hbm.xml"/>
 <editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Announcement.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Rest.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Provider.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Proorder.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Product.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Post.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Performances.hbm.xml"/>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Out.hbm.xml"/>
 <editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Orders.hbm.xml"/>
 <editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Orderroots.hbm.xml"/>
 <editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/OA/src/cn/bdqn/j25/pojo/Monitoring.hbm.xml"/>
@@ -373,94 +348,113 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" path="/OA/src/struts/struts-procurement.xml"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/dao/ProorderDao.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/dao/ProviderDao.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" path="/OA/WebRoot/jst/business.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/action/ChecksAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/dao/ProviderDao.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/action/productsAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OA/src/cn/bdqn/j25/action/ContactAction.java"/>
 </editors>
-<item historyLabel="Rest.hbm.xml" index="4"/>
-<item historyLabel="Provider.hbm.xml" index="5"/>
-<item historyLabel="Proorder.hbm.xml" index="6"/>
-<item historyLabel="Product.hbm.xml" index="7"/>
-<item historyLabel="Post.hbm.xml" index="8"/>
-<item historyLabel="Performances.hbm.xml" index="9"/>
-<item historyLabel="Out.hbm.xml" index="10"/>
-<item historyLabel="Orders.hbm.xml" index="11"/>
-<item historyLabel="Orderroots.hbm.xml" index="12"/>
-<item historyLabel="Monitoring.hbm.xml" index="13"/>
-<item historyLabel="Material.hbm.xml" index="14"/>
-<item historyLabel="Holidays.hbm.xml" index="15"/>
-<item historyLabel="Equipment.hbm.xml" index="16"/>
-<item historyLabel="Enter.hbm.xml" index="17"/>
-<item historyLabel="Employee.hbm.xml" index="18"/>
-<item historyLabel="Department.hbm.xml" index="19"/>
-<item historyLabel="Customer.hbm.xml" index="20"/>
-<item historyLabel="Contact.hbm.xml" index="21"/>
-<item historyLabel="Clockin.hbm.xml" index="22"/>
-<item historyLabel="Checks.hbm.xml" index="23"/>
-<item historyLabel="Attendance.hbm.xml" index="24"/>
+<item historyLabel="Orders.hbm.xml" index="4"/>
+<item historyLabel="Orderroots.hbm.xml" index="5"/>
+<item historyLabel="Monitoring.hbm.xml" index="6"/>
+<item historyLabel="Material.hbm.xml" index="7"/>
+<item historyLabel="Holidays.hbm.xml" index="8"/>
+<item historyLabel="Equipment.hbm.xml" index="9"/>
+<item historyLabel="Enter.hbm.xml" index="10"/>
+<item historyLabel="Employee.hbm.xml" index="11"/>
+<item historyLabel="Department.hbm.xml" index="12"/>
+<item historyLabel="Customer.hbm.xml" index="13"/>
+<item historyLabel="Contact.hbm.xml" index="14"/>
+<item historyLabel="Clockin.hbm.xml" index="15"/>
+<item historyLabel="Checks.hbm.xml" index="16"/>
+<item historyLabel="Attendance.hbm.xml" index="17"/>
 <item historyLabel="Announcement.hbm.xml" index="3"/>
 <item historyLabel="Accounts.hbm.xml" index="2"/>
 <item historyLabel="business.js" index="1">
 <position info="not_deleted" x="591" y="0"/>
 </item>
-<item historyLabel="procurementAction.java" index="25">
+<item historyLabel="procurementAction.java" index="18">
 <position info="not_deleted" x="911" y="0"/>
 </item>
-<item historyLabel="applicationContext.xml" index="26"/>
-<item historyLabel="procurementAction.java" index="25">
+<item historyLabel="applicationContext.xml" index="19"/>
+<item historyLabel="procurementAction.java" index="18">
 <position info="not_deleted" x="5675" y="0"/>
 </item>
 <item historyLabel="business.jsp" index="0"/>
 <item historyLabel="business.js" index="1">
 <position info="not_deleted" x="591" y="0"/>
 </item>
-<item historyLabel="procurementAction.java" index="25">
+<item historyLabel="procurementAction.java" index="18">
 <position info="not_deleted" x="5675" y="0"/>
 </item>
 <item historyLabel="business.jsp" index="0"/>
 <item historyLabel="business.js" index="1">
 <position info="not_deleted" x="1345" y="0"/>
 </item>
-<item historyLabel="procurementAction.java" index="25">
+<item historyLabel="procurementAction.java" index="18">
 <position info="not_deleted" x="2699" y="0"/>
 </item>
-<item historyLabel="Procurement.java" index="27">
+<item historyLabel="Procurement.java" index="20">
 <position info="not_deleted" x="336" y="10"/>
 </item>
-<item historyLabel="procurementAction.java" index="25">
+<item historyLabel="procurementAction.java" index="18">
 <position info="not_deleted" x="2699" y="0"/>
 </item>
-<item historyLabel="procurementAction.java" index="25">
+<item historyLabel="procurementAction.java" index="18">
 <position info="not_deleted" x="5675" y="0"/>
 </item>
-<item historyLabel="struts-procurement.xml" index="28"/>
-<item historyLabel="procurementAction.java" index="25">
+<item historyLabel="struts-procurement.xml" index="21"/>
+<item historyLabel="procurementAction.java" index="18">
 <position info="not_deleted" x="1064" y="12"/>
 </item>
-<item historyLabel="struts-procurement.xml" index="28"/>
-<item historyLabel="procurementAction.java" index="25">
+<item historyLabel="struts-procurement.xml" index="21"/>
+<item historyLabel="procurementAction.java" index="18">
 <position info="not_deleted" x="1064" y="12"/>
 </item>
-<item historyLabel="struts-procurement.xml" index="28"/>
-<item historyLabel="Procurement.java" index="27">
+<item historyLabel="struts-procurement.xml" index="21"/>
+<item historyLabel="Procurement.java" index="20">
 <position info="not_deleted" x="336" y="10"/>
 </item>
-<item historyLabel="procurementAction.java" index="25">
+<item historyLabel="procurementAction.java" index="18">
 <position info="not_deleted" x="1103" y="12"/>
 </item>
-<item historyLabel="struts-procurement.xml" index="28"/>
-<item historyLabel="procurementAction.java" index="25">
+<item historyLabel="struts-procurement.xml" index="21"/>
+<item historyLabel="procurementAction.java" index="18">
 <position info="not_deleted" x="1073" y="0"/>
 </item>
-<item historyLabel="ProorderDao.java" index="29">
+<item historyLabel="ProorderDao.java" index="22">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="procurementAction.java" index="25">
+<item historyLabel="procurementAction.java" index="18">
 <position info="not_deleted" x="1073" y="0"/>
 </item>
-<item historyLabel="ProviderDao.java" index="30">
+<item historyLabel="ProviderDao.java" index="23">
 <position info="not_deleted" x="449" y="0"/>
 </item>
-<item historyLabel="struts-procurement.xml" index="28"/>
-<item active="true" historyLabel="Procurement.java" index="27">
+<item historyLabel="struts-procurement.xml" index="21"/>
+<item historyLabel="Procurement.java" index="20">
 <position info="not_deleted" x="336" y="10"/>
+</item>
+<item historyLabel="business.js" index="24">
+<position info="not_deleted" x="358" y="0"/>
+</item>
+<item historyLabel="ChecksAction.java" index="25">
+<position info="not_deleted" x="3064" y="0"/>
+</item>
+<item historyLabel="business.js" index="24">
+<position info="not_deleted" x="358" y="0"/>
+</item>
+<item historyLabel="ProviderDao.java" index="26">
+<position info="not_deleted" x="449" y="0"/>
+</item>
+<item historyLabel="productsAction.java" index="27">
+<position info="not_deleted" x="3231" y="0"/>
+</item>
+<item historyLabel="ContactAction.java" index="28">
+<position info="not_deleted" x="2447" y="0"/>
+</item>
+<item active="true" historyLabel="productsAction.java" index="27">
+<position info="not_deleted" x="3231" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -487,6 +481,15 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContactAction.java" tooltip="OA/src/cn/bdqn/j25/action/ContactAction.java">
+<persistable path="/OA/src/cn/bdqn/j25/action/ContactAction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="productsAction.java" tooltip="OA/src/cn/bdqn/j25/action/productsAction.java">
+<persistable path="/OA/src/cn/bdqn/j25/action/productsAction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ChecksAction.java" tooltip="OA/src/cn/bdqn/j25/action/ChecksAction.java">
+<persistable path="/OA/src/cn/bdqn/j25/action/ChecksAction.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProviderDao.java" tooltip="OA/src/cn/bdqn/j25/dao/ProviderDao.java">
 <persistable path="/OA/src/cn/bdqn/j25/dao/ProviderDao.java"/>
 </file>
@@ -522,15 +525,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Temporary.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Temporary.hbm.xml">
 <persistable path="/OA/src/cn/bdqn/j25/pojo/Temporary.hbm.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Team.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Team.hbm.xml">
-<persistable path="/OA/src/cn/bdqn/j25/pojo/Team.hbm.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="State.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/State.hbm.xml">
-<persistable path="/OA/src/cn/bdqn/j25/pojo/State.hbm.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Rest.hbm.xml" tooltip="OA/src/cn/bdqn/j25/pojo/Rest.hbm.xml">
-<persistable path="/OA/src/cn/bdqn/j25/pojo/Rest.hbm.xml"/>
 </file>
 </mruList>
 </workbench>
