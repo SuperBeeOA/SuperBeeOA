@@ -9,7 +9,10 @@
 			method="addContact">
 			<result>/page/public.jsp</result>
 		</action>
+		
+		<action name="getEmps" class="cn.bdqn.j25.action.ContactAction"
+			method="getEmps">
+			<result>/page/public/lodemps.jsp</result>
+		</action>
 	</package>
-	
-
 </struts>

@@ -32,6 +32,14 @@ public class Product implements java.io.Serializable {
 		return unit;
 	}
 
+	public Set getOrderses() {
+		return orderses;
+	}
+
+	public void setOrderses(Set orderses) {
+		this.orderses = orderses;
+	}
+
 	public void setUnit(String unit) {
 		this.unit = unit;
 	}

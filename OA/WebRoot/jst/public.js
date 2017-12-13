@@ -100,4 +100,9 @@ $(function() {
 	$("#out").show();
 	$("#in").hide();
   });
+  
+  $("#departmentname").change(function() {
+	  var departmentname = $(this).val();
+	$("#empname").load("getEmps.action","departmentname="+departmentname);
+  });
 });

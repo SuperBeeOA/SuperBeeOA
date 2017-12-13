@@ -131,12 +131,12 @@ public class ChecksAction extends ActionSupport {
 		List<Checks> checkList = checksService.findChecksById(Integer.parseInt(checkId));
 		request.put("checkList", checkList);
 		return SUCCESS;
-	}
+	}/*
 	public String findChecksByEmployeeId(){
 		List<Object[]> checkList = checksService.findChecksByEmployeeId(Integer.parseInt(employeeId));
-		/*for(Object[] a : checkList){
+		for(Object[] a : checkList){
 			System.out.println(((Employee)a[1]).getName());
-		}*/
+		}
 		request.put("checkList", checkList);
 		return SUCCESS;
 	}
@@ -144,7 +144,7 @@ public class ChecksAction extends ActionSupport {
 		List<Object[]> checkList = checksService.findChecksByProorderId(Integer.parseInt(proorderId));
 		request.put("checkList", checkList);
 		return SUCCESS;
-	}
+	}*/
 	public String addChecks(){
 		Employee employee = employeeService.findByid(Integer.parseInt(employeeId));
 		Proorder proorder = proorderService.findByid(Integer.parseInt(proorderId));
