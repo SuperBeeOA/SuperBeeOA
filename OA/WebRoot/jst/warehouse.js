@@ -11,6 +11,7 @@ $(function() {
 	});
 
 	$("#fo").click(function() {
+		$("#allout").load("findallorder.action");
 		$("#fout").show();
 		$("#contact").hide();
 		$("#attendance").hide();
@@ -43,13 +44,20 @@ $(function() {
 		$("#tein").hide();
 	});
 	
-	$("#fin").click(function() {
-		$("#in").show();
-		$("#allin").hide();
+	$("#ftein").click(function() {
+		$("#teins").show();
+		$("#alltein").hide();
 	});
 	
-	$("#bi").click(function() {
-		$("#allin").show();
-		$("#in").hide();
+	$("#btei").click(function() {
+		$("#alltein").show();
+		$("#teins").hide();
+	});
+	
+	$(".gout").click(function() {
+		var ordernumber = $(this).prev().val();
+		$("#faout").load("findorderbyordernumber.action","ordernumber="+ordernumber);
+		$("#faout").show();
+		$("#allout").hide();
 	});
 });

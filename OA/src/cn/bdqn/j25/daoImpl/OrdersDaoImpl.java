@@ -24,7 +24,7 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 	@Override
 	public List<Orders> findByOrderno(String orderno) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().find("from Orders where orderno =?", orderno);
+		return this.getHibernateTemplate().find("from Orders where ordernumber =?", orderno);
 	}
 
 	@Override
@@ -63,6 +63,18 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 	public void addOrders(Orders orders) {
 		// TODO Auto-generated method stub
 		getHibernateTemplate().save(orders);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Orders> findAllByPage(final int pageNo,final int max) {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().execute(new HibernateCallback(){
+			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
+			Query query = session.createQuery("from Orders");
+			return query.setFirstResult(pageNo).setMaxResults(max).list();
+			}
+		});
 	}
 
 }

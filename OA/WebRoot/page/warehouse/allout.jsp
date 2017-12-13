@@ -21,7 +21,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			            				<td>${ allout.ordernumber }</td>
 			            				<td>${ allout.employeeByOriginator.name }</td>
 			            				<td>${ allout.datetime }</td>
-			            				<td><input type="button" value="查看" id="gout"></td>
+			            				<td>
+			            					<input type="hidden" value="${ allout.ordernumber }">
+			            					<input type="button" value="查看" class="gout">
+			            				</td>
 			            			</tr>
 		            			</c:forEach>
 		            	</table>

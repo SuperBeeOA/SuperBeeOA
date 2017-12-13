@@ -19,4 +19,6 @@ public interface OrdersDao {
 	public int countByTime(String date);//根据传入的时间统计订单量
 	
 	public void addOrders(Orders orders);//添加
+	
+	public List<Orders> findAllByPage(int pageNo,int max);//分页展示全部
 }

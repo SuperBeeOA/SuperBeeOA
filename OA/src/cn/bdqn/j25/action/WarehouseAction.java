@@ -3,6 +3,10 @@ package cn.bdqn.j25.action;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
+
 import cn.bdqn.j25.pojo.Orders;
 import cn.bdqn.j25.pojo.State;
 import cn.bdqn.j25.service.OrdersService;
@@ -39,6 +43,20 @@ public class WarehouseAction extends ActionSupport {
 		request.put("allOut", allOut);
 		/*Map<String, Object> session = (Map) ActionContext.getContext().getSession();
 		session.put("allOut", allOut);*/
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stop");
+		return SUCCESS;
+		
+	}
+	
+	public String findOrderByOrdernumber() {
+		System.out.println("Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String ordernumber = request.getParameter("ordernumber");
+		Orders order = ordersService.findByOrderno(ordernumber).get(0);
+		Map<String, Object> requests = (Map) ActionContext.getContext().get("request");
+		requests.put("order", order);
+
 		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stop");
 		return SUCCESS;
 		
