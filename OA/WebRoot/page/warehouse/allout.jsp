@@ -8,6 +8,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@include file="../common/js.jsp" %>
 <script src="${pageContext.request.contextPath }/jst/warehouse.js"></script>
+<script type="text/javascript">
+	$(function () {
+		function pageNo() {
+			var nowpageno = $("#allout-nowpageno").text();
+			var maxpageno = $("#allout-maxpageno").text();
+			if(nowpageno == 1){
+				$("#allout-first").attr({"disabled":"disabled"});
+				$("#allout-up").attr({"disabled":"disabled"});
+			}else if(nowpageno == maxpageno){
+				$("#allout-down").attr({"disabled":"disabled"});
+				$("#allout-last").attr({"disabled":"disabled"});
+			}
+		}
+		pageNo();
+	});
+</script>
 
 <table class="table table-hover table-bordered">
 	<tr>
@@ -29,11 +45,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</c:forEach>
 </table>
 <div class="text-center">
-	<a href="javascript:void(0)">首页</a>
-	<a href="javascript:void(0)">上一页</a>
-	<span>第<span>1</span>/${ requestScope.countNo }页</span>
-	<a href="javascript:void(0)">下一页</a>
-	<a href="javascript:void(0)">末页</a>
+	<input id="allout-first" class="btn btn-default" type="button" value="首页">
+	<input id="allout-up" class="btn btn-default" type="button" value="上一页">
+	<span>第<span id="allout-nowpageno">${ requestScope.nowpageno }</span>/<span id="allout-maxpageno">${ requestScope.countNo }</span>页</span>
+	<input id="allout-down" class="btn btn-default" type="button" value="下一页">
+	<input id="allout-last" class="btn btn-default" type="button" value="末页">
 </div>
 		            	
 

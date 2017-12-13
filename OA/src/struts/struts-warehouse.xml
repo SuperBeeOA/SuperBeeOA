@@ -10,6 +10,12 @@
 			method="findAllOrder">
 			<result name="success">/page/warehouse/allout.jsp</result>
 		</action>
+		
+		<action name="changepageno" class="cn.bdqn.j25.action.WarehouseAction"
+			method="changePageNo">
+			<result name="success">/page/warehouse/allout.jsp</result>
+		</action>
+		
 		<action name="findorderbyordernumber" class="cn.bdqn.j25.action.WarehouseAction"
 			method="findOrderByOrdernumber">
 			<result name="success">/page/warehouse/aout.jsp</result>

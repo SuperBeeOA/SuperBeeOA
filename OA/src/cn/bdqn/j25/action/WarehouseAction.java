@@ -36,7 +36,8 @@ public class WarehouseAction extends ActionSupport {
 	}
 
 	public String findAllOrder() {
-		System.out.println("Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		System.out.println("findAllOrder()Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		
 		List<Orders> allOut = ordersService.findAllByPage(1, 5);
 		int countNo = 0;
 		if(ordersService.countAll()%5 != 0){
@@ -44,19 +45,50 @@ public class WarehouseAction extends ActionSupport {
 		}else if(ordersService.countAll()%5 == 0){
 			countNo = ordersService.countAll()/5;
 		}
-		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+allOut.get(0).getOrdernumber());
 		Map<String, Object> request = (Map) ActionContext.getContext().get("request");
 		request.put("allOut", allOut);
 		request.put("countNo", countNo);
-		/*Map<String, Object> session = (Map) ActionContext.getContext().getSession();
-		session.put("allOut", allOut);*/
-		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stop");
+		request.put("nowpageno", 1);
+		
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>findAllOrder()Stop");
 		return SUCCESS;
 		
 	}
 	
+	public String changePageNo(){
+		System.out.println("changePageNo()Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+		Map<String, Object> requests = (Map) ActionContext.getContext().get("request");
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String changeno = request.getParameter("changeno");
+		int nowpageno = Integer.parseInt(request.getParameter("nowpageno"));
+		int maxno = 5;
+		int countNo = 0;
+		if(ordersService.countAll()%5 != 0){
+			countNo = ordersService.countAll()/5+1;
+		}else if(ordersService.countAll()%5 == 0){
+			countNo = ordersService.countAll()/5;
+		}
+		if(changeno.equals("first")){
+			nowpageno = 1;
+		}else if(changeno.equals("up")){
+			nowpageno = nowpageno-1;
+		}else if(changeno.equals("down")){
+			nowpageno = nowpageno+1;
+		}else if(changeno.equals("last")){
+			nowpageno = countNo;
+		}
+		List<Orders> allOut = ordersService.findAllByPage(nowpageno, maxno);
+		requests.put("allOut", allOut);
+		requests.put("countNo", countNo);
+		requests.put("nowpageno", nowpageno);
+		
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>changePageNo()Stop");
+		return SUCCESS;
+	}
+	
 	public String findOrderByOrdernumber() {
-		System.out.println("Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		System.out.println("findOrderByOrdernumber()Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String ordernumber = request.getParameter("ordernumber");
@@ -64,7 +96,7 @@ public class WarehouseAction extends ActionSupport {
 		Map<String, Object> requests = (Map) ActionContext.getContext().get("request");
 		requests.put("order", order);
 
-		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stop");
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>findOrderByOrdernumber()Stop");
 		return SUCCESS;
 		
 	}

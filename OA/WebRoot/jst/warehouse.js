@@ -1,4 +1,5 @@
 $(function() {
+	
 	$("#tei").click(function() {
 		$("#tein").show();
 		$("#contact").hide();
@@ -64,5 +65,25 @@ $(function() {
 	$("#bout").click(function() {
 		$("#allout").show();
 		$("#faout").hide();
+	});
+	
+	$("#allout-first").click(function() {
+		var nowpageno = $("#allout-nowpageno").text();
+		$("#allout").load("changepageno.action",{"changeno":"first","nowpageno":nowpageno});
+	});
+	
+	$("#allout-up").click(function() {
+		var nowpageno = $("#allout-nowpageno").text();
+		$("#allout").load("changepageno.action",{"changeno":"up","nowpageno":nowpageno});
+	});
+	
+	$("#allout-down").click(function() {
+		var nowpageno = $("#allout-nowpageno").text();
+		$("#allout").load("changepageno.action",{"changeno":"down","nowpageno":nowpageno});
+	});
+	
+	$("#allout-last").click(function() {
+		var nowpageno = $("#allout-nowpageno").text();
+		$("#allout").load("changepageno.action",{"changeno":"last","nowpageno":nowpageno});
 	});
 });
