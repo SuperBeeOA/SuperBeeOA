@@ -23,10 +23,7 @@ public class Product implements java.io.Serializable {
 	private BigDecimal productioncost;
 	private BigDecimal truckage;
 	private String productremarks;
-<<<<<<< HEAD
 	private String unit;
-=======
->>>>>>> c3e840da7efa2f0ecd9ff5ae022c201f01850ba0
 	private Set orderses = new HashSet(0);
 
 	// Constructors
@@ -34,14 +31,11 @@ public class Product implements java.io.Serializable {
 	/** default constructor */
 	public Product() {
 	}
-<<<<<<< HEAD
-=======
 
 	/** minimal constructor */
 	public Product(String productname) {
 		this.productname = productname;
 	}
->>>>>>> c3e840da7efa2f0ecd9ff5ae022c201f01850ba0
 
 	public Product(Types types, String productname,
 			String productno, String component,
@@ -62,13 +56,8 @@ public class Product implements java.io.Serializable {
 	public Product(Types types, String productname, String productno,
 			BigDecimal productprice, String component, Integer shelflife,
 			String productmodel, BigDecimal productioncost,
-<<<<<<< HEAD
 			BigDecimal truckage, String productremarks, String unit,
 			Set orderses) {
-=======
-			BigDecimal truckage, String productremarks, Set orderses,
-			Set procurements) {
->>>>>>> c3e840da7efa2f0ecd9ff5ae022c201f01850ba0
 		this.types = types;
 		this.productname = productname;
 		this.productno = productno;
