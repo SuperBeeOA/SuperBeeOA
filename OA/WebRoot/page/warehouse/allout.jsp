@@ -8,6 +8,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@include file="../common/js.jsp" %>
 <script src="${pageContext.request.contextPath }/jst/warehouse.js"></script>
+<<<<<<< HEAD
+<script type="text/javascript">
+	$(function () {
+		function pageNo() {
+			var nowpageno = $("#allout-nowpageno").text();
+			var maxpageno = $("#allout-maxpageno").text();
+			if(nowpageno == 1){
+				$("#allout-first").attr({"disabled":"disabled"});
+				$("#allout-up").attr({"disabled":"disabled"});
+			}
+			if(nowpageno == maxpageno){
+				$("#allout-down").attr({"disabled":"disabled"});
+				$("#allout-last").attr({"disabled":"disabled"});
+			}
+		}
+		pageNo();
+	});
+</script>
+=======
+>>>>>>> 4fb26e1d3466a17bae00cb0d7b06fe8007973e72
 
 		            	<table class="table table-hover table-bordered">
 								<tr>

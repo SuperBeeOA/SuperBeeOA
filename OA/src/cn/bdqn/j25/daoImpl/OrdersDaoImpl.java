@@ -72,4 +72,28 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 		 getHibernateTemplate().update(orders);
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Orders> findAllByPage(final int pageNo,final int max) {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().execute(new HibernateCallback(){
+			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
+			Query query = session.createQuery("from Orders");
+			return query.setFirstResult(pageNo).setMaxResults(max).list();
+			}
+		});
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public int countAll() {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().execute(new HibernateCallback(){
+			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
+			Query query = session.createQuery("select count(*) from Orders");
+			return Integer.parseInt(query.uniqueResult().toString());
+			}
+		});
+	}
+
 }
