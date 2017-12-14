@@ -24,7 +24,7 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 	@Override
 	public List<Orders> findByOrderno(String orderno) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().find("from Orders where orderno =?", orderno);
+		return this.getHibernateTemplate().find("from Orders where ordernumber =?", orderno);
 	}
 
 	@Override

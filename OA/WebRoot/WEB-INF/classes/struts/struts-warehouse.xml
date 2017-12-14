@@ -8,27 +8,27 @@
 	<package name="warehouse" namespace="/"  extends="struts-default">
 		<action name="findallorder" class="cn.bdqn.j25.action.WarehouseAction"
 			method="findAllOrder">
-			<result name="success">/page/warehouse/allout.jsp</result>
+			<result name="success">page/warehouse/allout.jsp</result>
 		</action>
 		
 		<action name="changeoutpageno" class="cn.bdqn.j25.action.WarehouseAction"
 			method="changeOutPageNo">
-			<result name="success">/page/warehouse/allout.jsp</result>
+			<result name="success">page/warehouse/allout.jsp</result>
 		</action>
 		
 		<action name="findorderbyordernumber" class="cn.bdqn.j25.action.WarehouseAction"
 			method="findOrderByOrdernumber">
-			<result name="success">/page/warehouse/aout.jsp</result>
+			<result name="success">page/warehouse/aout.jsp</result>
 		</action>
 		
 		<action name="findallprocurement" class="cn.bdqn.j25.action.WarehouseAction"
 			method="findAllProcurement">
-			<result name="success">/page/warehouse/alltematerial.jsp</result>
+			<result name="success">page/warehouse/alltematerial.jsp</result>
 		</action>
 		
 		<action name="changetematerialpageNo" class="cn.bdqn.j25.action.WarehouseAction"
 			method="changeTematerialPageNo">
-			<result name="success">/page/warehouse/alltematerial.jsp</result>
+			<result name="success">page/warehouse/alltematerial.jsp</result>
 		</action>
 	</package>
 	

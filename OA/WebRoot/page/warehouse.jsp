@@ -30,7 +30,7 @@
 	            <!-- <div id="tein" style="display: none;">
 	            	<h2 class="text-center">审核产品入库申请</h2>
 	            	<hr>
-	            	<div id="allin">
+	            	<div id="alltein">
 	            		<table class="table table-hover table-bordered">
 	            			<tr>
 	            				<td>申请人</td>
@@ -40,11 +40,11 @@
 	            			<tr>
 	            				<td></td>
 	            				<td></td>
-	            				<td><input type="button" value="查看" id="fin"></td>
+	            				<td><input type="button" value="查看" id="ftein"></td>
 	            			</tr>
 	            		</table>
 	            	</div>
-	            	<div id="in" style="display: none;">
+	            	<div id="teins" style="display: none;">
 	            		<table class="table table-hover table-bordered">
 	            			<tr>
 	            				<td>产品编号</td>
@@ -56,12 +56,16 @@
 	            		</table>
 	            		<input id="yes" class="btn btn-primary" type="button" value="通过">
 	            		<input id="no" class="btn btn-primary" type="button" value="驳回">
-	            		<input id="bi" class="btn btn-primary pull-right" type="button" value="返回">
+	            		<input id="btei" class="btn btn-primary pull-right" type="button" value="返回">
 	            	</div>
 	            </div> -->
 	            <div id="fout" style="display: none;">
 	            	<h2 class="text-center">查看出库单</h2>
 	            	<hr>
+	            	<div id="allout">
+	            	</div>
+	            	<div id="faout" style="display: none;">
+	            	</div>
 	            </div>
 	            <div id="tematerial" style="display: none;">
 	            	<h2 class="text-center">审核原材料申请</h2>

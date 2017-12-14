@@ -8,7 +8,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@include file="../common/js.jsp" %>
 <script src="${pageContext.request.contextPath }/jst/warehouse.js"></script>
-<<<<<<< HEAD
 <script type="text/javascript">
 	$(function () {
 		function pageNo() {
@@ -26,23 +25,32 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		pageNo();
 	});
 </script>
-=======
->>>>>>> 4fb26e1d3466a17bae00cb0d7b06fe8007973e72
 
-		            	<table class="table table-hover table-bordered">
-								<tr>
-		            				<td>订单编号</td>
-		            				<td>发起人</td>
-		            				<td>时间</td>
-		            				<td>操作</td>
-		            			</tr>
-		            			<c:forEach var="allout" items="${ requestScope.allOut }">
-			            			<tr>
-			            				<td>${ allout.ordernumber }</td>
-			            				<td>${ allout.employeeByOriginator.name }</td>
-			            				<td>${ allout.datetime }</td>
-			            				<td><input type="button" value="查看" id="gout"></td>
-			            			</tr>
-		            			</c:forEach>
-		            	</table>
+<table class="table table-hover table-bordered">
+	<tr>
+		<td>订单编号</td>
+		<td>发起人</td>
+		<td>时间</td>
+		<td>操作</td>
+	</tr>
+	<c:forEach var="allout" items="${ requestScope.allOut }">
+		<tr>
+			<td>${ allout.ordernumber }</td>
+			<td>${ allout.employeeByOriginator.name }</td>
+			<td>${ allout.datetime }</td>
+			<td>
+				<input type="hidden" value="${ allout.ordernumber }">
+			    <input type="button" value="查看" class="gout">
+			</td>
+		</tr>
+	</c:forEach>
+</table>
+<div class="text-center">
+	<input id="allout-first" class="btn btn-default" type="button" value="首页">
+	<input id="allout-up" class="btn btn-default" type="button" value="上一页">
+	<span>第<span id="allout-nowpageno">${ requestScope.nowpageno }</span>/<span id="allout-maxpageno">${ requestScope.countNo }</span>页</span>
+	<input id="allout-down" class="btn btn-default" type="button" value="下一页">
+	<input id="allout-last" class="btn btn-default" type="button" value="末页">
+</div>
+		            	
 
