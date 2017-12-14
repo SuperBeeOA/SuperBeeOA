@@ -39,7 +39,7 @@
 	<package name="procurement" extends="struts-default">
 			
 		<action name="procurement4" class="cn.bdqn.j25.action.ProcurementAction" method="findProcurement" >
-			<result>/page/order/order.jsp</result>
+			<result>/page/order/procurement.jsp</result>
 		</action> 
 		
 	</package> 

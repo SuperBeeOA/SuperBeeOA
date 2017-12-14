@@ -43,21 +43,21 @@ public class OrderAction extends ActionSupport{
 	private State state;
 	private String productid;
 	private String first;
-	private String max="5";
+	private String max="10";
 	@SuppressWarnings("unchecked")
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
-	private String orderid;
-	private String stateid;
+//	private String orderid;
+//	private String stateid;
 	
 	
 	//审核
 	public String pass(){
-		System.out.println(stateid);
-		System.out.println(orderid);
-		state.setStateid(Integer.parseInt(stateid));
+//		System.out.println(state.getStateid());
+//		System.out.println(orders.getOrderid());
+		orders=ordersService.findByid(orders.getOrderid());		
 		orders.setState(state);
-		orders.setOrderid(Integer.parseInt(orderid));
+		orders.setOrderid(orders.getOrderid());
 		String result=null;
 		if(ordersService.UpdateOrders(orders)==true){
 			result="审核成功";			
@@ -78,7 +78,35 @@ public class OrderAction extends ActionSupport{
 		}			
 		return SUCCESS;
 	}
-		
+	//取消
+	public String cancel(){
+//		System.out.println(state.getStateid());
+//		System.out.println(orders.getOrderid());
+		orders=ordersService.findByid(orders.getOrderid());		
+		orders.setState(state);
+		orders.setOrderid(orders.getOrderid());
+		String result=null;
+		if(ordersService.UpdateOrders(orders)==true){
+			result="取消成功";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else{
+			result="取消失败";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}			
+		return SUCCESS;
+	}
+	
+	
 	//自动生成客户编号
 	public String findCustomer() throws UnsupportedEncodingException{
 		listCustomer=customerService.findAll();
@@ -267,16 +295,16 @@ public class OrderAction extends ActionSupport{
 	public void setRequest(Map<String, Object> request) {
 		this.request = request;
 	}
-	public String getOrderid() {
-		return orderid;
-	}
-	public void setOrderid(String orderid) {
-		this.orderid = orderid;
-	}
-	public String getStateid() {
-		return stateid;
-	}
-	public void setStateid(String stateid) {
-		this.stateid = stateid;
-	}	
+//	public String getOrderid() {
+//		return orderid;
+//	}
+//	public void setOrderid(String orderid) {
+//		this.orderid = orderid;
+//	}
+//	public String getStateid() {
+//		return stateid;
+//	}
+//	public void setStateid(String stateid) {
+//		this.stateid = stateid;
+//	}	
 }

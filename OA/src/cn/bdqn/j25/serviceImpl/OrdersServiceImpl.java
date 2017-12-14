@@ -75,18 +75,6 @@ public class OrdersServiceImpl implements OrdersService {
 		}
 	}
 
-	@Override
-	public List<Orders> findAllByPage(int pageNo, int max) {
-		// TODO Auto-generated method stub
-		return ordersDao.findAllByPage(pageNo, max);
-	}
-
-	@Override
-	public int countAll() {
-		// TODO Auto-generated method stub
-		return ordersDao.countAll();
-	}
-
 	
 
 }

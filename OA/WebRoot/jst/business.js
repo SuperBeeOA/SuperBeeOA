@@ -257,12 +257,28 @@ $(function() {
 	//审核
 		$(".pass").click(function(){
 			var id=$(this).parents().siblings(".orderid").text();
-			$.get("order5!pass",{"orderid":id,"stateid":2},function(date){
+			$.get("order5!pass",{"orders.orderid":id,"state.stateid":2},function(date){
 				if(date=="审核成功"){
+					alert("审核成功");
 					$(".table-bordered").load("order4!findOrder","first=1");
 				}
 				if(date=="审核失败"){
 					alert("审核失败");
+				}
+			});
+						
+		});
+		
+	//取消
+		$(".cancel").click(function(){
+			var id=$(this).parents().siblings(".orderid").text();
+			$.get("order6!cancel",{"orders.orderid":id,"state.stateid":6},function(date){
+				if(date=="取消成功"){
+					alert("取消成功");
+					$(".table-bordered").load("order4!findOrder","first=1");
+				}
+				if(date=="取消失败"){
+					alert("取消失败");
 				}
 			});
 						
