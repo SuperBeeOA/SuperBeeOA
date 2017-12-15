@@ -20,5 +20,11 @@ public interface OrdersDao {
 	
 	public void UpdateOrders(Orders orders);//更新信息
 	
+<<<<<<< HEAD
 	public List<Orders> findAllOrderByState();//查询所有待审核的订单
+=======
+	public List<Orders> findAllByPage(int pageNo,int max);//分页展示全部
+	
+	public int countAll();//统计所有订单数量
+>>>>>>> 07229d919aa75ddc1b3172253e297acc455c7006
 }

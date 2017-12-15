@@ -15,7 +15,7 @@
 				                <li id="fat"><a href="javascript:void(0)">查看出勤</a></li>
 				                <li id="fan"><a href="javascript:void(0)">发布公告</a></li>
 				                <li id="fc"><a href="javascript:void(0)">内部联络</a></li>
-				                <li id="tei"><a href="javascript:void(0)">审核产品入库申请</a></li>
+				                <!-- <li id="tei"><a href="javascript:void(0)">审核产品入库申请</a></li> -->
 				                <li id="tem"><a href="javascript:void(0)">审核原材料申请</a></li>
 				                <li id="fo"><a href="javascript:void(0)">查看出库单</a></li>
 				                <li id="mwh"><a href="javascript:void(0)">库存管理</a></li>
@@ -27,10 +27,10 @@
 	        
 	        <div class="col-md-8 panel" style="background-color: #f8f8f8; height: auto; padding-bottom:3000px; margin-bottom:-3000px;">
 	            <%@include file="common/public.jsp" %>
-	            <div id="tein" style="display: none;">
+	            <!-- <div id="tein" style="display: none;">
 	            	<h2 class="text-center">审核产品入库申请</h2>
 	            	<hr>
-	            	<div id="allin">
+	            	<div id="alltein">
 	            		<table class="table table-hover table-bordered">
 	            			<tr>
 	            				<td>申请人</td>
@@ -40,11 +40,11 @@
 	            			<tr>
 	            				<td></td>
 	            				<td></td>
-	            				<td><input type="button" value="查看" id="fin"></td>
+	            				<td><input type="button" value="查看" id="ftein"></td>
 	            			</tr>
 	            		</table>
 	            	</div>
-	            	<div id="in" style="display: none;">
+	            	<div id="teins" style="display: none;">
 	            		<table class="table table-hover table-bordered">
 	            			<tr>
 	            				<td>产品编号</td>
@@ -56,16 +56,22 @@
 	            		</table>
 	            		<input id="yes" class="btn btn-primary" type="button" value="通过">
 	            		<input id="no" class="btn btn-primary" type="button" value="驳回">
-	            		<input id="bi" class="btn btn-primary pull-right" type="button" value="返回">
+	            		<input id="btei" class="btn btn-primary pull-right" type="button" value="返回">
 	            	</div>
-	            </div>
+	            </div> -->
 	            <div id="fout" style="display: none;">
 	            	<h2 class="text-center">查看出库单</h2>
 	            	<hr>
+	            	<div id="allout">
+	            	</div>
+	            	<div id="faout" style="display: none;">
+	            	</div>
 	            </div>
 	            <div id="tematerial" style="display: none;">
 	            	<h2 class="text-center">审核原材料申请</h2>
 	            	<hr>
+	            	<div id="alltematerial">
+	            	</div>
 	            </div>
 	            <div id="mwarehouse" style="display: none;">
 	            	<h2 class="text-center">库存管理</h2>
