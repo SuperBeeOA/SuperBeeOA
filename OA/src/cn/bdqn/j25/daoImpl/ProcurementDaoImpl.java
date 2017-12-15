@@ -59,8 +59,6 @@ public class ProcurementDaoImpl extends HibernateDaoSupport implements
 		getHibernateTemplate().save(procurement);
 	}
 
-<<<<<<< HEAD
-=======
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Procurement> findAllByPage(final int pageNo, final int max) {
@@ -84,6 +82,4 @@ public class ProcurementDaoImpl extends HibernateDaoSupport implements
 			}
 		});
 	}
-
->>>>>>> no message
 }

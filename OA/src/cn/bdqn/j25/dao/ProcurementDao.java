@@ -16,4 +16,8 @@ public interface ProcurementDao {
 	public void delProcurement(Procurement procurement); //删除
 	
 	public void addProcurement(Procurement procurement);//添加
+
+	int countAll();//统计数量
+
+	List<Procurement> findAllByPage(int pageNo, int max);//分页查询所有
 }

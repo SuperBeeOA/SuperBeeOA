@@ -19,4 +19,8 @@ public interface OrdersDao {
 	public void addOrders(Orders orders);//添加
 	
 	public void UpdateOrders(Orders orders);//更新信息
+	
+	public List<Orders> findAllByPage(int pageNo,int max);//分页展示全部
+	
+	public int countAll();//统计所有订单数量
 }
