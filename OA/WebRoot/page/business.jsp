@@ -32,20 +32,21 @@
 	            <%@include file="common/public.jsp" %>
 	            <div id="forder" style="display: none;">
 	            	<h2 class="text-center">查看订单</h2>
-	            &nbsp;&nbsp;&nbsp;&nbsp;
-	            <a href="javascript:void(0)" class="sale">销售</a> &nbsp;&nbsp;&nbsp;&nbsp; 
-	            <a href="javascript:void(0)" class="buy">采购</a>
+		            &nbsp;&nbsp;&nbsp;&nbsp;
+		            <a href="javascript:void(0)" class="sale">销售</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+		            <a href="javascript:void(0)" class="buy">采购</a>
 	            	<hr>
-	            <div id="chakan">
-	            </div>
+		            <div id="chakan">
+		            </div>
 	            </div>
 	            <div id="aorder" style="display: none;">
 	            	<h2 class="text-center">生成业务订单</h2>
 	            	<hr>
-	            	<form action="javascript:void(0);"  id="orderAdd">
+	            	<form class="text-center" action="javascript:void(0);"  id="orderAdd">
 	            		<table class="table">
 	            			<tr>
 	            				<td>订单号：</td>
+<<<<<<< HEAD
 	            				<td> 
 	            				<input type="text" name="orders.ordernumber" class="orderno"> 
 	            				<input type="hidden" name="department.departmentid" value="2" >
@@ -53,14 +54,23 @@
 	            				<input type="hidden" name="state.stateid" value="1"> 
 	            				<input type="hidden" name="employee.employeeid" value="1">	            				
 	            				</td>
+=======
+	            				<td>
+									<input type="text" name="orders.ordernumber" class="orderno">
+								</td>
+>>>>>>> no message
 	            				<td>客户名称：</td>
 	            				<td>
-								<select style="width:150px" class="cutomerNo" name="customer.customerid">	
-	            				</select></td>
+									<select class="cutomerNo" name="customer.customerid">	
+		            				</select>
+	            				</td>
 	            				<td>发起时间：</td>
-	            				<td><input name="orders.datetime" type="date">    </td>
+	            				<td>
+	            					<input name="orders.datetime" type="date">
+	            				</td>
 	            			</tr>
-	            			<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	            		</table>
+	            		<table class="table">
 	            			<tr>
 	            				
 	            				<td>产品名称</td>
@@ -73,7 +83,7 @@
 	            			<tr>
 	            				
 	            				<td>
-	            				<select style="width:150px" class="productid" name="product.productid">	
+	            				<select class="productid" name="product.productid">	
 	            				</select>
 	            				</td>			
 	            				<td class="unit"></td>
@@ -84,7 +94,7 @@
 	            			</tr>
 	            		
 	            		</table>
-	            		<input id="addOrder" class="btn btn-primary" type="button" value="提交订单" style="position: relative; left: 45%;">
+	            		<input id="addOrder" class="btn btn-primary" type="button" value="提交订单">
 	            	</form>
 	            </div>
 	            
@@ -92,24 +102,34 @@
 	           <div id="cgrder" style="display: none;">
 	            	<h2 class="text-center">生成采购订单</h2>
 	            	<hr>
-	            	<form action="javascript:void(0);"  id="Procurement">
+	            	<form class="text-center" action="javascript:void(0);"  id="Procurement">
 	            		<table class="table">
 	            			<tr>
 	            				<td>订单号：</td>
+<<<<<<< HEAD
 	            				<td> 
 	            				<input type="text" name="procurement.ordernumber" class="Procurementnum"> 	            				
 								<input type="hidden" name="department.departmentid" value="2" >
 	            				<input type="hidden" name="type.typeid" value="1">
 	            				<input type="hidden" name="state.stateid" value="1"> 
 	            				<input type="hidden" name="employee.employeeid" value="1">			            				</td>
+=======
+	            				<td>
+	            					<input type="text" name="procurement.ordernumber" class="Procurementnum">
+	            				</td>
+>>>>>>> no message
 	            				<td>供应商名称：</td>
 	            				<td>
-								<select style="width:150px" class="providerNo" name="provider.providerid">	
-	            				</select></td>
+									<select class="providerNo" name="provider.providerid">	
+		            				</select>
+	            				</td>
 	            				<td>发起时间：</td>
-	            				<td><input name="procurement.datetime" type="date">    </td>
+	            				<td>
+	            					<input name="procurement.datetime" type="date">
+	            				</td>
 	            			</tr>
-	            			<tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	            		</table>
+	            		<table class="table">
 	            			<tr>	            				
 	            				<td>物品名称</td>
 	            				<td>单位</td>
@@ -120,7 +140,7 @@
 	            			</tr>
 	            			<tr>	            				
 	            				<td>
-	            				<select style="width:150px" class="materialid" name="material.materialid">	
+	            				<select class="materialid" name="material.materialid">	
 	            				</select>
 	            				</td>			
 	            				<td class="Procurementunit"></td>
@@ -131,14 +151,14 @@
 	            			</tr>
 	            		
 	            		</table>
-	            		<input id="addprocurement" class="btn btn-primary1" type="button" value="提交订单" style="position: relative; left: 45%;">
+	            		<input id="addprocurement" class="btn btn-primary" type="button" value="提交订单">
 	            	</form>
 	            </div>
 	            
 	            <div id="customer" style="display: none;">
 	            	<h2 class="text-center">管理客户</h2>
 	            	<hr>
-	            <div id="allcustomer">
+	            	<div id="allcustomer">
 		            	<table class="table table-hover table-bordered" id="custable">
 		            		<tr>
 		            			<td>客户名称</td>
@@ -228,60 +248,59 @@
 	            				
 	            				<input class="change" type="button" value="修改">
 	            				<input type="hidden" value="supplierid">
-	            			<>
+	            			</li>
 	            			<br>
 	            			<li>
 	            				供应商名称: 
 	            				
 	            				<input class="change" type="button" value="修改">
 	            				<input type="hidden" value="suppliername">
-	            			<li>
+	            			</li>
 	            			<br>
 	            			<li>
 	            				供应商类型: 
 	            				
 	            				<input class="change" type="button" value="修改">
 	            				<input type="hidden" value="typeid">
-	            			<li>
+	            			</li>
 	            			<br>
 	            			<li>
 	            				地址: 
 	            				
 	            				<input class="change" type="button" value="修改">
 	            				<input type="hidden" value="address">
-	            			<li>
+	            			</li>
 	            			<br>
 	            			<li>
 	            				联系人: 
 	            				
 	            				<input class="change" type="button" value="修改">
 	            				<input type="hidden" value="contacts">
-	            			<li>
+	            			</li>
 	            			<br>
 	            			<li>
 	            				联系电话: 
 	            				
 	            				<input class="change" type="button" value="修改">
 	            				<input type="hidden" value="phone">
-	            			<li>
+	            			</li>
 	            			<br>
 	            			<li>
 	            				供应物品内容: 
 	            				
 	            				<input class="change" type="button" value="修改">
 	            				<input type="hidden" value="comments">
-	            			<li>
+	            			</li>
 	            			<br>
 	            			<li>
 	            				备注: 
 	            				
 	            				<input class="change" type="button" value="修改">
 	            				<input type="hidden" value="remarks">
-	            			<li>
+	            			</li>
 	            		</ul>
 	            		<input id="bs" class="btn btn-primary pull-right" type="button" value="返回">
 	            	</div>
-	            </div>
 	            </div>
 	        </div>
 	        
