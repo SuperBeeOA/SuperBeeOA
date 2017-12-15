@@ -19,4 +19,6 @@ public interface OrdersService {
 	public int countByTime(String date);//根据传入的时间统计订单量
 	
 	public boolean addOrders(Orders orders);//添加
+	
+	public List<Orders> findAllOrderByState();//查询所有待审核的订单
 }

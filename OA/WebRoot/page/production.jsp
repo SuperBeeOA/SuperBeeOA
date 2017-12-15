@@ -30,22 +30,7 @@
 	            	<h2 class="text-center">审核订单</h2>
 	            	<hr>
 	            	<div id="allorder">
-		            	<table class="table table-hover table-bordered">
-		            		<tr>
-		            			<td>订单编号</td>
-		            			<td>客户编号</td>
-		            			<td>业务员</td>
-		            			<td>生成日期</td>
-		            			<td>操作</td>
-		            		</tr>
-		            		<tr>
-		            			<td></td>
-		            			<td></td>
-		            			<td></td>
-		            			<td></td>
-		            			<td><input id="examine" type="button" value="审核"></td>
-		            		</tr>
-		            	</table>
+		            	
 	            	</div>
 	            	<div id="order" style="display: none;">
 	            		<table class="table">

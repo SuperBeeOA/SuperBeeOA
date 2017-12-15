@@ -75,6 +75,12 @@ public class OrdersServiceImpl implements OrdersService {
 		}
 	}
 
+	@Override
+	public List<Orders> findAllOrderByState() {
+		// TODO Auto-generated method stub
+		return ordersDao.findAllOrderByState();
+	}
+
 	
 
 }

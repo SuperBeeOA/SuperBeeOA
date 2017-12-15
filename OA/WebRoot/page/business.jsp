@@ -46,7 +46,13 @@
 	            		<table class="table">
 	            			<tr>
 	            				<td>订单号：</td>
-	            				<td> <input type="text" name="orders.ordernumber" class="orderno"> </td>
+	            				<td> 
+	            				<input type="text" name="orders.ordernumber" class="orderno"> 
+	            				<input type="hidden" name="department.departmentid" value="2" >
+	            				<input type="hidden" name="type.typeid" value="1">
+	            				<input type="hidden" name="state.stateid" value="1"> 
+	            				<input type="hidden" name="employee.employeeid" value="1">	            				
+	            				</td>
 	            				<td>客户名称：</td>
 	            				<td>
 								<select style="width:150px" class="cutomerNo" name="customer.customerid">	
@@ -90,7 +96,12 @@
 	            		<table class="table">
 	            			<tr>
 	            				<td>订单号：</td>
-	            				<td> <input type="text" name="procurement.ordernumber" class="Procurementnum"> </td>
+	            				<td> 
+	            				<input type="text" name="procurement.ordernumber" class="Procurementnum"> 	            				
+								<input type="hidden" name="department.departmentid" value="2" >
+	            				<input type="hidden" name="type.typeid" value="1">
+	            				<input type="hidden" name="state.stateid" value="1"> 
+	            				<input type="hidden" name="employee.employeeid" value="1">			            				</td>
 	            				<td>供应商名称：</td>
 	            				<td>
 								<select style="width:150px" class="providerNo" name="provider.providerid">	
@@ -135,52 +146,50 @@
 		            			<td>电话</td>
 		            			<td>地址</td>
 		            			<td>客户级别</td>
+		            			<td>备注</td>
 		            			<td>操作</td>
 		            		</tr>
 		            		
 		            	</table>
 	            	</div>
 	            	<div id="mcustomer" style="display: none;">
-	            		<ul class="list-unstyled" style="padding: 50px;">
-	            		
+	            	  <form action="javascript:void(0)" id="updcustomer">
+	            		<ul class="list-unstyled" style="padding: 50px;">	            		
 	            			<li>
 	            				请输入修改后的客户名称: 
-	            				<input type="text" name="customer.customername" >
-	            				<input class="change" type="button" value="修改">
-	            				
+	            				<input type="text" name="customer.customername" id="customername">	            				            				
 	            			</li>
 	            			<br>
 	            			<li>
 	            				请输入修改后的地址: 
-	            				<input type="text" name="customer.address" >
-	            				<input class="change" type="button" value="修改">	            				
+	            				<input type="text" name="customer.address" id="customeraddress">          				
 	            			</li>
 	            			<br>
 	            			<li>
 	            				请输入修改后的客户级别: 
-	            				<input type="text" name="customer.levels" >
-	            				<input class="change" type="button" value="修改">
+	            				<input type="text" name="customer.levels" id="levels">
 	            			</li>
 	            			<br>
 	            			<li>
-	            				联系人: 
-	            				<input type="text" name="customer.contacts" >
-	            				<input class="change" type="button" value="修改">
+	            				请输入修改后的联系人: 
+	            				<input type="text" name="customer.contacts" id="customercontacts">	            			
 	            			</li>
 	            			<br>
 	            			<li>
-	            				联系电话: 
-	            				<input type="text" name="customer.phone" >
-	            				<input class="change" type="button" value="修改">
+	            				请输入修改后的联系电话: 
+	            				<input type="text" name="customer.phone" id="customerphone">	            				
 	            			</li>
 	            			<br>
 	            			<li>
-	            				备注: 
-	            				<input type="text" name="customer.remarks" >
-	            				<input class="change" type="button" value="修改">
+	            				请输入修改后的备注: 
+	            				<input type="text" name="customer.remarks" id="customerremarks">	            				
 	            			</li>
+	            			<br>
+	            			<li><input class="change" type="button" value="修改"></li>            			
 	            		</ul>
+	            		</form>
 	            		<input id="bc" class="btn btn-primary pull-right" type="button" value="返回">
+	            		
 	            	</div>
 	            
 	            </div>
@@ -190,11 +199,15 @@
 	            <div id="allsupplier">
 		            	<table class="table table-hover table-bordered">
 		            		<tr>
-		            			<td>供应商编号</td>
+		       
 		            			<td>供应商名称</td>
 		            			<td>供应商类型</td>
+		            			<td>地址</td>
 		            			<td>联系电话</td>
-		            			<td>操作</td>
+		            			<td>联系人</td>
+		            			<td>供应的产品</td>
+		            			<td>备注</td>
+		            			<td>操作</td>		        
 		            		</tr>
 		            		<tr>
 		            			<td></td>

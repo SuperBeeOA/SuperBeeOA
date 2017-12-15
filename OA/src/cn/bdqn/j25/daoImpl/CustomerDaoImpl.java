@@ -76,4 +76,10 @@ public class CustomerDaoImpl extends HibernateDaoSupport implements CustomerDao 
 			 });     
 	}
 
+	@Override
+	public void updateCustomer(Customer customer) {
+		 getHibernateTemplate().update(customer);
+		
+	}
+
 }

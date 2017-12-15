@@ -58,7 +58,7 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 		 return getHibernateTemplate().executeFind(new HibernateCallback(){   
 			 public Object doInHibernate(Session  s)throws HibernateException,SQLException{  
 				 Query query = s.createQuery("from Orders order by datetime desc");  
-				 query.setFirstResult(firstResult);   
+				 query.setFirstResult((firstResult-1)*maxResults);   
 				 query.setMaxResults(maxResults);   
 				 List list  = query.list();  
 				 return list;     
@@ -70,6 +70,12 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 	public void UpdateOrders(Orders orders) {
 		// TODO Auto-generated method stub
 		 getHibernateTemplate().update(orders);
+	}
+
+	@Override
+	public List<Orders> findAllOrderByState() {
+		// TODO Auto-generated method stub
+		return getHibernateTemplate().find("from Orders o where o.state.stateid=1");
 	}
 
 }

@@ -48,14 +48,36 @@ public class OrderAction extends ActionSupport{
 	@SuppressWarnings("unchecked")
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
-//	private String orderid;
-//	private String stateid;
 	
-	//修改客户信息
+	//查看所有待审核的订单
+		public String fingAllOrders(){
+			listOrders=ordersService.findAllOrderByState();
+			request.put("stateOrderlist", listOrders);			
+			return SUCCESS;
+		}
 	
+	
+	//修改客户信息	
 	public String updateCustomer(){
 		
-		
+		String result=null;
+		if(customerService.updateCustomer(customer)==true){
+			result="修改成功";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else{
+			result="修改失败";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}	
 		return SUCCESS;
 	}
 	
@@ -160,11 +182,14 @@ public class OrderAction extends ActionSupport{
 	
 		return SUCCESS;
 	}
-	
+	//添加订单
 	public String addOrder(){
 		orders.setCustomer(customer);
 		orders.setProduct(product);
+		orders.setTypes(type);
+		orders.setState(state);
 		orders.setEmployeeByOriginator(employee);
+		orders.setDepartment(department);
 		String result=null;		
 		if(ordersService.addOrders(orders)!=false){
 			result="添加成功";
@@ -319,16 +344,6 @@ public class OrderAction extends ActionSupport{
 	public void setRequest(Map<String, Object> request) {
 		this.request = request;
 	}
-//	public String getOrderid() {
-//		return orderid;
-//	}
-//	public void setOrderid(String orderid) {
-//		this.orderid = orderid;
-//	}
-//	public String getStateid() {
-//		return stateid;
-//	}
-//	public void setStateid(String stateid) {
-//		this.stateid = stateid;
-//	}	
+
+	
 }

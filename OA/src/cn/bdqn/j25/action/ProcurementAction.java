@@ -87,11 +87,14 @@ public class ProcurementAction extends ActionSupport{
 	}
 	//添加采购订单
 	public String addProcurement(){	
-		System.out.println(provider.getProviderid());
-		System.out.println(material.getMaterialid());
+//		System.out.println(provider.getProviderid());
+//		System.out.println(material.getMaterialid());
 		procurement.setProvider(provider);
 		procurement.setMaterial(material);			
 		procurement.setEmployeeByOriginator(employee);
+		procurement.setTypes(type);
+		procurement.setState(state);
+		procurement.setDepartment(department);
 		String result=null;		
 		if(procurementService.addProcurement(procurement)!=false){
 			result="添加成功";

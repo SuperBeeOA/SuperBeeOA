@@ -28,6 +28,13 @@ public class productsAction extends ActionSupport {
 	private String productremarks;
 	private Map<String, Object> request = (Map) ActionContext.getContext().get("request");
 	private Map<String, Object> session = ActionContext.getContext().getSession();
+	
+	
+	
+	
+	
+	
+	
 	public ProductService getProductService() {
 		return productService;
 	}

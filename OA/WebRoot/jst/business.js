@@ -59,7 +59,7 @@ $(function() {
 		  $("#cgrder").hide();
 	  });
 	  
-	  $("#find").click(function() {
+	  $("#bs").click(function() {
 		  $("#order").show();
 		  $("#allorder").hide();
 		  $("#custable tr:eq(0)").siblings().empty();
@@ -173,7 +173,7 @@ $(function() {
 	  //添加业务订单
 	  $("#addOrder").click(function(){
 			var orderAdd=$("#orderAdd").serialize();
-			$.get("order3!addOrder?employee.employeeid=1",orderAdd,callback,"text");
+			$.get("order3!addOrder",orderAdd,callback,"text");
 		});
 	  function callback(data){
 			if(data=="添加成功"){
@@ -323,11 +323,12 @@ $(function() {
 					$(jsonObj).each(function(){						
 						$("#custable").append("<tr>"+
 							 "<td style='display:none' class='customerid'>"+this.customerid+"</td>"+
-					         "<td>"+this.customername+"</td>"+
-					         "<td>"+this.contacts+"</td>"+                                                                         
-					         "<td>"+this.phone+"</td>"+
-					         "<td>"+this.address+"</td>"+ 
-					         "<td>"+this.levels+"</td>"+
+					         "<td class='name1'>"+this.customername+"</td>"+
+					         "<td class='contacts1'>"+this.contacts+"</td>"+                                                                         
+					         "<td class='phone1'>"+this.phone+"</td>"+
+					         "<td class='address1'>"+this.address+"</td>"+ 
+					         "<td class='levels1'>"+this.levels+"</td>"+
+					         "<td class='remarks1'>"+this.remarks+"</td>"+
 					         "<td>"+"<input id='cc' type='button' value='修改'>"+        				
 					         "<input id='dc' type='button' value='删除'></td>"+
 					         "</tr>"				               			
@@ -335,31 +336,33 @@ $(function() {
 					});	
 					  $("#cc").click(function() {
 						var id=$(this).parents().siblings(".customerid").text();
-						  alert(id);
+						$("#customername").val($(this).parents().siblings(".name1").text());
+						$("#customercontacts").val($(this).parents().siblings(".contacts1").text());
+						$("#customerphone").val($(this).parents().siblings(".phone1").text());
+						$("#customeraddress").val($(this).parents().siblings(".address1").text());
+						$("#levels").val($(this).parents().siblings(".levels1").text());
+						$("#customerremarks").val($(this).parents().siblings(".remarks1").text());
+//						  alert(id);
 						  $("#mcustomer").show();
 						  $("#allcustomer").hide();
+						  
 						//修改	
 						$("#mcustomer .change").click(function(){
-							var name=$(this).siblings().attr("name");
-//							alert(name);
-							var val=$(this).siblings(":input").val();
-//							alert(val);
-							$.get("order8!updateCustomer",{"customer.customerid":id,name:val},function(data){
-								
+							var date=$("#mcustomer form").serialize();
+							alert(date);
+							$.get("order8!updateCustomer?customer.customerid="+id,date,function(data){
+								if(data=="修改成功"){
+									alert("修改成功");
+								}else{
+									alert("修改失败");
+								}
 								
 								});
 							});
 					  });
 					
-	
-//	//修改	
-//		$("#mcustomer .change").click(function(){
-//			var val=$(this).siblings(":input").val();
-//			alert(val);
-//			$.get("",{},function(data){
-							
 			});
-			
+		
 			
 		});
 		

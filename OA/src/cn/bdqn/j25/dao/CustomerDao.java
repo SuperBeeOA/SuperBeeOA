@@ -23,4 +23,6 @@ public interface CustomerDao {
 	public void delCustomer(Customer customer); //删除
 	
 	public List<Customer> findByPage(int firstResult,int maxResults);//根据客户名称拼音排序分页展示全部 
+	
+	public void updateCustomer(Customer customer);//更新客户的信息
 }

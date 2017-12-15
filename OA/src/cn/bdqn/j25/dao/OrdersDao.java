@@ -19,4 +19,6 @@ public interface OrdersDao {
 	public void addOrders(Orders orders);//添加
 	
 	public void UpdateOrders(Orders orders);//更新信息
+	
+	public List<Orders> findAllOrderByState();//查询所有待审核的订单
 }

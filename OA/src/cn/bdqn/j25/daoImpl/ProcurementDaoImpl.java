@@ -33,7 +33,7 @@ public class ProcurementDaoImpl extends HibernateDaoSupport implements
 		 return getHibernateTemplate().executeFind(new HibernateCallback(){   
 			 public Object doInHibernate(Session  s)throws HibernateException,SQLException{  
 				 Query query = s.createQuery("from Procurement order by datetime desc");  
-				 query.setFirstResult(firstResult);   
+				 query.setFirstResult((firstResult-1)*maxResults);   
 				 query.setMaxResults(maxResults);   
 				 List list  = query.list();  
 				 return list;     
