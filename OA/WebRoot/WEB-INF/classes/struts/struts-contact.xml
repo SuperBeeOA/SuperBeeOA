@@ -9,7 +9,7 @@
 			method="addContact">
 			<result type="redirect">/page/common/public.jsp</result>
 		</action>
-<<<<<<< HEAD
+
 		
 		<action name="getEmps" class="cn.bdqn.j25.action.ContactAction"
 			method="getEmps">
@@ -18,8 +18,7 @@
 				<param name="inputName">inputStream</param>
 			</result>
 		</action>
-=======
->>>>>>> 6b96a9e68ae9478909f16c5cd8697c7ff8310b07
+
 	</package>
 	
 

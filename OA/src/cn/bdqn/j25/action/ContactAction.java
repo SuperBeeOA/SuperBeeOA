@@ -1,15 +1,12 @@
 package cn.bdqn.j25.action;
 
-<<<<<<< HEAD
+
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
-=======
 import java.util.List;
 import java.util.Map;
-
->>>>>>> 6b96a9e68ae9478909f16c5cd8697c7ff8310b07
 import cn.bdqn.j25.pojo.Contact;
 import cn.bdqn.j25.pojo.Department;
 import cn.bdqn.j25.pojo.Employee;
@@ -82,7 +79,7 @@ public class ContactAction extends ActionSupport {
 	public void setContact(Contact contact) {
 		this.contact = contact;
 	}
-<<<<<<< HEAD
+
 
 	public String getEmps() {
 		List<Employee> listemp = employeeService
@@ -104,18 +101,12 @@ public class ContactAction extends ActionSupport {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-=======
-	
-	
-	
-	public String getEmps(){
-		List<Employee> listemp=employeeService.findByDepartmentName(department.getDepartmentname());
-		employeeBySender=(Employee) ActionContext.getContext().getSession().get("employee");
-		Map<String, Object> request = (Map) ActionContext.getContext().get("request");
-		request.put("listemps",listemp);
->>>>>>> 6b96a9e68ae9478909f16c5cd8697c7ff8310b07
 		return SUCCESS;
+
 	}
+	
+	
+
 
 	public String addContact() {
 		System.out.println("....aaaaa...................");

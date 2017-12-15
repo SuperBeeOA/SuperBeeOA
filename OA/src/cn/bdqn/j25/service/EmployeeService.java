@@ -23,4 +23,6 @@ public interface EmployeeService {
 	public void delEmployee(Employee employee); // 增加类型
 
 	public List<Employee> findAll(Employee employee);
+	
+	public List<Employee> findByDepartmentName(String name);
 }
