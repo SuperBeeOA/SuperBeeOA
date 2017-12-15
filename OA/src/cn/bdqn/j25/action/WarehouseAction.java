@@ -54,47 +54,20 @@ public class WarehouseAction extends ActionSupport {
 	public void setOrdersService(OrdersService ordersService) {
 		this.ordersService = ordersService;
 	}
-	
-	//查看出库单功能
 
-	@SuppressWarnings("unchecked")
-	public String findAllOrder() {
-		System.out.println("findAllOrder()Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-		
-		List<Orders> allOut = ordersService.findAllByPage(1, 5);
-		int infono = ordersService.countAll();
-		int countNo = 0;
-		if(infono%5 != 0){
-			countNo = infono/5+1;
-		}else if(infono%5 == 0){
-			countNo = infono/5;
-		}
-		Map<String, Object> request = (Map<String, Object>) ActionContext.getContext().get("request");
-		request.put("allOut", allOut);
-		request.put("countNo", countNo);
-		request.put("nowpageno", 1);
-		
-		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>findAllOrder()Stop");
-		return SUCCESS;
-		
-	}
 	
+	//翻页
 	@SuppressWarnings("unchecked")
-	public String changeOutPageNo(){
+	public String changePageNo(){
 		System.out.println("changePageNo()Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 
 		Map<String, Object> requests = (Map<String, Object>) ActionContext.getContext().get("request");
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String changeno = request.getParameter("changeno");
+		String page = request.getParameter("page");
 		int nowpageno = Integer.parseInt(request.getParameter("nowpageno"));
 		int maxno = 5;
-		int infono = ordersService.countAll();
 		int countNo = 0;
-		if(infono%5 != 0){
-			countNo = infono/5+1;
-		}else if(infono%5 == 0){
-			countNo = infono/5;
-		}
 		if(changeno.equals("first")){
 			nowpageno = 1;
 		}else if(changeno.equals("up")){
@@ -104,15 +77,52 @@ public class WarehouseAction extends ActionSupport {
 		}else if(changeno.equals("last")){
 			nowpageno = countNo;
 		}
-		List<Orders> allOut = ordersService.findAllByPage(nowpageno, maxno);
-		requests.put("allOut", allOut);
-		requests.put("countNo", countNo);
-		requests.put("nowpageno", nowpageno);
+		if(page.equals("allProductin")){
+			int infono = ordersService.countAll();
+			if(infono%5 != 0){
+				countNo = infono/5+1;
+			}else if(infono%5 == 0){
+				countNo = infono/5;
+			}
+			List<Orders> allteout = ordersService.findAllByPage(nowpageno, maxno);
+			requests.put("allteout", allteout);
+			requests.put("countNo", countNo);
+			requests.put("nowpageno", nowpageno);
+			return "allProductin";
+		}
+		
 		
 		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>changePageNo()Stop");
-		return SUCCESS;
+		return ERROR;
 	}
 	
+	
+	//查看产品出库申请功能
+	//查找所有需审核订单
+	@SuppressWarnings("unchecked")
+	public String findAllOrder() {
+		System.out.println("findAllOrder()Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		
+		List<Orders> allteout = ordersService.findAllByPage(1, 5);
+		int infono = ordersService.countAll();
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>"+infono);
+		int countNo = 0;
+		if(infono%5 != 0){
+			countNo = infono/5+1;
+		}else if(infono%5 == 0){
+			countNo = infono/5;
+		}
+		Map<String, Object> request = (Map<String, Object>) ActionContext.getContext().get("request");
+		request.put("allteout", allteout);
+		request.put("countNo", countNo);
+		request.put("nowpageno", 1);
+		
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>findAllOrder()Stop");
+		return SUCCESS;
+		
+	}
+	
+	//根据订单编号查找订单信息
 	@SuppressWarnings("unchecked")
 	public String findOrderByOrdernumber() {
 		System.out.println("findOrderByOrdernumber()Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
@@ -127,7 +137,6 @@ public class WarehouseAction extends ActionSupport {
 		return SUCCESS;
 		
 	}
-	
 	//审核原材料申请功能
 	
 	@SuppressWarnings("unchecked")
@@ -135,8 +144,8 @@ public class WarehouseAction extends ActionSupport {
 		System.out.println("findAllProcurement()Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 
 		List<Procurement> allTematerial = procurementService.findAllByPage(1, 5);
-		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>"+allTematerial.get(0).getOrdernumber());
 		int infono = procurementService.countAll();
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>"+infono);
 		int countNo = 0;
 		if(infono%5 != 0){
 			countNo = infono/5+1;

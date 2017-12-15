@@ -19,7 +19,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <td>${ requestScope.order.ordernumber }</td>
     <td>${ requestScope.order.employeeByOriginator.name }</td>
     <td>${ requestScope.order.customer.customername }</td>
-    <td>${ requestScope.order.datetime }</td>
+    <td>
+		<fmt:formatDate value="${ requestScope.order.datetime }" pattern="yyyy-MM-dd"/>
+	</td>
   </tr>
 </table>
 <table class="table table-hover table-bordered">

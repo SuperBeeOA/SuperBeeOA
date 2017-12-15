@@ -22,7 +22,7 @@ $(function() {
 	$("#teo").hide();
 	$("#ars").hide();
 	$("#irs").hide();
-	$("#tein").hide();
+	$("#fteout").hide();
 	$("#fout").hide();
 	$("#tematerial").hide();
 	$("#mwarehouse").hide();
@@ -43,7 +43,7 @@ $(function() {
 	$("#teo").hide();
 	$("#ars").hide();
 	$("#irs").hide();
-	$("#tein").hide();
+	$("#fteout").hide();
 	$("#fout").hide();
 	$("#tematerial").hide();
 	$("#mwarehouse").hide();
@@ -64,7 +64,7 @@ $(function() {
 	$("#teo").hide();
 	$("#ars").hide();
 	$("#irs").hide();
-	$("#tein").hide();
+	$("#fteout").hide();
 	$("#fout").hide();
 	$("#tematerial").hide();
 	$("#mwarehouse").hide();
@@ -85,7 +85,7 @@ $(function() {
 	$("#teo").hide();
 	$("#ars").hide();
 	$("#irs").hide();
-	$("#tein").hide();
+	$("#fteout").hide();
 	$("#fout").hide();
 	$("#tematerial").hide();
 	$("#mwarehouse").hide();

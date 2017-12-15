@@ -36,7 +36,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<tr>
 			<td>${ tematerial.ordernumber }</td>
 			<td>${ tematerial.employeeByOriginator.name }</td>
-			<td>${ tematerial.datetime }</td>
+			<td>
+				<fmt:formatDate value="${ tematerial.datetime }" pattern="yyyy-MM-dd"/>
+			</td>
 			<td>
 				<input type="hidden" value="${ tematerial.ordernumber }">
 				<input type="button" value="查看" class="gtematerial">

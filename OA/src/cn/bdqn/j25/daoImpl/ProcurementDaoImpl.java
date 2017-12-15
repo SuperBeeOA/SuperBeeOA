@@ -66,7 +66,7 @@ public class ProcurementDaoImpl extends HibernateDaoSupport implements
 		return this.getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
 			Query query = session.createQuery("from Procurement p where p.state.statename='待审核'");
-			return query.setFirstResult(pageNo).setMaxResults(max).list();
+			return query.setFirstResult((pageNo-1)*max).setMaxResults(max).list();
 			}
 		});
 	}
@@ -77,7 +77,7 @@ public class ProcurementDaoImpl extends HibernateDaoSupport implements
 		// TODO Auto-generated method stub
 		return this.getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
-			Query query = session.createQuery("select count(*) from Procurement");
+			Query query = session.createQuery("select count(p.procurementid) from Procurement p where p.state.statename='待审核'");
 			return Integer.parseInt(query.uniqueResult().toString());
 			}
 		});

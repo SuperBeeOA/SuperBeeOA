@@ -1,6 +1,7 @@
 $(function() {
-	$("#tei").click(function() {
-		$("#tein").show();
+	$("#teout").click(function() {
+		$("#allteout").load("findallorder.action");
+		$("#fteout").show();
 		$("#contact").hide();
 		$("#attendance").hide();
 		$("#announcement").hide();
@@ -17,7 +18,7 @@ $(function() {
 		$("#attendance").hide();
 		$("#announcement").hide();
 		$("#info").hide();
-		$("#tein").hide();
+		$("#fteout").hide();
 		$("#tematerial").hide();
 		$("#mwarehouse").hide();
 	});
@@ -30,7 +31,7 @@ $(function() {
 		$("#announcement").hide();
 		$("#info").hide();
 		$("#fout").hide();
-		$("#tein").hide();
+		$("#fteout").hide();
 		$("#mwarehouse").hide();
 	});
 
@@ -42,17 +43,7 @@ $(function() {
 		$("#info").hide();
 		$("#fout").hide();
 		$("#tematerial").hide();
-		$("#tein").hide();
-	});
-	
-	$("#ftein").click(function() {
-		$("#teins").show();
-		$("#alltein").hide();
-	});
-	
-	$("#btei").click(function() {
-		$("#alltein").show();
-		$("#teins").hide();
+		$("#fteout").hide();
 	});
 	
 	$(".gout").click(function() {
@@ -66,25 +57,41 @@ $(function() {
 		$("#allout").show();
 		$("#faout").hide();
 	});
+
+	//allProductin.jsp翻页
+	var allProductin = "allProductin";
 	
-	$("#allout-first").click(function() {
-		var nowpageno = $("#allout-nowpageno").text();
-		$("#allout").load("changeoutpageno.action",{"changeno":"first","nowpageno":nowpageno});
+	$("#allteout-first").click(function() {
+		var nowpageno = $("#allteout-nowpageno").text();
+		$("#allteout").load("changepageno.action",{"changeno":"first","nowpageno":nowpageno,"page":allProductin});
 	});
 	
-	$("#allout-up").click(function() {
-		var nowpageno = $("#allout-nowpageno").text();
-		$("#allout").load("changeoutpageno.action",{"changeno":"up","nowpageno":nowpageno});
+	$("#allteout-up").click(function() {
+		var nowpageno = $("#allteout-nowpageno").text();
+		$("#allteout").load("changepageno.action",{"changeno":"up","nowpageno":nowpageno,"page":allProductin});
 	});
 	
-	$("#allout-down").click(function() {
-		var nowpageno = $("#allout-nowpageno").text();
-		$("#allout").load("changeoutpageno.action",{"changeno":"down","nowpageno":nowpageno});
+	$("#allteout-down").click(function() {
+		var nowpageno = $("#allteout-nowpageno").text();
+		$("#allteout").load("changepageno.action",{"changeno":"down","nowpageno":nowpageno,"page":allProductin});
 	});
 	
-	$("#allout-last").click(function() {
-		var nowpageno = $("#allout-nowpageno").text();
-		$("#allout").load("changeoutpageno.action",{"changeno":"last","nowpageno":nowpageno});
+	$("#allteout-last").click(function() {
+		var nowpageno = $("#allteout-nowpageno").text();
+		$("#allteout").load("changepageno.action",{"changeno":"last","nowpageno":nowpageno,"page":allProductin});
+	});
+	
+	//allProductin.jsp查看详情
+	$("#gteout").click(function() {
+		var ordernumber = $(this).prev().val();
+		$("#teouts").load("findorderbyordernumber.action","ordernumber="+ordernumber);
+		$("#teouts").show();
+		$("#allteout").hide();
+	});
+	
+	$("#bteo").click(function() {
+		$("#allteout").show();
+		$("#teouts").hide();
 	});
 	
 	$("#tematerial-first").click(function() {

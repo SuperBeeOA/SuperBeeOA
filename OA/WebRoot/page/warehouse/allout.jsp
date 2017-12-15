@@ -37,7 +37,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<tr>
 			<td>${ allout.ordernumber }</td>
 			<td>${ allout.employeeByOriginator.name }</td>
-			<td>${ allout.datetime }</td>
+			<td>
+				<fmt:formatDate value="${ allout.datetime }" pattern="yyyy-MM-dd"/>
+			</td>
 			<td>
 				<input type="hidden" value="${ allout.ordernumber }">
 			    <input type="button" value="查看" class="gout">

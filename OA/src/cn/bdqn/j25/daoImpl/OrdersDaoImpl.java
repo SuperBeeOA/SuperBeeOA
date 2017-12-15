@@ -84,8 +84,8 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 		// TODO Auto-generated method stub
 		return this.getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
-			Query query = session.createQuery("from Orders");
-			return query.setFirstResult(pageNo).setMaxResults(max).list();
+			Query query = session.createQuery("from Orders o where o.state.statename='完结'");
+			return query.setFirstResult((pageNo-1)*max).setMaxResults(max).list();
 			}
 		});
 	}
@@ -96,7 +96,7 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 		// TODO Auto-generated method stub
 		return this.getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
-			Query query = session.createQuery("select count(*) from Orders");
+			Query query = session.createQuery("select count(o.orderid) from Orders o where o.state.statename='完结'");
 			return Integer.parseInt(query.uniqueResult().toString());
 			}
 		});
