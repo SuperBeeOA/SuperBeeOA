@@ -33,7 +33,7 @@
 		            	
 	            	</div>
 	            	<div id="order" style="display: none;">
-	            		<table class="table">
+	            	<!-- 	<table class="table">
 	            			<tr>
 	            				<td>订单号：</td>
 	            				<td></td>
@@ -62,7 +62,7 @@
 	            		</table>
 	            		<input id="yes" class="btn btn-primary" type="button" value="通过">
 	            		<input id="no" class="btn btn-primary" type="button" value="驳回">
-	            		<input id="bo" class="btn btn-primary pull-right" type="button" value="返回">
+	            		<input id="bo" class="btn btn-primary pull-right" type="button" value="返回"> -->
 	            	</div>
 	            </div>
 	            <div id="ars" style="display: none;">

@@ -49,7 +49,15 @@ public class OrderAction extends ActionSupport{
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
 	
-	//查看所有待审核的订单
+	//生产部根据订单id查询
+	public String findByID(){
+		orders=ordersService.findByid(orders.getOrderid());		
+		request.put("waitpass", orders);
+		return SUCCESS;
+	}
+	
+	
+	//生产部查看所有业务审核过的订单
 		public String findAllOrders(){
 			listOrders=ordersService.findAllOrderByState();
 			request.put("stateOrderlist", listOrders);			

@@ -20,7 +20,7 @@ public interface OrdersDao {
 	
 	public void UpdateOrders(Orders orders);//更新信息
 	
-	public List<Orders> findAllOrderByState();//查询所有待审核的订单
+	public List<Orders> findAllOrderByState();//查询所有业务审核过的订单
 
 	public List<Orders> findAllByPage(int pageNo,int max);//分页展示全部
 	

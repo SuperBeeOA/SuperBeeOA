@@ -76,7 +76,7 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 	@Override
 	public List<Orders> findAllOrderByState() {
 		// TODO Auto-generated method stub
-		return getHibernateTemplate().find("from Orders o where o.state.stateid=1");
+		return getHibernateTemplate().find("from Orders o where o.state=2");
 	}
 	
 	@SuppressWarnings("unchecked")

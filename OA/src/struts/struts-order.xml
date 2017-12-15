@@ -74,6 +74,10 @@
 		<action name="order9" class="cn.bdqn.j25.action.OrderAction" method="findAllOrders" >
 			<result>/page/order/stateorder.jsp</result>
 		</action> 
+		
+		<action name="order10" class="cn.bdqn.j25.action.OrderAction" method="findByID" >
+			<result>/page/order/passorder.jsp</result>
+		</action> 
 	</package> 
 	
 
