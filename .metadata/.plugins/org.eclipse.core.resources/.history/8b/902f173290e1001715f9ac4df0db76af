@@ -44,7 +44,7 @@ $(function() {
 	  
 	 //查询所有待审核的订单 
 	  $("#te").click(function(){
-		  $("#allorder").load("order9!findAllOrders");
+		  $("#allorder").load("order9!fingAllOrders");
 	  });
 	
 	  

@@ -79,8 +79,7 @@ public class OrdersServiceImpl implements OrdersService {
 	public List<Orders> findAllOrderByState() {
 		// TODO Auto-generated method stub
 		return ordersDao.findAllOrderByState();
-	}
-	
+
 	public List<Orders> findAllByPage(int pageNo, int max) {
 		// TODO Auto-generated method stub
 		return ordersDao.findAllByPage(pageNo, max);

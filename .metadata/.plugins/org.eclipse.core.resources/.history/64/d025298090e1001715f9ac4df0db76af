@@ -78,7 +78,6 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 		// TODO Auto-generated method stub
 		return getHibernateTemplate().find("from Orders o where o.state.stateid=1");
 	}
-	
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Orders> findAllByPage(final int pageNo,final int max) {

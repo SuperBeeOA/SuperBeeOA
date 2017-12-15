@@ -71,7 +71,7 @@
 			<result>/page/order/order.jsp</result>
 		</action> 
 		
-		<action name="order9" class="cn.bdqn.j25.action.OrderAction" method="findAllOrders" >
+		<action name="order9" class="cn.bdqn.j25.action.OrderAction" method="fingAllOrders" >
 			<result>/page/order/stateorder.jsp</result>
 		</action> 
 	</package> 

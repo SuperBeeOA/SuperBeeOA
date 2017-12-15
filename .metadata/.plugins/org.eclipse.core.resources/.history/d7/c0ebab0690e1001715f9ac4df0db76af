@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		            		<tr>
 		            			<td style="display: none;" class="orderid">${state.orderid}</td>
 		            			<td>${state.ordernumber}</td>
-		            			<td><%-- ${state.customer.customername} --%></td>
+		            			<td>${state.customer.customername}</td>
 		            			<td>${state.employeeByOriginator.name}</td>
 		            			<td>${state.datetime}</td>
 		            			<td><input id="examine" type="button" value="审核"></td>

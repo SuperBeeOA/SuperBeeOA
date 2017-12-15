@@ -50,7 +50,7 @@ public class OrderAction extends ActionSupport{
 			"request");
 	
 	//查看所有待审核的订单
-		public String fingAllOrders(){
+		public String findAllOrders(){
 			listOrders=ordersService.findAllOrderByState();
 			request.put("stateOrderlist", listOrders);			
 			return SUCCESS;
