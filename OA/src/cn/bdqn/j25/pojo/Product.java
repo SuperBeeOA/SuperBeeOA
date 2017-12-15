@@ -28,7 +28,7 @@ public class Product implements java.io.Serializable {
 
 	// Constructors
 
-<<<<<<< HEAD
+
 	public String getUnit() {
 		return unit;
 	}
@@ -44,16 +44,11 @@ public class Product implements java.io.Serializable {
 	public void setUnit(String unit) {
 		this.unit = unit;
 	}
-=======
->>>>>>> af36e01fd40d7c03e82ab73926c69d95c7b8f8de
+
 
 	/** default constructor */
 	public Product() {
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> 86a4d067baa50770d063ede07e05642fe7568b04
 
 	/** minimal constructor */
 	public Product(String productname) {
@@ -74,10 +69,7 @@ public class Product implements java.io.Serializable {
 		this.truckage = truckage;
 		this.productremarks = productremarks;
 	}
-<<<<<<< HEAD
 
-=======
->>>>>>> 86a4d067baa50770d063ede07e05642fe7568b04
 
 	/** full constructor */
 	public Product(Types types, String productname, String productno,

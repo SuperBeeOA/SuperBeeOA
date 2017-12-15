@@ -4,6 +4,7 @@ import java.util.List;
 
 import cn.bdqn.j25.dao.AnnouncementDao;
 import cn.bdqn.j25.pojo.Announcement;
+import cn.bdqn.j25.pojo.Employee;
 import cn.bdqn.j25.service.AnnouncementService;
 
 public class AnnouncementServiceImpl implements AnnouncementService {
@@ -39,6 +40,18 @@ public class AnnouncementServiceImpl implements AnnouncementService {
 	@Override
 	public void delAnnouncement(String announcementid) {
 		annoucementDao.delAnnouncement(announcementid);
+	}
+
+	@Override
+	public List<Announcement> findByOpen() {
+		// TODO Auto-generated method stub
+		return annoucementDao.findByOpen();
+	}
+
+	@Override
+	public List<Announcement> findBydepartment(String depName) {
+		// TODO Auto-generated method stub
+		return annoucementDao.findBydepartment(depName);
 	}
 
 

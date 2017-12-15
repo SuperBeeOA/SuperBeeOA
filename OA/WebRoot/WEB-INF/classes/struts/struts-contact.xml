@@ -7,12 +7,15 @@
 	<package name="contact" extends="struts-default">
 		<action name="addContact" class="cn.bdqn.j25.action.ContactAction"
 			method="addContact">
-			<result>/page/public.jsp</result>
+			<result type="redirect">/page/common/public.jsp</result>
 		</action>
 		
 		<action name="getEmps" class="cn.bdqn.j25.action.ContactAction"
 			method="getEmps">
-			<result>/page/public/lodemps.jsp</result>
+			<result type="stream">
+				<param name="contentType">application/json</param>
+				<param name="inputName">inputStream</param>
+			</result>
 		</action>
 	</package>
 </struts>

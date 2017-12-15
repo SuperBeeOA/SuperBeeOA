@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
 <script src="${pageContext.request.contextPath }/jst/public.js"></script>
 <%@include file="../common/js.jsp" %>
-<c:forEach items="${ requestScope.listemps }" var="emp">
+<c:forEach items="${ sessionScope.listemp }" var="emp">
 	<option value="${ emp.name }">${ emp.name }</option>
 </c:forEach>
 

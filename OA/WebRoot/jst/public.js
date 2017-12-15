@@ -102,7 +102,28 @@ $(function() {
   });
   
   $("#departmentname").change(function() {
+	  $("#empname").html("");
 	  var departmentname = $(this).val();
-	$("#empname").load("getEmps.action","departmentname="+departmentname);
+	 $.ajax(
+			  {
+
+				  type: 'POST',
+				  url: "getEmps!getEmps",
+				dataType: 'json',
+				  data:"department.departmentname="+departmentname,
+				success: function (data) {
+					  for(var i=0;i<data.length;i++){
+						  $("#empname").append(
+						            "<option value="+data[i]["empName"]+">"+data[i]["empName"]+"</option>"   			
+								);
+					  }
+						
+							
+							
+				  	}
+				  }
+			  );
+	  
+	
   });
 });

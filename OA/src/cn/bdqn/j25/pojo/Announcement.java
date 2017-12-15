@@ -11,7 +11,7 @@ public class Announcement implements java.io.Serializable {
 	// Fields
 
 	private Integer announcementid;
-	private State state;
+	private State state ;
 	private Employee employee;
 	private Department department;
 	private String title;

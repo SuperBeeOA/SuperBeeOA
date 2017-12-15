@@ -39,7 +39,8 @@ public class ContactDaoImpl extends HibernateDaoSupport implements ContactDao {
 	@Override
 	public Contact updateContact(Contact contact) {
 		// TODO Auto-generated method stub
-		 return this.getHibernateTemplate().merge(contact);
+		  this.getHibernateTemplate().save(contact);
+		  return null;
 	}
 
 }

@@ -80,7 +80,7 @@
 <div id="announcement" style="display: none;">
 	<h2 class="text-center">发布公告</h2>
 	<hr>
-	<form action="">
+	<form action="addAnnouncement.action" method="post">
 		发布范围：
 		<select name="scope">
 			<option value="1">本部门</option>
@@ -88,13 +88,19 @@
 			<option value="3">全公司</option>
 		</select>
 		<br>
+		<input type="hidden" name="employeeBySender.employeeid" value="${sessionScope.employee.employeeid}"/>
+		<input type="hidden" name="employeeBySender.department.departmentid" value="${sessionScope.employee.department.departmentid}"/>
+		公告标题：
+		<br>
+		<input type="text" name="announcement.title"/>
+		<br>
 		公告内容：
 		<br>
-		<textarea rows="20" cols="100" name="com" id="com" class="col-md-offset-1"></textarea>
+		<textarea name="announcement.context" rows="20" cols="100" id="com" class="col-md-offset-1"></textarea>
 		<br>
 		上传图片：
 		<br>
-		<input type="file" name="image">
+		<!-- <input type="file" name="announcement.image"> -->
 		<br>
 		<input class="btn btn-primary" type="submit" value="发布公告" style="position: relative; left: 45%;">
 	</form>
@@ -113,7 +119,7 @@
 				<option value="3">总部</option>
 			</select> -->
 			所属部门：
-			<select name="department.departmentname" id="departmentname">
+			<select name="contact.department.departmentname" id="departmentname">
 				<option value="业务">业务部</option>
 				<option value="人事">人事部</option>
 				<option value="财务">财务部</option>
@@ -122,13 +128,14 @@
 				<option value="质检">质检部</option>
 			</select>
 			姓名：
-			<select name="employeeByRecipient.name" id="empname">
+			<select name="contact.employeeByRecipient.name" id="empname">
 				
 			</select>
+			<input type="hidden" name="contact.employeeBySender.name" value="${sessionScope.employee.name }">
 			<br>
 			信息内容：
 			<br>
-			<textarea name="contact.ccontent" rows="20" cols="100" name="com" id="com" class="col-md-offset-1"></textarea>
+			<textarea name="contact.content" rows="20" cols="100" name="com" id="com" class="col-md-offset-1"></textarea>
 			<br>
 			<input class="btn btn-primary" type="submit" value="发送消息" style="position: relative; left: 45%;">
 		</form>

@@ -16,7 +16,7 @@
         <many-to-one name="employee" class="cn.bdqn.j25.pojo.Employee" fetch="select">
             <column name="EMPLOYEEID" precision="9" scale="0" />
         </many-to-one>
-        <many-to-one name="department" class="cn.bdqn.j25.pojo.Department" fetch="select">
+        <many-to-one name="department" class="cn.bdqn.j25.pojo.Department" fetch="select" >
             <column name="DEPARTMENTID" precision="9" scale="0" />
         </many-to-one>
         <property name="title" type="java.lang.String">

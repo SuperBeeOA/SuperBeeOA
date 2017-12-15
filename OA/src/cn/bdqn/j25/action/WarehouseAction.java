@@ -31,16 +31,16 @@ public class WarehouseAction extends ActionSupport {
 		this.ordersService = ordersService;
 	}
 
-	public String findAllOrder() {
+	/*public String findAllOrder() {
 		System.out.println("Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		List<Orders> allOut = ordersService.findAllByPage(1, 10);
 		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+allOut.get(0).getOrdernumber());
 		Map<String, Object> request = (Map) ActionContext.getContext().get("request");
 		request.put("allOut", allOut);
-		/*Map<String, Object> session = (Map) ActionContext.getContext().getSession();
-		session.put("allOut", allOut);*/
+		Map<String, Object> session = (Map) ActionContext.getContext().getSession();
+		session.put("allOut", allOut);
 		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Stop");
 		return SUCCESS;
 		
-	}
+	}*/
 }

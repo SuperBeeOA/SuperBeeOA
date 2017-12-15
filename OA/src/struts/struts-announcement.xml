@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<package name="announcement" extends="struts-default">
+		<action name="addAnnouncement" class="cn.bdqn.j25.action.AnnouncementAction"
+			method="addAnnouncement">
+			<result type="redirect">/page/common/public.jsp</result>
+		</action>
+        <action name="finaByOpen" class="cn.bdqn.j25.action.AnnouncementAction"
+			method="finaByOpen">
+			<result>/page/main.jsp</result>
+		</action>
+		  <action name="findBydepartment" class="cn.bdqn.j25.action.AnnouncementAction"
+			method="findBydepartment">
+			<result>/page/main.jsp</result>
+		</action>
+	</package>
+</struts>

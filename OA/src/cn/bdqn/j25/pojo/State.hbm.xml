@@ -35,7 +35,7 @@
             <key>
                 <column name="STATEID" precision="9" scale="0" />
             </key>
-            <one-to-many class="cn.bdqn.j25.pojo.Announcement" />
+            <one-to-many class="cn.bdqn.j25.pojo.Announcement"  />
         </set>
         <set name="orderses" inverse="true">
             <key>

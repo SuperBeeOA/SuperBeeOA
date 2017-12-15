@@ -10,6 +10,8 @@
 	<include file="struts/struts-procurement.xml"></include>
 	<include file="struts/struts-contact.xml"></include>
 	<include file="struts/struts-warehouse.xml"></include>
+	<include file="struts/struts-announcement.xml"></include>
+	
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
 	<constant name="struts.custom.i18n.resources" value="message" />
 	<constant name="struts.i18n.encoding" value="UTF-8" />
