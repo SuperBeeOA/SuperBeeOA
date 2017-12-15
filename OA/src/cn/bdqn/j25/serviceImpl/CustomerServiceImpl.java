@@ -66,4 +66,10 @@ public class CustomerServiceImpl implements CustomerService {
 		customerDao.delCustomer(customer);
 	}
 
+	@Override
+	public List<Customer> findByPage(int firstResult, int maxResults) {
+		// TODO Auto-generated method stub
+		return customerDao.findByPage(firstResult, maxResults);
+	}
+
 }

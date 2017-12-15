@@ -62,6 +62,27 @@ $(function() {
 	  $("#find").click(function() {
 		  $("#order").show();
 		  $("#allorder").hide();
+		  $("#custable tr:eq(0)").siblings().empty();
+			$.getJSON("order7!findAllCustomer",{"first":1},function(data){
+				 var jsonObj=data;		
+					$(jsonObj).each(function(){
+						
+						$("#custable").append("<tr>"+
+					         "<td>"+this.customername+"</td>"+
+					         "<td>"+this.contacts+"</td>"+                                                                         
+					         "<td>"+this.phone+"</td>"+
+					         "<td>"+this.address+"</td>"+ 
+					         "<td>"+this.levels+"</td>"+
+					         "<td>"+"<input id='cc' type='button' value='修改'>"+        				
+					         "<input id='dc' type='button' value='删除'></td>"+
+					         "</tr>"				               			
+						);
+					});	
+					  $("#cc").click(function() {
+						  $("#mcustomer").show();
+						  $("#allcustomer").hide();
+					  });
+			});
 	  });
 
 	  $("#bo").click(function() {
@@ -69,10 +90,10 @@ $(function() {
 		  $("#order").hide();
 	  });
 
-	  $("#cc").click(function() {
-		  $("#mcustomer").show();
-		  $("#allcustomer").hide();
-	  });
+//	  $("#cc").click(function() {
+//		  $("#mcustomer").show();
+//		  $("#allcustomer").hide();
+//	  });
 
 	  $("#bc").click(function() {
 		  $("#allcustomer").show();
@@ -149,16 +170,21 @@ $(function() {
 	  });
 	  
 	  
-	  //添加订单
-	  $(".btn-primary").click(function(){
+	  //添加业务订单
+	  $("#addOrder").click(function(){
 			var orderAdd=$("#orderAdd").serialize();
 			$.get("order3!addOrder?employee.employeeid=1",orderAdd,callback,"text");
 		});
 	  function callback(data){
 			if(data=="添加成功"){
 				alert("添加成功");			
+				$(':input','#orderAdd')
+			      .not(':button,:submit,:reset,:hidden')//将myform表单中input元素type为button、submit、reset、hidden排除
+			      .val('')  //将input元素的value设为空值
+			      .removeAttr('checked')
+			      .removeAttr('checked') // 如果任何radio/checkbox/select inputs有checked or selected 属性，将其移除
 			}else{				
-				 $(':input','#myform')
+				 $(':input','#orderAdd')
 			       .not(':button,:submit,:reset,:hidden')//将myform表单中input元素type为button、submit、reset、hidden排除
 			       .val('')  //将input元素的value设为空值
 			       .removeAttr('checked')
@@ -227,16 +253,21 @@ $(function() {
 		  });
 		  
 		  
-		  //添加订单
-		  $(".btn-primary1").click(function(){
+		  //添加采购订单
+		  $("#addprocurement").click(function(){
 				var orderAdd=$("#Procurement").serialize();
 				$.get("procurement3!addProcurement?employee.employeeid=1",orderAdd,callback,"text");
 			});
 		  function callback(data){
 				if(data=="添加成功"){
-					alert("添加成功");			
+					alert("添加成功");	
+					 $(':input','#Procurement')
+				       .not(':button,:submit,:reset,:hidden')//将myform表单中input元素type为button、submit、reset、hidden排除
+				       .val('')  //将input元素的value设为空值
+				       .removeAttr('checked')
+				       .removeAttr('checked') // 如果任何radio/checkbox/select inputs有checked or selected 属性，将其移除
 				}else{				
-					 $(':input','#myform')
+					 $(':input','#Procurement')
 				       .not(':button,:submit,:reset,:hidden')//将myform表单中input元素type为button、submit、reset、hidden排除
 				       .val('')  //将input元素的value设为空值
 				       .removeAttr('checked')
@@ -254,7 +285,7 @@ $(function() {
 		$(".buy").click(function(){
 			$("#chakan").load("procurement4!findProcurement","first=1");
 		});
-	//审核
+	//审核订单
 		$(".pass").click(function(){
 			var id=$(this).parents().siblings(".orderid").text();
 			$.get("order5!pass",{"orders.orderid":id,"state.stateid":2},function(date){
@@ -269,7 +300,7 @@ $(function() {
 						
 		});
 		
-	//取消
+	//取消订单
 		$(".cancel").click(function(){
 			var id=$(this).parents().siblings(".orderid").text();
 			$.get("order6!cancel",{"orders.orderid":id,"state.stateid":6},function(date){
@@ -283,4 +314,53 @@ $(function() {
 			});
 						
 		});
+		
+	//管理客户
+		$("#mc").click(function(){
+			$("#custable tr:eq(0)").siblings().empty();
+			$.getJSON("order7!findAllCustomer",{"first":1},function(data){
+				 var jsonObj=data;		
+					$(jsonObj).each(function(){						
+						$("#custable").append("<tr>"+
+							 "<td style='display:none' class='customerid'>"+this.customerid+"</td>"+
+					         "<td>"+this.customername+"</td>"+
+					         "<td>"+this.contacts+"</td>"+                                                                         
+					         "<td>"+this.phone+"</td>"+
+					         "<td>"+this.address+"</td>"+ 
+					         "<td>"+this.levels+"</td>"+
+					         "<td>"+"<input id='cc' type='button' value='修改'>"+        				
+					         "<input id='dc' type='button' value='删除'></td>"+
+					         "</tr>"				               			
+						);
+					});	
+					  $("#cc").click(function() {
+						var id=$(this).parents().siblings(".customerid").text();
+						  alert(id);
+						  $("#mcustomer").show();
+						  $("#allcustomer").hide();
+						//修改	
+						$("#mcustomer .change").click(function(){
+							var name=$(this).siblings().attr("name");
+//							alert(name);
+							var val=$(this).siblings(":input").val();
+//							alert(val);
+							$.get("order8!updateCustomer",{"customer.customerid":id,name:val},function(data){
+								
+								
+								});
+							});
+					  });
+					
+	
+//	//修改	
+//		$("#mcustomer .change").click(function(){
+//			var val=$(this).siblings(":input").val();
+//			alert(val);
+//			$.get("",{},function(data){
+							
+			});
+			
+			
+		});
+		
 });

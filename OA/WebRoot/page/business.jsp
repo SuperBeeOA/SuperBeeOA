@@ -18,7 +18,7 @@
 				                <li id="fan"><a href="javascript:void(0)">发布公告</a></li>
 				                <li id="fc"><a href="javascript:void(0)">内部联络</a></li>
 				                <li id="fo"><a href="javascript:void(0)">查看订单</a></li>
-				                <li id="ao"><a href="javascript:void(0)">生成销售订单</a></li>
+				                <li id="ao"><a href="javascript:void(0)">生成业务订单</a></li>
 				                <li id="cg"><a href="javascript:void(0)">生成采购订单</a></li>
 				                <li id="mc"><a href="javascript:void(0)">管理客户</a></li>
 	            				<li id="ms"><a href="javascript:void(0)">管理供应商</a></li>	            				
@@ -40,7 +40,7 @@
 	            </div>
 	            </div>
 	            <div id="aorder" style="display: none;">
-	            	<h2 class="text-center">生成订单</h2>
+	            	<h2 class="text-center">生成业务订单</h2>
 	            	<hr>
 	            	<form action="javascript:void(0);"  id="orderAdd">
 	            		<table class="table">
@@ -78,11 +78,13 @@
 	            			</tr>
 	            		
 	            		</table>
-	            		<input class="btn btn-primary" type="button" value="提交订单" style="position: relative; left: 45%;">
+	            		<input id="addOrder" class="btn btn-primary" type="button" value="提交订单" style="position: relative; left: 45%;">
 	            	</form>
 	            </div>
+	            
+	            
 	           <div id="cgrder" style="display: none;">
-	            	<h2 class="text-center">生成销售订单</h2>
+	            	<h2 class="text-center">生成采购订单</h2>
 	            	<hr>
 	            	<form action="javascript:void(0);"  id="Procurement">
 	            		<table class="table">
@@ -118,7 +120,7 @@
 	            			</tr>
 	            		
 	            		</table>
-	            		<input class="btn btn-primary1" type="button" value="提交订单" style="position: relative; left: 45%;">
+	            		<input id="addprocurement" class="btn btn-primary1" type="button" value="提交订单" style="position: relative; left: 45%;">
 	            	</form>
 	            </div>
 	            
@@ -126,75 +128,56 @@
 	            	<h2 class="text-center">管理客户</h2>
 	            	<hr>
 	            <div id="allcustomer">
-		            	<table class="table table-hover table-bordered">
+		            	<table class="table table-hover table-bordered" id="custable">
 		            		<tr>
-		            			<td>客户编号</td>
 		            			<td>客户名称</td>
+		            			<td>联系人</td>
+		            			<td>电话</td>
+		            			<td>地址</td>
 		            			<td>客户级别</td>
-		            			<td>联系电话</td>
 		            			<td>操作</td>
 		            		</tr>
-		            		<tr>
-		            			<td></td>
-		            			<td></td>
-		            			<td></td>
-		            			<td></td>
-		            			<td>
-		            				<input id="cc" type="button" value="修改">
-		            				<input id="dc" type="button" value="删除">
-		            			</td>
-		            		</tr>
+		            		
 		            	</table>
 	            	</div>
 	            	<div id="mcustomer" style="display: none;">
 	            		<ul class="list-unstyled" style="padding: 50px;">
+	            		
 	            			<li>
-	            				客户编号: 
-	            				
+	            				请输入修改后的客户名称: 
+	            				<input type="text" name="customer.customername" >
 	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="customerid">
+	            				
 	            			</li>
 	            			<br>
 	            			<li>
-	            				客户名称: 
-	            				
-	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="customername">
+	            				请输入修改后的地址: 
+	            				<input type="text" name="customer.address" >
+	            				<input class="change" type="button" value="修改">	            				
 	            			</li>
 	            			<br>
 	            			<li>
-	            				地址: 
-	            				
+	            				请输入修改后的客户级别: 
+	            				<input type="text" name="customer.levels" >
 	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="address">
-	            			</li>
-	            			<br>
-	            			<li>
-	            				客户级别: 
-	            				
-	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="levels">
 	            			</li>
 	            			<br>
 	            			<li>
 	            				联系人: 
-	            				
+	            				<input type="text" name="customer.contacts" >
 	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="contacts">
 	            			</li>
 	            			<br>
 	            			<li>
 	            				联系电话: 
-	            				
+	            				<input type="text" name="customer.phone" >
 	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="phone">
 	            			</li>
 	            			<br>
 	            			<li>
 	            				备注: 
-	            				
+	            				<input type="text" name="customer.remarks" >
 	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="remarks">
 	            			</li>
 	            		</ul>
 	            		<input id="bc" class="btn btn-primary pull-right" type="button" value="返回">

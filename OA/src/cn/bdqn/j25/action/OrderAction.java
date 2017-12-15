@@ -7,6 +7,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
 import net.sf.json.util.CycleDetectionStrategy;
@@ -43,18 +44,41 @@ public class OrderAction extends ActionSupport{
 	private State state;
 	private String productid;
 	private String first;
-	private String max="10";
+	private String max="5";
 	@SuppressWarnings("unchecked")
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
 //	private String orderid;
 //	private String stateid;
 	
+	//修改客户信息
+	
+	public String updateCustomer(){
+		
+		
+		return SUCCESS;
+	}
+	
+	//查看所有客户
+	public String findAllCustomer(){
+		
+		JsonConfig jsonConfig = new JsonConfig();
+		jsonConfig.setIgnoreDefaultExcludes(false); //设置默认忽略 
+		jsonConfig.setCycleDetectionStrategy(CycleDetectionStrategy.LENIENT);//设置循环策略为忽略    解决json最头疼的问题 死循环
+		jsonConfig.setExcludes(new String[] {"orderses"});//此处是亮点，只要将所需忽略字段加到数组中即可
+		listCustomer=customerService.findByPage(Integer.parseInt(first),Integer.parseInt(max));
+		String jsonStr = JSONArray.fromObject(listCustomer, jsonConfig).toString();
+		try {
+			inputStream = new ByteArrayInputStream(jsonStr.getBytes("utf-8")) ;
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		return SUCCESS;
+	}
 	
 	//审核
 	public String pass(){
-//		System.out.println(state.getStateid());
-//		System.out.println(orders.getOrderid());
 		orders=ordersService.findByid(orders.getOrderid());		
 		orders.setState(state);
 		orders.setOrderid(orders.getOrderid());
