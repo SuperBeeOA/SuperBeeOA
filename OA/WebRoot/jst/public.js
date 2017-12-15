@@ -22,7 +22,7 @@ $(function() {
 	$("#teo").hide();
 	$("#ars").hide();
 	$("#irs").hide();
-	$("#tein").hide();
+	$("#fteout").hide();
 	$("#fout").hide();
 	$("#tematerial").hide();
 	$("#mwarehouse").hide();
@@ -43,7 +43,7 @@ $(function() {
 	$("#teo").hide();
 	$("#ars").hide();
 	$("#irs").hide();
-	$("#tein").hide();
+	$("#fteout").hide();
 	$("#fout").hide();
 	$("#tematerial").hide();
 	$("#mwarehouse").hide();
@@ -64,7 +64,7 @@ $(function() {
 	$("#teo").hide();
 	$("#ars").hide();
 	$("#irs").hide();
-	$("#tein").hide();
+	$("#fteout").hide();
 	$("#fout").hide();
 	$("#tematerial").hide();
 	$("#mwarehouse").hide();
@@ -85,7 +85,7 @@ $(function() {
 	$("#teo").hide();
 	$("#ars").hide();
 	$("#irs").hide();
-	$("#tein").hide();
+	$("#fteout").hide();
 	$("#fout").hide();
 	$("#tematerial").hide();
 	$("#mwarehouse").hide();
@@ -100,6 +100,7 @@ $(function() {
 	$("#out").show();
 	$("#in").hide();
   });
+<<<<<<< HEAD
   
   $("#departmentname").change(function() {
 	  $("#empname").html("");
@@ -126,4 +127,6 @@ $(function() {
 	  
 	
   });
+=======
+>>>>>>> 6b96a9e68ae9478909f16c5cd8697c7ff8310b07
 });

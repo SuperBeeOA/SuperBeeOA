@@ -31,18 +31,6 @@ public class OrdersServiceImpl implements OrdersService {
 	}
 
 	@Override
-	public List<Orders> findByPage(Orders orders, int first, int max) {
-		// TODO Auto-generated method stub
-		return ordersDao.findByPage(orders, first, max);
-	}
-
-	@Override
-	public Orders addOrUpdateOrders(Orders orders) {
-		// TODO Auto-generated method stub
-		return ordersDao.addOrUpdateOrders(orders);
-	}
-
-	@Override
 	public void delOrders(Orders orders) {
 		// TODO Auto-generated method stub
 		ordersDao.delOrders(orders);
@@ -67,5 +55,44 @@ public class OrdersServiceImpl implements OrdersService {
 			return false;
 		}
 	}
+
+	@Override
+	public List<Orders> findByPage(int firstResult, int maxResults) {
+		// TODO Auto-generated method stub
+		return ordersDao.findByPage(firstResult, maxResults);
+	}
+
+	@Override
+	public boolean UpdateOrders(Orders orders){
+		// TODO Auto-generated method stub
+		try {
+			ordersDao.UpdateOrders(orders);
+			return true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+<<<<<<< HEAD
+	public List<Orders> findAllOrderByState() {
+		// TODO Auto-generated method stub
+		return ordersDao.findAllOrderByState();
+=======
+	public List<Orders> findAllByPage(int pageNo, int max) {
+		// TODO Auto-generated method stub
+		return ordersDao.findAllByPage(pageNo, max);
+	}
+
+	@Override
+	public int countAll() {
+		// TODO Auto-generated method stub
+		return ordersDao.countAll();
+>>>>>>> 07229d919aa75ddc1b3172253e297acc455c7006
+	}
+
+	
 
 }

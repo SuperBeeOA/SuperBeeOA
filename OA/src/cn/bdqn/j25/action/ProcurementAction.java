@@ -33,6 +33,7 @@ public class ProcurementAction extends ActionSupport{
 	private Procurement procurement;
 	private Provider provider;
 	private ProviderService providerService;
+	private List<Procurement> listProcurement;
 	private List<Provider> listProvider;
 	private List<Material> listMaterial;
 	private MaterialService materialService;
@@ -47,7 +48,8 @@ public class ProcurementAction extends ActionSupport{
 			"request");
 	
 	private String materialid;
-	
+	private String first;
+	private String max="5";
 	
 	//自动生成客户编号
 	public String findProvider() throws UnsupportedEncodingException{
@@ -83,13 +85,16 @@ public class ProcurementAction extends ActionSupport{
 	
 		return SUCCESS;
 	}
-	
+	//添加采购订单
 	public String addProcurement(){	
-		System.out.println(provider.getProviderid());
-		System.out.println(material.getMaterialid());
+//		System.out.println(provider.getProviderid());
+//		System.out.println(material.getMaterialid());
 		procurement.setProvider(provider);
 		procurement.setMaterial(material);			
 		procurement.setEmployeeByOriginator(employee);
+		procurement.setTypes(type);
+		procurement.setState(state);
+		procurement.setDepartment(department);
 		String result=null;		
 		if(procurementService.addProcurement(procurement)!=false){
 			result="添加成功";
@@ -103,6 +108,14 @@ public class ProcurementAction extends ActionSupport{
 		
 		return SUCCESS;
 	}
+	
+	//查看所有订单	
+	public String findProcurement() throws UnsupportedEncodingException{		
+		listProcurement=procurementService.findByPage(Integer.parseInt(first),Integer.parseInt(max));	
+		request.put("listProcurement", listProcurement);
+		return SUCCESS;		
+	}
+	
 	public ProcurementService getProcurementService() {
 		return procurementService;
 	}
@@ -192,6 +205,24 @@ public class ProcurementAction extends ActionSupport{
 	}
 	public void setMaterialid(String materialid) {
 		this.materialid = materialid;
+	}
+	public List<Procurement> getListProcurement() {
+		return listProcurement;
+	}
+	public void setListProcurement(List<Procurement> listProcurement) {
+		this.listProcurement = listProcurement;
+	}
+	public String getFirst() {
+		return first;
+	}
+	public void setFirst(String first) {
+		this.first = first;
+	}
+	public String getMax() {
+		return max;
+	}
+	public void setMax(String max) {
+		this.max = max;
 	}
 	
 }

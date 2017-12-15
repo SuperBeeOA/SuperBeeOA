@@ -10,7 +10,10 @@
 	<include file="struts/struts-procurement.xml"></include>
 	<include file="struts/struts-contact.xml"></include>
 	<include file="struts/struts-warehouse.xml"></include>
+<<<<<<< HEAD
 	<include file="struts/struts-announcement.xml"></include>
+=======
+>>>>>>> 6b96a9e68ae9478909f16c5cd8697c7ff8310b07
 	
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
 	<constant name="struts.custom.i18n.resources" value="message" />

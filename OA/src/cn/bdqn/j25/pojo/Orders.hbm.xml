@@ -10,25 +10,25 @@
             <column name="ORDERID" precision="9" scale="0" />
             <generator class="increment" />
         </id>
-        <many-to-one name="product" class="cn.bdqn.j25.pojo.Product" fetch="select">
+        <many-to-one name="product" class="cn.bdqn.j25.pojo.Product" fetch="select" >
             <column name="PRODUCID" precision="9" scale="0" />
         </many-to-one>
-        <many-to-one name="state" class="cn.bdqn.j25.pojo.State" fetch="select">
+        <many-to-one name="state" class="cn.bdqn.j25.pojo.State" fetch="select" update="true">
             <column name="STATEID" precision="9" scale="0" />
         </many-to-one>
-        <many-to-one name="employeeByOperator" class="cn.bdqn.j25.pojo.Employee" fetch="select">
+        <many-to-one name="employeeByOperator" class="cn.bdqn.j25.pojo.Employee" fetch="select" >
             <column name="OPERATOR" precision="9" scale="0" />
         </many-to-one>
-        <many-to-one name="department" class="cn.bdqn.j25.pojo.Department" fetch="select">
+        <many-to-one name="department" class="cn.bdqn.j25.pojo.Department" fetch="select" >
             <column name="DEPARTMENT" precision="9" scale="0" />
         </many-to-one>
-        <many-to-one name="customer" class="cn.bdqn.j25.pojo.Customer" fetch="select">
+        <many-to-one name="customer" class="cn.bdqn.j25.pojo.Customer" fetch="select" >
             <column name="CUSTOMERID" precision="9" scale="0" />
         </many-to-one>
-        <many-to-one name="types" class="cn.bdqn.j25.pojo.Types" fetch="select">
+        <many-to-one name="types" class="cn.bdqn.j25.pojo.Types" fetch="select" >
             <column name="TYPEID" precision="9" scale="0" />
         </many-to-one>
-        <many-to-one name="employeeByOriginator" class="cn.bdqn.j25.pojo.Employee" fetch="select">
+        <many-to-one name="employeeByOriginator" class="cn.bdqn.j25.pojo.Employee" fetch="select" >
             <column name="ORIGINATOR" precision="9" scale="0" />
         </many-to-one>
         <property name="ordernumber" type="java.lang.String">

@@ -66,4 +66,22 @@ public class CustomerServiceImpl implements CustomerService {
 		customerDao.delCustomer(customer);
 	}
 
+	@Override
+	public List<Customer> findByPage(int firstResult, int maxResults) {
+		// TODO Auto-generated method stub
+		return customerDao.findByPage(firstResult, maxResults);
+	}
+
+	@Override
+	public boolean updateCustomer(Customer customer) {
+		try {
+			customerDao.updateCustomer(customer);
+			return true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+
 }

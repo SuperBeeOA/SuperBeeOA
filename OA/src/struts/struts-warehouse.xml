@@ -6,9 +6,31 @@
 	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
 	
 	<package name="warehouse" namespace="/"  extends="struts-default">
+		
+		<action name="changepageno" class="cn.bdqn.j25.action.WarehouseAction"
+			method="changePageNo">
+			<result name="allProductin">/page/warehouse/allproductin.jsp</result>
+			<result name="error">index.jsp</result>
+		</action>
+		
 		<action name="findallorder" class="cn.bdqn.j25.action.WarehouseAction"
 			method="findAllOrder">
-			<result name="success">/page/warehouse/allout.jsp</result>
+			<result name="success">/page/warehouse/allproductin.jsp</result>
+		</action>
+		
+		<action name="findorderbyordernumber" class="cn.bdqn.j25.action.WarehouseAction"
+			method="findOrderByOrdernumber">
+			<result name="success">/page/warehouse/aproductin.jsp</result>
+		</action>
+		
+		<action name="findallprocurement" class="cn.bdqn.j25.action.WarehouseAction"
+			method="findAllProcurement">
+			<result name="success">/page/warehouse/alltematerial.jsp</result>
+		</action>
+		
+		<action name="changetematerialpageNo" class="cn.bdqn.j25.action.WarehouseAction"
+			method="changeTematerialPageNo">
+			<result name="success">/page/warehouse/alltematerial.jsp</result>
 		</action>
 	</package>
 	

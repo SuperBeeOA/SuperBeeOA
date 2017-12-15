@@ -110,15 +110,16 @@
 	<div id="out">
 		<h2 class="text-center">发送消息<small><a id="if" href="javascript:void(0)">收到的消息</a></small></h2>
 		<hr>
-		<form action="addContact.action" method="post">
+		<form action="">
 			收件人：<br>
-			<!-- 所属公司：
+			所属公司：
 			<select name="company">
 				<option value="1">本公司</option>
 				<option value="2">分公司1</option>
 				<option value="3">总部</option>
-			</select> -->
+			</select>
 			所属部门：
+<<<<<<< HEAD
 			<select name="contact.department.departmentname" id="departmentname">
 				<option value="业务">业务部</option>
 				<option value="人事">人事部</option>
@@ -130,12 +131,30 @@
 			姓名：
 			<select name="contact.employeeByRecipient.name" id="empname">
 				
+=======
+			<select name="department">
+				<option value="1">业务部</option>
+				<option value="2">人事部</option>
+				<option value="3">财务部</option>
+				<option value="4">生产部</option>
+				<option value="5">仓库部</option>
+				<option value="6">质检部</option>
+			</select>
+			姓名：
+			<select name="company">
+				<option value="1">王大锤</option>
+				<option value="2">赵大刚</option>
+>>>>>>> 6b96a9e68ae9478909f16c5cd8697c7ff8310b07
 			</select>
 			<input type="hidden" name="contact.employeeBySender.name" value="${sessionScope.employee.name }">
 			<br>
 			信息内容：
 			<br>
+<<<<<<< HEAD
 			<textarea name="contact.content" rows="20" cols="100" name="com" id="com" class="col-md-offset-1"></textarea>
+=======
+			<textarea rows="20" cols="100" name="com" id="com" class="col-md-offset-1"></textarea>
+>>>>>>> 6b96a9e68ae9478909f16c5cd8697c7ff8310b07
 			<br>
 			<input class="btn btn-primary" type="submit" value="发送消息" style="position: relative; left: 45%;">
 		</form>

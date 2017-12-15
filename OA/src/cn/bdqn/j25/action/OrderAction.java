@@ -7,11 +7,10 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.JsonConfig;
 import net.sf.json.util.CycleDetectionStrategy;
-
-import org.apache.log4j.Logger;
 
 import cn.bdqn.j25.pojo.Customer;
 import cn.bdqn.j25.pojo.Department;
@@ -33,6 +32,7 @@ public class OrderAction extends ActionSupport{
 	private Orders orders;
 	private Customer customer;
 	private CustomerService customerService;
+	private List<Orders> listOrders;
 	private List<Customer> listCustomer;
 	private List<Product> listProduct;
 	private ProductService productService;
@@ -42,21 +42,120 @@ public class OrderAction extends ActionSupport{
 	private Department department;
 	private Types type;
 	private State state;
+	private String productid;
+	private String first;
+	private String max="5";
 	@SuppressWarnings("unchecked")
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
 	
-	private String productid;
+	//查看所有待审核的订单
+		public String fingAllOrders(){
+			listOrders=ordersService.findAllOrderByState();
+			request.put("stateOrderlist", listOrders);			
+			return SUCCESS;
+		}
+	
+	
+	//修改客户信息	
+	public String updateCustomer(){
+		
+		String result=null;
+		if(customerService.updateCustomer(customer)==true){
+			result="修改成功";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else{
+			result="修改失败";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}	
+		return SUCCESS;
+	}
+	
+	//查看所有客户
+	public String findAllCustomer(){
+		
+		JsonConfig jsonConfig = new JsonConfig();
+		jsonConfig.setIgnoreDefaultExcludes(false); //设置默认忽略 
+		jsonConfig.setCycleDetectionStrategy(CycleDetectionStrategy.LENIENT);//设置循环策略为忽略    解决json最头疼的问题 死循环
+		jsonConfig.setExcludes(new String[] {"orderses"});//此处是亮点，只要将所需忽略字段加到数组中即可
+		listCustomer=customerService.findByPage(Integer.parseInt(first),Integer.parseInt(max));
+		String jsonStr = JSONArray.fromObject(listCustomer, jsonConfig).toString();
+		try {
+			inputStream = new ByteArrayInputStream(jsonStr.getBytes("utf-8")) ;
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		return SUCCESS;
+	}
+	
+	//审核
+	public String pass(){
+		orders=ordersService.findByid(orders.getOrderid());		
+		orders.setState(state);
+		orders.setOrderid(orders.getOrderid());
+		String result=null;
+		if(ordersService.UpdateOrders(orders)==true){
+			result="审核成功";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else{
+			result="审核失败";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}			
+		return SUCCESS;
+	}
+	//取消
+	public String cancel(){
+//		System.out.println(state.getStateid());
+//		System.out.println(orders.getOrderid());
+		orders=ordersService.findByid(orders.getOrderid());		
+		orders.setState(state);
+		orders.setOrderid(orders.getOrderid());
+		String result=null;
+		if(ordersService.UpdateOrders(orders)==true){
+			result="取消成功";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else{
+			result="取消失败";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}			
+		return SUCCESS;
+	}
 	
 	
 	//自动生成客户编号
 	public String findCustomer() throws UnsupportedEncodingException{
 		listCustomer=customerService.findAll();
-//		System.out.println(listCustomer);
-//		for (Customer c : listCustomer) {
-//			c.getCustomerid();
-//			c.getCustomername();
-//		}
 		return SUCCESS;		
 	}
 	//自动生成产品编号
@@ -83,11 +182,14 @@ public class OrderAction extends ActionSupport{
 	
 		return SUCCESS;
 	}
-	
+	//添加订单
 	public String addOrder(){
 		orders.setCustomer(customer);
 		orders.setProduct(product);
+		orders.setTypes(type);
+		orders.setState(state);
 		orders.setEmployeeByOriginator(employee);
+		orders.setDepartment(department);
 		String result=null;		
 		if(ordersService.addOrders(orders)!=false){
 			result="添加成功";
@@ -101,7 +203,14 @@ public class OrderAction extends ActionSupport{
 		
 		return SUCCESS;
 	}
+	//查看所有订单	
+		public String findOrder() throws UnsupportedEncodingException{		
+			listOrders=ordersService.findByPage(Integer.parseInt(first),Integer.parseInt(max));	
+			request.put("listOrders", listOrders);
+			return SUCCESS;		
+		}
 	
+					
 	public OrdersService getOrdersService() {
 		return ordersService;
 	}
@@ -147,15 +256,6 @@ public class OrderAction extends ActionSupport{
 
 	public void setListCustomer(List<Customer> listCustomer) {
 		this.listCustomer = listCustomer;
-	}
-
-	public Map<String, Object> getRequest() {
-		return request;
-	}
-
-
-	public void setRequest(Map<String, Object> request) {
-		this.request = request;
 	}
 
 	public List<Product> getListProduct() {
@@ -220,5 +320,30 @@ public class OrderAction extends ActionSupport{
 	public void setState(State state) {
 		this.state = state;
 	}
+	public String getFirst() {
+		return first;
+	}
+	public void setFirst(String first) {
+		this.first = first;
+	}
+	public String getMax() {
+		return max;
+	}
+	public void setMax(String max) {
+		this.max = max;
+	}
+	public List<Orders> getListOrders() {
+		return listOrders;
+	}
+	public void setListOrders(List<Orders> listOrders) {
+		this.listOrders = listOrders;
+	}
+	public Map<String, Object> getRequest() {
+		return request;
+	}
+	public void setRequest(Map<String, Object> request) {
+		this.request = request;
+	}
+
 	
 }

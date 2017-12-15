@@ -24,19 +24,7 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 	@Override
 	public List<Orders> findByOrderno(String orderno) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().find("from Orders where orderno =?", orderno);
-	}
-
-	@Override
-	public List<Orders> findByPage(Orders orders, int first, int max) {
-		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().findByExample(orders, first, max);
-	}
-
-	@Override
-	public Orders addOrUpdateOrders(Orders orders) {
-		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().merge(orders);
+		return this.getHibernateTemplate().find("from Orders where ordernumber =?", orderno);
 	}
 
 	@Override
@@ -63,6 +51,56 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 	public void addOrders(Orders orders) {
 		// TODO Auto-generated method stub
 		getHibernateTemplate().save(orders);
+	}
+
+	@Override
+	public List<Orders> findByPage(final int firstResult,final int maxResults){
+		 return getHibernateTemplate().executeFind(new HibernateCallback(){   
+			 public Object doInHibernate(Session  s)throws HibernateException,SQLException{  
+				 Query query = s.createQuery("from Orders order by datetime desc");  
+				 query.setFirstResult((firstResult-1)*maxResults);   
+				 query.setMaxResults(maxResults);   
+				 List list  = query.list();  
+				 return list;     
+				 }    
+			 });     
+	}
+
+	@Override
+	public void UpdateOrders(Orders orders) {
+		// TODO Auto-generated method stub
+		 getHibernateTemplate().update(orders);
+	}
+
+<<<<<<< HEAD
+	@Override
+	public List<Orders> findAllOrderByState() {
+		// TODO Auto-generated method stub
+		return getHibernateTemplate().find("from Orders o where o.state.stateid=1");
+=======
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Orders> findAllByPage(final int pageNo,final int max) {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().execute(new HibernateCallback(){
+			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
+			Query query = session.createQuery("from Orders o where o.state.statename='完结'");
+			return query.setFirstResult((pageNo-1)*max).setMaxResults(max).list();
+			}
+		});
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public int countAll() {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().execute(new HibernateCallback(){
+			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
+			Query query = session.createQuery("select count(o.orderid) from Orders o where o.state.statename='完结'");
+			return Integer.parseInt(query.uniqueResult().toString());
+			}
+		});
+>>>>>>> 07229d919aa75ddc1b3172253e297acc455c7006
 	}
 
 }
