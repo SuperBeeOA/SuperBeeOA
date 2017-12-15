@@ -59,4 +59,31 @@ public class ProcurementDaoImpl extends HibernateDaoSupport implements
 		getHibernateTemplate().save(procurement);
 	}
 
+<<<<<<< HEAD
+=======
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Procurement> findAllByPage(final int pageNo, final int max) {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().execute(new HibernateCallback(){
+			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
+			Query query = session.createQuery("from Procurement p where p.state.statename='待审核'");
+			return query.setFirstResult(pageNo).setMaxResults(max).list();
+			}
+		});
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public int countAll() {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().execute(new HibernateCallback(){
+			public Object doInHibernate(Session session) throws HibernateException, SQLException {				
+			Query query = session.createQuery("select count(*) from Procurement");
+			return Integer.parseInt(query.uniqueResult().toString());
+			}
+		});
+	}
+
+>>>>>>> no message
 }
