@@ -17,11 +17,13 @@ import cn.bdqn.j25.pojo.Department;
 import cn.bdqn.j25.pojo.Employee;
 import cn.bdqn.j25.pojo.Orders;
 import cn.bdqn.j25.pojo.Product;
+import cn.bdqn.j25.pojo.Proorder;
 import cn.bdqn.j25.pojo.State;
 import cn.bdqn.j25.pojo.Types;
 import cn.bdqn.j25.service.CustomerService;
 import cn.bdqn.j25.service.OrdersService;
 import cn.bdqn.j25.service.ProductService;
+import cn.bdqn.j25.service.ProorderService;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -31,7 +33,9 @@ public class OrderAction extends ActionSupport{
 	private OrdersService ordersService;
 	private Orders orders;
 	private Customer customer;
+	private Proorder proorder;
 	private CustomerService customerService;
+	private ProorderService proorderService;
 	private List<Orders> listOrders;
 	private List<Customer> listCustomer;
 	private List<Product> listProduct;
@@ -49,6 +53,22 @@ public class OrderAction extends ActionSupport{
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
 	
+	//添加生产任务单
+	public String addProOrders(){
+		proorder.setEmployee(employee);
+		proorder.setOrders(orders);
+		proorderService.addProorder(proorder);
+		return SUCCESS;
+	}
+	
+	
+	//生产部查看所有财务审核过的订单
+	public String findOrdersByfinance(){		
+		listOrders=ordersService.findAllOrderByFinance();
+		request.put("product", listOrders);			
+		return SUCCESS;
+	}
+	
 	//财务部查看所有生产审核过的订单
 	public String findAllOrderByProduct(){
 		listOrders=ordersService.findAllOrderByProduct();
@@ -56,7 +76,7 @@ public class OrderAction extends ActionSupport{
 		return SUCCESS;
 	}
 	
-	//生产部根据订单id查询
+	//生产部、财务根据订单id查询
 	public String findByID(){
 		orders=ordersService.findByid(orders.getOrderid());		
 		request.put("waitpass", orders);

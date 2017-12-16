@@ -16,10 +16,10 @@
 				                <li id="fan"><a href="javascript:void(0)">发布公告</a></li>
 				                <li id="fc"><a href="javascript:void(0)">内部联络</a></li>
 				                <li id="te"><a href="javascript:void(0)">审核订单</a></li>
-				                <li id="ar"><a href="javascript:void(0)">原材料申请</a></li>
-				                <li id="ir"><a href="javascript:void(0)">入库申请</a></li>
-				                <li id="ir"><a href="javascript:void(0)">查看审核通过的订单</a></li>
-				                <li id="ir"><a href="javascript:void(0)">入库申请</a></li>
+				                <li id="ar"><a href="javascript:void(0)">查看生产订单</a></li>
+				                <li id="ir"><a href="javascript:void(0)">生产流程监控</a></li>
+				               <!--  <li id="ir"><a href="javascript:void(0)">原料申请</a></li>
+				                <li id="ir"><a href="javascript:void(0)">入库申请</a></li> -->
 				            </ul>
 				        </div>
 				    </div>
@@ -32,7 +32,22 @@
 	            	<h2 class="text-center">审核订单</h2>
 	            	<hr>
 	            	<div id="allorder">
-		            	
+		            	<!-- <table class="table table-hover table-bordered">
+		            		<tr>
+		            			<td>订单编号</td>
+		            			<td>客户编号</td>
+		            			<td>业务员</td>
+		            			<td>生成日期</td>
+		            			<td>操作</td>
+		            		</tr>
+		            		<tr>
+		            			<td></td>
+		            			<td></td>
+		            			<td></td>
+		            			<td></td>
+		            			<td><input id="examine" type="button" value="审核"></td>
+		            		</tr>
+		            	</table>-->
 	            	</div>
 	            	<div id="order" style="display: none;">
 	            	<!-- 	<table class="table">
@@ -68,26 +83,14 @@
 	            	</div>
 	            </div>
 	            <div id="ars" style="display: none;">
-	            	<h2 class="text-center">原材料申请</h2>
+	            	<h2 class="text-center">查看生产订单</h2>
 	            	<hr>
-	            	<form action="">
-	            		<table class="table">
-		            		<tr>
-		            			<td>材料编号</td>
-		            			<td>材料名称</td>
-		            			<td>材料型号</td>
-		            			<td>申请数量</td>
-		            		</tr>
-		            		<tr>
-		            			<td><input type="text" name="materialid"></td>
-		            			<td><input type="text" name="materialname"></td>
-		            			<td><input type="text" name="materialmodel"></td>
-		            			<td><input type="text" name="number"></td>
-		            		</tr>
-		            	</table>
-		            	<input class="btn btn-primary" type="submit" value="提交申请" style="position: relative; left: 45%;">
-	            	</form>
 	            	
+	            	
+	            </div>
+	            
+	            <div id="addproductorder">
+	            
 	            </div>
 	            <div id="irs" style="display: none;">
 	            	<h2 class="text-center">入库申请</h2>

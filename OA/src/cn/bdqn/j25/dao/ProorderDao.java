@@ -14,4 +14,6 @@ public interface ProorderDao {
 	public Proorder addOrUpdateProorder(Proorder proorder);//增加或更新信息
 	
 	public void delProorder(Proorder proorder); //删除
+	
+	public void addProorder(Proorder proorder);//添加
 }

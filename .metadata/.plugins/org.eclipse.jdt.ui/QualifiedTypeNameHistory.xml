@@ -35,4 +35,6 @@
 <fullyQualifiedTypeName name="cn.bdqn.j25.pojo.Material"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.pojo.Provider"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.service.ProviderService"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.pojo.Proorder"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.ProorderService"/>
 </qualifiedTypeNameHistroy>

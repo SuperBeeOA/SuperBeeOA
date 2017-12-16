@@ -8,6 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@include file="../common/js.jsp" %>
 <script src="${pageContext.request.contextPath }/jst/production.js"></script>
+
 				<table class="table">
 	            			<tr>
 	            				

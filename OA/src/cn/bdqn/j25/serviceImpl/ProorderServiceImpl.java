@@ -43,9 +43,30 @@ public class ProorderServiceImpl implements ProorderService {
 	}
 
 	@Override
-	public void delProorder(Proorder proorder) {
+	public boolean delProorder(Proorder proorder) {
 		// TODO Auto-generated method stub
-		proorderDao.delProorder(proorder);
+		try {
+			proorderDao.delProorder(proorder);
+			return true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public boolean addProorder(Proorder proorder) {
+		// TODO Auto-generated method stub
+		try {
+			proorderDao.addProorder(proorder);
+			return true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+		
 	}
 
 }

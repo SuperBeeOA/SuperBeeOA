@@ -27,4 +27,6 @@ public interface OrdersService {
 	public int countAll();//统计所有订单数量
 	
 	public List<Orders> findAllOrderByProduct();//查询所有生产审核的订单
+	
+	public List<Orders> findAllOrderByFinance();//查询财务审核的订单
 }

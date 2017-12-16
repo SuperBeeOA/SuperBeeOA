@@ -39,4 +39,10 @@ public class ProorderDaoImpl extends HibernateDaoSupport implements ProorderDao 
 		getHibernateTemplate().delete(proorder);
 	}
 
+	@Override
+	public void addProorder(Proorder proorder) {
+		// TODO Auto-generated method stub
+		getHibernateTemplate().save(proorder);
+	}
+
 }

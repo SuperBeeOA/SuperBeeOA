@@ -70,19 +70,18 @@ $(function() {
 	
 	  
 	  
+	//查看审核通过的订单
+	 $("#ar").click(function(){
+		$("#ars").load("order13！findOrdersByfinance"); 
+	 });
 	  
-	  
-//		$("#examine").click(function(){
-//			var id=$(this).siblings(".orderid").text();
-//			$.get("order5!pass",{"orders.orderid":id,"state.stateid":2},function(date){
-//				if(date=="审核成功"){
-//					alert("审核成功");
-//					$(".table-bordered").load("order4!findOrder","first=1");
-//				}
-//				if(date=="审核失败"){
-//					alert("审核失败");
-//				}
-//			});
-//						
-//		}); 
+	//生产任务单生成
+	 $("#downorder").click(function(){
+		 var date=$("#productOrder").serialize();
+		 $.post("",date,function(date){
+			 
+			 
+		 });
+		 
+	 });	
 });

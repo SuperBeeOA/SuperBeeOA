@@ -110,4 +110,10 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 
 	}
 
+	@Override
+	public List<Orders> findAllOrderByFinance() {
+		// TODO Auto-generated method stub
+		return getHibernateTemplate().find("from Orders o where o.state=4");
+	}
+
 }

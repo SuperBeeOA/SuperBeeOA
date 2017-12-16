@@ -99,6 +99,12 @@ public class OrdersServiceImpl implements OrdersService {
 		return ordersDao.findAllOrderByProduct();
 	}
 
+	@Override
+	public List<Orders> findAllOrderByFinance() {
+		// TODO Auto-generated method stub
+		return ordersDao.findAllOrderByFinance();
+	}
+
 	
 
 }
