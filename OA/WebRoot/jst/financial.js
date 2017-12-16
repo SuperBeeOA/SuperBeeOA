@@ -6,6 +6,8 @@ $(function() {
 		  $("#announcement").hide();
 		  $("#info").hide();
 		  $("#smoney").hide();
+		//加载生产审核过的订单列表  
+		  $("#allorder").load("order11!findAllOrderByProduct");
 	  });
 
 	  $("#sm").click(function() {
@@ -26,4 +28,6 @@ $(function() {
 		  $("#allorder").show();
 		  $("#order").hide();
 	  });
+	  
+	  
 });

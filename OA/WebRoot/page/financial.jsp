@@ -29,7 +29,7 @@
 	            	<h2 class="text-center">审核订单</h2>
 	            	<hr>
 	            	<div id="allorder">
-		            	<table class="table table-hover table-bordered">
+		            	<!-- <table class="table table-hover table-bordered">
 		            		<tr>
 		            			<td>订单编号</td>
 		            			<td>客户编号</td>
@@ -45,7 +45,7 @@
 		            			<td><input id="examine" type="button" value="审核"></td>
 		            		</tr>
 		            	</table>
-	            	</div>
+	            	</div> -->
 	            	<div id="order" style="display: none;">
 	            		<table class="table">
 	            			<tr>

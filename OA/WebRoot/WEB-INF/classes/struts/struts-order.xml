@@ -62,8 +62,6 @@
 			</result>
 		</action> 
 	</package> 
-
-
 	
 	<package name="order" extends="struts-default">
 			
@@ -78,6 +76,10 @@
 		<action name="order10" class="cn.bdqn.j25.action.OrderAction" method="findByID" >
 			<result>/page/order/passorder.jsp</result>
 		</action> 
+		
+		<action name="order11" class="cn.bdqn.j25.action.OrderAction" method="findAllOrderByProduct" >
+			<result>/page/order/financeorder.jsp</result>
+		</action>
 	</package> 
 	
 

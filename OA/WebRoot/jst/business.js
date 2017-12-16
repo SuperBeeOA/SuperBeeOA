@@ -285,6 +285,7 @@ $(function() {
 		$(".buy").click(function(){
 			$("#chakan").load("procurement4!findProcurement","first=1");
 		});
+		
 	//审核订单
 		$(".pass").click(function(){
 			var id=$(this).parents().siblings(".orderid").text();

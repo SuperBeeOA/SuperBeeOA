@@ -18,6 +18,8 @@
 				                <li id="te"><a href="javascript:void(0)">审核订单</a></li>
 				                <li id="ar"><a href="javascript:void(0)">原材料申请</a></li>
 				                <li id="ir"><a href="javascript:void(0)">入库申请</a></li>
+				                <li id="ir"><a href="javascript:void(0)">查看审核通过的订单</a></li>
+				                <li id="ir"><a href="javascript:void(0)">入库申请</a></li>
 				            </ul>
 				        </div>
 				    </div>

@@ -49,6 +49,13 @@ public class OrderAction extends ActionSupport{
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
 	
+	//财务部查看所有生产审核过的订单
+	public String findAllOrderByProduct(){
+		listOrders=ordersService.findAllOrderByProduct();
+		request.put("finance", listOrders);			
+		return SUCCESS;
+	}
+	
 	//生产部根据订单id查询
 	public String findByID(){
 		orders=ordersService.findByid(orders.getOrderid());		
@@ -59,7 +66,7 @@ public class OrderAction extends ActionSupport{
 	
 	//生产部查看所有业务审核过的订单
 		public String findAllOrders(){
-			listOrders=ordersService.findAllOrderByState();
+			listOrders=ordersService.findAllOrderByBusiness();
 			request.put("stateOrderlist", listOrders);			
 			return SUCCESS;
 		}

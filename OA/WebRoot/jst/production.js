@@ -56,7 +56,7 @@ $(function() {
 	//通过
 	  $("#yes").click(function(){
 		  var id1=$(this).siblings("#waitpassid").val();
-		  alert(id1);
+//		  alert(id1);
 		  $.get("order5!pass",{"orders.orderid":id1,"state.stateid":3},function(date){
 				if(date=="审核成功"){
 					alert("审核成功");
