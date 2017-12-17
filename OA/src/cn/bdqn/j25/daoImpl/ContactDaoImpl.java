@@ -15,25 +15,26 @@ public class ContactDaoImpl extends HibernateDaoSupport implements ContactDao {
 	@Override
 	public List<Contact> finaAll() {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().find("from CONTACT");
+		return this.getHibernateTemplate().find("from Contact");
 	}
 
 	@Override
 	public List<Contact> finaCantactById(String id) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().find("from CONTACT where contactid=?",id);
+		return this.getHibernateTemplate().find("from Contact where contactid=?",id);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public List<Contact> finaCantecByRecipient(String name) {
+	public List<Contact> finaCantecByRecipient(String empname) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().find("from CONTACT  where  employeeByRecipient.name=?",name);
+		return this.getHibernateTemplate().find("from Contact where employeeByRecipient.name=?",empname);
 	}
 
 	@Override
 	public List<Contact> finaantactBySender(String name) {
 		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().find("from CONTACT  where  employeeBySender.name=?",name);
+		return this.getHibernateTemplate().find("from Contact c where  c.employeeBySender.name=?",name);
 	}
 
 	@Override

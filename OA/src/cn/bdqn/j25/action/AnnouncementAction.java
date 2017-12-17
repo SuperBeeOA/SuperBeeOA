@@ -18,8 +18,17 @@ public class AnnouncementAction extends ActionSupport{
 	private Announcement announcement;
 	private Employee employeeBySender;// 发
 	private AnnouncementService announcementService;
+	private State state;
 	
 	
+
+	public State getState() {
+		return state;
+	}
+
+	public void setState(State state) {
+		this.state = state;
+	}
 
 	public Announcement getAnnouncement() {
 		return announcement;
@@ -47,22 +56,17 @@ public class AnnouncementAction extends ActionSupport{
 	
 	
     public String addAnnouncement(){
-    	State state=new State();
     	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
     	String date = df.format(new Date());
     	Timestamp ts = new Timestamp(System.currentTimeMillis());  
     	 ts = Timestamp.valueOf(date); 
     	 announcement.setTime(ts);
-/*    	 announcement.setTypeid(1); 
-    	 announcement.setState(state);*/
+    	 announcement.setState(state);
     	 announcement.setEmployee(employeeBySender);
     	 announcement.setDepartment(employeeBySender.getDepartment());
     	 employeeBySender.getAnnouncements().add(employeeBySender);
     	 employeeBySender.getDepartment().getAnnouncements().add(announcement);
-    	
-        	
-    	 System.out.println(employeeBySender.getEmployeeid());
-//    	announcementService.addAnnouncement(announcement);
+     	announcementService.addAnnouncement(announcement);
     	return SUCCESS;
     }
     public String finaByOpen(){

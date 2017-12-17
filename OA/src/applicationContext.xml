@@ -226,6 +226,8 @@
 				read-only="true" />
 			<tx:method name="find*" propagation="REQUIRED"
 				read-only="true" />
+			<tx:method name="fina*" propagation="REQUIRED"
+				read-only="true" />
 			<tx:method name="search*" propagation="REQUIRED"
 				read-only="true" />
 			<tx:method name="query*" propagation="REQUIRED"

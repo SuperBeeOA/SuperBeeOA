@@ -55,7 +55,7 @@ public class WarehouseAction extends ActionSupport {
 		this.ordersService = ordersService;
 	}
 
-<<<<<<< HEAD
+
 	/*public String findAllOrder() {
 		System.out.println("Start>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		List<Orders> allOut = ordersService.findAllByPage(1, 10);
@@ -68,7 +68,7 @@ public class WarehouseAction extends ActionSupport {
 		return SUCCESS;
 		
 	}*/
-=======
+
 	
 	//翻页
 	@SuppressWarnings("unchecked")
@@ -208,5 +208,5 @@ public class WarehouseAction extends ActionSupport {
 		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>changeTematerialPageNo()Stop");
 		return SUCCESS;
 	}
->>>>>>> 6b96a9e68ae9478909f16c5cd8697c7ff8310b07
+
 }

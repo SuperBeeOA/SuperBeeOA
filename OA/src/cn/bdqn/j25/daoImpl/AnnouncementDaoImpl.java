@@ -43,13 +43,13 @@ public class AnnouncementDaoImpl extends HibernateDaoSupport implements Announce
 	@Override
 	public List<Announcement> findByOpen() {
 		// TODO Auto-generated method stub
-		return getHibernateTemplate().find("from Announcement where stateid= 6 and typeid= 9");
+		return getHibernateTemplate().find("from Announcement where stateid= 6 and typeid= 8");
 	}
 
 	@Override
 	public List<Announcement> findBydepartment(String depName) {
 		// TODO Auto-generated method stub
-		 return getHibernateTemplate().find("from Announcement a where a.state.stateid= 9 and a.typeid = (select t.typeid from Types t where t.typename = ?)",depName);
+		 return getHibernateTemplate().find("from Announcement a where a.state.stateid= 6 and a.typeid = (select t.typeid from Types t where t.typename = ?)",depName);
 	}
 
 	}

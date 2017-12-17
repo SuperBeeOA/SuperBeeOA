@@ -7,7 +7,7 @@
 	<package name="contact" extends="struts-default">
 		<action name="addContact" class="cn.bdqn.j25.action.ContactAction"
 			method="addContact">
-			<result type="redirect">/page/common/public.jsp</result>
+			<result>/page/common/public.jsp</result>
 		</action>
 
 		

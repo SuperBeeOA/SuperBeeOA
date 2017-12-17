@@ -11,7 +11,7 @@ public class State implements java.io.Serializable {
 
 	// Fields
 
-	private Integer stateid=1;
+	private Integer stateid;
 	private String statename;
 	private Set procurements = new HashSet(0);
 	private Set orderrootses = new HashSet(0);
