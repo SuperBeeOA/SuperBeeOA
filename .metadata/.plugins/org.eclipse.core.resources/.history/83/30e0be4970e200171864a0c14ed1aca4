@@ -8,8 +8,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@include file="../common/js.jsp" %>
 <script src="${pageContext.request.contextPath }/jst/production.js"></script>
-			<h2 class="text-center">查看生产订单</h2>
-	            	<hr>
 				<table class="table table-hover table-bordered">
 		            		<tr>
 		            			<td>订单编号</td>

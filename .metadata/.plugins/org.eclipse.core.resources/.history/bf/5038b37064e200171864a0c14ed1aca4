@@ -1,7 +1,8 @@
 $(function() {
 	  $("#fo").click(function() {
-		  $("#forder").show();
+		  $("#forder").show();	  
 		  $("#contact").hide();
+		  $("#cgrder").hide();
 		  $("#attendance").hide();
 		  $("#announcement").hide();
 		  $("#info").hide();
@@ -12,6 +13,7 @@ $(function() {
 
 	  $("#ao").click(function() {
 		  $("#aorder").show();
+		  $("#cgrder").hide();
 		  $("#contact").hide();
 		  $("#attendance").hide();
 		  $("#announcement").hide();
@@ -23,7 +25,7 @@ $(function() {
 	  
 	  $("#cg").click(function() {
 		  $("#cgrder").show();
-		  $("#ao").hide();
+		  $("#aorder").hide();
 		  $("#contact").hide();
 		  $("#attendance").hide();
 		  $("#announcement").hide();
@@ -42,6 +44,7 @@ $(function() {
 		  $("#aorder").hide();
 		  $("#forder").hide();
 		  $("#supplier").hide();
+		  $("#cgrder").hide();
 	  });
 
 	  $("#ms").click(function() {
@@ -53,6 +56,58 @@ $(function() {
 		  $("#aorder").hide();
 		  $("#customer").hide();
 		  $("#forder").hide();
+		  $("#cgrder").hide();
+	  });
+	  
+	  $("#bs").click(function() {
+		  $("#order").show();
+		  $("#allorder").hide();
+		  $("#custable tr:eq(0)").siblings().empty();
+			$.getJSON("order7!findAllCustomer",{"first":1},function(data){
+				 var jsonObj=data;		
+					$(jsonObj).each(function(){
+						
+						$("#custable").append("<tr>"+
+					         "<td>"+this.customername+"</td>"+
+					         "<td>"+this.contacts+"</td>"+                                                                         
+					         "<td>"+this.phone+"</td>"+
+					         "<td>"+this.address+"</td>"+ 
+					         "<td>"+this.levels+"</td>"+
+					         "<td>"+"<input id='cc' type='button' value='修改'>"+        				
+					         "<input id='dc' type='button' value='删除'></td>"+
+					         "</tr>"				               			
+						);
+					});	
+					  $("#cc").click(function() {
+						  $("#mcustomer").show();
+						  $("#allcustomer").hide();
+					  });
+			});
+	  });
+
+	  $("#bo").click(function() {
+		  $("#allorder").show();
+		  $("#order").hide();
+	  });
+
+//	  $("#cc").click(function() {
+//		  $("#mcustomer").show();
+//		  $("#allcustomer").hide();
+//	  });
+
+	  $("#bc").click(function() {
+		  $("#allcustomer").show();
+		  $("#mcustomer").hide();
+	  });
+
+	  $("#cs").click(function() {
+		  $("#msupplier").show();
+		  $("#allsupplier").hide();
+	  });
+
+	  $("#bs").click(function() {
+		  $("#allsupplier").show();
+		  $("#msupplier").hide();
 	  });
 	  
 	//生成订单编号  
@@ -115,16 +170,17 @@ $(function() {
 	  });
 	  
 	  
-	  //添加订单
-	  $(".btn-primary").click(function(){
+	  //添加业务订单
+	  $("#addOrder").click(function(){
 			var orderAdd=$("#orderAdd").serialize();
-			$.get("order3!addOrder?employee.employeeid=1",orderAdd,callback,"text");
+			$.get("order3!addOrder",orderAdd,callback,"text");
 		});
 	  function callback(data){
 			if(data=="添加成功"){
 				alert("添加成功");			
+				$('#orderAdd').reset();
 			}else{				
-				 $(':input','#myform')
+				 $('#orderAdd')
 			       .not(':button,:submit,:reset,:hidden')//将myform表单中input元素type为button、submit、reset、hidden排除
 			       .val('')  //将input元素的value设为空值
 			       .removeAttr('checked')
@@ -193,16 +249,21 @@ $(function() {
 		  });
 		  
 		  
-		  //添加订单
-		  $(".btn-primary1").click(function(){
+		  //添加采购订单
+		  $("#addprocurement").click(function(){
 				var orderAdd=$("#Procurement").serialize();
 				$.get("procurement3!addProcurement?employee.employeeid=1",orderAdd,callback,"text");
 			});
 		  function callback(data){
 				if(data=="添加成功"){
-					alert("添加成功");			
+					alert("添加成功");	
+					 $(':input','#Procurement')
+				       .not(':button,:submit,:reset,:hidden')//将myform表单中input元素type为button、submit、reset、hidden排除
+				       .val('')  //将input元素的value设为空值
+				       .removeAttr('checked')
+				       .removeAttr('checked') // 如果任何radio/checkbox/select inputs有checked or selected 属性，将其移除
 				}else{				
-					 $(':input','#myform')
+					 $(':input','#Procurement')
 				       .not(':button,:submit,:reset,:hidden')//将myform表单中input元素type为button、submit、reset、hidden排除
 				       .val('')  //将input元素的value设为空值
 				       .removeAttr('checked')
@@ -211,5 +272,95 @@ $(function() {
 				
 			};
 			
+	//查看所有订单
+			
+		$(".sale").click(function(){
+			$("#chakan").load("order4!findOrder","first=1");
+		});
+		
+		$(".buy").click(function(){
+			$("#chakan").load("procurement4!findProcurement","first=1");
+		});
+		
+	//审核订单
+		$(".pass").click(function(){
+			var id=$(this).parents().siblings(".orderid").text();
+			$.get("order5!pass",{"orders.orderid":id,"state.stateid":2},function(date){
+				if(date=="审核成功"){
+					alert("审核成功");
+					$(".table-bordered").load("order4!findOrder","first=1");
+				}
+				if(date=="审核失败"){
+					alert("审核失败");
+				}
+			});
+						
+		});
+		
+	//取消订单
+		$(".cancel").click(function(){
+			var id=$(this).parents().siblings(".orderid").text();
+			$.get("order6!cancel",{"orders.orderid":id,"state.stateid":6},function(date){
+				if(date=="取消成功"){
+					alert("取消成功");
+					$(".table-bordered").load("order4!findOrder","first=1");
+				}
+				if(date=="取消失败"){
+					alert("取消失败");
+				}
+			});
+						
+		});
+		
+	//管理客户
+		$("#mc").click(function(){
+			$("#custable tr:eq(0)").siblings().empty();
+			$.getJSON("order7!findAllCustomer",{"first":1},function(data){
+				 var jsonObj=data;		
+					$(jsonObj).each(function(){						
+						$("#custable").append("<tr>"+
+							 "<td style='display:none' class='customerid'>"+this.customerid+"</td>"+
+					         "<td class='name1'>"+this.customername+"</td>"+
+					         "<td class='contacts1'>"+this.contacts+"</td>"+                                                                         
+					         "<td class='phone1'>"+this.phone+"</td>"+
+					         "<td class='address1'>"+this.address+"</td>"+ 
+					         "<td class='levels1'>"+this.levels+"</td>"+
+					         "<td class='remarks1'>"+this.remarks+"</td>"+
+					         "<td>"+"<input id='cc' type='button' value='修改'>"+        				
+					         "<input id='dc' type='button' value='删除'></td>"+
+					         "</tr>"				               			
+						);
+					});	
+					  $("#cc").click(function() {
+						var id=$(this).parents().siblings(".customerid").text();
+						$("#customername").val($(this).parents().siblings(".name1").text());
+						$("#customercontacts").val($(this).parents().siblings(".contacts1").text());
+						$("#customerphone").val($(this).parents().siblings(".phone1").text());
+						$("#customeraddress").val($(this).parents().siblings(".address1").text());
+						$("#levels").val($(this).parents().siblings(".levels1").text());
+						$("#customerremarks").val($(this).parents().siblings(".remarks1").text());
+//						  alert(id);
+						  $("#mcustomer").show();
+						  $("#allcustomer").hide();
+						  
+						//修改	
+						$("#mcustomer .change").click(function(){
+							var date=$("#mcustomer form").serialize();
+							alert(date);
+							$.get("order8!updateCustomer?customer.customerid="+id,date,function(data){
+								if(data=="修改成功"){
+									alert("修改成功");
+								}else{
+									alert("修改失败");
+								}
+								
+								});
+							});
+					  });
+					
+			});
+		
+			
+		});
 		
 });

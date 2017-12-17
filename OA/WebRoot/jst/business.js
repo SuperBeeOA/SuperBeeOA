@@ -173,24 +173,21 @@ $(function() {
 	  //添加业务订单
 	  $("#addOrder").click(function(){
 			var orderAdd=$("#orderAdd").serialize();
+			$(':input','#orderAdd')    
+			 .not(':button, :submit, :reset, :hidden')    
+			 .val(' ')    
+			 .removeAttr('checked')    
+			 .removeAttr('selected');
 			$.get("order3!addOrder",orderAdd,callback,"text");
+			
 		});
 	  function callback(data){
 			if(data=="添加成功"){
-				alert("添加成功");			
-				$(':input','#orderAdd')
-			      .not(':button,:submit,:reset,:hidden')//将myform表单中input元素type为button、submit、reset、hidden排除
-			      .val('')  //将input元素的value设为空值
-			      .removeAttr('checked')
-			      .removeAttr('checked') // 如果任何radio/checkbox/select inputs有checked or selected 属性，将其移除
+				alert("添加成功");		
+				 
 			}else{				
-				 $(':input','#orderAdd')
-			       .not(':button,:submit,:reset,:hidden')//将myform表单中input元素type为button、submit、reset、hidden排除
-			       .val('')  //将input元素的value设为空值
-			       .removeAttr('checked')
-			       .removeAttr('checked') // 如果任何radio/checkbox/select inputs有checked or selected 属性，将其移除
-			}
-			
+				alert("添加失败");			    
+			}			
 		};
 		
 		//采购订单部分
@@ -256,22 +253,18 @@ $(function() {
 		  //添加采购订单
 		  $("#addprocurement").click(function(){
 				var orderAdd=$("#Procurement").serialize();
+				$(':input','#orderAdd')    
+				 .not(':button, :submit, :reset, :hidden')    
+				 .val(' ')    
+				 .removeAttr('checked')    
+				 .removeAttr('selected');
 				$.get("procurement3!addProcurement?employee.employeeid=1",orderAdd,callback,"text");
 			});
 		  function callback(data){
 				if(data=="添加成功"){
-					alert("添加成功");	
-					 $(':input','#Procurement')
-				       .not(':button,:submit,:reset,:hidden')//将myform表单中input元素type为button、submit、reset、hidden排除
-				       .val('')  //将input元素的value设为空值
-				       .removeAttr('checked')
-				       .removeAttr('checked') // 如果任何radio/checkbox/select inputs有checked or selected 属性，将其移除
+					alert("添加成功");				
 				}else{				
-					 $(':input','#Procurement')
-				       .not(':button,:submit,:reset,:hidden')//将myform表单中input元素type为button、submit、reset、hidden排除
-				       .val('')  //将input元素的value设为空值
-				       .removeAttr('checked')
-				       .removeAttr('checked') // 如果任何radio/checkbox/select inputs有checked or selected 属性，将其移除
+					alert("添加失败");	
 				}
 				
 			};

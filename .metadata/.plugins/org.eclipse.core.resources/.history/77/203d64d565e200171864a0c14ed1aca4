@@ -70,26 +70,17 @@ $(function() {
 	
 	  
 	  
-	//查看生产订单
+	//查看审核通过的订单
 	 $("#ar").click(function(){
-		$("#ars").load("order13!findOrdersByfinance"); 
+		$("#ars").load("order13！findOrdersByfinance"); 
 	 });
 	  
 	//生产任务单生成
 	 $("#downorder").click(function(){
 		 var date=$("#productOrder").serialize();
-		 $(':input','#orderAdd')    
-		 .not(':button, :submit, :reset, :hidden')    
-		 .val(' ')    
-		 .removeAttr('checked')    
-		 .removeAttr('selected');
-		 $.post("order15！addProOrders",date,function(date){
-			 if(date=="添加成功"){
-				 alert("添加成功");
-			 }else{
-				 alert("添加失败");				
-			 }
-						 
+		 $.post("",date,function(date){
+			 
+			 
 		 });
 		 
 	 });	

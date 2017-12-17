@@ -70,9 +70,9 @@ $(function() {
 	
 	  
 	  
-	//查看生产订单
+	//查看审核通过的订单
 	 $("#ar").click(function(){
-		$("#ars").load("order13!findOrdersByfinance"); 
+		$("#ars").load("order13！findOrdersByfinance"); 
 	 });
 	  
 	//生产任务单生成

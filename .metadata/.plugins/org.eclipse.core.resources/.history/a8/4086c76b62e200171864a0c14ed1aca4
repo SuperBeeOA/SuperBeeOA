@@ -56,25 +56,8 @@ public class OrderAction extends ActionSupport{
 	//添加生产任务单
 	public String addProOrders(){
 		proorder.setEmployee(employee);
-		proorder.setOrders(orders);		
-		String result=null;
-		if(proorderService.addProorder(proorder)==true){
-			result="添加成功";			
-			try {
-				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}else{
-			result="添加失败";			
-			try {
-				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
-			} catch (UnsupportedEncodingException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}	
+		proorder.setOrders(orders);
+		proorderService.addProorder(proorder);
 		return SUCCESS;
 	}
 	
