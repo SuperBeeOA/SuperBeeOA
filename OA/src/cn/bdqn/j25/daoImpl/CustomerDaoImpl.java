@@ -68,7 +68,7 @@ public class CustomerDaoImpl extends HibernateDaoSupport implements CustomerDao 
 		return getHibernateTemplate().executeFind(new HibernateCallback(){   
 			 public Object doInHibernate(Session  s)throws HibernateException,SQLException{  
 				 Query query = s.createQuery("from  Customer c order by nlssort(c.customername,'NLS_SORT=SCHINESE_PINYIN_M')");  
-				 query.setFirstResult(firstResult);   
+				 query.setFirstResult((firstResult-1)*maxResults);   
 				 query.setMaxResults(maxResults);   
 				 List list  = query.list();  
 				 return list;     

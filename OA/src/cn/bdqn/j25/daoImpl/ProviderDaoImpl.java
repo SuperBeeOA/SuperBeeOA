@@ -1,7 +1,12 @@
 package cn.bdqn.j25.daoImpl;
 
+import java.sql.SQLException;
 import java.util.List;
 
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.springframework.orm.hibernate3.HibernateCallback;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import cn.bdqn.j25.dao.ProviderDao;
@@ -43,6 +48,26 @@ public class ProviderDaoImpl extends HibernateDaoSupport implements ProviderDao 
 	public List<Provider> findAll() {
 		// TODO Auto-generated method stub
 		return getHibernateTemplate().find("select new Provider(providerid,providername) from Provider");
+	}
+
+	@Override
+	public void updateProvider(Provider provider) {
+		// TODO Auto-generated method stub
+		getHibernateTemplate().update(provider);
+	}
+
+	@Override
+	public List<Provider> findByPage(final int firstResult,final int maxResults) {
+		// TODO Auto-generated method stub
+		return getHibernateTemplate().executeFind(new HibernateCallback(){   
+			 public Object doInHibernate(Session  s)throws HibernateException,SQLException{  
+				 Query query = s.createQuery("from  Provider p order by nlssort(p.providername,'NLS_SORT=SCHINESE_PINYIN_M')");  
+				 query.setFirstResult((firstResult-1)*maxResults);   
+				 query.setMaxResults(maxResults);   
+				 List list  = query.list();  
+				 return list;     
+				 }    
+			 });
 	}
 
 }

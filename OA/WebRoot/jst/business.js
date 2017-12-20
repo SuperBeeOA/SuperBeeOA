@@ -336,7 +336,6 @@ $(function() {
 						$("#customeraddress").val($(this).parents().siblings(".address1").text());
 						$("#levels").val($(this).parents().siblings(".levels1").text());
 						$("#customerremarks").val($(this).parents().siblings(".remarks1").text());
-//						  alert(id);
 						  $("#mcustomer").show();
 						  $("#allcustomer").hide();
 						  
@@ -355,9 +354,56 @@ $(function() {
 							});
 					  });
 					
-			});
+			});			
+		});
 		
-			
+		//管理供应商
+		$("#ms").click(function(){
+			$("#protable tr:eq(0)").siblings().empty();
+			$.getJSON("procurement5!findAllprovider",{"first":1},function(data){
+				 var jsonObj=data;		
+					$(jsonObj).each(function(){						
+						$("#custable").append("<tr>"+
+							 "<td style='display:none' class='providerid'>"+this.providerid+"</td>"+
+					         "<td class='name1'>"+this.providername+"</td>"+
+					         "<td>"+this.types.typename+"</td>"+ 
+					         "<td class='address1'>"+this.address+"</td>"+
+					         "<td class='phone1'>"+this.phone+"</td>"+					 
+					         "<td class='contacts1'>"+this.contacts+"</td>"+
+					         "<td class='comments1'>"+this.comments+"</td>"+
+					         "<td class='remarks1'>"+this.remarks+"</td>"+
+					         "<td>"+"<input id='cc' type='button' value='修改'>"+        				
+					         "<input id='dc' type='button' value='删除'></td>"+
+					         "</tr>"				               			
+						);
+					});	
+					  $("#cc").click(function() {
+						var id=$(this).parents().siblings(".customerid").text();
+						$("#providername").val($(this).parents().siblings(".name1").text());
+						$("#provideraddress").val($(this).parents().siblings(".address1").text());
+						$("#providerphone").val($(this).parents().siblings(".phone1").text());
+						$("#providercontacts").val($(this).parents().siblings(".contacts1").text());
+						$("#providercomments").val($(this).parents().siblings(".comments1").text());
+						$("#providerremarks").val($(this).parents().siblings(".remarks1").text());
+						  $("#msupplier").show();
+						  $("#allsupplier").hide();
+						  
+						//修改	
+						$("#msupplier .change").click(function(){
+							var date=$("#msupplier form").serialize();
+							alert(date);
+							$.get("procurement6!updateprovider?provider.providerid="+id,date,function(data){
+								if(data=="修改成功"){
+									alert("修改成功");
+								}else{
+									alert("修改失败");
+								}
+								
+								});
+							});
+					  });
+					
+			});			
 		});
 		
 });

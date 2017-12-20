@@ -16,4 +16,6 @@ public interface ProorderService {
 	public boolean delProorder(Proorder proorder); //删除
 	
 	public boolean addProorder(Proorder proorder);//添加
+	
+	public List<Proorder> findAllProorder();//查询全部生产订单
 }

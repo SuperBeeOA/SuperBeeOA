@@ -1,0 +1,49 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@include file="../common/js.jsp" %>
+<script src="${pageContext.request.contextPath }/jst/production.js"></script>
+			<h2 class="text-center">生产记录</h2>
+	            	<hr>
+	            	<form action="javascript:void(0)" id="productionrecords">
+	            		<table class="table">
+		            		<tr>	            				
+	            				<td>订单号：</td>
+	            				<td><input type="text" value="${requestScope.waitpass.ordernumber}"> 
+	            					<input type="hidden" id="ordersorderid" name="orders.orderid" value="${requestScope.waitpass.orderid}">
+	            				</td>
+	            				<td>任务单负责人：</td>
+	            				<td>${requestScope.waitpass.customer.customername}
+	            					<input type="hidden" name="monitoring.employeeByProorderpeople" value="${requestScope.waitpass.customer.customername}">
+	            				</td>
+	            			</tr>	
+	            			<tr>
+	            				<td>生产负责人：</td>
+	            				<td>
+	            					<select type="text" name="monitoring.employeeByProducter">	            				
+	            					</select>
+	            				</td>
+	            				<td>生产开始时间：</td>
+	            				<td><input type="date" name="monitoring.starttime"></td>
+	            			</tr>       		
+	            			<tr>
+	            				<td>生产结束时间：</td>
+	            				<td><input type="date" name="monitoring.starttime"></td>
+	            				<td>生产情况描述：</td>
+	            				<td><input type="text" name="monitoring.endtiem"></td>
+	            				<td>生产数量：</td>
+	            				<td><input type="text" name="proorder.packing"></td>
+	            			</tr>
+	            			<tr>
+	            				<td>批号：</td>
+	            				<td><input type="text" value="${requestScope.waitpass.product.unit}"></td>		 	  				
+	            			</tr>
+	            			
+		            	</table>
+		            	<input class="btn btn-primary" id="orderdown" type="button" value="下单" style="position: relative; left: 45%;">
+	            	</form>

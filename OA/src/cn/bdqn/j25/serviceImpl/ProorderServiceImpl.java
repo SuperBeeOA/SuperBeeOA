@@ -69,4 +69,10 @@ public class ProorderServiceImpl implements ProorderService {
 		
 	}
 
+	@Override
+	public List<Proorder> findAllProorder() {
+		// TODO Auto-generated method stub
+		return proorderDao.findAllProorder();
+	}
+
 }

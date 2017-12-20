@@ -19,7 +19,6 @@
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.PostDao"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.dao.OrderrootsDao"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.service.AttendanceService"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="net.sf.json.JsonConfig"/>
 <fullyQualifiedTypeName name="net.sf.json.util.CycleDetectionStrategy"/>
 <fullyQualifiedTypeName name="org.apache.struts2.json.annotations.JSON"/>
@@ -37,4 +36,9 @@
 <fullyQualifiedTypeName name="cn.bdqn.j25.service.ProviderService"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.pojo.Proorder"/>
 <fullyQualifiedTypeName name="cn.bdqn.j25.service.ProorderService"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.pojo.Monitoring"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.service.MonitoringService"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="cn.bdqn.j25.pojo.Employee"/>
+<fullyQualifiedTypeName name="com.sun.istack.internal.FinalArrayList"/>
 </qualifiedTypeNameHistroy>

@@ -16,4 +16,6 @@ public interface ProorderDao {
 	public void delProorder(Proorder proorder); //删除
 	
 	public void addProorder(Proorder proorder);//添加
+	
+	public List<Proorder> findAllProorder();//查询全部生产订单
 }

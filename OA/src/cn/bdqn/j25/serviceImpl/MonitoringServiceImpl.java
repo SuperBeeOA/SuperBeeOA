@@ -48,4 +48,23 @@ public class MonitoringServiceImpl implements MonitoringService {
 		monitoringDao.delMonitoring(monitoring);
 	}
 
+	@Override
+	public boolean addMonitoring(Monitoring monitoring) {
+		// TODO Auto-generated method stub
+		try {
+			monitoringDao.addMonitoring(monitoring);
+			return true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public List<Monitoring> findByPage(int firstResult, int maxResults) {
+		// TODO Auto-generated method stub
+		return monitoringDao.findByPage(firstResult, maxResults);
+	}
+
 }

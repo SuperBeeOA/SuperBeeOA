@@ -197,9 +197,8 @@
 	            	<h2 class="text-center">管理供应商</h2>
 	            	<hr>
 	            <div id="allsupplier">
-		            	<table class="table table-hover table-bordered">
-		            		<tr>
-		       
+		            	<table class="table table-hover table-bordered" id="protable">
+		            		<tr>		       
 		            			<td>供应商名称</td>
 		            			<td>供应商类型</td>
 		            			<td>地址</td>
@@ -209,77 +208,56 @@
 		            			<td>备注</td>
 		            			<td>操作</td>		        
 		            		</tr>
-		            		<tr>
-		            			<td></td>
-		            			<td></td>
-		            			<td></td>
-		            			<td></td>
-		            			<td>
-		            				<input id="cs" type="button" value="修改">
-		            				<input id="ds" type="button" value="删除">
-		            			</td>
-		            		</tr>
+		            		
 		            	</table>
 	            	</div>
 	            	<div id="msupplier" style="display: none;">
-	            		<ul class="list-unstyled" style="padding: 50px;">
+	            	<form action="javascript:void(0)" id="updprovider">
+	            		<ul class="list-unstyled" style="padding: 50px;">	            		
 	            			<li>
-	            				供应商编号: 
-	            				
-	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="supplierid">
-	            			<>
+	            				请输入修改后的供应商名称: 
+	            				<input type="text" name="provider.providername" id="providername">	            				            				
+	            			</li>
 	            			<br>
 	            			<li>
-	            				供应商名称: 
-	            				
-	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="suppliername">
-	            			<li>
+	            				请输入修改后的供应商类型: 
+	            				<select style="width:150px"  name="type.typeid">
+	            					<option value="2">原料</option>
+	            					<option value="3">设备相关</option>
+	            					<option value="4">办公用品</option>
+	            					<option value="5">杂物</option>
+	            				</select>          				
+	            			</li>
 	            			<br>
 	            			<li>
-	            				供应商类型: 
-	            				
-	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="typeid">
-	            			<li>
+	            				请输入修改后的地址: 
+	            				<input type="text" name="provider.address" id="provideraddress">
+	            			</li>
 	            			<br>
 	            			<li>
-	            				地址: 
-	            				
-	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="address">
-	            			<li>
+	            				请输入修改后的联系电话: 
+	            				<input type="text" name="provider.phone" id="providerphone">	            			
+	            			</li>
 	            			<br>
 	            			<li>
-	            				联系人: 
-	            				
-	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="contacts">
-	            			<li>
+	            				请输入修改后的联系人: 
+	            				<input type="text" name="provider.contacts" id="providercontacts">	            				
+	            			</li>
 	            			<br>
 	            			<li>
-	            				联系电话: 
-	            				
-	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="phone">
-	            			<li>
+	            				请输入修改后供应的产品: 
+	            				<input type="text" name="provider.comments" id="providercomments">	            				
+	            			</li>
 	            			<br>
 	            			<li>
-	            				供应物品内容: 
-	            				
-	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="comments">
-	            			<li>
+	            				请输入修改后的备注: 
+	            				<input type="text" name="provider.remarks" id="providerremarks">	            				
+	            			</li>
 	            			<br>
-	            			<li>
-	            				备注: 
-	            				
-	            				<input class="change" type="button" value="修改">
-	            				<input type="hidden" value="remarks">
-	            			<li>
+	            			<li><input class="change" type="button" value="修改"></li>            			
 	            		</ul>
-	            		<input id="bs" class="btn btn-primary pull-right" type="button" value="返回">
+	            		</form>
+	            		<input id="bc" class="btn btn-primary pull-right" type="button" value="返回">
 	            	</div>
 	            </div>
 	            </div>
@@ -296,6 +274,6 @@
 	            	</ul>
 	            </div>
 	        </div>
-    	</div>
+    	
 	</section>
 <%@include file="common/footer.jsp" %>  

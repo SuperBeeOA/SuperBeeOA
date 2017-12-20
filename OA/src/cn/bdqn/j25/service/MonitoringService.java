@@ -14,4 +14,8 @@ public interface MonitoringService {
 	public Monitoring addOrUpdateMonitoring(Monitoring monitoring);//增加或更新信息
 	
 	public void delMonitoring(Monitoring monitoring); //删除
+	
+	public boolean addMonitoring(Monitoring monitoring);//添加生产记录
+	
+	public List<Monitoring> findByPage(int firstResult,int maxResults);
 }

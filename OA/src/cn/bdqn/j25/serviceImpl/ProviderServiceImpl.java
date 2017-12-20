@@ -54,4 +54,23 @@ public class ProviderServiceImpl implements ProviderService {
 		return providerDao.findAll();
 	}
 
+	@Override
+	public boolean updateProvider(Provider provider) {
+		// TODO Auto-generated method stub
+		try {
+			providerDao.updateProvider(provider);
+			return true;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public List<Provider> findByPage(int firstResult, int maxResults) {
+		// TODO Auto-generated method stub
+		return providerDao.findByPage(firstResult, maxResults);
+	}
+
 }

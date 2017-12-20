@@ -15,12 +15,14 @@ import net.sf.json.util.CycleDetectionStrategy;
 import cn.bdqn.j25.pojo.Customer;
 import cn.bdqn.j25.pojo.Department;
 import cn.bdqn.j25.pojo.Employee;
+import cn.bdqn.j25.pojo.Monitoring;
 import cn.bdqn.j25.pojo.Orders;
 import cn.bdqn.j25.pojo.Product;
 import cn.bdqn.j25.pojo.Proorder;
 import cn.bdqn.j25.pojo.State;
 import cn.bdqn.j25.pojo.Types;
 import cn.bdqn.j25.service.CustomerService;
+import cn.bdqn.j25.service.MonitoringService;
 import cn.bdqn.j25.service.OrdersService;
 import cn.bdqn.j25.service.ProductService;
 import cn.bdqn.j25.service.ProorderService;
@@ -34,11 +36,15 @@ public class OrderAction extends ActionSupport{
 	private Orders orders;
 	private Customer customer;
 	private Proorder proorder;
+	private Monitoring monitoring;
+	private MonitoringService monitoringService;
 	private CustomerService customerService;
 	private ProorderService proorderService;
+	private List<Monitoring> listMonitoring;
 	private List<Orders> listOrders;
 	private List<Customer> listCustomer;
 	private List<Product> listProduct;
+	private List<Proorder> listProorder;
 	private ProductService productService;
 	private Product product;
 	private InputStream inputStream;
@@ -49,9 +55,69 @@ public class OrderAction extends ActionSupport{
 	private String productid;
 	private String first;
 	private String max="5";
+	private String employeeByProorderpeople;
+	private String employeeByProducter;
 	@SuppressWarnings("unchecked")
 	private Map<String, Object> request = (Map) ActionContext.getContext().get(
 			"request");
+	
+	//查看生产记录
+	public String findAllMon(){
+		listMonitoring=monitoringService.findByPage(Integer.parseInt(first),Integer.parseInt(max));
+		for (Monitoring monitoring : listMonitoring) {
+			System.out.println(monitoring.getOrders().getCustomer().getCustomername());
+		}
+		
+		request.put("monlist", listMonitoring);
+		return SUCCESS;
+	}
+	
+	//添加生产记录
+	public String addMon(){
+		Employee employee1=new Employee();
+		Employee employee2=new Employee();
+		employee1.setEmployeeid(Integer.parseInt(employeeByProorderpeople));
+		employee2.setEmployeeid(Integer.parseInt(employeeByProducter));
+		monitoring.setEmployeeByProducter(employee2);
+		monitoring.setEmployeeByProorderpeople(employee1);
+		monitoring.setOrders(orders);
+		String result=null;
+		if(monitoringService.addMonitoring(monitoring)==true){
+			result="添加成功";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else{
+			result="添加失败";			
+			try {
+				inputStream = new ByteArrayInputStream(result.getBytes("utf-8")) ;
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}	
+		return SUCCESS;
+	}
+	
+	//根据生产任务单id查询
+	public String findProorderByid(){		
+		proorder=proorderService.findByid(proorder.getProorderid());
+		request.put("proorder", proorder);
+		return SUCCESS;
+	}
+		
+	//查看生产任务单
+	public String findAllProorder(){
+		listProorder =proorderService.findAllProorder();
+		request.put("Proorder", listProorder);
+		for (Proorder proorder : listProorder) {
+			System.out.println(proorder.getOrders().getCustomer().getCustomername());
+		}
+		return SUCCESS;
+	}
 	
 	//添加生产任务单
 	public String addProOrders(){
@@ -397,5 +463,73 @@ public class OrderAction extends ActionSupport{
 		this.request = request;
 	}
 
+
+	public Proorder getProorder() {
+		return proorder;
+	}
+
+
+	public void setProorder(Proorder proorder) {
+		this.proorder = proorder;
+	}
+
+
+	public ProorderService getProorderService() {
+		return proorderService;
+	}
+
+
+	public void setProorderService(ProorderService proorderService) {
+		this.proorderService = proorderService;
+	}
+
+	public List<Proorder> getListProorder() {
+		return listProorder;
+	}
+
+	public void setListProorder(List<Proorder> listProorder) {
+		this.listProorder = listProorder;
+	}
+
+	public Monitoring getMonitoring() {
+		return monitoring;
+	}
+
+	public void setMonitoring(Monitoring monitoring) {
+		this.monitoring = monitoring;
+	}
+
+	public MonitoringService getMonitoringService() {
+		return monitoringService;
+	}
+
+	public void setMonitoringService(MonitoringService monitoringService) {
+		this.monitoringService = monitoringService;
+	}
+
+	public List<Monitoring> getListMonitoring() {
+		return listMonitoring;
+	}
+
+	public void setListMonitoring(List<Monitoring> listMonitoring) {
+		this.listMonitoring = listMonitoring;
+	}
+
+	public String getEmployeeByProorderpeople() {
+		return employeeByProorderpeople;
+	}
+
+	public void setEmployeeByProorderpeople(String employeeByProorderpeople) {
+		this.employeeByProorderpeople = employeeByProorderpeople;
+	}
+
+	public String getEmployeeByProducter() {
+		return employeeByProducter;
+	}
+
+	public void setEmployeeByProducter(String employeeByProducter) {
+		this.employeeByProducter = employeeByProducter;
+	}
+	
 	
 }

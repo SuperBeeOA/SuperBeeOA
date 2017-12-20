@@ -33,10 +33,23 @@
 				<param name="inputName">inputStream</param>
 			</result>
 		</action> 
-			
+		
+		<action name="procurement5" class="cn.bdqn.j25.action.ProcurementAction" method="findAllprovider" >
+			<result type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action> 	
+		
+		<action name="procurement6" class="cn.bdqn.j25.action.ProcurementAction" method="updateprovider" >
+			<result type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action> 	
 	</package> 	
 
-	<package name="procurement" extends="struts-default">
+	<package name="procurements" extends="struts-default">
 			
 		<action name="procurement4" class="cn.bdqn.j25.action.ProcurementAction" method="findProcurement" >
 			<result>/page/order/procurement.jsp</result>

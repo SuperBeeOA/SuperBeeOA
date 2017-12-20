@@ -5,6 +5,7 @@ import java.util.List;
 
 import cn.bdqn.j25.dao.OrdersDao;
 import cn.bdqn.j25.pojo.Orders;
+import cn.bdqn.j25.pojo.State;
 import cn.bdqn.j25.service.OrdersService;
 
 public class OrdersServiceImpl implements OrdersService {
@@ -103,6 +104,12 @@ public class OrdersServiceImpl implements OrdersService {
 	public List<Orders> findAllOrderByFinance() {
 		// TODO Auto-generated method stub
 		return ordersDao.findAllOrderByFinance();
+	}
+
+	@Override
+	public List<Orders> findAllOrderByState(State state) {
+		// TODO Auto-generated method stub
+		return ordersDao.findAllOrderByState(state);
 	}
 
 	

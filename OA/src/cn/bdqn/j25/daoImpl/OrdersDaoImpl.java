@@ -12,6 +12,7 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import cn.bdqn.j25.dao.OrdersDao;
 import cn.bdqn.j25.pojo.Orders;
+import cn.bdqn.j25.pojo.State;
 
 public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 
@@ -114,6 +115,12 @@ public class OrdersDaoImpl extends HibernateDaoSupport implements OrdersDao {
 	public List<Orders> findAllOrderByFinance() {
 		// TODO Auto-generated method stub
 		return getHibernateTemplate().find("from Orders o where o.state=4");
+	}
+
+	@Override
+	public List<Orders> findAllOrderByState(State state) {
+		// TODO Auto-generated method stub
+		return getHibernateTemplate().find("from Orders o where o.state=?",state);
 	}
 
 }

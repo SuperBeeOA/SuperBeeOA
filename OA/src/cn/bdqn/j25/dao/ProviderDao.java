@@ -17,4 +17,8 @@ public interface ProviderDao {
 	public void delProvider(Provider provider); //删除
 	
 	public List<Provider> findAll();//查找全部供应商
+	
+	public void updateProvider(Provider provider);//更新供应商的信息
+	
+	public List<Provider> findByPage(int firstResult,int maxResults);//根据供应商名称拼音排序分页展示全部 
 }

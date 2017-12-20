@@ -4,6 +4,7 @@ package cn.bdqn.j25.dao;
 import java.util.List;
 
 import cn.bdqn.j25.pojo.Orders;
+import cn.bdqn.j25.pojo.State;
 
 public interface OrdersDao {
 	public Orders findByid(int id);//根据ID查询	
@@ -29,4 +30,6 @@ public interface OrdersDao {
 	public List<Orders> findAllOrderByProduct();//查询所有生产审核的订单
 	
 	public List<Orders> findAllOrderByFinance();//查询财务审核的订单
+	
+	public List<Orders> findAllOrderByState(State state);//根据订单状态查询
 }
