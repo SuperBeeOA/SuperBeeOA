@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import cn.bdqn.j25.dao.PerformancesDao;
+import cn.bdqn.j25.pojo.Employee;
 import cn.bdqn.j25.pojo.Performances;
 
 public class PerformancesDaoImpl extends HibernateDaoSupport implements
@@ -39,6 +40,12 @@ public class PerformancesDaoImpl extends HibernateDaoSupport implements
 	public void delPerformances(Performances performances) {
 		// TODO Auto-generated method stub
 		getHibernateTemplate().delete(performances);
+	}
+
+	@Override
+	public List<Performances> findByEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		return getHibernateTemplate().find("from Performances where employee =?", employee);
 	}
 
 }

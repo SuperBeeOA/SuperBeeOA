@@ -1,13 +1,7 @@
 package cn.bdqn.j25.action;
 
-import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.struts2.ServletActionContext;
 
 import cn.bdqn.j25.pojo.Checks;
 import cn.bdqn.j25.pojo.Employee;
@@ -132,11 +126,11 @@ public class ChecksAction extends ActionSupport {
 		request.put("checkList", checkList);
 		return SUCCESS;
 	}
-/*	public String findChecksByEmployeeId(){
+	public String findChecksByEmployeeId(){
 		List<Object[]> checkList = checksService.findChecksByEmployeeId(Integer.parseInt(employeeId));
-		for(Object[] a : checkList){
+		/*for(Object[] a : checkList){
 			System.out.println(((Employee)a[1]).getName());
-		}
+		}*/
 		request.put("checkList", checkList);
 		return SUCCESS;
 	}
@@ -144,7 +138,7 @@ public class ChecksAction extends ActionSupport {
 		List<Object[]> checkList = checksService.findChecksByProorderId(Integer.parseInt(proorderId));
 		request.put("checkList", checkList);
 		return SUCCESS;
-	}*/
+	}
 	public String addChecks(){
 		Employee employee = employeeService.findByid(Integer.parseInt(employeeId));
 		Proorder proorder = proorderService.findByid(Integer.parseInt(proorderId));

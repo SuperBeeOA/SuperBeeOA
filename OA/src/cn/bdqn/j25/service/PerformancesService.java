@@ -2,7 +2,9 @@ package cn.bdqn.j25.service;
 
 import java.util.List;
 
+import cn.bdqn.j25.pojo.Employee;
 import cn.bdqn.j25.pojo.Performances;
+import cn.bdqn.j25.pojo.Procurement;
 
 public interface PerformancesService {
 	public Performances findByid(int id);//根据ID查询	
@@ -14,4 +16,6 @@ public interface PerformancesService {
 	public Performances addOrUpdatePerformances(Performances performances);//增加或更新信息
 	
 	public void delPerformances(Performances performances); //删除
+	
+	public List<Performances> findByEmployee(Employee employee);
 }

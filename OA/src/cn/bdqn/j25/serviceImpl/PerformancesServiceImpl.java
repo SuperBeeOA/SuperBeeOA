@@ -3,7 +3,9 @@ package cn.bdqn.j25.serviceImpl;
 import java.util.List;
 
 import cn.bdqn.j25.dao.PerformancesDao;
+import cn.bdqn.j25.pojo.Employee;
 import cn.bdqn.j25.pojo.Performances;
+import cn.bdqn.j25.pojo.Procurement;
 import cn.bdqn.j25.service.PerformancesService;
 
 public class PerformancesServiceImpl implements PerformancesService {
@@ -46,6 +48,12 @@ public class PerformancesServiceImpl implements PerformancesService {
 	public void delPerformances(Performances performances) {
 		// TODO Auto-generated method stub
 		performancesDao.delPerformances(performances);
+	}
+
+	@Override
+	public List<Performances> findByEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		return performancesDao.findByEmployee(employee);
 	}
 
 }

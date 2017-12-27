@@ -82,7 +82,28 @@
 	            <div id="smoney" style="display: none;">
 	            	<h2 class="text-center">结算工资</h2>
 	            	<hr>
-	            
+	            	<div>
+		            	<table class="table table-hover table-bordered" id="settleAccounts">
+		            		<tr>
+		            			<td>员工ID</td>
+		            			<td>员工姓名</td>
+		            			<td>基础工资</td>
+		            			<td>绩效奖金</td>
+		            			<td>绩效时间</td>
+		            			<td>实际工资</td>
+		            			<td>打印</td>
+		            		</tr>
+		            		<tr>
+		            			<td></td>
+		            			<td></td>
+		            			<td></td>
+		            			<td></td>
+		            			<td></td>
+		            			<td></td>
+		            			<td><input id="copysalary" type="button" value="打印"></td>
+		            		</tr>
+		            	</table>
+	            	</div>
 	            </div>
 	        </div>
 	        

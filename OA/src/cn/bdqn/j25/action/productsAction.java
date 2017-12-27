@@ -26,15 +26,9 @@ public class productsAction extends ActionSupport {
 	private BigDecimal productioncost;
 	private BigDecimal truckage;
 	private String productremarks;
+	private String unit;
 	private Map<String, Object> request = (Map) ActionContext.getContext().get("request");
 	private Map<String, Object> session = ActionContext.getContext().getSession();
-	
-	
-	
-	
-	
-	
-	
 	public ProductService getProductService() {
 		return productService;
 	}
@@ -114,16 +108,19 @@ public class productsAction extends ActionSupport {
 	public void setProductremarks(String productremarks) {
 		this.productremarks = productremarks;
 	}
+	public String getUnit() {
+		return unit;
+	}
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
 	public String addProducts(){
 		BigDecimal proCost = productioncost.add(truckage);
+		System.out.println(proCost);
 		session.put("proCost", proCost);
 		Types types = typeService.findByid(typeid);
-		Product product = new Product(types, productname, productno, component, shelflife, productmodel, productioncost, truckage, productremarks);
+		Product product = new Product(types, productname, productno, component, shelflife, productmodel, productioncost, truckage, productremarks,unit);
 		productService.addOrUpdateProduct(product);
 		return SUCCESS;
 	}
-	/*public String addProductsPrice(){
-		productService.addProductsPriceById(productid, productprice);
-		return SUCCESS;
-	}*/
 }

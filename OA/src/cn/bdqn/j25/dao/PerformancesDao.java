@@ -2,6 +2,7 @@ package cn.bdqn.j25.dao;
 
 import java.util.List;
 
+import cn.bdqn.j25.pojo.Employee;
 import cn.bdqn.j25.pojo.Performances;
 
 public interface PerformancesDao {
@@ -15,4 +16,6 @@ public interface PerformancesDao {
 	public Performances addOrUpdatePerformances(Performances performances);//增加或更新信息
 	
 	public void delPerformances(Performances performances); //删除
+	
+	public List<Performances> findByEmployee(Employee employee);
 }

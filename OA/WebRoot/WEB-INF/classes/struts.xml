@@ -12,7 +12,9 @@
 	<include file="struts/struts-warehouse.xml"></include>
 
 	<include file="struts/struts-announcement.xml"></include>
-
+	<include file="struts/struts-check.xml"/>
+	<include file="struts/struts-product.xml"/>
+	<include file="struts/struts-wage.xml"/>
 	
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
 	<constant name="struts.custom.i18n.resources" value="message" />

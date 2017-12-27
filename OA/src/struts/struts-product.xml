@@ -6,10 +6,7 @@
 <struts>
 	<package name="products" extends="struts-default">
 		<action name="addProducts" class="cn.bdqn.j25.action.productsAction" method="addProducts">
-			<result>/page/gerenzhongxin.jsp</result>
-		</action>
-		<action name="addProductsPrice" class="cn.bdqn.j25.action.productsAction" method="addProductsPrice">
-			<result>/page/gerenzhongxin.jsp</result>
+			<result>/page/main.jsp</result>
 		</action>
 	</package>
 </struts>
