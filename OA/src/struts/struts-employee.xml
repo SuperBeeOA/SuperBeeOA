@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<package name="employee" extends="struts-default">
+		<action name="addemp" class="cn.bdqn.j25.action.EmployeeAction"
+			method="addemp">
+			<result>/page/personnel.jsp</result>
+		</action>
+		<action name="allemp" class="cn.bdqn.j25.action.EmployeeAction"
+			method="allemp">
+			<result>/page/personnel/emp.jsp</result>
+		</action>
+		<action name="aemp" class="cn.bdqn.j25.action.EmployeeAction"
+			method="aemp">
+			<result>/page/personnel/empxgai.jsp</result>
+		</action>
+	</package>
+	
+
+</struts>

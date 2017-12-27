@@ -25,4 +25,6 @@ public interface EmployeeService {
 	public List<Employee> findAll(Employee employee);
 	
 	public List<Employee> findByDepartmentName(String name);
+	
+	public List<Employee> findByEmp(Employee employee);
 }

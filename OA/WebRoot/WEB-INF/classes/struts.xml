@@ -10,7 +10,7 @@
 	<include file="struts/struts-procurement.xml"></include>
 	<include file="struts/struts-contact.xml"></include>
 	<include file="struts/struts-warehouse.xml"></include>
-
+    <include file="struts/struts-employee.xml"></include>
 	<include file="struts/struts-announcement.xml"></include>
 
 	

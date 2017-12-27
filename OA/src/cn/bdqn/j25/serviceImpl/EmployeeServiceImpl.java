@@ -80,4 +80,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return employeeDao.findByDepartmentName(name);
 	}
 
+	@Override
+	public List<Employee> findByEmp(Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

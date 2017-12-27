@@ -78,4 +78,10 @@ public class EmployeeDaoImpl extends HibernateDaoSupport implements EmployeeDao 
 		return this.getHibernateTemplate().find("select d.employees from Department d where d.departmentname = ?",name);
 	}
 
+	@Override
+	public List<Employee> findByEmp(Employee employee) {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().findByExample(employee);
+	}
+
 }

@@ -28,35 +28,35 @@
 	            <div id="add" style="display: none;" class="text-center">
 	            	<h2 class="text-center">增加员工</h2>
 					<hr>
-					<form action="">
+					<form action="addemp.action" method="post">
 						<table class="table table-condensed">
 							<tr>
-								<td>职工号：</td>
-								<td></td>
+								<td >职工号：</td>
+								<td><input type="text" name="employee.workid"></td>
 							</tr>
 							<tr>
-								<td>姓名：</td>
-								<td><input type="text" name="name"></td>
+								<td >姓名：</td>
+								<td><input type="text" name="employee.name"></td>
 							</tr>
 							<tr>
 								<td>性别：</td>
 								<td>
-									<input type="checkbox" name="sex" value="男">男
-									<input type="checkbox" name="sex" value="女">女
+									<input type="checkbox" name="employee.sex" value="男">男
+									<input type="checkbox" name="employee.sex" value="女">女
 								</td>
 							</tr>
 							<tr>
 								<td>民族：</td>
-								<td><input type="text" name="nation"></td>
+								<td><input type="text" name="employee.nation"></td>
 							</tr>
 							<tr>
 								<td>生日：</td>
-								<td><input type="date" name="birthday"></td>
+								<td><input type="date" name="employee.birthday"></td>
 							</tr>
 							<tr>
 								<td>部门：</td>
 								<td>
-									<select name="departmentid">
+									<select name="employee.department.departmentid">
 										<option value="1">生产</option>
 										<option value="2">仓库</option>
 										<option value="3">人事</option>
@@ -69,7 +69,7 @@
 							<tr>
 								<td>职务：</td>
 								<td>
-									<select name="postid">
+									<select name="employee.post.postid">
 										<option value="1">员工</option>
 										<option value="2">主任</option>
 									</select>
@@ -78,36 +78,36 @@
 							<tr>
 								<td>学历：</td>
 								<td>
-									<select name="education">
-										<option value="1">专科</option>
-										<option value="2">本科</option>
+									<select name="employee.education">
+										<option value="专科">专科</option>
+										<option value="本科">本科</option>
 									</select>
 								</td>
 							</tr>
 							<tr>
 								<td>电话：</td>
-								<td><input type="text" name="phone"></td>
+								<td><input type="text" name="employee.phone"></td>
 							</tr>
 							<tr>
 								<td>地址：</td>
-								<td><input type="text" name="address"></td>
+								<td><input type="text" name="employee.address"></td>
 							</tr>
 							<tr>
 								<td>基础工资：</td>
-								<td><input type="text" name="money"></td>
+								<td><input type="text" name="employee.money"></td>
 							</tr>
-							<tr>
+						<!-- 	<tr>
 								<td>密码：</td>
 								<td></td>
 							</tr>
 							<tr>
 								<td>调休时数：</td>
-								<td><input type="text" name="resttime"></td>
-							</tr>
+								<td><input type="text" name="employee.resttime"></td>
+							</tr> -->
 							<tr>
 								<td>车间：</td>
 								<td>
-									<select name="workshopid">
+									<select name="employee.workshop.workshopid">
 										<option value="1">一号</option>
 										<option value="2">二号</option>
 									</select>
@@ -116,7 +116,7 @@
 							<tr>
 								<td>班组：</td>
 								<td>
-									<select name="teamid">
+									<select name="employee.team.teamid">
 										<option value="1">一组</option>
 										<option value="2">二组</option>
 									</select>
@@ -130,90 +130,38 @@
 	            	<h2 class="text-center">管理员工</h2>
 					<hr>
 					<div id="allstaff">
-		            	<table class="table table-hover table-bordered">
-		            		<tr>
-		            			<td>职工号</td>
-		            			<td>姓名</td>
-		            			<td>职位</td>
-		            			<td>联系电话</td>
-		            			<td>操作</td>
-		            		</tr>
-		            		<tr>
-		            			<td></td>
-		            			<td></td>
-		            			<td></td>
-		            			<td></td>
-		            			<td>
+						<!-- <form action="allemp.action" method="post">
+		            	
+		            		
+		            			<input type="text" name="employee.workid">
+		            			姓名 
+		            			<input type="text" name="employee.name">
+		            			部门
+								<input type="text" name="employee.department">
+		            			
+		            		
+		            		        <input id="cx" type="button" value="查询">
 		            				<input id="cs" type="button" value="修改">
 		            				<input id="ds" type="button" value="删除">
-		            			</td>
-		            		</tr>
-		            	</table>
+		            		
+		            	</form>
+ -->
+			            <form id="allemp" action="allemp.action" method="post">
+			                                                                   员工号
+			                        <input type="text" name="employee.workid">
+			            			姓名 
+			            			<input type="text" name="employee.name">
+			            	<!-- 		部门
+									<input type="text" name="employee.department.departmentname"> -->
+									 <input id="cx" type="button" value="查询">
+			            </form>
+		            	<div id="zs">
+		            		
+		            	</div>
 	            	</div>
+	            	
 	            	<div id="cstaff" style="display: none;">
-	            		<table class="table table-hover">
-							<tr>
-								<td><label>职工号：</label></td>
-								<td> </td>
-		            			<td></td>
-							</tr>
-							<tr>
-								<td><label>姓名：</label></td>
-								<td> </td>
-		            			<td></td>
-							</tr>
-							<tr>
-								<td><label>性别：</label></td>
-								<td> </td>
-		            			<td></td>
-							</tr>
-							<tr>
-								<td><label>民族：</label></td>
-								<td> </td>
-		            			<td></td>
-							</tr>
-							<tr>
-								<td><label>生日：</label></td>
-								<td> </td>
-		            			<td></td>
-							</tr>
-							<tr>
-								<td><label>所属部门：</label></td>
-								<td> </td>
-								<td><input id="departmentid" type="button" value="修改"></td>
-							</tr>
-							<tr>
-								<td><label>入职时间：</label></td>
-								<td></td>
-		            			<td></td>
-							</tr>
-							<tr>
-								<td><label>职务：</label></td>
-								<td> </td>
-								<td><input id="postid" type="button" value="修改"></td>
-							</tr>
-							<tr>
-								<td><label>学历：</label></td>
-								<td> </td>
-								<td><input id="education" type="button" value="修改"></td>
-							</tr>
-							<tr>
-								<td><label>电话：</label></td>
-								<td> </td>
-								<td><input id="phone" type="button" value="修改"></td>
-							</tr>
-							<tr>
-								<td><label>地址：</label></td>
-								<td> </td>
-								<td><input id="address" type="button" value="修改"></td>
-							</tr>
-							<tr>
-								<td><label>调休时数：</label></td>
-								<td> </td>
-								<td><input id="resttime" type="button" value="修改"></td>
-							</tr>
-						</table>
-						<input id="bcs" class="btn btn-primary pull-right" type="button" value="返回">
+	            		
 	            	</div>
 	            </div>
 	        </div>
